@@ -53,6 +53,11 @@
   };
 
   anim = function(el, ef, z) {
+    if (z == null) {
+      z = function() {
+        return true;
+      };
+    }
     return $(el).addClass(ef + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
       el.removeClass(ef + ' animated');
       return z();
@@ -80,15 +85,18 @@
         });
       }
     });
-    $('#enter .checkbox').click(function() {
+    $('.checkbox').off('click').on('click', function() {
       $(this).toggleClass('checked');
-      return $('#enter a').toggleClass('no-ajax');
+      return $(this).parent().find('a').toggleClass('no-ajax');
     });
-    $('#enter a').click(function(e) {
-      if (!$('#enter .checkbox').hasClass("checked")) {
-        anim($('#enter .checkbox'), 'tada');
+    $('#enter a, a.enter').off('click').on('click', function() {
+      if (!$(this).parent().find('.checkbox').hasClass("checked")) {
+        anim($(this).parent().find('.checkbox'), 'tada');
         return false;
       } else {
+        if ($(this).parents('.modal-dialog').length > 0) {
+          $('#doctor').modal('hide');
+        }
         return true;
       }
     });

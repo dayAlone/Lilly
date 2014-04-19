@@ -31,7 +31,7 @@
                  <ul class="nav">
                     <?if(!$doctors):?>
                     <li>
-                       <a href="#locator"  data-toggle="modal" data-target="#locator" class="<?= (strstr($_SERVER['SCRIPT_NAME'],'doctors')?'active':'') ?>">Специалистам</a><br>
+                       <a href="#doctor" data-toggle="modal" data-target="#doctor" class="<?= (strstr($_SERVER['SCRIPT_NAME'],'doctors')?'active':'') ?>">Специалистам</a><br>
                     </li>
                     <li>
                        <a href="/materials.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/materials.html'?'active':'') ?>">Мужской разговор</a><br>
