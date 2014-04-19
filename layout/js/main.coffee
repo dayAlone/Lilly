@@ -44,7 +44,7 @@ anim = (el, ef)->
 init = ()->
     $('a').on 'click', (e)->
         url = $(this).attr('href')
-        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url != '#')
+        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#')
             e.preventDefault()
             
             $('body .frame').removeClass('animated fadeIn')

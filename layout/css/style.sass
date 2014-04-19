@@ -9,7 +9,7 @@ $i : '../images/'
 	width: 100%
 	position: relative
 
-@mixin b($img, $position: center center, $color: '')
+@mixin b($img, $position: center center no-repeat, $color: '')
 	background: #{$color} url(#{$i}#{$img}) $position
 
 +font-face('DINPro', font-files('/layout/fonts/dinpro-light.eot', '/layout/fonts/dinpro-light.svg', '/layout/fonts/dinpro-light.ttf', '/layout/fonts/dinpro-light.woff'),'/layout/fonts/dinpro-light.eot', 300,'normal')
@@ -502,6 +502,44 @@ input:focus, a:focus
 		float: left
 		&:hover
 			opacity: .7
+
+.modal-dialog
+	.close
+		+b('close.png')
+		opacity: 1
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 10px
+		right: 10px
+	a.go
+		display: inline-block
+		padding: 0 60px
+		margin: 5px 0 20px
+		font-weight: 600
+		color: white
+		line-height: 35px
+		text-transform: uppercase
+		background-color: #FF000E
+		+background-image(linear-gradient(left, #fff -20%, rgba(234,33,44,0) 71.77%)) 
+	.modal-content
+		+full-width
+		border-radius: 0
+		padding: 20px
+		+box-shadow(0 0 7px rgba(3,3,8,.4)) 
+		small
+			+full-width
+			font-size: 13px
+			line-height: 15px
+			opacity: .4
+		h3
+			margin: 10px 0
+
+
+.modal-backdrop
+	background: white
+	&.in
+		opacity: .7
 
 #products-promo
 	+full-width

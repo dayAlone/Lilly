@@ -301,7 +301,7 @@ a:hover, a span:hover, .shadow:hover {
   margin-left: -40px;
   margin-top: -40px;
   cursor: pointer;
-  background:  url(../images/play2.png) center center;
+  background:  url(../images/play2.png) center center no-repeat;
 }
 #main-block .shadow {
   position: absolute;
@@ -579,7 +579,7 @@ input:focus, a:focus {
 #enter-button {
   width: 242px;
   height: 121px;
-  background:  url(../images/enter2.png) center center;
+  background:  url(../images/enter2.png) center center no-repeat;
   position: absolute;
   right: 0;
   top: 30px;
@@ -654,6 +654,59 @@ input:focus, a:focus {
   opacity: 0.7;
 }
 
+.modal-dialog .close {
+  background:  url(../images/close.png) center center no-repeat;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.modal-dialog a.go {
+  display: inline-block;
+  padding: 0 60px;
+  margin: 5px 0 20px;
+  font-weight: 600;
+  color: white;
+  line-height: 35px;
+  text-transform: uppercase;
+  background-color: #ff000e;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(-20%, #ffffff), color-stop(71.77%, rgba(234, 33, 44, 0)));
+  background-image: -webkit-linear-gradient(left, #ffffff -20%, rgba(234, 33, 44, 0) 71.77%);
+  background-image: -moz-linear-gradient(left, #ffffff -20%, rgba(234, 33, 44, 0) 71.77%);
+  background-image: -o-linear-gradient(left, #ffffff -20%, rgba(234, 33, 44, 0) 71.77%);
+  background-image: linear-gradient(left, #ffffff -20%, rgba(234, 33, 44, 0) 71.77%);
+}
+.modal-dialog .modal-content {
+  float: left;
+  width: 100%;
+  position: relative;
+  border-radius: 0;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 7px rgba(3, 3, 8, 0.4);
+  -moz-box-shadow: 0 0 7px rgba(3, 3, 8, 0.4);
+  box-shadow: 0 0 7px rgba(3, 3, 8, 0.4);
+}
+.modal-dialog .modal-content small {
+  float: left;
+  width: 100%;
+  position: relative;
+  font-size: 13px;
+  line-height: 15px;
+  opacity: 0.4;
+}
+.modal-dialog .modal-content h3 {
+  margin: 10px 0;
+}
+
+.modal-backdrop {
+  background: white;
+}
+.modal-backdrop.in {
+  opacity: 0.7;
+}
+
 #products-promo {
   float: left;
   width: 100%;
@@ -690,7 +743,7 @@ input:focus, a:focus {
   margin-left: -39px;
   top: 47%;
   margin-top: -40px;
-  background:  url(../images/play.png) center center;
+  background:  url(../images/play.png) center center no-repeat;
   z-index: 3;
 }
 #products-promo #product-1, #products-promo #product-2 {
@@ -870,7 +923,7 @@ input:focus, a:focus {
   margin-left: -40px;
   width: 80px;
   height: 80px;
-  background:  url(../images/play2.png) center center;
+  background:  url(../images/play2.png) center center no-repeat;
 }
 
 #research {
@@ -982,7 +1035,7 @@ input:focus, a:focus {
   margin-left: 2px;
   width: 28px;
   height: 28px;
-  background:  url(../images/search.png) center center;
+  background:  url(../images/search.png) center center no-repeat;
   border: 0;
 }
 #footer .counter {

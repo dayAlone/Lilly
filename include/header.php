@@ -14,16 +14,6 @@
     <meta name="author" content="">
     <meta name="format-detection" content="telephone=no">
 
-    <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/layout/css/plugins.css" rel="stylesheet" />
-    <link href="/layout/css/style.css" rel="stylesheet" />
-    
-    <!--[if IE]>
-           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="/layout/js/jquery.js"></script>
-    <script type="text/javascript" src="/layout/js/plugins.js"></script>
-    <script type="text/javascript" src="/layout/js/main.js"></script>
   </head>
 
   <body>
@@ -57,7 +47,7 @@
                        <span class="small">как помочь, <br>если у него ЭД?</span>
                     </li>
                     <li>
-                       <a href="#">Найти уролога</a>
+                       <a href="#locator"  data-toggle="modal" data-target="#locator" class="">Найти уролога</a>
                     </li>
                   <? else :?>
                     <li>
@@ -70,7 +60,7 @@
                        <a href="/doctors/research.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/doctors/research.html'?'active':'') ?>">Клинические исследования</a><br>
                     </li>
                     <li>
-                       <a href="#" class="">Доктор-Локатор</a><br>
+                       <a href="#locator"  data-toggle="modal" data-target="#locator" class="">Доктор-Локатор</a><br>
                     </li>
                   <? endif; ?>
                  </ul>
@@ -97,5 +87,15 @@
           <p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВХОД», чтобы начать работу.</p>
         </div>
       </div>
+     <? else:?>
+     <?/*
+      <div id="event">
+         <div class="day">25</div>
+         <div class="month">апреля</div>
+         <div class="wday">понедельник</div>
+         <div class="title">IV МЕЖДУНАРОДНЫЙ СИМПОЗИУМ ПО СЕКСУАЛЬНОЙ И РЕПРОДУКТИВНОЙ МЕДИЦИНЕ</div>
+         <a href="#">ВСЕ СОБЫТИЯ</a>
+      </div>
+      */?>
      <?endif;?>
    

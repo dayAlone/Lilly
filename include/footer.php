@@ -2,7 +2,7 @@
    global $doctors;
 ?>
 
-<div id="footer">
+   <div id="footer">
       <div class="container">
          <? if($doctors):?>
          <p class="doctors">
@@ -47,6 +47,33 @@
          </div>
       </div>
    </div>
-
 </div>
+   <div class="modal fade" id="locator" tabindex="-1" role="dialog" aria-labelledby="locator" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
+         <p>Вы в одном шаге от инновационного инструмента ДОКТОР-ЛОКАТОР!<br>Он поможет вам найти врача-уролога в вашем городе или регионе.</p>
+
+         <h3>ЗАПИШИТЕСЬ НА ПРИЁМ ПРЯМО СЕЙЧАС!</h3>
+
+         <a href="http://doctorlocator.rusmh.org" class="no-ajax go">перейти</a>
+
+         <small>Вы покидаете www.ochenprosto.ru и переходите на сайт Российского общества «Мужское здоровье». Эли Лилли энд Компани не контролирует, не поддерживает и не влияет на этот сайт. Все мнения, точки зрения или комментарии, высказанные на этом сайте, не должны приписываться Эли Лилли энд Компани. Также Эли Лилли энд Компани не несет ответственности за конфиденциальность, безопасность и сбор данных каких-либо сайтов, принадлежащих третьим сторонам.</small>
+
+
+
+       </div>    
+     </div>
+   </div>
+
+ <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
+ <link href="/layout/css/plugins.css" rel="stylesheet" />
+ <link href="/layout/css/style.css" rel="stylesheet" />
+ 
+ <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <![endif]-->
+ <script type="text/javascript" src="/layout/js/jquery.js"></script>
+ <script type="text/javascript" src="/layout/js/plugins.js"></script>
+ <script type="text/javascript" src="/layout/js/main.js"></script>
 </body>
