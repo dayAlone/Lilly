@@ -27,7 +27,7 @@
  <?
  $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	"promo",
+	"promo.woman",
 	Array(
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "1",
