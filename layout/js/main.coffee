@@ -86,6 +86,9 @@ init = ()->
         height : ()->
             return $(this).parents('.text').height()
 
+    $('#map').click ()->
+        $('#locator').modal()
+
 $(document).ready ()->
 
     $(document).ajaxStart ()-> Pace.restart()

@@ -103,10 +103,13 @@
         return $('#enter').addClass('short');
       }
     });
-    return $('#faq .block .text .panel').slimscroll({
+    $('#faq .block .text .panel').slimscroll({
       height: function() {
         return $(this).parents('.text').height();
       }
+    });
+    return $('#map').click(function() {
+      return $('#locator').modal();
     });
   };
 
