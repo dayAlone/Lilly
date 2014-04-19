@@ -211,7 +211,8 @@ a:hover, a span:hover, .shadow:hover {
 }
 .block.medium .content .title {
   font-size: 36px;
-  line-height: 38px;
+  line-height: 33px;
+  margin-bottom: 8px;
 }
 .block .shadow {
   position: absolute;
