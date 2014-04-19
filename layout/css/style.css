@@ -187,6 +187,22 @@ a:hover, a span:hover, .shadow:hover {
 .block.small .content .text {
   font-size: 17px;
 }
+.block.small .content span {
+  color: white;
+}
+.block.small .content span.bbb {
+  font-weight: 300;
+  font-size: 115px;
+  line-height: 25px;
+}
+.block.small .content span.bb {
+  font-size: 52px;
+  line-height: 25px;
+}
+.block.small .content span.b {
+  font-size: 22px;
+  line-height: 25px;
+}
 .block.medium {
   height: 307px;
 }
