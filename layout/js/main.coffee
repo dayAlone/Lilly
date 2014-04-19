@@ -34,7 +34,7 @@ validatePhone = (phone)->
 	re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
 	return re.test(phone)
 
-anim = (el, ef, z)->
+anim = (el, ef, z=()->return true)->
     $(el)
         .addClass(ef + ' animated')
         .one 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', ()->
@@ -45,7 +45,7 @@ anim = (el, ef, z)->
 init = ()->
     $('a').on 'click', (e)->
         url = $(this).attr('href')
-        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#')
+        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && $(this).parents('#panel,.bx-component-opener').length==0)
             e.preventDefault()
             
             $('body .frame').removeClass('animated fadeIn')
@@ -57,18 +57,19 @@ init = ()->
                         anim($('body .frame'),'fadeIn')
                         if (window.history.replaceState)
                             window.history.replaceState({}, $(data).filter('head').find('title').text(), url);
-
                         init()
     
-    $('#enter .checkbox').click ()->
+    $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')
-        $('#enter a').toggleClass('no-ajax')
+        $(this).parent().find('a').toggleClass('no-ajax')
     
-    $('#enter a').click (e)->
-        if(!$('#enter .checkbox').hasClass("checked"))
-            anim($('#enter .checkbox'),'tada')
+    $('#enter a, a.enter').off('click').on 'click', ()->
+        if(!$(this).parent().find('.checkbox').hasClass("checked"))
+            anim($(this).parent().find('.checkbox'),'tada')
             return false
         else
+            if($(this).parents('.modal-dialog').length>0)
+                $('#doctor').modal('hide')
             return true
 
     $('#enter.short a').hoverIntent

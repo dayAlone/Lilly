@@ -17,9 +17,19 @@
             </div>
             <div class="col-md-11 right">
                <div class="menu">
-                  <a href="#">О компании</a>
-                  <a href="#">Конфиденциальность информации</a>
-                  <a href="#">Пользовательское соглашение</a><br>
+                  <?$APPLICATION->IncludeComponent("bitrix:menu","bottom",Array(
+                        "ROOT_MENU_TYPE" => "bottom", 
+                        "MAX_LEVEL" => "1", 
+                        "CHILD_MENU_TYPE" => "bottom", 
+                        "USE_EXT" => "Y",
+                        "DELAY" => "N",
+                        "ALLOW_MULTI_SELECT" => "Y",
+                        "MENU_CACHE_TYPE" => "N", 
+                        "MENU_CACHE_TIME" => "3600", 
+                        "MENU_CACHE_USE_GROUPS" => "Y", 
+                        "MENU_CACHE_GET_VARS" => "" 
+                      )
+                    );?><br>
                   <span class="copyright">© Copyright ООО «Лилли Фарма» 2014. Все права защищены.</span>
                </div>
             </div>
@@ -68,13 +78,23 @@
    <div class="modal fade" id="doctor" tabindex="-1" role="dialog" aria-labelledby="doctor" aria-hidden="true">
      <div class="modal-dialog">
        <div class="modal-content">
-         <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
-         <h3></h3>
+         <h3>ВХОД ДЛЯ СПЕЦИАЛИСТОВ ЗДРАВООХРАНЕНИЯ</h3>
+         
+         <p>Вся информация, размещенная в данном разделе веб-сайта, предназначена исключительно для специалистов здравоохранения- медицинских 
+         и фармацевтических работников.</p>
 
+         <p>Если Вы не являетесь специалистом здравоохранения, в соответствии 
+         с положениями действующего законодательства РФ Вы не имеете права доступа к информации, размещенной в данном разделе веб-сайта, в связи с чем просим Вас незамедлительно покинуть данный раздел веб-сайта.</p>
+
+         <p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВХОД», чтобы начать работу.</p>
+         <a href="/doctors/" class="no-ajax enter">Вход</a>
+         <div class="checkbox"></div>
+         <a href="#" data-dismiss="modal" aria-hidden="true" class="back"> <span>&lsaquo;</span> ВЕРНУТЬСЯ</a>
+         <span class="agree">подтверждаю</span>
        </div>    
      </div>
    </div>
-
+ 
  <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
  <link href="/layout/css/plugins.css" rel="stylesheet" />
  <link href="/layout/css/style.css" rel="stylesheet" />
