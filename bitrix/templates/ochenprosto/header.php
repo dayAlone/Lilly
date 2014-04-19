@@ -29,7 +29,6 @@
               </div>
               <div class="col-md-10">
                  <ul class="nav">
-<<<<<<< HEAD:bitrix/templates/ochenprosto/header.php
                     <?$APPLICATION->IncludeComponent("bitrix:menu","top",Array(
                         "ROOT_MENU_TYPE" => "top", 
                         "MAX_LEVEL" => "1", 
@@ -43,42 +42,6 @@
                         "MENU_CACHE_GET_VARS" => "" 
                       )
                     );?>
-=======
-                    <?if(!$doctors):?>
-                    <li>
-                       <a href="#doctor" data-toggle="modal" data-target="#doctor" class="<?= (strstr($_SERVER['SCRIPT_NAME'],'doctors')?'active':'') ?>">Специалистам</a><br>
-                    </li>
-                    <li>
-                       <a href="/materials.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/materials.html'?'active':'') ?>">Мужской разговор</a><br>
-                       <span class="small">об эректильной дисфункции</span><br>
-                       <span class="small">об аденоме проедстательной железы</span>
-                    </li>
-                    <li>
-                       <a href="/faq.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/faq.html'?'active':'') ?>">FAQ</a><br>
-                       <span class="small">ответы<br/>на ваши вопросы</span>
-                    </li>
-                    <li>
-                       <a href="/woman.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/woman.html'?'active':'') ?>">Для женщин</a><br>
-                       <span class="small">как помочь, <br>если у него ЭД?</span>
-                    </li>
-                    <li>
-                       <a href="#locator"  data-toggle="modal" data-target="#locator" class="">Найти уролога</a>
-                    </li>
-                  <? else :?>
-                    <li>
-                       <a href="/doctors/" class="<?= ($_SERVER['SCRIPT_NAME']=='/doctors/index.html'?'active':'') ?><?= ($_SERVER['SCRIPT_NAME']=='/doctors/product-1.html'?'active':'') ?><?= ($_SERVER['SCRIPT_NAME']=='/doctors/product-2.html'?'active':'') ?>">О препаратах</a><br>
-                    </li>
-                    <li>
-                       <a href="/doctors/video.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/doctors/video.html'?'active':'') ?>">Записи научных трансляций</a><br>
-                    </li>
-                    <li>
-                       <a href="/doctors/research.html" class="<?= ($_SERVER['SCRIPT_NAME']=='/doctors/research.html'?'active':'') ?>">Клинические исследования</a><br>
-                    </li>
-                    <li>
-                       <a href="#locator"  data-toggle="modal" data-target="#locator" class="">Доктор-Локатор</a><br>
-                    </li>
-                  <? endif; ?>
->>>>>>> FETCH_HEAD:include/header.php
                  </ul>
               </div>
            </div>
