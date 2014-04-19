@@ -24,7 +24,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Для женщин", 
-		"woman", 
+		"/woman/", 
 		Array(), 
 		Array("MORE"=>"как помочь, <br>если у него ЭД?"), 
 		"" 
