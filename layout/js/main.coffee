@@ -56,7 +56,8 @@ init = ()->
                         $('body .frame').html($(data).filter('.frame').html())
                         anim($('body .frame'),'fadeIn')
                         if (window.history.replaceState)
-                            window.history.replaceState({}, $(data).filter('head').find('title').text(), url);
+                            window.history.replaceState({}, $(data).filter('title').text(), url);
+                        document.title = $(data).filter('title').text()
                         init()
     
     $('.checkbox').off('click').on 'click', ()->
