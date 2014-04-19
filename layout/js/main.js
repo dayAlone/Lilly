@@ -52,9 +52,10 @@
     return re.test(phone);
   };
 
-  anim = function(el, ef) {
+  anim = function(el, ef, z) {
     return $(el).addClass(ef + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-      return el.removeClass(ef + ' animated');
+      el.removeClass(ef + ' animated');
+      return z();
     });
   };
 
@@ -119,6 +120,11 @@
     });
     $(document).ajaxStop(function() {
       return Pace.stop();
+    });
+    anim($('.frame'), 'fadeIn', function() {
+      return $('.frame').css({
+        opacity: 1
+      });
     });
     init();
     return $('body').imagesLoaded(function() {

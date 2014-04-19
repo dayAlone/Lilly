@@ -65,6 +65,15 @@
        </div>    
      </div>
    </div>
+   <div class="modal fade" id="doctor" tabindex="-1" role="dialog" aria-labelledby="doctor" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
+         <h3></h3>
+
+       </div>    
+     </div>
+   </div>
 
  <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
  <link href="/layout/css/plugins.css" rel="stylesheet" />

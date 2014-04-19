@@ -34,11 +34,12 @@ validatePhone = (phone)->
 	re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
 	return re.test(phone)
 
-anim = (el, ef)->
+anim = (el, ef, z)->
     $(el)
         .addClass(ef + ' animated')
         .one 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', ()->
             el.removeClass(ef + ' animated');
+            z()
 
 
 init = ()->
@@ -94,6 +95,7 @@ $(document).ready ()->
     $(document).ajaxStart ()-> Pace.restart()
     $(document).ajaxStop ()-> Pace.stop()
 
+    anim($('.frame'), 'fadeIn', ()-> $('.frame').css({opacity:1}))
     init()
 
     $('body').imagesLoaded ()->
