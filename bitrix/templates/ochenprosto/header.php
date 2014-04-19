@@ -38,8 +38,8 @@
                     		0 => "",
                     		1 => "",
                     	),
-                    	"MAX_LEVEL" => "1",
-                    	"CHILD_MENU_TYPE" => "top",
+                    	"MAX_LEVEL" => "2",
+                    	"CHILD_MENU_TYPE" => "left",
                     	"USE_EXT" => "Y",
                     	"DELAY" => "Y",
                     	"ALLOW_MULTI_SELECT" => "Y"

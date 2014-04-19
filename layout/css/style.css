@@ -122,14 +122,21 @@ a:hover, a span:hover, .shadow:hover {
 #toolbar .nav li a.active {
   font-weight: 700;
 }
-#toolbar .nav li span.small {
+#toolbar .nav li span.small, #toolbar .nav li a.small {
   color: #5f5e4d;
+  text-shadow: none;
   font-family: "Helvetica Neue", Arial;
   font-style: italic;
   font-size: 12px;
   line-height: 14px;
   padding: 0;
   margin: 0;
+}
+#toolbar .nav li a.small:hover {
+  color: red;
+}
+#toolbar .nav li a.small.active {
+  font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
   #toolbar .nav {

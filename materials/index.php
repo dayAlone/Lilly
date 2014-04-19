@@ -1,9 +1,11 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Мужской разговор :: Lilly Answers That Matter");
-
+	CModule::IncludeModule("iblock");
+	$rsSect = CIBlockSection::GetList(array(),array('CODE'=>$_REQUEST['ELEMENT_CODE']));
+	$arSect = $rsSect->Fetch();
 ?><?
- if(!$_REQUEST['ELEMENT_CODE']) {
+ if(!$_REQUEST['ELEMENT_CODE']||$arSect['ID']>0) {
  $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"promo",
@@ -35,8 +37,8 @@
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "man",
+		"PARENT_SECTION" => $arSect['ID'],
+		"PARENT_SECTION_CODE" => ($arSect['ID']>0?"":"man"),
 		"INCLUDE_SUBSECTIONS" => "N",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",

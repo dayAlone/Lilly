@@ -80,16 +80,20 @@ a, a span, .shadow
 					background: transparent
 				&.active
 					font-weight: 700
-			span.small
+			span.small, a.small
 				color: #5F5E4D
-				
-					
+				text-shadow: none	
 				font-family: 'Helvetica Neue', Arial
 				font-style: italic
 				font-size: 12px
 				line-height: 14px
 				padding: 0
 				margin: 0
+			a.small
+				&:hover
+					color: #FF0000
+				&.active
+					font-weight: bold
 					
 	@media screen and (max-width: 1200px)
 		.nav
