@@ -936,7 +936,7 @@ input:focus, a:focus
 				width: 80px
 				height: 80px
 				+b('play.png', no-repeat)
-			.container 
+			.container
 				.text
 					h1
 						font-size: 45px
@@ -1010,20 +1010,23 @@ input:focus, a:focus
 			left: 0
 			+b('article-fade2.png', bottom center repeat-y)
 			background-size: cover
-		.container .text
-			z-index: 3
-			position: absolute
-			color: white
-			bottom: 15px
-			h1
-				font-weight: 700
-				font-size: 53px
-				padding-bottom: 0
-				margin-bottom: 0
-				line-height: 53px
-			h3
-				font-weight: 400
-				font-size: 25px
+		.container
+			position: relative
+			height: 420px
+			.text
+				z-index: 3
+				position: absolute
+				color: white
+				bottom: 15px
+				h1
+					font-weight: 700
+					font-size: 53px
+					padding-bottom: 0
+					margin-bottom: 0
+					line-height: 53px
+				h3
+					font-weight: 400
+					font-size: 25px
 	> .content
 		+full-width
 		margin: 30px 0

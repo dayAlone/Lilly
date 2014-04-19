@@ -1298,6 +1298,10 @@ input:focus, a:focus {
   background:  url(../images/article-fade2.png) bottom center repeat-y;
   background-size: cover;
 }
+#article > .top-title .container {
+  position: relative;
+  height: 420px;
+}
 #article > .top-title .container .text {
   z-index: 3;
   position: absolute;
