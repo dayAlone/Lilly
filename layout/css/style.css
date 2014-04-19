@@ -241,7 +241,8 @@ a:hover, a span:hover, .shadow:hover {
 .block .content .title {
   line-height: 40px;
   font-size: 47px;
-  line-height: 60px;
+  line-height: 45px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 .block:hover {
