@@ -1,5 +1,4 @@
 <?
-$sMenuTemplate = "/Верхнее меню";
 $aMenuLinks = Array(
 	Array(
 		"О препаратах", 

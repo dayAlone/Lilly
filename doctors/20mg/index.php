@@ -1,10 +1,9 @@
-<? 
-      global $doctors;
-      $doctors = true;
-      global $toolbar;
-      $toolbar='white';
-      require($_SERVER['DOCUMENT_ROOT'].'/include/header.php');
-?>
+<?
+   global $nav;
+   $nav='white';
+   require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+   $APPLICATION->SetTitle("Lilly Answers That Matter");
+?> 
    <div id="product" class="product-2" style="background-image:url(/layout/images/p-2-bg.jpg)">
       <div class="container">
          <div class="row">
@@ -14,15 +13,12 @@
                   <a href="/doctors/" class="back"><span class="r">&lsaquo;</span> вернуться</a>
                </p>
                <a href="#" class="manual">Инструкция</a>
-               <a href="/doctors/product-1.html" class="next"><span class="r">&lsaquo;</span> Сиалис® 5 мг.</a>
+               <a href="/doctors/5mg/" class="next"><span class="r">&lsaquo;</span> Сиалис® 5 мг.</a>
             </div>
          </div>
          
       </div>
    </div>
-  
-   <? require($_SERVER['DOCUMENT_ROOT'].'/include/footer.php') ?>
-
-  </body>
-  
-</html>
+<?
+   require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>
