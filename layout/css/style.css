@@ -1304,6 +1304,7 @@ input:focus, a:focus {
 }
 #article > .top-title .container .text {
   z-index: 3;
+  width: 100%;
   position: absolute;
   color: white;
   bottom: 15px;
