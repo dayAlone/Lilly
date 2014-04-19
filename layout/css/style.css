@@ -696,7 +696,7 @@ input:focus, a:focus {
 #products-promo #product-1, #products-promo #product-2 {
   float: right;
   margin-right: -100px;
-  width: 500px;
+  width: 600px;
   margin-top: 150px;
 }
 #products-promo #product-1 img, #products-promo #product-2 img {

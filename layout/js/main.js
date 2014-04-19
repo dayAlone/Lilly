@@ -114,6 +114,9 @@
     $(document).ajaxStart(function() {
       return Pace.restart();
     });
+    $(document).ajaxStop(function() {
+      return Pace.stop();
+    });
     init();
     return $('body').imagesLoaded(function() {
       return $.lockfixed("#article .fix", {
