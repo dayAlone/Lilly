@@ -1,9 +1,11 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Мужской разговор :: Lilly Answers That Matter");
-	CModule::IncludeModule("iblock");
-	$rsSect = CIBlockSection::GetList(array(),array('CODE'=>$_REQUEST['ELEMENT_CODE']));
-	$arSect = $rsSect->Fetch();
+	if($_REQUEST['ELEMENT_CODE']){
+		CModule::IncludeModule("iblock");
+		$rsSect = CIBlockSection::GetList(array(),array('CODE'=>$_REQUEST['ELEMENT_CODE']));
+		$arSect = $rsSect->Fetch();
+	}
 ?><?
  if(!$_REQUEST['ELEMENT_CODE']||$arSect['ID']>0) {
  $APPLICATION->IncludeComponent(
@@ -12,7 +14,7 @@
 	Array(
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "1",
-		"NEWS_COUNT" => "999",
+		"NEWS_COUNT" => "100",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
 		"SORT_BY2" => "",
@@ -37,8 +39,8 @@
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => $arSect['ID'],
-		"PARENT_SECTION_CODE" => ($arSect['ID']>0?"":"man"),
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "man",
 		"INCLUDE_SUBSECTIONS" => "N",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
