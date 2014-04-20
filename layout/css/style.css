@@ -327,6 +327,7 @@ a:hover, a span:hover, .shadow:hover {
   margin-top: -40px;
   cursor: pointer;
   background:  url(../images/play2.png) center center no-repeat;
+  cursor: pointer;
 }
 #main-block .shadow {
   pointer-events: none !important;
@@ -840,6 +841,14 @@ input:focus, a:focus {
   display: inline-block;
 }
 #products-promo #video .icon {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   z-index: 22;
   cursor: pointer;
   width: 78px;
@@ -1279,11 +1288,20 @@ input:focus, a:focus {
   position: absolute;
   left: 50%;
   top: 50%;
+  cursor: pointer;
   z-index: 30;
   margin-top: -80px;
   margin-left: -40px;
   width: 80px;
   height: 80px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   background:  url(../images/play.png) no-repeat;
 }
 #article.video > .top-title .video-block {
@@ -1292,15 +1310,34 @@ input:focus, a:focus {
   position: relative;
   z-index: 29;
   text-align: center;
-  margin-top: 20px;
 }
 #article.video > .top-title .video-block iframe {
   opacity: 0;
   display: inline-block;
+  width: 745px !important;
+  height: 420px !important;
   float: none !important;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 #article.video > .top-title .container {
   z-index: 20;
+}
+#article.video > .top-title .container .text {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 #article.video > .top-title .container .text h1 {
   font-size: 45px;

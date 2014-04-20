@@ -121,6 +121,15 @@
     $('#map').click(function() {
       return $('#locator').modal();
     });
+    $('#article.video .icon-play').click(function() {
+      var iframe, player;
+
+      $('#article.video iframe').css('opacity', 1);
+      $('#article.video .icon-play, .top-title .text').css('opacity', 0);
+      iframe = $('#article.video iframe')[0];
+      player = $f(iframe);
+      return player.api('play');
+    });
     return $('#video .icon').click(function() {
       var iframe, player;
 

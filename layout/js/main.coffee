@@ -91,6 +91,14 @@ init = ()->
 
     $('#map').click ()->
         $('#locator').modal()
+
+    $('#article.video .icon-play').click ()->
+        $('#article.video iframe').css('opacity',1)
+        $('#article.video .icon-play, .top-title .text').css('opacity',0)
+        iframe = $('#article.video iframe')[0]
+        player = $f(iframe)
+        player.api('play')
+
     $('#video .icon'). click ()->
         $('#video iframe').css('opacity',1)
         $('#video .icon').css('opacity',0)

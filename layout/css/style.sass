@@ -244,7 +244,8 @@ a, a span, .shadow
 			margin-left: -40px
 			margin-top: -40px
 			cursor: pointer
-			+b('play2.png') 
+			+b('play2.png')
+			cursor: pointer
 	.shadow
 		pointer-events: none !important
 		position: absolute
@@ -645,6 +646,8 @@ input:focus, a:focus
 		max-width: 100%
 		height: 506px
 		.icon
+			+transition-property(all)
+			+transition-duration(.3s)
 			z-index: 22
 			cursor: pointer
 			width: 78px
@@ -996,24 +999,32 @@ input:focus, a:focus
 				position: absolute
 				left: 50%
 				top: 50%
+				cursor: pointer
 				z-index: 30
 				margin-top: -80px
 				margin-left: -40px
 				width: 80px
 				height: 80px
+				+transition-property(all)
+				+transition-duration(.3s)
 				+b('play.png', no-repeat)
 			.video-block
 				+full-width
 				z-index: 29
 				text-align: center
-				margin-top: 20px
 				iframe
 					opacity: 0
 					display: inline-block
+					width: 745px !important
+					height: 420px !important
 					float: none !important
+					+transition-property(all)
+					+transition-duration(.3s)
 			.container
 				z-index: 20
 				.text
+					+transition-property(all)
+					+transition-duration(.3s)
 					h1
 						font-size: 45px
 						line-height: 45px
