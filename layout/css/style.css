@@ -1436,7 +1436,7 @@ input:focus, a:focus {
 }
 #article > .content p {
   width: 90%;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 30px;
 }
 #article > .content p img {

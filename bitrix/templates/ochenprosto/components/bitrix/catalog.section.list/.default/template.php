@@ -8,9 +8,13 @@
 			if($i!=0) echo "</div>";
 			echo '<div class="row">';
 		}
+		$arSelect = Array("ID", "CODE");
+		$arFilter = Array("IBLOCK_ID"=>$item['IBLOCK_ID'], "SECTION_ID"=>$item['ID']);
+		$res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter, false, Array("nPageSize"=>1), $arSelect);
+		$ob = $res->GetFetch();
 		?>
 			<div class="col-md-4">
-               <a href="/doctors/video-item.html" class="item">
+               <a href="/doctors/video/<?=$ob['CODE']?>/" class="item">
                   <span class="image" style="background-image:url(<?=$item['PICTURE']['SRC']?>)">
                      <span class="icon"></span>
                   </span>
