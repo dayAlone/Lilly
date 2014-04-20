@@ -11,7 +11,7 @@
 		$arSelect = Array("ID", "CODE");
 		$arFilter = Array("IBLOCK_ID"=>$item['IBLOCK_ID'], "SECTION_ID"=>$item['ID']);
 		$res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter, false, Array("nPageSize"=>1), $arSelect);
-		$ob = $res->GetFetch();
+		$ob = $res->Fetch();
 		?>
 			<div class="col-md-4">
                <a href="/doctors/video/<?=$ob['CODE']?>/" class="item">
