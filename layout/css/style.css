@@ -329,6 +329,7 @@ a:hover, a span:hover, .shadow:hover {
   background:  url(../images/play2.png) center center no-repeat;
 }
 #main-block .shadow {
+  pointer-events: none !important;
   position: absolute;
   width: 100%;
 }
