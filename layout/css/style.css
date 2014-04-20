@@ -1008,6 +1008,55 @@ input:focus, a:focus {
   background:  url(../images/play2.png) center center no-repeat;
 }
 
+#text p {
+  font-size: 15px;
+  line-height: 17px;
+  margin-bottom: 22px;
+}
+#text h1 {
+  color: #e50000;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+#text h2 {
+  font-size: 19px;
+  margin-top: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+#text img {
+  max-width: 100%;
+}
+#text ul {
+  padding: 0;
+  margin-bottom: 25px;
+}
+#text ul li {
+  font-size: 15px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style: none;
+  position: relative;
+}
+#text ul li:before {
+  content: "\22c5";
+  font-size: 23px;
+  position: absolute;
+  top: -6px;
+  left: 3px;
+}
+#text a {
+  text-decoration: underline;
+  color: red;
+}
+
+.frame {
+  overflow: hidden;
+}
+
 #research {
   float: left;
   width: 100%;
@@ -1087,6 +1136,10 @@ input:focus, a:focus {
   margin: 0 10px;
   text-decoration: underline;
   font-size: 16px;
+}
+#footer a.active {
+  font-weight: 600;
+  text-decoration: none;
 }
 #footer span.copyright {
   color: #a3a3a3;
