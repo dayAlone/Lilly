@@ -1,6 +1,6 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-	$APPLICATION->SetTitle("Исследования :: Lilly Answers That Matter");
+	$APPLICATION->SetTitle("Клинические исследования :: Lilly Answers That Matter");
 ?> 
 	<div id="research">
       <div class="container">
