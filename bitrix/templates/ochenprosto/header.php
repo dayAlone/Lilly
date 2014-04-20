@@ -1,5 +1,6 @@
 <?
   global $nav;
+  global $doctors;
   if(strstr($_SERVER['REQUEST_URI'],'doctors'))
     $doctors = true;
 ?>

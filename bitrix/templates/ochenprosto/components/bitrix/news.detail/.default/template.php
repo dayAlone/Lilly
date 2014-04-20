@@ -1,4 +1,5 @@
 <?
+  global $doctors;
   $db_old_groups = CIBlockElement::GetElementGroups($arResult['ID'], false);
   $categorys = array();
   while($ar_group = $db_old_groups->Fetch()) {
@@ -69,6 +70,7 @@
            <div class="col-md-<?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'12':'8')?>">
              <?=$arResult['~DETAIL_TEXT']?>
            </div>
+          <? if(!$doctors) :?>
            <div class="col-md-4 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
             <div class="fix">
               <h4>Другие публикации</h4>
@@ -124,6 +126,7 @@
                 ?>
               </div>
            </div>
+          <? endif;?>
          </div>
        </div>
      </div>
