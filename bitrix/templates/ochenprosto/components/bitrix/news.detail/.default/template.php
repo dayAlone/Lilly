@@ -5,7 +5,7 @@
    $categorys[] = $ar_group["ID"];
   }
 	$rs = CIBlockElement::GetList(
-									array("sort" => "asc"), 
+									array("sort" => "desc"), 
 									array("ACTIVE"=>"Y", "IBLOCK_ID"=>$arResult["IBLOCK_ID"], "SECTION_ID"=>$arResult['IBLOCK_SECTION_ID']), 
 									false, 
 									array("nElementID"=>$arResult["ID"], "nPageSize"=>1), 
@@ -62,6 +62,9 @@
      
      <div class="content">
        <div class="container">
+         <div id="chapter-list">
+           
+         </div>
          <div class="row">
            <div class="col-md-<?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'12':'8')?>">
              <?=$arResult['~DETAIL_TEXT']?>
