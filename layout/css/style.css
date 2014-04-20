@@ -1279,11 +1279,28 @@ input:focus, a:focus {
   position: absolute;
   left: 50%;
   top: 50%;
+  z-index: 30;
   margin-top: -80px;
   margin-left: -40px;
   width: 80px;
   height: 80px;
   background:  url(../images/play.png) no-repeat;
+}
+#article.video > .top-title .video-block {
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 29;
+  text-align: center;
+  margin-top: 20px;
+}
+#article.video > .top-title .video-block iframe {
+  opacity: 0;
+  display: inline-block;
+  float: none !important;
+}
+#article.video > .top-title .container {
+  z-index: 20;
 }
 #article.video > .top-title .container .text h1 {
   font-size: 45px;

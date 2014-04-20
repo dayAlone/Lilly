@@ -996,12 +996,23 @@ input:focus, a:focus
 				position: absolute
 				left: 50%
 				top: 50%
+				z-index: 30
 				margin-top: -80px
 				margin-left: -40px
 				width: 80px
 				height: 80px
 				+b('play.png', no-repeat)
+			.video-block
+				+full-width
+				z-index: 29
+				text-align: center
+				margin-top: 20px
+				iframe
+					opacity: 0
+					display: inline-block
+					float: none !important
 			.container
+				z-index: 20
 				.text
 					h1
 						font-size: 45px

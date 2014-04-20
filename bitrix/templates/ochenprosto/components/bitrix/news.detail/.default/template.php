@@ -26,8 +26,10 @@
 
 	$path = str_replace('index.php', '', $_SERVER['REAL_FILE_PATH']);
 ?> 
-	<div id="article">
+	<div id="article" class="<?=($arResult['PROPERTIES']['VIDEO']['VALUE']?"video":"")?>">
      <div class="top-title" style="background-image: url(<?=$arResult['DETAIL_PICTURE']['SRC']?>)">
+      
+
        <div class="shadow-1"></div>
        <div class="shadow-2"></div>
        <? if($prev): ?>
@@ -44,6 +46,12 @@
 	   <? endif;?>
 
        <div class="container">
+        <?if($arResult['PROPERTIES']['VIDEO']['VALUE']):?>
+          <div class="icon-play"></div>
+          <div class="video-block">
+            <?=$arResult['PROPERTIES']['VIDEO']['~VALUE']?>
+          </div>
+        <? endif; ?>
         <div class="text">
          <h1><?=$arResult['NAME']?></h1>
          <?=($arResult['PREVIEW_TEXT']?'<h3>'.$arResult['PREVIEW_TEXT'].'</h3>':'')?>
@@ -93,7 +101,7 @@
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                     "ADD_SECTIONS_CHAIN" => "Y",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                    "PARENT_SECTION" => $categorys[count($categorys)-1],
+                    "PARENT_SECTION" => ($arResult['IBLOCK_ID']==1?$categorys[count($categorys)-1]:""),
                     "PARENT_SECTION_CODE" => "man",
                     "INCLUDE_SUBSECTIONS" => "N",
                     "DISPLAY_DATE" => "Y",
