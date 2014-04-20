@@ -1029,6 +1029,7 @@ input:focus, a:focus {
 }
 #text img {
   max-width: 100%;
+  min-width: 100%;
 }
 #text ul {
   padding: 0;
