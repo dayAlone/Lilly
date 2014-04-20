@@ -7,7 +7,7 @@
   }
 	$rs = CIBlockElement::GetList(
 									array("sort" => "desc"), 
-									array("ACTIVE"=>"Y", "IBLOCK_ID"=>$arResult["IBLOCK_ID"], "SECTION_ID"=>$arResult['IBLOCK_SECTION_ID']), 
+									array("ACTIVE"=>"Y", "IBLOCK_ID"=>$arResult["IBLOCK_ID"], "SECTION_ID"=>$categorys[count($categorys)-1]), 
 									false, 
 									array("nElementID"=>$arResult["ID"], "nPageSize"=>1), 
 									array("ID","CODE","NAME")
