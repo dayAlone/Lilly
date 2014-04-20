@@ -46,14 +46,14 @@
        </div>
        
      </div>
+     
      <div class="content">
        <div class="container">
          <div class="row">
-           <div class="col-md-8">
+           <div class="col-md-<?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'12':'8')?>">
              <?=$arResult['~DETAIL_TEXT']?>
-
            </div>
-           <div class="col-md-4 side" >
+           <div class="col-md-4 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
             <div class="fix">
               <h4>Другие публикации</h4>
                <?

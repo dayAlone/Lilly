@@ -342,6 +342,12 @@ a:hover, a span:hover, .shadow:hover {
   background-size: cover;
 }
 
+.full-width {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
 #map {
   float: left;
   width: 100%;

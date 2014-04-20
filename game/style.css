@@ -1,0 +1,527 @@
+@CHARSET "UTF-8";
+
+/**
+ * http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Fonts
+ */
+@font-face {
+  font-family: 'PFDinTextCondProMediumRegular';
+  src: url('fonts/ufonts.com_pfdintextcondpro-medium-webfont.eot');
+  src: url('fonts/ufonts.com_pfdintextcondpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/ufonts.com_pfdintextcondpro-medium-webfont.woff') format('woff'),
+       url('fonts/ufonts.com_pfdintextcondpro-medium-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinTextCondProRegular';
+  src: url('fonts/ufonts.com_pfdintextcondpro-regular-webfont.eot');
+  src: url('fonts/ufonts.com_pfdintextcondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/ufonts.com_pfdintextcondpro-regular-webfont.woff') format('woff'),
+       url('fonts/ufonts.com_pfdintextcondpro-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinTextCondProXBlackRegular';
+  src: url('fonts/ufonts.com_pfdintextcondpro-xblack-webfont.eot');
+  src: url('fonts/ufonts.com_pfdintextcondpro-xblack-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/ufonts.com_pfdintextcondpro-xblack-webfont.woff') format('woff'),
+       url('fonts/ufonts.com_pfdintextcondpro-xblack-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/**
+ * Common styles
+ */
+html,
+body,
+#outer {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  background-color: #fff;
+  color: #000;
+  height: 100%;
+  min-height: 571px;
+  font: 14px/22px Arial, Helvetica, sans;
+  color: #caf0d8;
+}
+
+p, ul, ol, dl {
+  margin-bottom: 12px;
+}
+
+.button {
+  background: transparent url(images/buttons.png) no-repeat 0 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  //text-indent: 0;
+  display: inline-block;
+  //display: inline;
+  cursor: pointer;
+  zoom: 1;
+  //font-size: 0;
+  //line-height: 0;
+}
+.button-start,
+.button-start-again {
+  width: 233px;
+  height: 63px;
+}
+.button-start {background-position: 0 0;}
+.button-start:hover {background-position: 0 -63px;}
+.button-start:active {background-position: 0 -126px;}
+.button-start-again {
+    background: url("images/button_play_again.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 70px;
+    width: 265px;
+}
+.button-start-again:hover {}
+.button-start-again:active {}
+
+.button-ok,
+.button-yes,
+.button-no {
+  width: 73px;
+  height: 37px;
+}
+.button-ok {background-position: 0 -263px;}
+/*.button-ok:hover {background-position: -73px -263px;}
+.button-ok:active {background-position: -146px -263px;}*/
+
+.button-yes {background-position: 0 -189px;}
+/*.button-yes:hover {background-position: -73px -189px;}
+.button-yes:active {background-position: -146px -189px;}*/
+/*.button-yes.success, .button-yes.success:hover, .button-yes.success:active {background-position: -219px -189px;}
+.button-yes.error, .button-yes.error:hover, .button-yes.error:active {background-position: -292px -189px;}*/
+
+.button-no {background-position: 0 -226px;}
+/*.button-no:hover {background-position: -73px -226px;}
+.button-no:active {background-position: -146px -226px;}
+.button-no.success, .button-no.success:hover, .button-no.success:active {background-position: -219px -226px;}
+.button-no.error, .button-no.error:hover, .button-no.error:active {background-position: -292px -226px;}*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* IE6 */
+* html .clearfix {
+  height: 1%;
+}
+/* IE7 */
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+
+/**
+ * Styles
+ */
+#outer {
+  width: 943px;
+  min-width: 943px;
+  min-height: 571px;
+  margin: auto;
+  overflow-y: hidden;
+}
+#wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 943px;
+  height: 571px;
+  margin-top: -286px;
+  background: url(images/bg.jpg) no-repeat center center;
+  position: relative;
+  overflow: hidden;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+#preloader {
+  width: 85px;
+  height: 16px;
+  background: url(images/preloader.png) no-repeat 0 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -42px;
+  margin-top: -30px;
+}
+
+/* sidebar */
+#sidebar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 206px;
+  height: 551px;
+}
+
+/* steps */
+#step-widjet {
+  font-size: 12px;
+  margin-left: -1px;
+}
+#step-widjet span {
+  width: 23px;
+  height: 23px;
+  line-height: 21px;
+  display: block;
+  float: left;
+  clear: none;
+  background: url(images/steps-sprite.png) no-repeat 0 0;
+  text-align: center;
+  color: #130202;
+  //margin-left: -1px;
+}
+#step-widjet span.active {
+  color: #fff;
+  font-weight: bold;
+  background-position: -23px 0;
+}
+
+/* question */
+#question {
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+#question h2 {
+  font-family: "Arial Narrow", Helvetica, "HelveticaNeue";
+  font-size: 19px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 7px 0;
+}
+#question-content {
+  height: 125px;
+  overflow-y: auto;
+}
+
+/* answer */
+#answer,
+#help {
+  width: 244px;
+  height: 315px;
+  position: absolute;
+  left: -27px;
+  bottom: 44px;
+  background: url(images/answer-bg.png) no-repeat center center;
+  font-family: PFDinTextCondProMediumRegular;
+  display: none;
+}
+#answer-wrapper,
+#help-wrapper {
+  padding: 18px 42px 40px 45px;
+  position: relative;
+}
+#answer-title,
+#help-title {
+  color: #71c887;
+  font-size: 21px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+#answer-content,
+#help-content {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  overflow-y: auto;
+  height: 234px;
+}
+#answer .buttonbar,
+#help .buttonbar {
+  position: absolute;
+  left: 37px;
+  top: 244px;
+}
+
+#help #error-content,
+#help #help-content {
+  display: none;
+}
+#help.state-error #error-content,
+#help.state-help #help-content {
+  display: block;
+}
+
+#buttonbar-message {
+  position: absolute;
+  left: 44px;
+  top: 295px;
+  font-size: 12px;
+  font-family: "Arial Narrow", Helvetica, "HelveticaNeue";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#buttonbar-message span {
+  display: none;
+}
+#buttonbar-message span.success {
+  color: #C90000;
+}
+#buttonbar-message span.error {
+  color: #c90000;
+}
+
+#answer.yes-success #buttonbar-message span.success,
+#answer.no-success #buttonbar-message span.success,
+#answer.yes-error #buttonbar-message span.error,
+#answer.no-error #buttonbar-message span.error {
+  display: inline;
+}
+
+#answer.disabled .button-yes:hover,
+#answer.disabled .button-yes:active {background-position: 0 -189px;}
+
+#answer.disabled .button-no:hover,
+#answer.disabled .button-no:active {background-position: 0 -226px;}
+
+#answer.disabled.yes-success .button-yes,
+#answer.disabled.yes-success .button-yes:hover,
+#answer.disabled.yes-success .button-yes:active {background-position: -219px -189px;}
+
+#answer.disabled.yes-error .button-yes,
+#answer.disabled.yes-error .button-yes:hover,
+#answer.disabled.yes-error .button-yes:active {background-position: -292px -189px;}
+
+#answer.disabled.no-success .button-no,
+#answer.disabled.no-success .button-no:hover,
+#answer.disabled.no-success .button-no:active {background-position: -219px -226px;}
+
+#answer.disabled.no-error .button-no,
+#answer.disabled.no-error .button-no:hover,
+#answer.disabled.no-error .button-no:active {background-position: -292px -226px;}
+
+/* questions */
+#questions-widjet {
+  position: absolute;
+  left: 16px;
+  bottom: 13px;
+}
+#questions-widjet span {
+  width: 23px;
+  height: 28px;
+  display: block;
+  float: left;
+  clear: none;
+  background: url(images/questions-sprite.png) no-repeat 0 0;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+#questions-widjet span.success {background-position: -23px 0;}
+#questions-widjet span.error {background-position: -46px 0;}
+
+
+
+/**
+ * Start & Finish
+ */
+#step-container-start .header,
+#step-container-finish .header {
+  font: 62px/1.2em PFDinTextCondProXBlackRegular, "Arial Narrow", Arial, Helvetica, serif;
+  font-family: "PFDinTextCondProXBlackRegular", "Arial Narrow", Arial, Helvetica, serif;
+  font-weight: bold;
+  color: #D00000;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  text-align: center;
+  letter-spacing: -0.04em;
+  margin-top: 30px;
+  height: 100px;
+}
+#step-container-start .header span ,
+#step-container-finish .header span {
+  display: block;
+  color: #000000;
+  font: 20px/1.2em PFDinTextCondProRegular;
+  letter-spacing: 0;
+}
+#step-container-finish .header {
+  /*font-size: 73px;*/
+}
+
+#step-container-start .content,
+#step-container-finish .content {
+  width: 551px;
+  height: 357px;
+  background: url(images/step-start.png) no-repeat center center;
+  margin: auto;
+  padding-left: 300px;
+  padding-right: 20px;
+}
+#step-container-game {
+  background: url(images/bg-inner.jpg) no-repeat center center;
+}
+#step-container-start .content .first {
+  color: #fff;
+  font-size: 28px;
+  line-height: 1em;
+  padding-top: 25px;
+}
+#step-container-finish .content {
+    background-image: url("images/step-finish.png");
+    padding-left: 277px;
+    width: 580px;
+}
+#step-container-finish .content {
+  font-size: 17px;
+  line-height: 28px;
+}
+#step-container-finish .content h2  {
+    color: #000000;
+    font-size: 48px;
+    padding: 38px 0 10px;
+}
+#step-container-finish .content p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 17px;
+    padding-top: 18px;
+}
+
+#step-container-start .buttonbar,
+#step-container-finish .buttonbar {
+  text-align: center;
+  padding-top: 7px;
+}
+
+/**
+ * Step
+ */
+.step-container {
+  width: 943px;
+  height: 571px;
+  background: url(images/bg-inner.jpg) no-repeat center center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.step, 
+#scene {
+    background-color: #FFFFFF;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 416px;
+    left: 22px;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    width: 685px;
+}
+#scene {
+	background: #000;
+}
+.step-question {
+  display: none;
+}
+.step-point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  //width: 25px;
+  //height: 25px;
+  //background: url(images/point.png) no-repeat center center;
+  cursor: pointer;
+  //padding: 15px;
+  width: 26px;
+  height: 26px;
+  background: url(images/point2.png) no-repeat 0 -26px;
+  padding:0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.step-point.active {
+  background-image: url(images/point-active.png);
+}
+
+#step-1 {background-image: url(images/step-1.jpg);}
+#step-2 {background-image: url(images/step-2.jpg);}
+#step-3 {background-image: url(images/step-3.jpg);}
+#step-4 {background-image: url(images/step-4.jpg);}
+#step-5 {background-image: url(images/step-5.jpg);}
+#step-6 {background-image: url(images/step-6.jpg);}
+#step-7 {background-image: url(images/step-7.jpg);}
+#step-8 {background-image: url(images/step-8.jpg);}
+#step-9 {background-image: url(images/step-9.jpg);}
+
+
+
+
+
+.button-start{text-indent:0 !important;
+width:209px !important;
+display: block;
+height: 70px;
+background: #ce0000;
+font: normal bold 24px/70px DINWebPro-Black, Tahoma, sans-serif;
+text-align: center;
+text-decoration: none;
+color: #fff;
+text-transform: uppercase;
+margin: 0 auto;}
+#step-container-start .buttonbar{padding-top:0;}

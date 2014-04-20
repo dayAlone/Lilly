@@ -57,7 +57,7 @@
 } else {
 $APPLICATION->IncludeComponent("bitrix:news.detail", ".default", array(
 	"IBLOCK_TYPE" => "content",
-	"IBLOCK_ID" => "",
+	"IBLOCK_ID" => "1",
 	"ELEMENT_ID" => "",
 	"ELEMENT_CODE" => $_REQUEST["ELEMENT_CODE"],
 	"CHECK_DATES" => "Y",
@@ -66,8 +66,11 @@ $APPLICATION->IncludeComponent("bitrix:news.detail", ".default", array(
 		1 => "",
 	),
 	"PROPERTY_CODE" => array(
-		0 => "",
-		1 => "",
+		0 => "HTML_TITLE",
+		1 => "AUTHOR",
+		2 => "VIDEO",
+		3 => "FULLWIDTH",
+		4 => "",
 	),
 	"IBLOCK_URL" => "",
 	"AJAX_MODE" => "N",
@@ -92,11 +95,6 @@ $APPLICATION->IncludeComponent("bitrix:news.detail", ".default", array(
 	"DISPLAY_BOTTOM_PAGER" => "Y",
 	"PAGER_TITLE" => "Страница",
 	"PAGER_SHOW_ALL" => "Y",
-	"DISPLAY_DATE" => "Y",
-	"DISPLAY_NAME" => "Y",
-	"DISPLAY_PICTURE" => "Y",
-	"DISPLAY_PREVIEW_TEXT" => "Y",
-	"USE_SHARE" => "N",
 	"AJAX_OPTION_ADDITIONAL" => ""
 	),
 	false
