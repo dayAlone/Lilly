@@ -172,6 +172,7 @@ a:hover, a span:hover, .shadow:hover {
   float: left;
   width: 100%;
   position: relative;
+  background-color: #071c23;
   background-position: center center;
   background-size: cover;
   margin-bottom: 14px;
@@ -274,6 +275,28 @@ a:hover, a span:hover, .shadow:hover {
 }
 .block:hover .shadow {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+#chapter-list {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+#chapter-list .block {
+  height: 150px;
+  width: 18.88%;
+  margin: 0 0.7%;
+}
+#chapter-list .block .title {
+  font-size: 16px;
+  line-height: 17px;
+}
+#chapter-list .block:first-of-type {
+  margin-left: 0;
+}
+#chapter-list .block:last-of-type {
+  margin-right: 0;
 }
 
 .flag {
