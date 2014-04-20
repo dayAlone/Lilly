@@ -344,7 +344,7 @@ a:hover, a span:hover, .shadow:hover {
 
 .full-width {
   float: left;
-  width: 100%;
+  width: 100% !important;
   position: relative;
 }
 
