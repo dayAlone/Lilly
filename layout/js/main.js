@@ -125,6 +125,7 @@
       var iframe, player;
 
       $('#video iframe').css('opacity', 1);
+      $('#video .icon').css('opacity', 0);
       iframe = $('#video iframe')[0];
       player = $f(iframe);
       return player.api('play');

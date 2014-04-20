@@ -93,6 +93,7 @@ init = ()->
         $('#locator').modal()
     $('#video .icon'). click ()->
         $('#video iframe').css('opacity',1)
+        $('#video .icon').css('opacity',0)
         iframe = $('#video iframe')[0]
         player = $f(iframe)
         player.api('play')
