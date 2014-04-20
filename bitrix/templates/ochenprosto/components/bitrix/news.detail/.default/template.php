@@ -1,4 +1,9 @@
 <?
+  $db_old_groups = CIBlockElement::GetElementGroups($arResult['ID'], false);
+  $categorys = array();
+  while($ar_group = $db_old_groups->Fetch()) {
+   $categorys[] = $ar_group["ID"];
+  }
 	$rs = CIBlockElement::GetList(
 									array("sort" => "asc"), 
 									array("ACTIVE"=>"Y", "IBLOCK_ID"=>$arResult["IBLOCK_ID"], "SECTION_ID"=>$arResult['IBLOCK_SECTION_ID']), 
@@ -88,7 +93,7 @@
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                     "ADD_SECTIONS_CHAIN" => "Y",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                    "PARENT_SECTION" => $arResult['IBLOCK_SECTION_ID'],
+                    "PARENT_SECTION" => $categorys[count($categorys)-1],
                     "PARENT_SECTION_CODE" => "man",
                     "INCLUDE_SUBSECTIONS" => "N",
                     "DISPLAY_DATE" => "Y",
