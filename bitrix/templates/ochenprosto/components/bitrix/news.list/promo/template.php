@@ -22,17 +22,17 @@
 
             <div class="row">
                <div class="col-md-6">
-                  <?if($item[1]) item($item[2],'small');?>                  
+                  <?if($item[3]) item($item[3],'small');?>                  
                </div>
                <div class="col-md-6">
-                  <?if($item[2]) item($item[3],'small');?>
+                  <?if($item[4]) item($item[4],'small');?>
                </div>
             </div>
          </div>
          
          <div class="col-md-5">
-            <?if($item[3]) item($item[1],'medium');?>
-            <?if($item[4]) item($item[4],'medium');?>
+            <?if($item[1]) item($item[1],'medium');?>
+            <?if($item[2]) item($item[2],'medium');?>
          </div>
       </div>
          
