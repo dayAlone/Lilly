@@ -118,8 +118,16 @@
         return $(this).parents('.text').height();
       }
     });
-    return $('#map').click(function() {
+    $('#map').click(function() {
       return $('#locator').modal();
+    });
+    return $('#video .icon').click(function() {
+      var iframe, player;
+
+      $('#video iframe').css('opacity', 1);
+      iframe = $('#video iframe')[0];
+      player = $f(iframe);
+      return player.api('play');
     });
   };
 

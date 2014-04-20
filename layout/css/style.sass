@@ -630,16 +630,26 @@ input:focus, a:focus
 		background-size: contain
 		margin-left: -9%
 		width: 100%
+		text-align: center
+		line-height: 506px
+		iframe
+			vertical-align: middle
+			opacity: 0
+			+transition-property(all)
+			+transition-duration(.3s)
+			display: inline-block
 		max-width: 100%
 		height: 506px
 		.icon
+			z-index: 22
+			cursor: pointer
 			width: 78px
 			height: 80px
 			position: absolute
 			left: 40%
 			margin-left: -39px
 			top: 47%
-			margin-top: -40px
+			margin-top: -30px
 			+b('play.png')
 			z-index: 3
 	

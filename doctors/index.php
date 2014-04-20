@@ -10,6 +10,7 @@
          <div class="row">
             <div class="col-md-8">
                <div id="video">
+                  <iframe src="//player.vimeo.com/video/75777386?title=0&amp;byline=0&amp;portrait=0&api=1&player_id=vimeoplayer" width="549" height="413" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   <div class="icon"></div>
                </div>
             </div>

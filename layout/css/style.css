@@ -814,17 +814,34 @@ input:focus, a:focus {
   background-size: contain;
   margin-left: -9%;
   width: 100%;
+  text-align: center;
+  line-height: 506px;
   max-width: 100%;
   height: 506px;
 }
+#products-promo #video iframe {
+  vertical-align: middle;
+  opacity: 0;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  display: inline-block;
+}
 #products-promo #video .icon {
+  z-index: 22;
+  cursor: pointer;
   width: 78px;
   height: 80px;
   position: absolute;
   left: 40%;
   margin-left: -39px;
   top: 47%;
-  margin-top: -40px;
+  margin-top: -30px;
   background:  url(../images/play.png) center center no-repeat;
   z-index: 3;
 }
