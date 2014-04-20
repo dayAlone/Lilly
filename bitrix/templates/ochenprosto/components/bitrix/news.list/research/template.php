@@ -10,7 +10,7 @@
          $divider = true;
       }
       ?>
-         <a class="item" href="<?=$item['PROPERTIES']['FILE']['VALUE']?>">
+         <a class="item no-ajax" target="_blank" href="<?=$item['PROPERTIES']['FILE']['VALUE']?>">
             <div class="image" style="background-image:url(<?=$item['PREVIEW_PICTURE']['SRC']?>)">
                <div class="icon"></div>
             </div>
