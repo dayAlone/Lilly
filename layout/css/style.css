@@ -1289,7 +1289,7 @@ input:focus, a:focus {
   left: 50%;
   top: 50%;
   cursor: pointer;
-  z-index: 30;
+  z-index: 35;
   margin-top: -80px;
   margin-left: -40px;
   width: 80px;
@@ -1499,5 +1499,6 @@ input:focus, a:focus {
 }
 #article > .content p.highlight {
   font-weight: 500;
-  font-size: 23px;
+  font-size: 19px;
+  line-height: 21px;
 }
