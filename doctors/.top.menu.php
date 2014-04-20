@@ -2,8 +2,8 @@
 $aMenuLinks = Array(
 	Array(
 		"О препаратах", 
-		"/doctors/", 
-		Array(), 
+		"/doctors/index.php", 
+		Array("/doctors/20mg/","/doctors/5mg/"), 
 		Array(), 
 		"" 
 	),
