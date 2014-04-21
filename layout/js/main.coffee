@@ -42,6 +42,17 @@ anim = (el, ef, z=()->return true)->
             z()
 state = 0
 
+load = (url)->
+    $.ajax 
+        url : url
+        success :
+            (data)-> 
+                $('body .frame').html($(data).filter('.frame').html())
+                anim($('body .frame'),'fadeIn')
+                if (window.history.pushState)
+                    window.history.pushState(state++, $(data).filter('title').text(), url);
+                document.title = $(data).filter('title').text()
+                init()
 
 
 init = ()->
@@ -55,19 +66,13 @@ init = ()->
             e.preventDefault()
             
             $('body .frame').removeClass('animated fadeIn')
-            $.ajax 
-                url : url
-                success :
-                    (data)-> 
-                        $('body .frame').html($(data).filter('.frame').html())
-                        anim($('body .frame'),'fadeIn')
-                        if (window.history.pushState)
-                            window.history.pushState(state++, $(data).filter('title').text(), url);
-                        document.title = $(data).filter('title').text()
-                        init()
+            load(url)
+
     $('#doctor').on 'shown.bs.modal', ()->
         if($.cookie('checkbox')=='true')
             $('#doctor .checkbox').addClass('checked')
+
+     
 
     $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')
@@ -91,13 +96,10 @@ init = ()->
             $('#enter.short').removeClass('short')
         out: ()->
 
-    #History.Adapter.bind window, "statechange", ()->
-    $(window).bind 'statechange',(a,b)->
-        console.log a,b
+    
 
     $('#enter').hoverIntent
         over: ()->
-            console.log($.cookie('checkbox'));
             if($.cookie('checkbox')=='true')
                 $('#enter .checkbox').addClass('checked')
 
@@ -131,7 +133,9 @@ init = ()->
 
 $(document).ready ()->
 
-    
+    History.Adapter.bind window,'statechange',()->
+        State = History.getState();
+        load(State.url)
 
     $(document).ajaxStart ()-> Pace.restart()
     $(document).ajaxStop ()-> Pace.stop()
