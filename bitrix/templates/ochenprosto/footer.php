@@ -89,7 +89,7 @@
          <p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВХОД», чтобы начать работу.</p>
          <a href="/doctors/" class="no-ajax enter">Вход</a>
          <div class="checkbox"></div>
-         <a href="#" data-dismiss="modal" aria-hidden="true" class="back"> <span>&lsaquo;</span> ВЕРНУТЬСЯ</a>
+         <a <?=($doctors? 'href="/"':'href="#" data-dismiss="modal" aria-hidden="true"')?> class="back"> <span>&lsaquo;</span> ВЕРНУТЬСЯ</a>
          <span class="agree">подтверждаю</span>
        </div>    
      </div>
