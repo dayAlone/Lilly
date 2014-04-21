@@ -68,6 +68,10 @@ init = ()->
     
     $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')
+        if($(this).hasClass('checked'))
+            $.cookie('checkbox', 'true', { expires: .5 });
+        else
+            $.removeCookie('checkbox');
         $(this).parent().find('a').toggleClass('no-ajax')
     
     $('#enter a, a.enter').off('click').on 'click', ()->
@@ -90,6 +94,9 @@ init = ()->
 
     $('#enter').hoverIntent
         over: ()->
+            console.log($.cookie('checkbox'));
+            if($.cookie('checkbox')=='true')
+                $('#enter .checkbox').addClass('checked')
 
         out: ()->
             $('#enter').addClass('short')

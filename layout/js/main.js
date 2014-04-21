@@ -93,6 +93,13 @@
     });
     $('.checkbox').off('click').on('click', function() {
       $(this).toggleClass('checked');
+      if ($(this).hasClass('checked')) {
+        $.cookie('checkbox', 'true', {
+          expires: .5
+        });
+      } else {
+        $.removeCookie('checkbox');
+      }
       return $(this).parent().find('a').toggleClass('no-ajax');
     });
     $('#enter a, a.enter').off('click').on('click', function() {
@@ -116,7 +123,12 @@
       return console.log(a, b);
     });
     $('#enter').hoverIntent({
-      over: function() {},
+      over: function() {
+        console.log($.cookie('checkbox'));
+        if ($.cookie('checkbox') === 'true') {
+          return $('#enter .checkbox').addClass('checked');
+        }
+      },
       out: function() {
         return $('#enter').addClass('short');
       }
