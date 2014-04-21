@@ -1,4 +1,5 @@
 <?
+   global $doctors;
    function item($item, $size) {
       echo '<a href="'.($doctors?"/doctors/video/":'/materials/').$item['CODE'].'/" class="block '.$size.'" style="background-image:url('.$item['PREVIEW_PICTURE']['SRC'].')">
                   <div class="shadow"></div>
