@@ -54,7 +54,7 @@
           </div>
         <? endif; ?>
         <div class="text">
-         <h1><?=$arResult['NAME']?></h1>
+         <h1><?=str_replace('®','<sup>®</sup>', $arResult['NAME'])?></h1>
          <?=($arResult['PREVIEW_TEXT']?'<h3>'.$arResult['PREVIEW_TEXT'].'</h3>':'')?>
         </div>  
        </div>
