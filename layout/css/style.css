@@ -1378,8 +1378,8 @@ input:focus, a:focus {
   position: relative;
   height: 420px;
   background-color: black;
-  background-size: cover;
-  background-position: top center;
+  background-size: 75% auto;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 #article > .top-title .arrow {
