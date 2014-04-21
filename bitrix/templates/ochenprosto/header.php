@@ -55,7 +55,7 @@
         </div>
      </div>
      <?if(!$doctors):?>
-       <a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>
+       <? /*<a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>*/?>
        <a href="#" class="flag test"><img src="/layout/images/flag-test.png"></a>
      
       <div id="enter" class="short">

@@ -40,9 +40,15 @@ anim = (el, ef, z=()->return true)->
         .one 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', ()->
             el.removeClass(ef + ' animated');
             z()
+state = 0
+
 
 
 init = ()->
+    $(window).on "navigate", (event, data)->
+        alert()
+  
+
     $('a').on 'click', (e)->
         url = $(this).attr('href')
         if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && $(this).parents('#panel,.bx-component-opener').length==0)
@@ -55,8 +61,8 @@ init = ()->
                     (data)-> 
                         $('body .frame').html($(data).filter('.frame').html())
                         anim($('body .frame'),'fadeIn')
-                        if (window.history.replaceState)
-                            window.history.replaceState({}, $(data).filter('title').text(), url);
+                        if (window.history.pushState)
+                            window.history.pushState(state++, $(data).filter('title').text(), url);
                         document.title = $(data).filter('title').text()
                         init()
     
@@ -78,6 +84,9 @@ init = ()->
             $('#enter.short').removeClass('short')
         out: ()->
 
+    #History.Adapter.bind window, "statechange", ()->
+    $(window).bind 'statechange',(a,b)->
+        console.log a,b
 
     $('#enter').hoverIntent
         over: ()->
@@ -107,6 +116,8 @@ init = ()->
         player.api('play')
 
 $(document).ready ()->
+
+    
 
     $(document).ajaxStart ()-> Pace.restart()
     $(document).ajaxStop ()-> Pace.stop()
