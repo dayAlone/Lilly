@@ -1,7 +1,7 @@
 <?
    global $doctors;
    function item($item, $size) {
-      echo '<a href="'.($doctors?"/doctors/video/":'/materials/').$item['CODE'].'/" class="block '.$size.'" style="background-image:url('.$item['PREVIEW_PICTURE']['SRC'].')">
+      echo '<a href="'.(strstr($_SERVER['REQUEST_URI'],'doctors')?"/doctors/video/":'/materials/').$item['CODE'].'/" class="block '.$size.'" style="background-image:url('.$item['PREVIEW_PICTURE']['SRC'].')">
                   <div class="shadow"></div>
                   <div class="content">
                      '.($item['PROPERTIES']['HTML_TITLE']['VALUE']?'<div class="text">'.$item['PROPERTIES']['HTML_TITLE']['~VALUE'].'</div>':
