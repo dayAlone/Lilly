@@ -17,15 +17,15 @@
             <div class="col-md-4">
                <div id="product-1">
 
-                  <p>Сиалис® — одно решение двух проблем: восстанавливает эректильную функцию и улучшает мочеиспускание у мужчин с доброкачественной гиперплазией предстательной железы.<br><a href="/upload/cialis5.pdf">ИНСТРУКЦИЯ</a></p>
+                  <p>Сиалис® — одно решение двух проблем: восстанавливает эректильную функцию и улучшает мочеиспускание у мужчин с доброкачественной гиперплазией предстательной железы.<br><a href="/upload/cialis5.pdf" class="no-ajax">ИНСТРУКЦИЯ</a></p>
                   
-                  <a href="/doctors/5mg/" class="no-ajax"><img src="/layout/images/p-1.png" alt=""></a>
+                  <a href="/doctors/5mg/"><img src="/layout/images/p-1.png" alt=""></a>
                </div>
                <div id="product-2">
 
-                  <p>Сиалис® позволяет мужчине улучшить качество сексуального здоровья и вернуться к жизни без эректильной дисфункции.<br><a href="/upload/cialis20.pdf">ИНСТРУКЦИЯ</a></p>
+                  <p>Сиалис® позволяет мужчине улучшить качество сексуального здоровья и вернуться к жизни без эректильной дисфункции.<br><a class="no-ajax" href="/upload/cialis20.pdf">ИНСТРУКЦИЯ</a></p>
                   
-                  <a href="/doctors/20mg/" class="no-ajax"><img src="/layout/images/p-2.png" alt=""></a>
+                  <a href="/doctors/20mg/"><img src="/layout/images/p-2.png" alt=""></a>
                </div>
             </div>
          </div>
