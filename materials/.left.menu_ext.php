@@ -1,15 +1,16 @@
 <?
 $aMenuLinks = Array(
+	
 	Array(
-		"Об аденоме предстательной железы", 
-		"/materials/adenoma/", 
+		"Об эректильной дисфункции", 
+		"/materials/dysfunction/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Об эректильной дисфункции", 
-		"/materials/dysfunction/", 
+		"Об аденоме предстательной железы", 
+		"/materials/adenoma/", 
 		Array(), 
 		Array(), 
 		"" 
