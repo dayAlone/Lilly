@@ -19,7 +19,7 @@
                      <span class="icon"></span>
                   </span>
                   <span class="title">
-                     <?=$item['NAME']?>
+                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
                   </span>
                   <span class="description">
                      <?=$item['DESCRIPTION']?>

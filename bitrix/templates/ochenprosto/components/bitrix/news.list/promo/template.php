@@ -6,7 +6,7 @@
                   <div class="content">
                      '.($item['PROPERTIES']['HTML_TITLE']['VALUE']?'<div class="text">'.$item['PROPERTIES']['HTML_TITLE']['~VALUE'].'</div>':
                      ($item['PROPERTIES']['AUTHOR']['VALUE']?'<div class="name">'.$item['PROPERTIES']['AUTHOR']['VALUE'].'</div>':'').'
-                     <div class="title">'.$item['NAME'].'</div>
+                     <div class="title">'.str_replace('®','<sup>®</sup>', $item['NAME']).'</div>
                      '.($item['~PREVIEW_TEXT']?'<div class="text">'.$item['~PREVIEW_TEXT'].'</div>':'')).'
                   </div>
                </a>';

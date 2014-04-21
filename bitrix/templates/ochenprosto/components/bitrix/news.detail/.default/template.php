@@ -36,13 +36,13 @@
        <? if($prev): ?>
 	       <a href="<?=$path?><?=$prev['CODE']?>/" class="arrow left">
 	         <div class="icon"></div>
-	         <div class="text"><?=$prev['NAME']?></div>
+	         <div class="text"><?=str_replace('®','<sup>®</sup>', $prev['NAME'])?></div>
 	       </a>
 	   <? endif;?>
 	   <? if($next): ?>
 	       <a href="<?=$path?><?=$next['CODE']?>/" class="arrow right">
 	         <div class="icon"></div>
-	         <div class="text"><?=$next['NAME']?></div>
+	         <div class="text"><?=str_replace('®','<sup>®</sup>', $next['NAME'])?></div>
 	       </a>
 	   <? endif;?>
 
