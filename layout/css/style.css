@@ -1186,8 +1186,8 @@ input:focus, a:focus {
   padding: 20px 0;
   font-weight: 300;
 }
-#footer p.doctors {
-  opacity: 0.5;
+#footer p {
+  color: #333333;
   font-size: 15px;
   margin-bottom: 25px;
 }
