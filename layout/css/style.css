@@ -489,6 +489,7 @@ input:focus, a:focus {
 }
 #enter .block {
   position: absolute;
+  background: transparent;
   width: 245px;
   right: 0;
   top: 20px;
