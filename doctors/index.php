@@ -6,7 +6,7 @@
 ?> 
 	<div id="products-promo">
       <div class="container">
-         <h1>Сиалис® — эффективное и безопасное решение</h1>
+         <h1>Сиалис<sup>®</sup> — эффективное и безопасное решение</h1>
          <div class="row">
             <div class="col-md-8">
                <div id="video">
