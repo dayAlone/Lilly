@@ -108,6 +108,10 @@ init = ()->
         player = $f(iframe)
         player.api('play')
 
+    if($('#article .container .col-md-8').height()<$('#article .container .col-md-4.side').height())
+        while($('#article .container .col-md-8').height()<$('#article .container .col-md-4.side').height())
+            $('#article .container .col-md-4.side .block:last').remove()
+
     $('#video .icon'). click ()->
         $('#video iframe').css('opacity',1)
         $('#video .icon').css('opacity',0)

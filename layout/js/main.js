@@ -138,6 +138,11 @@
       player = $f(iframe);
       return player.api('play');
     });
+    if ($('#article .container .col-md-8').height() < $('#article .container .col-md-4.side').height()) {
+      while ($('#article .container .col-md-8').height() < $('#article .container .col-md-4.side').height()) {
+        $('#article .container .col-md-4.side .block:last').remove();
+      }
+    }
     return $('#video .icon').click(function() {
       var iframe, player;
 
