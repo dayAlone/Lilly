@@ -65,7 +65,10 @@ init = ()->
                             window.history.pushState(state++, $(data).filter('title').text(), url);
                         document.title = $(data).filter('title').text()
                         init()
-    
+    $('#doctor').on 'shown.bs.modal', ()->
+        if($.cookie('checkbox')=='true')
+            $('#doctor .checkbox').addClass('checked')
+
     $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')
         if($(this).hasClass('checked'))

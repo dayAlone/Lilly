@@ -3,6 +3,7 @@
   global $doctors;
   if(strstr($_SERVER['REQUEST_URI'],'doctors'))
     $doctors = true;
+  
 ?>
 <!DOCTYPE html>
 <html lang="ru">

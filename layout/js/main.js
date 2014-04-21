@@ -91,6 +91,11 @@
         });
       }
     });
+    $('#doctor').on('shown.bs.modal', function() {
+      if ($.cookie('checkbox') === 'true') {
+        return $('#doctor .checkbox').addClass('checked');
+      }
+    });
     $('.checkbox').off('click').on('click', function() {
       $(this).toggleClass('checked');
       if ($(this).hasClass('checked')) {
