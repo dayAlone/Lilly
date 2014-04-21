@@ -133,6 +133,9 @@ init = ()->
 
 $(document).ready ()->
 
+    if (window.history.pushState)
+        window.history.pushState(state++, '', document.location.href);
+
     History.Adapter.bind window,'statechange',()->
         State = History.getState();
         load(State.url)

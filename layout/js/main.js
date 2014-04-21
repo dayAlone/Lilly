@@ -172,6 +172,9 @@
   };
 
   $(document).ready(function() {
+    if (window.history.pushState) {
+      window.history.pushState(state++, '', document.location.href);
+    }
     History.Adapter.bind(window, 'statechange', function() {
       var State;
 
