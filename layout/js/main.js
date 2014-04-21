@@ -160,7 +160,7 @@
         $('#article .container .col-md-4.side .block:last').remove();
       }
     }
-    return $('#video .icon').click(function() {
+    $('#video .icon').click(function() {
       var iframe, player;
 
       $('#video iframe').css('opacity', 1);
@@ -169,6 +169,7 @@
       player = $f(iframe);
       return player.api('play');
     });
+    return $('[data-toggle=tooltip]').tooltip();
   };
 
   $(document).ready(function() {

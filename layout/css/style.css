@@ -1172,6 +1172,11 @@ input:focus, a:focus {
   height: 95px;
   background:  url(../images/corner.jpg) top center;
 }
+#research .item .corner a, #research .item .buttons a {
+  float: left;
+  width: 27px;
+  height: 20px;
+}
 #research .item .buttons {
   bottom: 0;
   top: auto;

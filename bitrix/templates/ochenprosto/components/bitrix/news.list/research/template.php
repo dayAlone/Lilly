@@ -10,7 +10,7 @@
          $divider = true;
       }
       ?>
-         <a class="item no-ajax" target="_blank" href="<?=CFile::GetPath($item['PROPERTIES']['FILE']['VALUE'])?>">
+         <div class="item no-ajax" target="_blank">
             <div class="image" style="background-image:url(<?=$item['PREVIEW_PICTURE']['SRC']?>)">
                <div class="icon"></div>
             </div>
@@ -19,8 +19,11 @@
                <div class="description"><?=$item['PROPERTIES']['DESCRIPTION']['VALUE']?></div>
             </div>
             <div class="corner"></div>
-            <div class="buttons"></div>
-         </a>
+            <div class="buttons">
+            	<a href="<?=CFile::GetPath($item['PROPERTIES']['FILE']['VALUE'])?>" target="_blank" data-toggle="tooltip" class="no-ajax" data-placement="top" title="Просмотреть"></a>
+            	<a target="_blank" href="/download.php?f=<?=$item['PROPERTIES']['FILE']['VALUE']?>" data-toggle="tooltip" class="no-ajax" data-placement="top" title="Скачать"></a>
+            </div>
+         </div>
       <?
       $i++;
    }

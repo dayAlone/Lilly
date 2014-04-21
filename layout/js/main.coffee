@@ -131,6 +131,8 @@ init = ()->
         player = $f(iframe)
         player.api('play')
 
+    $('[data-toggle=tooltip]').tooltip()
+
 $(document).ready ()->
 
     if (window.history.pushState)
