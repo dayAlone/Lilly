@@ -87,7 +87,7 @@
                   "AJAX_OPTION_JUMP" => "N",
                   "AJAX_OPTION_STYLE" => "N",
                   "AJAX_OPTION_HISTORY" => "N",
-                  "CACHE_TYPE" => "A",
+                  "CACHE_TYPE" => "N",
                   "CACHE_TIME" => "36000000",
                   "CACHE_FILTER" => "N",
                   "CACHE_GROUPS" => "Y",
