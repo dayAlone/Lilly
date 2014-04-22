@@ -150,23 +150,30 @@ a:hover, a span:hover, .shadow:hover {
   }
 }
 
-#test-woman h2 {
+#pretest_block {
+  margin-bottom: 30px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+#test-woman h2, #test-man h2 {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 20px;
 }
-#test-woman p {
+#test-woman p, #test-man p {
   font-size: 15px;
   float: left;
   width: 100%;
   position: relative;
 }
-#test-woman p.small {
+#test-woman p.small, #test-man p.small {
   font-size: 14px;
   margin-top: 25px;
   color: #929292;
 }
-#test-woman h3 {
+#test-woman h3, #test-man h3 {
   float: left;
   width: 100%;
   position: relative;
@@ -176,7 +183,7 @@ a:hover, a span:hover, .shadow:hover {
   margin-top: 20px;
   margin-bottom: 15px;
 }
-#test-woman .counter {
+#test-woman .counter, #test-man .counter {
   float: left;
   font-size: 50px;
   line-height: 46px;
@@ -187,67 +194,98 @@ a:hover, a span:hover, .shadow:hover {
   margin-right: 10px;
   margin-left: 5px;
 }
-#test-woman #result_block h3 {
+#test-woman #result_block h3, #test-man #result_block h3 {
   color: black;
   background: transparent;
   font-size: 37px;
   font-weight: 600;
 }
-#test-woman #balls {
+#test-woman #balls, #test-man #balls {
   font-size: 25px;
   font-weight: 500;
 }
-#test-woman #pow {
+#test-woman #pow, #test-man #pow {
   font-size: 14px;
 }
-#test-woman #pow {
+#test-woman #pow, #test-woman #results_p, #test-man #pow, #test-man #results_p {
   float: left;
   width: 60%;
 }
-#test-woman .button_block {
-  margin-top: -20px;
+#test-woman .button_block, #test-man .button_block {
+  margin-top: -100px;
   float: right;
   width: 40%;
   height: 200px;
   background:  url(../images/ok.png) center center no-repeat;
   background-size: contain;
 }
-#test-woman #q_3 h3, #test-woman #q_5 h3 {
+#test-woman #q_3 h3, #test-woman #q_5 h3, #test-man #q_3 h3, #test-man #q_5 h3 {
   background:  url(../images/test_sm.png) top right no-repeat;
 }
-#test-woman #q_3 .counter, #test-woman #q_5 .counter {
+#test-woman #q_3 .counter, #test-woman #q_5 .counter, #test-man #q_3 .counter, #test-man #q_5 .counter {
   height: 46px;
 }
-#test-woman #q_7 h3 {
+#test-woman #q_7 h3, #test-man #q_7 h3 {
   background:  url(../images/test_bg.png) top right no-repeat;
 }
-#test-woman #q_7 .counter {
+#test-woman #q_7 .counter, #test-man #q_7 .counter {
   height: 82px;
 }
-#test-woman h3 {
+#test-woman h3, #test-man h3 {
   text-transform: uppercase;
 }
-#test-woman ol {
+#test-woman ol, #test-man ol {
   padding-left: 0;
 }
-#test-woman ol li {
+#test-woman ol li, #test-man ol li {
   list-style: none;
   float: left;
   width: 100%;
   position: relative;
 }
-#test-woman .questions {
+#test-woman .questions, #test-man .questions {
   float: left;
   width: 100%;
   position: relative;
 }
-#test-woman input[type="radio"] {
+#test-woman input[type="radio"], #test-man input[type="radio"] {
   float: left;
 }
-#test-woman label {
+#test-woman label, #test-man label {
   font-weight: 400;
   float: right;
   width: 95%;
+}
+
+#test-man #result_block {
+  margin-top: 40px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#test-man #q_3 h3, #test-man #q_00 h3 {
+  background:  url(../images/text_md.png) top right no-repeat;
+}
+#test-man #q_3 .counter, #test-man #q_00 .counter {
+  height: 78px;
+}
+#test-man #q_00 h3 {
+  padding-left: 30px;
+}
+#test-man #q_4 h3, #test-man #q_0 h3 {
+  background:  url(../images/test_sm.png) top right no-repeat;
+}
+#test-man #q_4 .counter, #test-man #q_0 .counter {
+  height: 46px;
+}
+#test-man #q_1 h3 {
+  font-size: 22px;
+}
+#test-man #q_2 h3, #test-man #q_1 h3 {
+  background:  url(../images/test_bg.png) top right no-repeat;
+}
+#test-man #q_2 .counter, #test-man #q_1 .counter {
+  height: 82px;
 }
 
 #promo {

@@ -20,15 +20,15 @@
 				$('input[type="radio"]').parent().addClass('selected');
 
 				$.ajax({
-					url:'/test/test.php',
+					url:'/test_man/test.php',
 					type: 'post', 
 					data: 'answers='+answers.toString()+'&balls='+balls,
 					success:function(response){
 						if(response.error == false){
-							_gaq.push(['_trackEvent', 'Test', 'Result_load', response.balls, 1, true]);
+							//_gaq.push(['_trackEvent', 'Test', 'Result_load', response.balls, 1, true]);
 							$('#result_block').html(response.response);
 						} else {
-							$('#test_block').html('<h3>Ошибка</h3>');
+							$('#result_block').html('<h3>Ошибка</h3>');
 							alert(response.message);
 						}
 					}
