@@ -26,9 +26,9 @@
 					success:function(response){
 						if(response.error == false){
 							//_gaq.push(['_trackEvent', 'Test', 'Result_load', response.balls, 1, true]);
-							$('#test_block').append(response.response);
+							$('#result_block').append(response.response);
 						} else {
-							$('#test_block').html('<h3>Ошибка</h3>');
+							$('#result_block').html('<h3>Ошибка</h3>');
 							alert(response.message);
 						}
 					}

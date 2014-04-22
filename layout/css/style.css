@@ -171,7 +171,7 @@ a:hover, a span:hover, .shadow:hover {
   width: 100%;
   position: relative;
   background:  url(../images/text_md.png) top right no-repeat;
-  padding: 13px 0;
+  padding: 12px 0;
   color: white;
   margin-top: 20px;
   margin-bottom: 15px;
@@ -179,28 +179,43 @@ a:hover, a span:hover, .shadow:hover {
 #test-woman .counter {
   float: left;
   font-size: 50px;
-  line-height: 78px;
+  line-height: 46px;
+  height: 78px;
   font-weight: 700;
   width: 50px;
   text-align: center;
   margin-right: 10px;
   margin-left: 5px;
 }
+#test-woman #result_block h3 {
+  color: black;
+  background: transparent;
+  font-size: 37px;
+  font-weight: 600;
+}
+#test-woman #balls {
+  font-size: 25px;
+  font-weight: 500;
+}
+#test-woman #pow {
+  font-size: 14px;
+}
 #test-woman #pow {
   float: left;
   width: 60%;
 }
 #test-woman .button_block {
+  margin-top: -20px;
   float: right;
   width: 40%;
   height: 200px;
   background:  url(../images/ok.png) center center no-repeat;
   background-size: contain;
 }
-#test-woman #q_3 h3 {
-  background:  url(../images/text_sm.png) top right no-repeat;
+#test-woman #q_3 h3, #test-woman #q_5 h3 {
+  background:  url(../images/test_sm.png) top right no-repeat;
 }
-#test-woman #q_3 .counter {
+#test-woman #q_3 .counter, #test-woman #q_5 .counter {
   height: 46px;
 }
 #test-woman #q_7 h3 {
