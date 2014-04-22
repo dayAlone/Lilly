@@ -50,7 +50,7 @@ load = (url)->
                 $('body .frame').html($(data).filter('.frame').html())
                 anim($('body .frame'),'fadeIn')
                 if (window.history.pushState)
-                    window.history.pushState(state++, $(data).filter('title').text(), url);
+                    window.history.pushState({'url':url}, $(data).filter('title').text(), url);
                 document.title = $(data).filter('title').text()
                 init()
 
@@ -134,9 +134,6 @@ init = ()->
     $('[data-toggle=tooltip]').tooltip()
 
 $(document).ready ()->
-
-    if (window.history.pushState)
-        window.history.pushState(state++, '', document.location.href);
 
     History.Adapter.bind window,'statechange',()->
         State = History.getState();

@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'PFDinTextCondProBold';
+    src: url('../../fonts/pfdintextcondpro-bold-webfont.eot');
+    src: url('../../fonts/pfdintextcondpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/pfdintextcondpro-bold-webfont.woff') format('woff'),
+         url('../../fonts/pfdintextcondpro-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PFDinTextCondProMediumRegular';
+    src: url('../../fonts/pfdintextcondpro-medium-webfont.eot');
+    src: url('../../fonts/pfdintextcondpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/pfdintextcondpro-medium-webfont.woff') format('woff'),
+         url('../../fonts/pfdintextcondpro-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PFDinTextCondProRegular';
+    src: url('../../fonts/pfdintextcondpro-regular-webfont.eot');
+    src: url('../../fonts/pfdintextcondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/pfdintextcondpro-regular-webfont.woff') format('woff'),
+         url('../../fonts/pfdintextcondpro-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#wrapper {
+	background: url(../img/bg.2.jpg) repeat 0 0;
+	padding: 30px 33px;
+	width: 590px;
+}
+	#wrapper h1 {
+		color: #333333;
+		font: 44px/24px PFDinTextCondProMediumRegular,"Myriad Pro",sans-serif;
+		text-transform:uppercase;
+	}
+	#wrapper h2 {
+		color: #CE0000;
+		font: normal 36px/42px PFDinTextCondProMediumRegular, "Myriad Pro", sans-serif;
+		text-transform:uppercase;
+		margin: 15px 0 0;
+	}
+	#wrapper p {
+		color: #333333;
+		font: normal 14px/20px Arial,sans-serif;
+		margin: 25px 0 0;
+		width: 510px;
+	}
+	.button_block {
+		position: relative;
+		margin: 60px 0 80px;
+		width: 590px;
+	}
+	.button_block#results {
+		margin: 20px 0;
+	}
+		.button_block a {
+			background: url(../img/test-buttons.png) no-repeat 0 0;
+			color: #fff;
+			display: block;
+			text-decoration: none;
+			height: 68px;
+			width: 280px;
+		}
+		
+		.button_block a:hover {
+			background: url(../img/test-buttons.png) no-repeat 0 -67px;
+		}
+		
+		.button_block a:active {
+			background: url(../img/test-buttons.png) no-repeat 0 -135px;
+		}
+		
+		.button_block #printButton {
+			background: url(../img/print_button.png) no-repeat 0 0;
+			height: 59px;
+			width: 282px;
+		}
+		.button_block .ok_icon {
+			background: url(../img/ok.png) no-repeat 0 0;
+			display: block;
+			position: absolute;
+				top: -105px;
+				right: 0;
+			height: 273px;
+			width: 177px;
+		}
+		#results .ok_icon {
+			top: -290px;
+		}
+
+		#testRepeat {
+			background: url(../img/repeat.png) no-repeat 0 0;
+			display: block;
+			text-decoration: none;
+			height: 45px;
+			width: 195px;
+		}
+	#wrapper .small {
+		font: normal 13px/15px Arial,sans-serif;
+	}
+	
+	
+	#test_block {
+		border-bottom: 3px solid #CE0000;
+		border-top: 3px solid #CE0000;
+		margin: 35px 0 0;
+		padding: 50px 0 20px;
+		width: 590px;
+	}
+	#test_block.results {
+		padding: 20px 0 0;
+	}
+		#test_block h3,
+		#result_block h3 {
+			color: #CE0000;
+			font: normal 20px/24px PFDinTextCondProMediumRegular, "Arial Narrow", Arial, sans-serif;
+			text-transform: uppercase;
+			height: auto !important;
+			overflow: hidden;
+			width: 590px;
+		}
+		#pretest_block h3 {
+			width: 500px;
+		}
+			#test_block h3 .counter {
+				display: block;
+				float: left;
+				font: normal 14px/18px PFDinTextCondProMediumRegular, "Arial Narrow", Arial, sans-serif;
+				text-align: center;
+				text-transform: uppercase;
+				vertical-align: top;
+				margin: 2px 10px 0 0;
+				width: 56px;
+			}
+				.counter .digit {
+					color: #fff;
+					background: none repeat scroll 0 0 #CE0000;
+					font: normal 48px/56px PFDinTextCondProBold, "Arial Narrow", Arial, sans-serif;
+					display: block;
+					height: 56px;
+					width: 56px;
+				}
+		#test_block .questions {
+			/*display: none;*/
+			margin: 0 0 20px;
+			overflow: hidden;
+			/*height: 250px;*/
+		}
+/*		#test_block .activeQ {
+			display: block;
+		}*/
+		#test_block ol, 
+		#pretest_block ol 
+			#test_block a, 
+			#pretest_block a {
+				color: #433f43;
+				font: normal 16px/22px Arial,sans-serif;
+				text-decoration: none;
+				margin: 10px 0;
+			}
+			#test_block ol li, 
+			#pretest_block ol li {
+				padding: 0 0 10px;
+				list-style: none;
+			}
+			#test_block ol input, 
+			#pretest_block ol input {
+				display: block;
+				float: left;
+				line-height: 52px;
+				margin: 2px 5px 2px 1px;
+				padding: 0;
+				position: relative;
+				top: 0;
+				vertical-align: inherit;
+			}
+			#test_block ol label, 
+			#pretest_block ol label {
+				display: block;
+				line-height: 18px;
+				margin: 0 0 0 18px;
+			}
+			#test_block a:hover,
+			#pretest_block a:hover {
+				color: #D85582;
+				text-decoration: underline;
+			}
+
+		#test_block #balls,
+		#test_block #pow {
+			margin: 0 0 20px;
+		}
+		#results_p {
+			margin: 12px 0 0 !important;
+			line-height:20px !important;
+		}
+		
+	#wrapper #pretest_small {
+		border-bottom: 3px solid #d85582;
+		font: normal 13px/15px Arial,sans-serif;
+		padding: 30px 0;
+		margin: 0 0 30px;
+	}
+	#wrapper #pow {
+		font: normal 14px/20px Arial,sans-serif;
+		width: 410px;
+	}
+		
+#footer {
+	background: #fff;
+	padding: 20px 33px;
+}
+	#footer p {
+		color: #292929;
+		font: normal 12px/14px Arial,sans-serif;
+		margin: 0 0 10px;
+		width: 590px;
+	}
+	
+	
+#print {
+	margin: 0 auto;
+	padding: 15px 105px;
+	width: 780px;
+}
+	#print #logo {
+		background:url(../img/logo.jpg) no-repeat 0 0;
+		display: block;
+		height: 81px;
+		text-decoration: none;
+		width: 180px;
+	}
+	#print h1 {
+		background: url(../img/print_ok.jpg) no-repeat 75% 0;
+		color: #333;
+		font: normal 28px/40px PFDinTextCondProMediumRegular, "Myriad Pro", sans-serif;
+		text-transform:uppercase;
+		margin: 15px 0;
+		height: 80px;
+	}
+	#print .note {
+		color: #999;
+		font: normal 16px/18px Arial,sans-serif;
+		width: 600px;
+	}
+	#print h2 {
+		color: #333;
+		font: normal 24px/24px PFDinTextCondProMediumRegular, "Myriad Pro", sans-serif;
+		margin: 15px 0;
+	}
+	#print ol {
+		margin: 0 0 15px 20px;
+		padding: 0;
+	}
+		#print ol>li {
+			color: #000;
+			font: normal 16px/18px Arial,sans-serif;
+			margin: 0 0 15px;
+		}
+		#print ul {
+			list-style:none;
+			margin: 0;
+			padding: 0;
+		}
+		#print li li {
+			color: #999;
+			display: block;
+			font: normal 12px/20px Arial,sans-serif;
+			margin: 10px 0 0;
+			padding: 0 0 0 25px;
+		}
+		#print li .active {
+			color: #333;
+			background: url(../img/icon_print.jpg) no-repeat 0 0;
+		}
+	#print .big {
+		color: #333;
+		font: normal 20px/26px Arial,sans-serif;
+		margin: 5px 0 0;
+	}
+		#print .big strong {
+			font: bold 20px/26px Arial,sans-serif;
+		}
+	#print .foottext {
+		color: #666;
+		font: normal 16px/20px Arial,sans-serif;
+		margin: 15px 0 0;
+		width: 700px;
+	}
+		.foottext strong {
+			color: #333;
+			font-weight: normal;
+		}

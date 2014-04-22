@@ -110,4 +110,9 @@
         $('#doctor').modal();
       </script>
 <?}?>
+<script>
+  $(function(){
+    $( "#test-woman" ).load( "/test_women/test.html" );
+  })
+</script>
 </body>

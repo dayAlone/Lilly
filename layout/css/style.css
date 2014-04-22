@@ -150,6 +150,91 @@ a:hover, a span:hover, .shadow:hover {
   }
 }
 
+#test-woman h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#test-woman p {
+  font-size: 15px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#test-woman p.small {
+  font-size: 14px;
+  margin-top: 25px;
+  color: #929292;
+}
+#test-woman h3 {
+  float: left;
+  width: 100%;
+  position: relative;
+  background:  url(../images/text_md.png) top right no-repeat;
+  padding: 13px 0;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+#test-woman .counter {
+  float: left;
+  font-size: 50px;
+  line-height: 78px;
+  font-weight: 700;
+  width: 50px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+#test-woman #pow {
+  float: left;
+  width: 60%;
+}
+#test-woman .button_block {
+  float: right;
+  width: 40%;
+  height: 200px;
+  background:  url(../images/ok.png) center center no-repeat;
+  background-size: contain;
+}
+#test-woman #q_3 h3 {
+  background:  url(../images/text_sm.png) top right no-repeat;
+}
+#test-woman #q_3 .counter {
+  height: 46px;
+}
+#test-woman #q_7 h3 {
+  background:  url(../images/test_bg.png) top right no-repeat;
+}
+#test-woman #q_7 .counter {
+  height: 82px;
+}
+#test-woman h3 {
+  text-transform: uppercase;
+}
+#test-woman ol {
+  padding-left: 0;
+}
+#test-woman ol li {
+  list-style: none;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#test-woman .questions {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#test-woman input[type="radio"] {
+  float: left;
+}
+#test-woman label {
+  font-weight: 400;
+  float: right;
+  width: 95%;
+}
+
 #promo {
   float: left;
   width: 100%;
