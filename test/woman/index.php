@@ -108,7 +108,7 @@ $APPLICATION->SetTitle("Как понять, что у вашего мужчин
 </div>
 <h3 class="red">В большинстве случаев эректильная дисфункция поддаётся лечению!</h3>
     <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
-<script type = "text/javascript" src="/test_women/js/script.js"></script>
+        <script type = "text/javascript" src="/test_women/js/script.js"></script>
 		</div>
 	</div>
 </div>
