@@ -16,6 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/layout/js/jquery.js"></script>
     <?php $APPLICATION->ShowHead();?>
   </head>
 
