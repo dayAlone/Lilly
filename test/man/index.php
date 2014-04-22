@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
+$APPLICATION->SetTitle("Cубъективная оценка эд :: Lilly Answers That Matter");
 ?> 
 <div class="container">
 	<div class="col-md-6 col-md-offset-3">
@@ -95,6 +95,8 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
     <div id="footer">
         <p>Обратите внимание, полноценно интерпретировать результаты этого теста сможет только Ваш лечащий врач, поэтому не стоит заниматься самолечением, обратитесь к врачу!</p>
     </div>
+    <h3 class="red">В большинстве случаев эректильная дисфункция поддаётся лечению!</h3>
+    <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
     <script src="/test_man/js/jquery-1.7.1.min.js"></script>
     <script src="/test_man/js/jquery.cookie.js" type="text/javascript"></script>
     <script src="/test_man/js/script.js" type="text/javascript"></script>

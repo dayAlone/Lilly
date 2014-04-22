@@ -106,6 +106,8 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
 <div id="footer">
     <p>Обратите внимание, полноценно интерпретировать результаты этого теста сможет только Ваш лечащий врач, поэтому не стоит заниматься самолечением, обратитесь к врачу!</p>
 </div>
+<h3 class="red">В большинстве случаев эректильная дисфункция поддаётся лечению!</h3>
+    <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
 <script type = "text/javascript" src="/test_women/js/script.js"></script>
 		</div>
 	</div>
