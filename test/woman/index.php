@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
+$APPLICATION->SetTitle("Как понять, что у вашего мужчины эд? :: Lilly Answers That Matter");
 ?> 
 <div class="container">
 	<div class="col-md-6 col-md-offset-3">
