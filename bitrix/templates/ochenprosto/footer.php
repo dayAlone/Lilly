@@ -1,5 +1,9 @@
 <?
    global $doctors;
+   function NumberEnd($number, $titles) {
+    $cases = array (2, 0, 1, 1, 1, 2);
+    return $titles[ ($number%100>4 && $number%100<20)? 2 : $cases[min($number%10, 5)] ];
+   }
 ?>
 
    <div id="footer">
@@ -15,7 +19,7 @@
                   <img src="/layout/images/logo2.png" alt="">
                </a>
             </div>
-            <div class="col-md-11 right">
+            <div class="col-md-7 center">
                <div class="menu">
                   <?$APPLICATION->IncludeComponent("bitrix:menu","bottom",Array(
                         "ROOT_MENU_TYPE" => "bottom", 
@@ -33,27 +37,38 @@
                   <span class="copyright">© Copyright ООО «Лилли Фарма» 2014. Все права защищены.</span>
                </div>
             </div>
-            <? /*
+            
             <div class="col-md-4">
                <div class="counter">
                   <nobr>
-                     <span class="n">7</span>
-                     <span class="n">1</span>
-                     <span class="n">5</span>
-                     <span class="n">9</span>
-                     <span class="n">7</span>
-                     <span class="n">7</span>
-                     <span class="n">7</span>
-                     <span class="t">человек <br>посетили этот сайт</span>
+                     <? 
+                      $obCache = new CPHPCache();
+                      $cacheLifetime = 1440; 
+                      $cacheID = 'count'-date('Y-m-d'); 
+                      $cachePath = '/';
+                      if( $obCache->InitCache($cacheLifetime, $cacheID, $cachePath) )
+                      {
+                         $vars = $obCache->GetVars();
+                         $count = $vars['counter'];
+                      }
+                      elseif( $obCache->StartDataCache()  )
+                      {
+                         $count = include($_SERVER['DOCUMENT_ROOT'].'/include/counter.php'); 
+                         $obCache->EndDataCache(array('count'=>$count));
+                      }
+                      
+                      for($i=0;$i<strlen($count);$i++)
+                        echo '<span class="n">'.$count[$i].'</span>';
+                     ?>
+                     <span class="t"><?=NumberEnd($count, array('человек','человека','человека'))?> <br>посетили этот сайт</span>
                   </nobr>
-               </div>
+               </div><?/*
                <div class="search">
                   <input type="submit" value="">
                   <input type="text" placeholder="Поиск по сайту">
 
-               </div>
+               </div>*/?>
             </div>
-            */?>
          </div>
       </div>
    </div>
@@ -102,13 +117,5 @@
  <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
  <![endif]-->
- <script type="text/javascript" src="/layout/js/jquery.js"></script>
- <script type="text/javascript" src="/layout/js/plugins.js"></script>
- <script type="text/javascript" src="/layout/js/main.js"></script>
- <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
-      <script>
-        $('#doctor').modal();
-      </script>
-<?}?>
 
 </body>

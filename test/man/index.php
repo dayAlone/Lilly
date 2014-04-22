@@ -97,7 +97,7 @@ $APPLICATION->SetTitle("Cубъективная оценка эд :: Lilly Answe
     </div>
     <h3 class="red">В большинстве случаев эректильная дисфункция поддаётся лечению!</h3>
     <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
-    <script src="/test_man/js/jquery-1.7.1.min.js"></script>
+    
     <script src="/test_man/js/script.js" type="text/javascript"></script>
 		</div>
 	</div>

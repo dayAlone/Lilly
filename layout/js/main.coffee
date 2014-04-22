@@ -62,11 +62,15 @@ init = ()->
 
     $('a').on 'click', (e)->
         url = $(this).attr('href')
-        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && $(this).parents('#panel,.bx-component-opener').length==0)
-            e.preventDefault()
+        e.preventDefault()
+        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
+            
             
             $('body .frame').removeClass('animated fadeIn')
             load(url)
+        else if(url.indexOf('http')>=0)
+            window.open(url, '_blank');
+
 
     $('#doctor').on 'shown.bs.modal', ()->
         if($.cookie('checkbox')=='true')

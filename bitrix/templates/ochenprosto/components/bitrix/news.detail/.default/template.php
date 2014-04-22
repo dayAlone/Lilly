@@ -126,6 +126,8 @@
             <div class="fix">
               <h4>Другие публикации</h4>
                <?
+                global $arFilter;
+                $arFilter = array('!ID'=>$arResult['ID']);
                 $APPLICATION->IncludeComponent(
                   "bitrix:news.list",
                   "more",
@@ -137,7 +139,7 @@
                     "SORT_ORDER1" => "ASC",
                     "SORT_BY2" => "",
                     "SORT_ORDER2" => "",
-                    "FILTER_NAME" => "",
+                    "FILTER_NAME" => "arFilter",
                     "FIELD_CODE" => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
                     "PROPERTY_CODE" => array("AUTHOR","HTML_TITLE"),
                     "CHECK_DATES" => "Y",

@@ -16,7 +16,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="format-detection" content="telephone=no">
-    
+     <script type="text/javascript" src="/layout/js/jquery.js"></script>
+     <script type="text/javascript" src="/layout/js/plugins.js"></script>
+     <script type="text/javascript" src="/layout/js/main.js"></script>
+     <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
+          <script>
+            $('#doctor').modal();
+          </script>
+    <?}?>
     <?php $APPLICATION->ShowHead();?>
   </head>
 

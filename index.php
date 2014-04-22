@@ -3,7 +3,6 @@
 	$nav='white';
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Lilly Answers That Matter");
-
 ?>
 <div id="main-block" style="background-image: url(/layout/images/index-bg.jpg)">
 	<div class="shadow bottom">

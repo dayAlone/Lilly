@@ -211,6 +211,24 @@ a:hover, a span:hover, .shadow:hover {
   float: left;
   width: 60%;
 }
+#test-woman #printButton, #test-woman #testRepeat, #test-man #printButton, #test-man #testRepeat {
+  float: left;
+  clear: both;
+  margin-top: 20px;
+  display: block;
+  line-height: 45px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: red;
+}
+#test-woman #printButton:hover, #test-woman #testRepeat:hover, #test-man #printButton:hover, #test-man #testRepeat:hover {
+  opacity: 0.7;
+}
+#test-woman #testRepeat, #test-man #testRepeat {
+  background: #aaaaaa;
+}
 #test-woman .button_block, #test-man .button_block {
   margin-top: -100px;
   float: right;
