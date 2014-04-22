@@ -102,7 +102,7 @@
  <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
  <![endif]-->
- 
+ <script type="text/javascript" src="/layout/js/jquery.js"></script>
  <script type="text/javascript" src="/layout/js/plugins.js"></script>
  <script type="text/javascript" src="/layout/js/main.js"></script>
  <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
