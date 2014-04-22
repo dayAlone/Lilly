@@ -98,8 +98,9 @@ $APPLICATION->SetTitle("Cубъективная оценка эд :: Lilly Answe
     <h3 class="red">В большинстве случаев эректильная дисфункция поддаётся лечению!</h3>
     <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
     
-    <script src="/test_man/js/script.js" type="text/javascript"></script>
+    
 		</div>
 	</div>
 </div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<script src="/test_man/js/script.js" type="text/javascript"></script>
