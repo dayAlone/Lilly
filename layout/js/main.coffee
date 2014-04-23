@@ -1,3 +1,4 @@
+bind = false
 
 size = ()-> 
 	
@@ -49,8 +50,6 @@ load = (url)->
             (data)-> 
                 $('body .frame').html($(data).filter('.frame').html())
                 anim($('body .frame'),'fadeIn')
-                if (window.history.pushState)
-                    window.history.pushState({'url':url}, $(data).filter('title').text(), url);
                 document.title = $(data).filter('title').text()
                 init()
 
@@ -61,15 +60,15 @@ init = ()->
   
 
     $('a').on 'click', (e)->
+        History = window.History;
         url = $(this).attr('href')
         e.preventDefault()
-        if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
-            
-            
-            $('body .frame').removeClass('animated fadeIn')
-            load(url)
-        else if(url.indexOf('http')>=0)
-            window.open(url, '_blank');
+        if (History.enabled)
+            if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
+                $('body .frame').removeClass('animated fadeIn')
+                History.pushState({'url':url}, $(this).text(), url);
+            else if(url.indexOf('http')>=0)
+                window.open(url, '_blank');
 
 
     $('#doctor').on 'shown.bs.modal', ()->
@@ -136,12 +135,17 @@ init = ()->
         player.api('play')
 
     $('[data-toggle=tooltip]').tooltip()
+    if (!bind)
+        bind = true
+        History.Adapter.bind window,'statechange',()->
+            State = History.getState();
+            console.log(State)
+            load(State.url)
+
 
 $(document).ready ()->
 
-    History.Adapter.bind window,'statechange',()->
-        State = History.getState();
-        load(State.url)
+    
 
     $(document).ajaxStart ()-> Pace.restart()
     $(document).ajaxStop ()-> Pace.stop()
