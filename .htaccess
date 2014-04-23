@@ -10,6 +10,7 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
+  Redirect /doctors/novosti/9/1887/ /doctors/video/pervoe-v-istorii-rossiyskoy-urologii-tok-shou-no-problem-tv/
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteCond %{REQUEST_FILENAME} !-d

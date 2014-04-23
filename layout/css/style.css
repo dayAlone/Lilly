@@ -1427,6 +1427,7 @@ input:focus, a:focus {
 #footer .counter span.n {
   background: #e50000;
   color: white;
+  margin: 0 1px;
   font-size: 28px;
   line-height: 28px;
   padding: 0 4px;

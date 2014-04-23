@@ -19,7 +19,7 @@
                   <img src="/layout/images/logo2.png" alt="">
                </a>
             </div>
-            <div class="col-md-7 center">
+            <div class="col-md-7 center menu">
                <div class="menu">
                   <?$APPLICATION->IncludeComponent("bitrix:menu","bottom",Array(
                         "ROOT_MENU_TYPE" => "bottom", 
@@ -49,7 +49,7 @@
                       if( $obCache->InitCache($cacheLifetime, $cacheID, $cachePath) )
                       {
                          $vars = $obCache->GetVars();
-                         $count = $vars['counter'];
+                         $count = $vars['count'];
                       }
                       elseif( $obCache->StartDataCache()  )
                       {
