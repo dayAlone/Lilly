@@ -97,7 +97,10 @@
             'url': url
           }, $(this).text(), url);
         } else if (url.indexOf('http') >= 0) {
-          return window.open(url, '_blank');
+          window.open(url, '_blank');
+          if ($(this).parents('#locator').length > 0) {
+            return $('#locator').modal('hide');
+          }
         }
       }
     });

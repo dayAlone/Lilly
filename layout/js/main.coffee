@@ -69,6 +69,8 @@ init = ()->
                 History.pushState({'url':url}, $(this).text(), url);
             else if(url.indexOf('http')>=0)
                 window.open(url, '_blank');
+                if($(this).parents('#locator').length>0)
+                    $('#locator').modal('hide')
 
 
     $('#doctor').on 'shown.bs.modal', ()->
