@@ -494,7 +494,7 @@ a:hover, a span:hover, .shadow:hover {
   left: 0;
 }
 .flag.test {
-  top: 245px;
+  top: 290px;
 }
 .flag:hover {
   opacity: 0.5;
@@ -631,7 +631,7 @@ input:focus, a:focus {
   position: relative;
   position: fixed;
   z-index: 300;
-  top: 89px;
+  top: 299px;
   min-height: 200px;
   background:  url(../images/enter-bg.png) top center;
   margin-bottom: 14px;
