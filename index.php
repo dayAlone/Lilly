@@ -1,5 +1,7 @@
 <?
 	global $nav;
+	global $index;
+	$index = true;
 	$nav='white';
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Lilly Answers That Matter");

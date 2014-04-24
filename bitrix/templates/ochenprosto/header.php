@@ -1,6 +1,7 @@
 <?
   global $nav;
   global $doctors;
+  global $index;
   if(strstr($_SERVER['REQUEST_URI'],'doctors'))
     $doctors = true;
   
@@ -38,7 +39,7 @@
   </head>
 
   <body>
-   <div class="frame <?=(!$doctors?'user':'doctor')?>" style="opacity: 0">
+   <div class="frame <?=(!$doctors?'user':'doctor')?> <?=($index?'index':'')?>" style="opacity: 0">
      <div id="panel"><?$APPLICATION->ShowPanel();?></div>
      <? global $toolbar ?>
      <div id="toolbar" class="<?=($nav?$nav:'')?>">
