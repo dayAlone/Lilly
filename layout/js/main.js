@@ -75,6 +75,7 @@
         $('body .frame').html($(data).filter('.frame').html());
         anim($('body .frame'), 'fadeIn');
         document.title = $(data).filter('title').text();
+        $.scrollTo(0, 500);
         return init();
       }
     });
