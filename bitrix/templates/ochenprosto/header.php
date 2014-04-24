@@ -28,7 +28,7 @@
   </head>
 
   <body>
-   <div class="frame" style="opacity: 0">
+   <div class="frame <?=(!$doctor?'user':'doctor')?>" style="opacity: 0">
      <div id="panel"><?$APPLICATION->ShowPanel();?></div>
      <? global $toolbar ?>
      <div id="toolbar" class="<?=($nav?$nav:'')?>">

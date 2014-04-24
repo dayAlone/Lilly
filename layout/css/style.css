@@ -122,6 +122,18 @@ a:hover, a span:hover, .shadow:hover {
 #toolbar .nav li a.active {
   font-weight: 700;
 }
+.user #toolbar .nav li:last-child a {
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(-18.85%, rgba(155, 29, 33, 0.8)), color-stop(81.15%, rgba(233, 33, 45, 0.8)));
+  background-image: -webkit-linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%);
+  background-image: -moz-linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%);
+  background-image: -o-linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%);
+  background-image: linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%);
+  line-height: 30px;
+  padding: 2px 15px 3px 15px;
+  margin-left: -15px;
+  margin-top: -9px;
+  color: white;
+}
 #toolbar .nav li span.small, #toolbar .nav li a.small {
   color: #5f5e4d;
   text-shadow: none;
