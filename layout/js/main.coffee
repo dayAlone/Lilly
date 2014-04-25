@@ -160,7 +160,7 @@ $(document).ready ()->
     init()
 
     $('body').imagesLoaded ()->
-        $('.frame').css({opacity:1})
+        $('.frame').css({opacity:1}).attr('css', '');
         $.lockfixed "#article .fix",
             offset: 
                 top: 0

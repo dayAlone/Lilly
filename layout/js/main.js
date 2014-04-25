@@ -208,7 +208,7 @@
     return $('body').imagesLoaded(function() {
       $('.frame').css({
         opacity: 1
-      });
+      }).attr('css', '');
       return $.lockfixed("#article .fix", {
         offset: {
           top: 0,
