@@ -204,13 +204,11 @@
     $(document).ajaxStop(function() {
       return Pace.stop();
     });
-    anim($('.frame'), 'fadeIn', function() {
-      return $('.frame').css({
-        opacity: 1
-      });
-    });
     init();
     return $('body').imagesLoaded(function() {
+      $('.frame').css({
+        opacity: 1
+      });
       return $.lockfixed("#article .fix", {
         offset: {
           top: 0,

@@ -157,10 +157,10 @@ $(document).ready ()->
     $(document).ajaxStart ()-> Pace.restart()
     $(document).ajaxStop ()-> Pace.stop()
 
-    anim($('.frame'), 'fadeIn', ()-> $('.frame').css({opacity:1}))
     init()
 
     $('body').imagesLoaded ()->
+        $('.frame').css({opacity:1})
         $.lockfixed "#article .fix",
             offset: 
                 top: 0
