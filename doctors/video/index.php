@@ -3,7 +3,7 @@
 	$APPLICATION->SetTitle("Записи научных трансляций :: Lilly Answers That Matter");
 	if(!$_REQUEST['ELEMENT_CODE']):
 ?> 
-	<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "", array(
+	<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", ".default", array(
 	"IBLOCK_TYPE" => "content",
 	"IBLOCK_ID" => "4",
 	"SECTION_ID" => $_REQUEST["SECTION_ID"],
@@ -21,11 +21,8 @@
 	"SECTION_URL" => "",
 	"CACHE_TYPE" => "A",
 	"CACHE_TIME" => "36000000",
-	"CACHE_GROUPS" => "Y",
-	"ADD_SECTIONS_CHAIN" => "Y",
-	"VIEW_MODE" => "TILE",
-	"SHOW_PARENT_NAME" => "Y",
-	"HIDE_SECTION_NAME" => "N"
+	"CACHE_GROUPS" => "N",
+	"ADD_SECTIONS_CHAIN" => "Y"
 	),
 	false
 );?>
