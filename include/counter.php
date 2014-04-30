@@ -37,6 +37,6 @@ $results = $service->data_ga->get(
         'max-results'   => '100'
         )
     );
-$count = (string)$results->totalsForAllResults['ga:sessions'];
+$count = (string)$results->totalsForAllResults['ga:pageviews'];
 return $count;
 ?>
