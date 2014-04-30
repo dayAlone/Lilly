@@ -32,7 +32,7 @@ $results = $service->data_ga->get(
     'ga:59248007',
     '2013-01-01',
     date('Y-m-d'),
-    'ga:pageview',
+    'ga:sessions',
     array(
         'max-results'   => '100'
         )
