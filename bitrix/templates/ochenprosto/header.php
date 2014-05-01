@@ -26,6 +26,7 @@
           </script>
     <?}?>
     <?php $APPLICATION->ShowHead();?>
+    <meta name="google-site-verification" content="rVPHuXR80IKS1-M4k0BJyZsP7KNF5_z8P-T5fKqrm4s" />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
