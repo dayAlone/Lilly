@@ -271,6 +271,50 @@ a, a span, .shadow
 	background-size: cover
 	margin-bottom: 14px
 	overflow: hidden
+	&.message
+		background: white url(/layout/images/phone.png) right 82% no-repeat
+		.c
+			float: left
+			margin-left: 15px
+			margin-top: 5px
+		h1
+			text-transform: uppercase
+			color: #E10000
+			font-weight: 600
+			margin-bottom: 0px
+		h2
+			text-transform: uppercase
+			color: black
+			font-weight: 400
+			margin-top: 0
+			margin-bottom: 20px
+		p+p
+			margin-top: 15px
+		p
+			color: black
+			font-size: 23px
+			+full-width
+			strong
+				text-transform: uppercase
+				color: #E10000
+			small
+				font-size: 18px
+				color: #727272	
+				font-weight: 300
+				float: left
+				clear: left
+				margin-top: -3px
+			&.phone
+				text-transform: uppercase
+				font-weight: 600
+				span
+					float: left
+					clear: left
+					margin-top: -15px
+					color: #E10000
+					font-size: 45px
+
+
 	&.big
 		height: 416px
 	&.small

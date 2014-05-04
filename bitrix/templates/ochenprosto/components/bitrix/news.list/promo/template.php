@@ -31,7 +31,22 @@
          </div>
          
          <div class="col-md-5">
-            <?if($item[1]) item($item[1],'medium');?>
+            <?if($APPLICATION->GetCurDir()=='/' && $i==0):?>
+               <a class="block message medium" href="/materials/goryachaya-liniya-muzhskoe-zdorove-smelo-sprashivayte/">
+                  <div class="c">
+                     <h1>Не знаете, с чего начать?</h1>
+                     <h2>Спросите у специалиста</h2>
+                     <p>
+                        На ваши вопросы ответит <strong>А.н.Берников</strong>, <br><small>к.м.н., доцент кафедры урологии МГМСУ</small>
+                     </p>
+                     <p class="phone">
+                        Телефон горячей линии: <br><span>8 800 200 36 36</span>
+                     </p>
+                  </div>
+               </a>
+            <? else: ?>
+               <?if($item[1]) item($item[1],'medium');?>
+            <? endif;?>
             <?if($item[2]) item($item[2],'medium');?>
          </div>
       </div>

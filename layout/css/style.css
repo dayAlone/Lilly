@@ -367,6 +367,60 @@ a:hover, a span:hover, .shadow:hover {
   overflow: hidden;
   color: white;
 }
+.block.message {
+  background: white url(/layout/images/phone.png) right 82% no-repeat;
+}
+.block.message .c {
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.block.message h1 {
+  text-transform: uppercase;
+  color: #e10000;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.block.message h2 {
+  text-transform: uppercase;
+  color: black;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.block.message p + p {
+  margin-top: 15px;
+}
+.block.message p {
+  color: black;
+  font-size: 23px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.block.message p strong {
+  text-transform: uppercase;
+  color: #e10000;
+}
+.block.message p small {
+  font-size: 18px;
+  color: #727272;
+  font-weight: 300;
+  float: left;
+  clear: left;
+  margin-top: -3px;
+}
+.block.message p.phone {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.block.message p.phone span {
+  float: left;
+  clear: left;
+  margin-top: -15px;
+  color: #e10000;
+  font-size: 45px;
+}
 .block.big {
   height: 416px;
 }
