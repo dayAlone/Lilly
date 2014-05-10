@@ -15,11 +15,19 @@
 		?>
 			<div class="col-md-4">
                <a href="/doctors/video/<?=$ob['CODE']?>/" class="item">
-                  <span class="image" style="background-image:url(<?=$item['PICTURE']['SRC']?>)">
-                     <span class="icon"></span>
-                  </span>
                   <span class="title">
                      <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
+                  </span>
+                  <span class="image" style="background-image:url(http://ochenprosto.ru<?=CFile::GetPath($item['PICTURE'])?>)">
+					<? if($item["UF_SOON"]) { ?>
+						<span class="soon">Скоро</span>	
+					<? } ?>
+					<? if($item["UF_PARTS"]) { ?>
+						<span class="parts"><?=$item["UF_PARTS"]?></span>	
+					<? } ?>
+					<? if($item["UF_TIME"]) { ?>
+						<span class="parts"><?=$item["UF_TIME"]?></span>	
+					<? } ?>
                   </span>
                   <span class="description">
                      <?=$item['DESCRIPTION']?>

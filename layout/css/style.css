@@ -1278,34 +1278,44 @@ input:focus, a:focus {
   position: relative;
   padding-bottom: 30px;
 }
+#video-list .row + .row {
+  padding-top: 30px;
+}
 #video-list .item {
   margin-top: 30px;
   float: left;
   width: 100%;
   position: relative;
-  font-size: 21px;
-  line-height: 23px;
 }
-#video-list .item .title, #video-list .item .description {
+#video-list .item .description {
   float: left;
   width: 100%;
   position: relative;
   font-weight: 300;
+  font-style: 18px;
+  line-height: 20px;
 }
 #video-list .item .title {
+  float: left;
   font-weight: 500;
+  color: #eb222e;
+  font-size: 25px;
+  line-height: 25px;
+  min-height: 100px;
+  width: 95%;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 #video-list .item .image {
   float: left;
   width: 100%;
   position: relative;
-  height: 250px;
+  height: 230px;
   position: relative;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 #video-list .item .image .icon {
   position: absolute;
@@ -1316,6 +1326,29 @@ input:focus, a:focus {
   width: 80px;
   height: 80px;
   background:  url(../images/play2.png) center center no-repeat;
+}
+#video-list .item .image .soon, #video-list .item .image .parts, #video-list .item .image .minutes {
+  min-width: 100px;
+  height: 40px;
+  padding-right: 25px;
+  background:  url(../images/test_sm.png) center center no-repeat;
+  position: absolute;
+  background-size: cover;
+  background-position: top right;
+  left: 0;
+  bottom: 20px;
+  color: white;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 40px;
+}
+#video-list .item .image .minutes {
+  left: auto;
+  right: 0;
+  background: transparent;
+  text-transform: none;
 }
 
 #text p {

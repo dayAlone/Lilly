@@ -46,7 +46,6 @@ a, a span, .shadow
 	&.white
 		.nav
 			color: white
-			
 			a
 				color: white
 				+text-shadow(-1px 2px 3px rgba(1,1,4,.67)) 
@@ -982,26 +981,34 @@ input:focus, a:focus
 #video-list
 	+full-width
 	padding-bottom: 30px
+	.row+.row
+		padding-top: 30px
 	.item
 		margin-top: 30px
 		+full-width
-		font-size: 21px
-		line-height: 23px
-		
-		.title, .description
+		.description
 			+full-width
 			font-weight: 300
+			font-style: 18px
+			line-height: 20px
 		.title
+			float: left
 			font-weight: 500
+			color: #eb222e
+			font-size: 25px
+			line-height: 25px
+			min-height: 100px
+			width: 95%
+			margin-bottom: 20px
 			text-transform: uppercase
 		.image
 			+full-width
-			height: 250px
+			height: 230px
 			position: relative
 			background-repeat: no-repeat
 			background-position: center center
 			background-size: cover
-			margin-bottom: 10px
+			margin-bottom: 0px
 			.icon
 				position: absolute
 				left: 50%
@@ -1011,7 +1018,27 @@ input:focus, a:focus
 				width: 80px
 				height: 80px
 				+b('play2.png')
-
+			.soon, .parts, .minutes
+				min-width: 100px
+				height: 40px
+				padding-right: 25px
+				+b('test_sm.png')
+				position: absolute
+				background-size: cover
+				background-position: top right
+				left: 0
+				bottom: 20px
+				color: white
+				padding-left: 20px
+				text-transform: uppercase
+				font-weight: 500
+				font-size: 18px
+				line-height: 40px
+			.minutes
+				left: auto
+				right: 0
+				background: transparent
+				text-transform: none
 #text
 	p
 		font-size: 15px

@@ -15,8 +15,9 @@
 			1 => "",
 		),
 		"SECTION_USER_FIELDS" => array(
-			0 => "",
-			1 => "",
+			0 => "UF_SOON",
+			1 => "UF_PARTS",
+			2 => "UF_TIME",
 		),
 		"SECTION_URL" => "",
 		"CACHE_TYPE" => "A",
