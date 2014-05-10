@@ -25,7 +25,7 @@ $aMenuLinks = Array(
 		"Доктор локатор", 
 		"#locator", 
 		Array(), 
-		Array("ADDITIONAL"=>"data-toggle=\"modal\" data-target=\"#locator\""), 
+		Array("ADDITIONAL"=>"data-toggle=\"modal\" data-target=\"#locator\" onClick=\"_gaq.push(['_trackEvent', 'DoctorLocator', 'DoctorClick', 'DL Click Doctor']);\""), 
 		"" 
 	)
 );

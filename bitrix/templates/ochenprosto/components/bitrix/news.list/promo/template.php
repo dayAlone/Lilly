@@ -1,6 +1,6 @@
 <div id="promo">
 <?
-   function item($item, $size) {
+   function item_promo($item, $size) {
       echo '<a href="/materials/'.$item['CODE'].'/" class="block '.$size.'" style="background-image:url('.$item['PREVIEW_PICTURE']['SRC'].')">
                   <div class="shadow"></div>
                   <div class="content">
@@ -18,14 +18,14 @@
      ?>
       <div class="row">
          <div class="col-md-7">
-            <?if($item[0]) item($item[0],'big');?>
+            <?if($item[0]) item_promo($item[0],'big');?>
 
             <div class="row">
                <div class="col-md-6">
-                  <?if($item[3]) item($item[3],'small');?>                  
+                  <?if($item[3]) item_promo($item[3],'small');?>                  
                </div>
                <div class="col-md-6">
-                  <?if($item[4]) item($item[4],'small');?>
+                  <?if($item[4]) item_promo($item[4],'small');?>
                </div>
             </div>
          </div>
@@ -45,9 +45,9 @@
                   </div>
                </a>
             <? else: ?>
-               <?if($item[1]) item($item[1],'medium');?>
+               <?if($item[1]) item_promo($item[1],'medium');?>
             <? endif;?>
-            <?if($item[2]) item($item[2],'medium');?>
+            <?if($item[2]) item_promo($item[2],'medium');?>
          </div>
       </div>
          

@@ -34,13 +34,13 @@
        <div class="shadow-1"></div>
        <div class="shadow-2"></div>
        <? if($prev): ?>
-	       <a href="<?=$path?><?=$prev['CODE']?>/" class="arrow left">
+	       <a href="<?=$path?><?=$prev['CODE']?>/" class="arrow left" onmouseover="_gaq.push(['_trackEvent', 'Article', 'PrevArticle', 'Previous Article']);">
 	         <div class="icon"></div>
 	         <div class="text"><?=str_replace('®','<sup>®</sup>', $prev['NAME'])?></div>
 	       </a>
 	   <? endif;?>
 	   <? if($next): ?>
-	       <a href="<?=$path?><?=$next['CODE']?>/" class="arrow right">
+	       <a href="<?=$path?><?=$next['CODE']?>/" class="arrow right" onmouseover="_gaq.push(['_trackEvent', 'Article', 'NextArticle', 'Next Article']);">
 	         <div class="icon"></div>
 	         <div class="text"><?=str_replace('®','<sup>®</sup>', $next['NAME'])?></div>
 	       </a>

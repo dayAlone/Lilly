@@ -11,7 +11,7 @@
             <div class="col-md-8">
                <div id="video">
                   <iframe src="//player.vimeo.com/video/75777386?title=0&amp;byline=0&amp;portrait=0&api=1&player_id=vimeoplayer&color=d11414" width="549" height="413" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                  <div class="icon"></div>
+                  <div class="icon" onclick="_gaq.push(['_trackEvent', 'DUPVideo', 'PlayDUP', 'DUP Video Play']);"></div>
                </div>
             </div>
             <div class="col-md-4">
@@ -19,13 +19,13 @@
 
                   <p>Сиалис<sup>®</sup> — одно решение двух проблем: восстанавливает эректильную функцию и улучшает мочеиспускание у мужчин с доброкачественной гиперплазией предстательной железы.<br><a href="/upload/сialis5.pdf" class="no-ajax">ИНСТРУКЦИЯ</a></p>
                   
-                  <a href="/doctors/5mg/"><img src="/layout/images/p-1.png" alt=""></a>
+                  <a href="/doctors/5mg/" onclick="_gaq.push(['_trackEvent', 'CialisInfo', '5mg', '5mg Info']);"><img src="/layout/images/p-1.png" alt=""></a>
                </div>
                <div id="product-2">
 
                   <p>Сиалис<sup>®</sup> позволяет мужчине улучшить качество сексуального здоровья и вернуться к жизни без эректильной дисфункции.<br><a class="no-ajax" href="/upload/сialis20.pdf">ИНСТРУКЦИЯ</a></p>
                   
-                  <a href="/doctors/20mg/"><img src="/layout/images/p-2.png" alt=""></a>
+                  <a href="/doctors/20mg/" onclick="_gaq.push(['_trackEvent', 'CialisInfo', '20mg', '20mg Info']);"><img src="/layout/images/p-2.png" alt=""></a>
                </div>
             </div>
          </div>

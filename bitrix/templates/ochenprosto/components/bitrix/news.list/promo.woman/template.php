@@ -1,6 +1,6 @@
 <div id="promo" class="woman">
 <?
-   function item($item, $size) {
+   function item_w($item, $size) {
       echo '<a href="/woman/'.$item['CODE'].'/" class="block '.$size.'" style="background-image:url('.$item['PREVIEW_PICTURE']['SRC'].')">
                   <div class="shadow"></div>
                   <div class="content">
@@ -19,12 +19,12 @@
       
       <div class="row">
          <div class="col-md-7">
-            <?if($item[0]) item($item[0],'big');?>
+            <?if($item[0]) item_w($item[0],'big');?>
          </div>
          
          <div class="col-md-5">
-            <?if($item[1]) item($item[1],'medium');?>
-            <?if($item[2]) item($item[2],'medium');?>
+            <?if($item[1]) item_w($item[1],'medium');?>
+            <?if($item[2]) item_w($item[2],'medium');?>
          </div>
       </div>   
    

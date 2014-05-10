@@ -27,6 +27,7 @@
     <?}?>
     <?php $APPLICATION->ShowHead();?>
     <meta name="google-site-verification" content="rVPHuXR80IKS1-M4k0BJyZsP7KNF5_z8P-T5fKqrm4s" />
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -90,8 +91,35 @@
           </div>
         </div>
         <div class="block">
-          <a href="/doctors" class="no-ajax">Войти</a>
-          <div class="checkbox"></div>
+          <?
+            // Index
+            if($APPLICATION->GetCurPage()=='/') {
+              $over         = "_gaq.push(['_trackEvent', 'EntryRibbon', 'RollOver', 'RO Main Page Ribbon']);";
+              $click_button = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click Main Page Ribbon']);";
+              $click_check  = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Check', 'Check Main Page Ribbon']);";
+            }
+            // Woman
+            if(strstr($APPLICATION->GetCurPage(),'woman')) {
+              $over         = "_gaq.push(['_trackEvent', 'EntryRibbon', 'RollOver', 'RO Women Ribbon']);";
+              $click_button = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click Women Ribbon']);";
+              $click_check  = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Check', 'Check Women Ribbon']);";
+            }
+            if(strstr($APPLICATION->GetCurPage(),'materials')) {
+              // Articles
+              $over         = "_gaq.push(['_trackEvent', 'EntryRibbon', 'RollOver', 'RO Article Ribbon']);";
+              $click_button = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click Article Ribbon']);";
+              $click_check  = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Check', 'Check Article Ribbon']);";
+            }
+            if($APPLICATION->GetCurPage()=='/faq/') {
+              // FAQ
+              $over         = "_gaq.push(['_trackEvent', 'EntryRibbon', 'RollOver', 'RO FAQ Ribbon']);";
+              $click_button = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click FAQ Ribbon']);";
+              $click_check  = "_gaq.push(['_trackEvent', 'EntryRibbon', 'Check', 'Check FAQ Ribbon']);";
+            }
+
+          ?>
+          <a href="/doctors" class="no-ajax" onmouseover="<?=$over?>" onclick="<?=$click_button?>">Войти</a>
+          <div class="checkbox" onclick="<?=$click_check?>"></div>
           <p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВХОД», чтобы начать работу.</p>
         </div>
       </div>

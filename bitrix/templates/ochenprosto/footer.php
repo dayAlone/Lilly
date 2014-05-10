@@ -81,7 +81,7 @@
 
          <h3>ЗАПИШИТЕСЬ НА ПРИЁМ ПРЯМО СЕЙЧАС!</h3>
 
-         <a href="http://doctorlocator.rusmh.org" target="_blank" class="no-ajax go">перейти</a>
+         <a href="http://doctorlocator.rusmh.org" target="_blank" onClick="_gaq.push(['_trackEvent', 'DoctorLocator', 'PopupClick', 'DL Popup Exit']);" class="no-ajax go">перейти</a>
 
          <small>Вы покидаете www.ochenprosto.ru и переходите на сайт Российского общества «Мужское здоровье». Эли Лилли энд Компани не контролирует, не поддерживает и не влияет на этот сайт. Все мнения, точки зрения или комментарии, высказанные на этом сайте, не должны приписываться Эли Лилли энд Компани. Также Эли Лилли энд Компани не несет ответственности за конфиденциальность, безопасность и сбор данных каких-либо сайтов, принадлежащих третьим сторонам.</small>
 
@@ -137,6 +137,7 @@
 
   <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 <? endif;?>
+  <script src="/layout/js/vimeo.js" type="text/javascript"></script>
  <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
   (function (d, w, c) {

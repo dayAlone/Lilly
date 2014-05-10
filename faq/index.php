@@ -6,11 +6,10 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
      <div class="container">
       <div class="row">
         <div class="col-md-7">
-            <div class="block big" style="background-image:url(/layout/images/img-15.jpg)">
+            <div class="block big" style="background-image:url(/layout/images/img-15.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q1', 'FAQ Substitue']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Можно ли заменить визит к врачу анонимно купленными через интернет таблетками?</div>
-                  
                </div>
                <div class="text">
                   <div class="panel">
@@ -23,7 +22,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                     
                 </div>
             </div>
-            <div class="block big" style="background-image:url(/layout/images/img-18.jpg)">
+            <div class="block big" style="background-image:url(/layout/images/img-18.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q4', 'FAQ Will it pass']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Может ли эректильная дисфункция (ЭД) пройти сама?</div>
@@ -36,7 +35,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                     
                 </div>
             </div>
-            <div class="block big" style="background-image:url(/layout/images/img-24.jpg)">
+            <div class="block big" style="background-image:url(/layout/images/img-24.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q6', 'FAQ Come with wife']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Нужно ли идти к врачу вдвоем с женой (подругой)?</div>
@@ -49,7 +48,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                     
                 </div>
             </div>
-            <div class="block big" style="background-image:url(/layout/images/img-22.jpg)">
+            <div class="block big" style="background-image:url(/layout/images/img-22.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q9', 'FAQ Alls good']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Нужно ли обращаться к врачу, если наличие/отсутствие эрекции никак не сказывается на качестве жизни?</div>
@@ -64,7 +63,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
             </div>
         </div>
         <div class="col-md-5">
-            <div class="block medium" style="background-image:url(/layout/images/img-16.jpg)">
+            <div class="block medium" style="background-image:url(/layout/images/img-16.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q2', 'FAQ Discuss with girlfriend']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Стоит ли обсуждать проблему ЭД с женой (подругой)?</div>
@@ -76,7 +75,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                   </div>
                 </div>
             </div>
-            <div class="block medium" style="background-image:url(/layout/images/img-17.jpg)">
+            <div class="block medium" style="background-image:url(/layout/images/img-17.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q3', 'FAQ What's the difference']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">В чем разница между эректильной дисфункцией и импотенцией?</div>
@@ -90,7 +89,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                 </div>
             </div>
 
-            <div class="block medium" style="background-image:url(/layout/images/img-19.jpg)">
+            <div class="block medium" style="background-image:url(/layout/images/img-19.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q5', 'FAQ Vacation']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Может ли полноценный отдых решить проблему ЭД?</div>
@@ -103,7 +102,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                   </div>
                 </div>
             </div>
-            <div class="block medium" style="background-image:url(/layout/images/img-20.jpg)">
+            <div class="block medium" style="background-image:url(/layout/images/img-20.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q7', 'FAQ Why so many']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Почему диагностика ЭД требует ответа на такое количество вопросов?</div>
@@ -116,7 +115,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                   </div>
                 </div>
             </div>
-            <div class="block medium" style="background-image:url(/layout/images/img-21.jpg)">
+            <div class="block medium" style="background-image:url(/layout/images/img-21.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q8', 'FAQ First Time']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">Что нужно сообщить врачу на первом приеме? Нужно ли рассказывать о деталях половой жизни?</div>
@@ -129,7 +128,7 @@ $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
                   </div>
                 </div>
             </div>
-            <div class="block medium" style="background-image:url(/layout/images/img-23.jpg)">
+            <div class="block medium" style="background-image:url(/layout/images/img-23.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q10', 'FAQ Any Age']);">
                <div class="shadow"></div>
                <div class="content">
                   <div class="title">В любом ли возрасте имеет смысл лечить ЭД?</div>
