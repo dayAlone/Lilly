@@ -26,7 +26,7 @@
 						<span class="parts"><?=$item["UF_PARTS"]?></span>	
 					<? } ?>
 					<? if($item["UF_TIME"]) { ?>
-						<span class="parts"><?=$item["UF_TIME"]?></span>	
+						<span class="minutes"><?=$item["UF_TIME"]?></span>	
 					<? } ?>
                   </span>
                   <span class="description">
