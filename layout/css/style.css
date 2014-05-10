@@ -1355,7 +1355,6 @@ input:focus, a:focus {
   background:  url(../images/test_sm_2.png) center center no-repeat;
   background-position: top left;
   background-size: cover;
-  background: transparent;
   text-transform: none;
 }
 
