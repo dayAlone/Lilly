@@ -1331,7 +1331,7 @@ input:focus, a:focus {
   min-width: 100px;
   height: 40px;
   padding-right: 25px;
-  background:  url(../images/test_sm.png) center center no-repeat;
+  background:  url(../images/test_sm_1.png) center center no-repeat;
   position: absolute;
   background-size: cover;
   background-position: top right;
@@ -1344,9 +1344,14 @@ input:focus, a:focus {
   font-size: 18px;
   line-height: 40px;
 }
+#video-list .item .image .parts {
+  background:  url(../images/test_sm.png) center center no-repeat;
+}
 #video-list .item .image .minutes {
   left: auto;
   right: 0;
+  background:  url(../images/test_sm_2.png) center center no-repeat;
+  background-position: top left;
   background: transparent;
   text-transform: none;
 }
