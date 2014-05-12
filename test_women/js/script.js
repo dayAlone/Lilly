@@ -13,7 +13,7 @@
 
 			$.cookie("balls", balls, {path: '/'});
 			$.cookie("ansver"+answer, [answers[answer]], {path: '/'});
-			$.cookie("ansvers", answer, {path: '/'});
+			$.cookie("ansvers", answers, {path: '/'});
 
 			if($('#wrapper input:checked').length == 8){
 				$('input[type="radio"]').attr('disabled','disabled');
@@ -27,6 +27,7 @@
 						if(response.error == false){
 							//_gaq.push(['_trackEvent', 'Test', 'Result_load', response.balls, 1, true]);
 							$('#result_block').append(response.response);
+							$.cookie("pow", $('#pow').text(), {path: '/'});
 						} else {
 							$('#result_block').html('<h3>Ошибка</h3>');
 							alert(response.message);

@@ -1,7 +1,7 @@
 <?php
 
-require_once('../classes/define.php');
-require_once('../classes/db.php');
+//require_once('../classes/define.php');
+//require_once('../classes/db.php');
 
 if(!session_id()){
 	session_start();
@@ -11,23 +11,22 @@ if(!empty($_GET['token'])){
 } else {
 	$token = session_id();
 }
-
 if(!empty($token)){
-	$db = new DB();
-	$sql = 'SELECT answers, balls, pow FROM test_woman WHERE session = "'.session_id().'"';
-	$result = $db->get_row($sql);
+	//$db = new DB();
+	//$sql = 'SELECT answers, balls, pow FROM test_woman WHERE session = "'.session_id().'"';
+	//$result = $db->get_row($sql);
 	
-	if($result){
+	if($_COOKIE['ansvers']){
 		
 		$template = file_get_contents('print.html');
-		$answers = explode(',',$result['answers']);
+		$answers = explode(',',$_COOKIE['ansvers']);
 		foreach($answers as $key => &$val){
 			$val = htmlspecialchars($val);
 			$k	 = 'active_'.($key+1).'_'.$val;
 			$template = str_replace('{'.$k.'}', 'class="active"', $template);
 		}
 		
-		foreach($result as $key=>$val){
+		foreach(array("balls"=>$_COOKIE['balls'], "pow"=>$_COOKIE['pow']) as $key=>$val){
 			$val = htmlspecialchars($val);
 			$template = str_replace('{'.$key.'}', $val, $template);
 		}
