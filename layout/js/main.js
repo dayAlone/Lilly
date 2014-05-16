@@ -107,6 +107,8 @@
           if ($(this).parents('#locator').length > 0) {
             return $('#locator').modal('hide');
           }
+        } else if ($(this).hasClass('no-ajax')) {
+          return window.open(url, '_blank');
         }
       }
     });

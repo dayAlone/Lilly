@@ -78,6 +78,8 @@ init = ()->
                 window.open(url, '_blank');
                 if($(this).parents('#locator').length>0)
                     $('#locator').modal('hide')
+            else if($(this).hasClass('no-ajax'))
+                window.open(url, '_blank')
 
 
     $('#doctor').on 'shown.bs.modal', ()->
