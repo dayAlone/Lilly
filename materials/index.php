@@ -29,7 +29,7 @@
 		"AJAX_OPTION_STYLE" => "N",
 		"AJAX_OPTION_HISTORY" => "N",
 		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000000",
+		"CACHE_TIME" => "3600",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"PREVIEW_TRUNCATE_LEN" => "",
