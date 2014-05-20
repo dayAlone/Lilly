@@ -27,7 +27,6 @@
     <?}?>
     <?php $APPLICATION->ShowHead();?>
     <meta name="google-site-verification" content="rVPHuXR80IKS1-M4k0BJyZsP7KNF5_z8P-T5fKqrm4s" />
-    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31297918-1']);
