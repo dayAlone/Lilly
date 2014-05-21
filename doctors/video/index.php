@@ -21,7 +21,7 @@
 		),
 		"SECTION_URL" => "",
 		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000000",
+		"CACHE_TIME" => "3600",
 		"CACHE_GROUPS" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y"
 		),
@@ -52,7 +52,7 @@
 			"AJAX_OPTION_STYLE" => "Y",
 			"AJAX_OPTION_HISTORY" => "N",
 			"CACHE_TYPE" => "A",
-			"CACHE_TIME" => "36000000",
+			"CACHE_TIME" => "3600",
 			"CACHE_GROUPS" => "Y",
 			"META_KEYWORDS" => "-",
 			"META_DESCRIPTION" => "-",
