@@ -15,7 +15,7 @@
       <? endif; ?>
          <div class="row">
             <div class="col-md-1">
-               <a href="#" class="logo">
+               <a href="/" class="logo">
                   <img src="/layout/images/logo2.png" alt="">
                </a>
             </div>
