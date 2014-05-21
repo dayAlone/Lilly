@@ -31,6 +31,7 @@
          </div>
          
          <div class="col-md-5">
+            <?/*
             <?if($APPLICATION->GetCurDir()=='/' && $i==0):?>
                <a class="block message medium" href="/materials/goryachaya-liniya-muzhskoe-zdorove-smelo-sprashivayte/">
                   <div class="c">
@@ -44,9 +45,9 @@
                      </p>
                   </div>
                </a>
-            <? else: ?>
+            <? else: ?>*/?>
                <?if($item[1]) item_promo($item[1],'medium');?>
-            <? endif;?>
+            <?/*<? endif;?>*/?>
             <?if($item[2]) item_promo($item[2],'medium');?>
          </div>
       </div>
