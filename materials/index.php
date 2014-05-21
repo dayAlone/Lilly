@@ -80,7 +80,7 @@ $APPLICATION->IncludeComponent("bitrix:news.detail", ".default", array(
 	"AJAX_OPTION_STYLE" => "Y",
 	"AJAX_OPTION_HISTORY" => "N",
 	"CACHE_TYPE" => "A",
-	"CACHE_TIME" => "36000000",
+	"CACHE_TIME" => "3600",
 	"CACHE_GROUPS" => "Y",
 	"META_KEYWORDS" => "-",
 	"META_DESCRIPTION" => "-",
