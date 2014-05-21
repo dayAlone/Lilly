@@ -14,8 +14,6 @@
     
     <meta name="viewport" content="width=850, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="description" content="">
-    <meta name="author" content="">
     <meta name="format-detection" content="telephone=no">
      <script type="text/javascript" src="/layout/js/jquery.js"></script>
      <script type="text/javascript" src="/layout/js/plugins.js"></script>
