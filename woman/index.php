@@ -6,7 +6,12 @@
 	$APPLICATION->SetTitle("Для женщин :: Lilly Answers That Matter");
 
 ?><?
- if(!$_REQUEST['ELEMENT_CODE']) {?>
+ if(!$_REQUEST['ELEMENT_CODE']) {
+
+$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, эрекция, мужское здоровье, сексуальное здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, мужские проблемы женщины, женщина и эрекция, эрекция мужа, помочь мужчине");
+$APPLICATION->SetPageProperty('DESCRIPTION', "У моего мужчины проблема с потенцией: что такое эректильная дисфункция, чем можно помочь и как себя вести.");
+
+ ?>
 
 	<div id="woman">
      <div class="woman-title" style="background-image: url(/layout/images/woman.jpg)">

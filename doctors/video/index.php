@@ -2,6 +2,8 @@
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Записи научных трансляций :: Lilly Answers That Matter");
 	if(!$_REQUEST['ELEMENT_CODE']):
+		$APPLICATION->SetPageProperty('KEYWORDS', "мужское здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, аденома предстательной железы,  лечение гиперплазии предстательной железы, мнение уролога, конференция урологов, пациент и уролог, съезд урологов, no problem tv");
+		$APPLICATION->SetPageProperty('DESCRIPTION', "Записи трансляций: урологи о лечении эректильной дисфункции и ДГПЖ, эффективных препаратах и доверии пациента к врачу.");
 ?> 
 	<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", ".default", array(
 		"IBLOCK_TYPE" => "content",

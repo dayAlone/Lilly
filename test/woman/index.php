@@ -1,6 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Как понять, что у вашего мужчины эд? :: Lilly Answers That Matter");
+$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, эрекция, мужское здоровье, сексуальное здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, тестирование эрекции, мужская проблема, сексуальная жизнь, эрекция мужа, женщине об эрекции");
+$APPLICATION->SetPageProperty('DESCRIPTION', "Интерактивный тест: как понять, что у вашего мужчины эректильная дисфункция?");
+
 ?> 
 <div class="container">
 	<div class="col-md-6 col-md-offset-3">

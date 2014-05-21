@@ -1,6 +1,8 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Клинические исследования :: Lilly Answers That Matter");
+      $APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция,  ЭД, лечение эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, лечение ДГПЖ, проблема мочеиспускания, ежедневная терапия ЭД, ифдэ5, сиалис 5 мг, тадалафил, съезд урологов, клинические исследования");
+      $APPLICATION->SetPageProperty('DESCRIPTION', "Урология: клинические исследования, научные публикации");
 ?> 
 	<div id="research">
       <div class="container">

@@ -3,6 +3,8 @@
    $nav='white';
    require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
    $APPLICATION->SetTitle("Lilly Answers That Matter");
+   $APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, эрекция, мужское здоровье, сексуальное здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, лечение гиперплазии предстательной железы, проблема мочеиспускания, сиалис 5 мг, сиалис, препарат от эректильной дисфункции, лекарстов для потенции, улучшение мочеиспускания, тадалафил");
+   $APPLICATION->SetPageProperty('DESCRIPTION', "Сиалис® 5 мг. Ежедневный прием Сиалис 5 мг. позволит мужчине восстановить эректильную функцию и улучшит мочеиспускание при ДГПЖ.");
 ?> 
    <div id="product" style="background-image:url(/layout/images/p-1-bg.jpg)">
       <div class="container">
