@@ -1,6 +1,8 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Lilly Answers That Matter");
+	$APPLICATION->SetPageProperty('KEYWORDS', "пользовательское соглашение, авторское право, сайт Эли Лилли, пользование сайтом, авторское право");
+    $APPLICATION->SetPageProperty('DESCRIPTION', "Пользовательское соглашение: сайт компании Эли Лилли");
 ?>
 
 <div class="row">
