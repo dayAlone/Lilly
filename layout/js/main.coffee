@@ -118,7 +118,8 @@ init = ()->
                 $('#enter .checkbox').addClass('checked')
 
         out: ()->
-            $('#enter').addClass('short')
+            if !$('#enter').hasClass('dont-hide')
+                $('#enter').addClass('short')
 
     $('#faq .block .text .panel').slimscroll
         height : ()->

@@ -694,6 +694,49 @@ input:focus, a:focus {
   right: 0;
   overflow: hidden;
 }
+#enter.dont-hide {
+  top: auto;
+  bottom: 0;
+  margin-bottom: 0 !important;
+}
+#enter.v2 {
+  background-image: none;
+  background-color: rgba(189, 34, 39, 0.9);
+  border-radius: 30px 30px 0 0;
+  height: 150px;
+  min-height: 0;
+}
+#enter.v2 a {
+  background: rgba(235, 34, 45, 0.8);
+  border-radius: 30px 30px 0 0;
+  padding-left: 90px;
+}
+#enter.v2 .block {
+  overflow: visible;
+  right: 40px;
+  top: 75px;
+  padding-top: 12px;
+}
+#enter.v2 .block p {
+  margin-top: -170px;
+  width: 100%;
+}
+#enter.v2 .checkbox {
+  top: 19px;
+  left: 45px;
+}
+#enter.v2 .title {
+  float: left;
+  width: 30%;
+  text-align: right;
+  font-size: 25px;
+  line-height: 29px;
+  padding-right: 20px;
+}
+#enter.v2 p {
+  float: right;
+  width: 70%;
+}
 #enter.short {
   width: 247px;
   background: transparent;
