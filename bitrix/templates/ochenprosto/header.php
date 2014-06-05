@@ -24,6 +24,7 @@
           </script>
     <?}?>
     <?php $APPLICATION->ShowHead();?>
+    <? if($APPLICATION->GetCurPage()=='/') {?>
     <meta name="google-site-verification" content="rVPHuXR80IKS1-M4k0BJyZsP7KNF5_z8P-T5fKqrm4s" />
     <!-- Google Analytics Content Experiment code -->
 <script>function utmx_section(){}function utmx(){}(function(){var
@@ -39,7 +40,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
-
+<? }?>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31297918-1']);
@@ -57,6 +58,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   </head>
 
   <body>
+  
    <div class="frame <?=(!$doctors?'user':'doctor')?> <?=($index?'index':'')?>" style="opacity: 0">
      <div id="panel"><?$APPLICATION->ShowPanel();?></div>
      <? global $toolbar ?>

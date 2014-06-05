@@ -21080,6 +21080,33 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/16\/16908b0605f2645dfcb4c3a8d248cef3.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/16\/16908b0605f2645dfcb4c3a8d248cef3.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/27\/27850a3654870e28053dd5b6d2051c3e.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/27\/27850a3654870e28053dd5b6d2051c3e.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/28\/28976769ed03dceeac01ae0d1c0e331d.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/28\/28976769ed03dceeac01ae0d1c0e331d.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/79\/797dbc624e6a1cdfdc2f0e699c6e175d.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21107,11 +21134,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/access_check\/68\/68878f8d908da869005ed3b1bbb77198.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/access_check\/68\/68878f8d908da869005ed3b1bbb77198.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/access_check\/9e\/9e7406c22b94737b75d70c8e3e8cccbd.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/access_check\/9e\/9e7406c22b94737b75d70c8e3e8cccbd.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/access_check\/ec\/eca380947aa83b89ebfde8658c6bb7b6.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/access_check\/ec\/eca380947aa83b89ebfde8658c6bb7b6.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21161,15 +21206,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bitrix\/managed_cache\/MYSQL\/agents\/76\/76ee4ad3b12ba3471b5273d26f48b51b.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/agents\/76\/76ee4ad3b12ba3471b5273d26f48b51b.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_clouds_file_bucket\/1a\/1a01acc5e163d73a3f7a6fb4c387651a.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21206,11 +21242,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_file\/2d\/2d81412d6b244708b21f3a7128f6b4de.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/2d\/2d81412d6b244708b21f3a7128f6b4de.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_file\/33\/337a7e1f967bcb941395a3e7433d65b8.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/33\/337a7e1f967bcb941395a3e7433d65b8.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_file\/36\/3617741705059537d49166388178cc3e.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/36\/3617741705059537d49166388178cc3e.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21229,6 +21283,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/77\/776e1614e97bbf81c1ed5ea70da26b3f.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_file\/aa\/aaf690b3a09e9d3a00ca3c89ec9b8b24.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/aa\/aaf690b3a09e9d3a00ca3c89ec9b8b24.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_file\/cb\/cb54184b9c7e54769569a0636a8eca91.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/cb\/cb54184b9c7e54769569a0636a8eca91.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21265,15 +21337,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_file\/f0\/f0715a75607aea70415b87f705acc850.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/bitrix\/managed_cache\/MYSQL\/b_iblock\/12\/12fe59ed4fd47eb7f7e38cdc8ffb4896.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_iblock\/12\/12fe59ed4fd47eb7f7e38cdc8ffb4896.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21346,6 +21409,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang\/87\/873202c2404c65d99ea73d27b5cfa2d5.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_lang\/8a\/8a6771cf0faa05bbec84465de484e41d.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang\/8a\/8a6771cf0faa05bbec84465de484e41d.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21467,6 +21539,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/25\/25fd59289cdd49e9ea8481de170172e7.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/25\/25fd59289cdd49e9ea8481de170172e7.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/3f\/3f8d868428f85a975e6b093594fafd51.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21476,11 +21557,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/5a\/5ac34a4d27aca16848347c44b236ebfa.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/5a\/5ac34a4d27aca16848347c44b236ebfa.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/64\/641e0f27ba21967a793f5359d448f984.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/64\/641e0f27ba21967a793f5359d448f984.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/6d\/6d260a0462575266fc54feff44aef554.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/6d\/6d260a0462575266fc54feff44aef554.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21512,11 +21611,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/b0\/b0b40b5fdc88dae28f9c095cfb10f3aa.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/b0\/b0b40b5fdc88dae28f9c095cfb10f3aa.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/bb\/bb0e6d1fa4da842766fa444a1c7c0043.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/bb\/bb0e6d1fa4da842766fa444a1c7c0043.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/f5\/f53a5802fff4cf7aaa952cef01d7f2a1.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/f5\/f53a5802fff4cf7aaa952cef01d7f2a1.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -22232,6 +22349,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/user_option\/80\/80d0df1c506cfa11d255d489ea901529.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/user_option\/80\/80d0df1c506cfa11d255d489ea901529.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/user_option\/8f\/8fe219017d20cdcb03fa4ee11303fc00.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -22309,6 +22435,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/user_option\/d5\/d578aea89ca73584176f90affbe2ede0.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/user_option\/d7\/d77b0d35f2942a8b09ddcc0e39c7bb57.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/user_option\/d7\/d77b0d35f2942a8b09ddcc0e39c7bb57.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/user_option\/e4\/e46a7cd1240e5249e769c3b594014c74.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/user_option\/e4\/e46a7cd1240e5249e769c3b594014c74.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
