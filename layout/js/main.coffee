@@ -126,6 +126,7 @@ init = ()->
             return $(this).parents('.text').height()
 
     $('#map').click ()->
+        _gaq.push(['_trackEvent', 'DoctorLocator', 'BannerClick', 'DL BannerMain Click']); 
         $('#locator').modal()
 
     $('#article.video .icon-play').click ()->
