@@ -28,7 +28,8 @@ $client->setAssertionCredentials(
 $client->setAccessType('offline');
 
 $service = new Google_Service_Analytics( $client );
-$results = $service->data_ga->get(
+try {
+   $results = $service->data_ga->get(
     'ga:59248007',
     '2013-01-01',
     date('Y-m-d'),
@@ -37,6 +38,10 @@ $results = $service->data_ga->get(
         'max-results'   => '100'
         )
     );
-$count = (string)$results->totalsForAllResults['ga:pageviews'];
+    $count = (string)$results->totalsForAllResults['ga:pageviews'];
+} catch (Exception $e) {
+  // won't be caught
+}
+
 return $count;
 ?>
