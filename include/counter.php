@@ -40,7 +40,7 @@ try {
     );
     $count = (string)$results->totalsForAllResults['ga:pageviews'];
 } catch (Exception $e) {
-  // won't be caught
+  $count = 1909496;
 }
 
 return $count;
