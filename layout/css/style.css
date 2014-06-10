@@ -155,6 +155,20 @@ a:hover, a span:hover, .shadow:hover {
     font-size: 11px;
   }
 }
+@media screen and (max-width: 1024px) {
+  #toolbar .nav {
+    left: 30px;
+  }
+  #toolbar .nav li {
+    padding: 0 1.3%;
+  }
+  #toolbar .nav li a {
+    font-size: 18px;
+  }
+  #toolbar .nav li span.small {
+    font-size: 11px;
+  }
+}
 
 #pretest_block {
   margin-bottom: 30px;
@@ -188,6 +202,12 @@ a:hover, a span:hover, .shadow:hover {
   color: white;
   margin-top: 20px;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 1024px) {
+  #test-woman .questions h3, #test-man .questions h3 {
+    font-size: 20px !important;
+    padding-right: 20px;
+  }
 }
 #test-woman .counter, #test-man .counter {
   float: left;
@@ -316,11 +336,21 @@ a:hover, a span:hover, .shadow:hover {
 #test-man #q_00 h3 {
   padding-left: 30px;
 }
+@media screen and (max-width: 1024px) {
+  #test-man #q_00 h3 {
+    padding-left: 10px;
+  }
+}
 #test-man #q_4 h3, #test-man #q_0 h3 {
   background:  url(../images/test_sm.png) top right no-repeat;
 }
 #test-man #q_4 .counter, #test-man #q_0 .counter {
   height: 46px;
+}
+@media screen and (max-width: 1024px) {
+  #test-man #q_4 .counter, #test-man #q_0 .counter {
+    height: 54px;
+  }
 }
 #test-man #q_1 h3 {
   font-size: 22px;
@@ -330,6 +360,11 @@ a:hover, a span:hover, .shadow:hover {
 }
 #test-man #q_2 .counter, #test-man #q_1 .counter {
   height: 82px;
+}
+@media screen and (max-width: 1024px) {
+  #test-man #q_2 .counter, #test-man #q_1 .counter {
+    height: 100px;
+  }
 }
 
 #promo {
@@ -1118,6 +1153,11 @@ input:focus, a:focus {
   padding-top: 130px;
   color: white;
 }
+@media screen and (max-width: 1024px) {
+  #products-promo {
+    min-height: 700px;
+  }
+}
 #products-promo h1 {
   text-transform: uppercase;
   font-size: 26px;
@@ -1170,6 +1210,11 @@ input:focus, a:focus {
   background:  url(../images/play.png) center center no-repeat;
   z-index: 3;
 }
+@media screen and (max-width: 1024px) {
+  #products-promo #video {
+    margin-left: -17%;
+  }
+}
 #products-promo #product-1, #products-promo #product-2 {
   float: right;
   margin-right: -100px;
@@ -1206,6 +1251,17 @@ input:focus, a:focus {
 #products-promo #product-1 a:hover, #products-promo #product-2 a:hover {
   opacity: 0.7;
 }
+@media screen and (max-width: 1024px) {
+  #products-promo #product-1, #products-promo #product-2 {
+    width: 500px;
+    margin-right: -40px;
+    margin-top: 60px;
+  }
+  #products-promo #product-1 img, #products-promo #product-2 img {
+    max-width: 300px;
+    margin-top: -40px;
+  }
+}
 #products-promo #product-2 {
   margin-top: 0;
 }
@@ -1213,6 +1269,12 @@ input:focus, a:focus {
   float: left;
   margin-top: -200px;
   left: -50px;
+}
+@media screen and (max-width: 1024px) {
+  #products-promo #product-2 img {
+    margin-top: -180px;
+    left: -35px;
+  }
 }
 #products-promo #product-2 p {
   float: right;

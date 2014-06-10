@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16921",
+"creatorBuild": "17018",
 "files": {
 	"\/about\/agreement\/index.php": {
 		"fileType": 8192,
@@ -21107,6 +21107,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/41\/416acb540279140f55ddb5b83b7646b7.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/41\/416acb540279140f55ddb5b83b7646b7.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/65\/65b7157158e194d714f3a0c683f9afce.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/65\/65b7157158e194d714f3a0c683f9afce.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/79\/797dbc624e6a1cdfdc2f0e699c6e175d.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21202,6 +21220,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/agents.~858803\/76\/76ee4ad3b12ba3471b5273d26f48b51b.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/agents\/76\/76ee4ad3b12ba3471b5273d26f48b51b.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/agents\/76\/76ee4ad3b12ba3471b5273d26f48b51b.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21341,6 +21368,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_iblock\/12\/12fe59ed4fd47eb7f7e38cdc8ffb4896.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_iblock\/12\/12fe59ed4fd47eb7f7e38cdc8ffb4896.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_iblock_type\/4a\/4a6d950e7b4790479f950d2a5921c62d.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21373,6 +21409,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang\/35\/35292448e1f054810f95a63c2de00899.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_lang\/4d\/4ddd3d008a59ee248a70e8d70e0f258e.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang\/4d\/4ddd3d008a59ee248a70e8d70e0f258e.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21440,11 +21485,38 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_lang\/c5\/c50f038ed6291a78ea68e4a590830017.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang\/c5\/c50f038ed6291a78ea68e4a590830017.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_lang\/fc\/fc70ad1863cba1f1760c13e7b4e20a98.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang\/fc\/fc70ad1863cba1f1760c13e7b4e20a98.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_lang_domain\/b2\/b21d3c2ec406ac96b9b443675c383d36.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang_domain\/b2\/b21d3c2ec406ac96b9b443675c383d36.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_lang_domain\/c0\/c0a6035229545c96522ff35e2b8c37a0.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_lang_domain\/c0\/c0a6035229545c96522ff35e2b8c37a0.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21494,6 +21566,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task\/45\/45de2c44c106ab11b08ddc54666aa803.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task\/45\/45de2c44c106ab11b08ddc54666aa803.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task\/4b\/4be714977d13e13a10c1bbfefb903580.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21521,6 +21602,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task\/9d\/9d8c68225868ee036081eef8be4a9b38.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task\/9d\/9d8c68225868ee036081eef8be4a9b38.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task\/e7\/e774be88c9837876236d0c60cce54f41.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21544,6 +21634,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/25\/25fd59289cdd49e9ea8481de170172e7.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/3b\/3b4c49d283c66c28757da744ed39bbb3.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/3b\/3b4c49d283c66c28757da744ed39bbb3.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21611,6 +21710,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/a2\/a2eb4d7b185876fac3d45cf5cdaa8cf8.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/a2\/a2eb4d7b185876fac3d45cf5cdaa8cf8.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/b0\/b0b40b5fdc88dae28f9c095cfb10f3aa.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21620,11 +21728,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/b3\/b3d102e05659b57fe9571855dab3fb50.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/b3\/b3d102e05659b57fe9571855dab3fb50.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/bb\/bb0e6d1fa4da842766fa444a1c7c0043.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/bb\/bb0e6d1fa4da842766fa444a1c7c0043.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/bc\/bcc8b4f04e1c23ce98c9d5066dd91df2.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_task_operation\/bc\/bcc8b4f04e1c23ce98c9d5066dd91df2.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21791,6 +21917,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bitrix\/managed_cache\/MYSQL\/b_user_field\/71\/71c06b469c2eb5bb0fe1b706f1751744.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/b_user_field\/71\/71c06b469c2eb5bb0fe1b706f1751744.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bitrix\/managed_cache\/MYSQL\/b_user_field\/74\/74a590af9fbe1cf07f3d36cbfcec4751.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -21859,6 +21994,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/css\/s1\/ochenprosto\/template_b832551cdf7b2e03152be2a11720fdaa\/info_c336ddf47f407f384d8a7412386b426c.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/e5\/e56397d99b3a76ae3f02219877fed2c7.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/e5\/e56397d99b3a76ae3f02219877fed2c7.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/fb\/fbebca4e0e7b3b5d5031caeb6b93a51f.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/fb\/fbebca4e0e7b3b5d5031caeb6b93a51f.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -22174,6 +22327,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/js\/s1\/ochenprosto\/template_29a19bc06074b03bce976fe01dd5515e\/info_61063b837d09c9cd53c154d691201466.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bitrix\/managed_cache\/MYSQL\/menu\/35\/3555ec3a183b1a320efce9724eaabf61.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bitrix\/managed_cache\/MYSQL\/menu\/35\/3555ec3a183b1a320efce9724eaabf61.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -85525,7 +85687,7 @@
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": false
 		},
 	"\/layout\/images\/article-arrows.png": {
 		"fileType": 32768,
@@ -87521,7 +87683,7 @@
 	"iconImageName": "meme-wonka"
 	},
 "projectSettings": {
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, ff 17, opera 12.1",
@@ -87576,10 +87738,6 @@
 		"newlines_after_classes": {
 			"active": 0,
 			"flagValue": 3
-			},
-		"no-unnecessary_fat_arrows": {
-			"active": 1,
-			"flagValue": -1
 			},
 		"no_backticks": {
 			"active": 1,
@@ -87637,6 +87795,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"no_unnecessary_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"non_empty_constructor_needs_parens": {
 			"active": 0,
 			"flagValue": -1
@@ -87649,7 +87811,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/l.local",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathRelativePath": "",
