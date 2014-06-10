@@ -128,6 +128,11 @@ a:hover, a span:hover, .shadow:hover {
   margin-top: -9px;
   color: white;
 }
+@media screen and (max-width: 1024px) {
+  .user #toolbar .nav li:last-child a {
+    margin-left: 0;
+  }
+}
 #toolbar .nav li span.small, #toolbar .nav li a.small {
   color: #5f5e4d;
   text-shadow: none;
