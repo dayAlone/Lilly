@@ -110,9 +110,6 @@
      </div>
    </div>
  
- <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
- <link href="/layout/css/plugins.css" rel="stylesheet" />
- <link href="/layout/css/style.css" rel="stylesheet" />
  
  <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

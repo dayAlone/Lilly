@@ -55,6 +55,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     </script>
 
     <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Bh6DI5ReSHIvsQsemv1SLKV6jKW8*qviv*I2ezvg/tqn4jZ439vgbfkzR2dG26Go/i4c*k6YC/B9MYPQWEEndGWVz/h81y8wBJjErUivrgccc5*4bzV4R7pAEENut9J/C8TyNd1rlJDD78OlhjcsIrNKOogMjYcoqSHHRNmNgbo-';</script>
+    <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
+ <link href="/layout/css/plugins.css" rel="stylesheet" />
+ <link href="/layout/css/style.css" rel="stylesheet" />
+ 
   </head>
 
   <body>
