@@ -43,7 +43,7 @@
                   <nobr>
                      <? 
                       $obCache = new CPHPCache();
-                      $cacheLifetime = 1440; 
+                      $cacheLifetime = 10800; 
                       $cacheID = 'count'-date('Y-m-d'); 
                       $cachePath = '/';
                       if( $obCache->InitCache($cacheLifetime, $cacheID, $cachePath) )
