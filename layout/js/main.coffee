@@ -97,12 +97,12 @@ init = ()->
 
         $(this).parents('.question').fadeOut()
 
-        console.log s_id
-
         $('#result, #buttons').fadeIn() if $('#result, #buttons').is(':hidden')
         $('#result .r'+s_id).show() if $('#result .r'+s_id).is(':hidden')
         $('#result .ansver').click (e)->
             id = $(this).data('id')
+            if($(this).parents('.section').find('.ansver').length==1)
+                $(this).parents('.section').fadeOut()
             $(this).remove()
             $(".question[data-id='#{id}']").fadeIn()
             e.preventDefault()
