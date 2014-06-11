@@ -86,7 +86,31 @@ init = ()->
         if($.cookie('checkbox')=='true')
             $('#doctor .checkbox').addClass('checked')
 
-     
+    $('#symtpoms input').iCheck()
+    $('#symtpoms input').on 'ifChanged', (event)->
+        title = $(this).parents('.question').find('h2').text()
+        s_id = $(this).parents('.section').data('id')
+        id = $(this).parents('.question').data('id')
+
+        answ = $(this).parents('li').find('label').text()
+
+        $('#result .r'+s_id).append "<div class='ansver' id='a-#{id}'>#{title} – #{answ}</div>"
+
+        $(this).parents('.question').fadeOut()
+
+        console.log s_id
+
+        $('#result, #buttons').fadeIn() if $('#result, #buttons').is(':hidden')
+        $('#result .r'+s_id).show() if $('#result .r'+s_id).is(':hidden')
+        console.log id
+
+    $('#symtpoms .frame').perfectScrollbar
+        suppressScrollX: true
+
+    $('#symtpoms .question h2').click (e)->
+        $(this).parents('.question').toggleClass('on')
+        $('#symtpoms .frame').perfectScrollbar('update')
+        e.preventDefault()
 
     $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')

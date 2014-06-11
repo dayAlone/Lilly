@@ -1472,10 +1472,133 @@ input:focus, a:focus
 				font-size: 19px
 				line-height: 21px
 
-
-
-
-
+#symtpoms
+	+full-width
+	height: 670px
+	.frame
+		width: 748px
+		height: 670px
+		padding-left: 100px
+		.scroll
+			+full-width
+		margin-left: -100px
+		+b('symptoms.jpg')
+		.ps-scrollbar-y-rail
+			position: absolute
+			top: 0 !important
+			left: -30px !important
+			opacity: 1 !important
+			background: rgba(0,0,0,.3)
+			border-radius: 0
+		.ps-scrollbar-y
+			opacity: 1 !important
+			background: rgba(235,34,46,.5)
+			border-radius: 0
+		h1
+			text-transform: uppercase
+			font-size: 23px
+			line-height: 30px
+			margin: 0
+			font-weight: 700
+			margin-bottom: 10px
+			margin-top: 5px
+			+full-width
+		.question
+			+transition-property(all)
+			+transition-duration(.3s)
+			padding: 10px 10px 5px
+			color: white
+			float: left
+			width: 46%
+			margin-right: 2%
+			margin-bottom: 15px
+			+b('arrow-s.png', 97% 10px no-repeat)
+			background-color: rgba(235,34,46,.85)
+			.iradio, .icheckbox
+				width: 12px
+				height: 12px
+				float: left
+				background: white
+				border-radius: 3px
+				margin-top: 6px
+				
+				margin-right: 5px
+				&.checked
+					background: white url(/layout/images/c.png) 2px 2px no-repeat
+			h2
+				font-size: 19px
+				min-height: 60px
+				margin: 0
+				+full-width
+				cursor: pointer
+				margin-bottom: 10px
+				color white
+				small
+					color: white
+			&.on
+				h2
+					min-height: 0
+				ul
+					display: block
+				+b('arrow-s2.png', 97% 10px no-repeat)
+				background-color: rgba(235,34,46,.85)
+				
+			ul
+				margin: 0
+				display: none
+				padding: 0
+				list-style: none
+				li
+					+full-width
+					clear: both
+					margin-bottom: 0
+					label
+						font-weight: 400
+						float: right
+						width: 93%
+						font-size: 14px
+	#result
+		display: none
+		+full-width
+		min-height: 20px
+		+box-shadow(0 0 13px rgba(8,10,14,.44))
+		padding: 10px
+		h2
+			font-weight: 300
+			text-transform: uppercase
+			font-size: 24px
+			margin: 0
+			padding: 5px 15px 4px
+			border-bottom: 1px solid #d1d1d1
+		.section
+			display: none
+			+full-width
+			padding: 0 15px
+			.ansver
+				+full-width
+				font-size: 13px
+				margin-bottom: 10px
+			border-bottom: 1px solid #d1d1d1
+			&:last-of-type
+				border-bottom: 0 !important
+			h3
+				font-size: 18px
+				margin: 8px 0 10px
+	#buttons
+		display: none
+		margin-top: 20px
+		+full-width
+		a
+			+full-width
+			background: #ec4149
+			text-transform: uppercase
+			color: white
+			padding: 3px 10px 4px
+			font-weight: 500
+			height: 45px
+			line-height: 18px
+			&.find
+				line-height: 40px
 
 
 
