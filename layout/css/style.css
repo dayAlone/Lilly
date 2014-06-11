@@ -2083,6 +2083,7 @@ input:focus, a:focus {
   position: relative;
   font-size: 13px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 #symtpoms #result .section:last-of-type {
   border-bottom: 0 !important;

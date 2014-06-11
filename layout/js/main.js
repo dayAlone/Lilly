@@ -120,7 +120,7 @@
       s_id = $(this).parents('.section').data('id');
       id = $(this).parents('.question').data('id');
       answ = $(this).parents('li').find('label').text();
-      $('#result .r' + s_id).append("<div class='ansver' id='a-" + id + "'>" + title + " – " + answ + "</div>");
+      $('#result .r' + s_id).append("<div data-id='" + id + "' class='ansver' id='a-" + id + "'>" + title + " – " + answ + "</div>");
       $(this).parents('.question').fadeOut();
       console.log(s_id);
       if ($('#result, #buttons').is(':hidden')) {
@@ -129,7 +129,12 @@
       if ($('#result .r' + s_id).is(':hidden')) {
         $('#result .r' + s_id).show();
       }
-      return console.log(id);
+      return $('#result .ansver').click(function(e) {
+        id = $(this).data('id');
+        $(this).remove();
+        $(".question[data-id='" + id + "']").fadeIn();
+        return e.preventDefault();
+      });
     });
     $('#symtpoms .frame').perfectScrollbar({
       suppressScrollX: true

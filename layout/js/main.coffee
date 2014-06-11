@@ -91,10 +91,9 @@ init = ()->
         title = $(this).parents('.question').find('h2').text()
         s_id = $(this).parents('.section').data('id')
         id = $(this).parents('.question').data('id')
-
         answ = $(this).parents('li').find('label').text()
 
-        $('#result .r'+s_id).append "<div class='ansver' id='a-#{id}'>#{title} – #{answ}</div>"
+        $('#result .r'+s_id).append "<div data-id='#{id}' class='ansver' id='a-#{id}'>#{title} – #{answ}</div>"
 
         $(this).parents('.question').fadeOut()
 
@@ -102,7 +101,13 @@ init = ()->
 
         $('#result, #buttons').fadeIn() if $('#result, #buttons').is(':hidden')
         $('#result .r'+s_id).show() if $('#result .r'+s_id).is(':hidden')
-        console.log id
+        $('#result .ansver').click (e)->
+            id = $(this).data('id')
+            $(this).remove()
+            $(".question[data-id='#{id}']").fadeIn()
+            e.preventDefault()
+    
+
 
     $('#symtpoms .frame').perfectScrollbar
         suppressScrollX: true
