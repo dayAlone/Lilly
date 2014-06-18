@@ -102,7 +102,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
        <? /*<a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>*/?>
        <a href="/test/man/" class="flag test"><img src="/layout/images/flag-test.png"></a>
      
-      <div id="enter" class="<?if(!$_GET['v']){?>short<?}else{?> dont-hide <?if($_GET['v']==2){?> v2<?}}?>">
+      <div id="enter" class="short">
         <div class="container">
           <div class="row">
             <div class="col-md-9 col-xs-6">

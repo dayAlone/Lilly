@@ -51,3 +51,4 @@ bitrix/php_interface/dbconn.php
 bitrix/cache/
 bitrix/managed_cache/
 upload/tmp/
+config.codekit

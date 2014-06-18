@@ -621,6 +621,12 @@ a:hover, a span:hover, .shadow:hover {
   margin-left: -273px;
   background:  url(../images/index-video.png) top center no-repeat;
 }
+#main-block .video.v-2 {
+  width: 700px;
+  height: 393px;
+  top: 150px;
+  margin-left: -350px;
+}
 #main-block .video .icon {
   position: absolute;
   width: 100%;
