@@ -119,7 +119,7 @@
          </div>
          <div class="row">
            <div class="col-md-<?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'12':'8')?>">
-             <?=$arResult['PROPERTIES']['WEBINAR']['VALUE']['TEXT']?>
+             <?=$arResult['PROPERTIES']['WEBINAR']['~VALUE']['TEXT']?>
            </div>
           <? if(!$doctors) :?>
            <div class="col-md-4 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
