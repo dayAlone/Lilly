@@ -87,25 +87,30 @@ init = ()->
             $('#doctor .checkbox').addClass('checked')
 
     $('#symtpoms input').iCheck()
-    $('#symtpoms input').on 'ifChanged', (event)->
-        title = $(this).parents('.question').find('h2').text()
-        s_id = $(this).parents('.section').data('id')
-        id = $(this).parents('.question').data('id')
-        answ = $(this).parents('li').find('label').text()
+    
+    $('#symtpoms-welcome').modal()
+    
+    $('#symtpoms input').on 'ifChecked', (event, a)->
 
-        $('#result .r'+s_id).append "<div data-id='#{id}' class='ansver' id='a-#{id}'>#{title} – #{answ}</div>"
+        $(this).iCheck('uncheck')
 
-        $(this).parents('.question').fadeOut()
+        $('#buttons').removeClass('off') if $('#buttons').hasClass('off')
 
-        $('#result, #buttons').fadeIn() if $('#result, #buttons').is(':hidden')
-        $('#result .r'+s_id).show() if $('#result .r'+s_id).is(':hidden')
-        $('#result .ansver').click (e)->
+        s_id  = $(this).parents('.section').data('id')
+        id    = $(this).parents('.question').data('id')
+        answ  = $(this).data("answer")
+
+        $("#result .r#{s_id}").append "<div data-id='#{id}' class='ansver' id='a-#{id}'>#{answ}</div>"
+
+        $(this).parents('.question').hide()
+
+        $("#result .ansver[data-id='#{id}']").one 'click', (e)->
             id = $(this).data('id')
-            if($(this).parents('.section').find('.ansver').length==1)
-                $(this).parents('.section').fadeOut()
+            $(".question[data-id='#{id}']").show()
             $(this).remove()
-            $(".question[data-id='#{id}']").fadeIn()
             e.preventDefault()
+
+
     
 
 

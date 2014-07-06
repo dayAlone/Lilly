@@ -114,27 +114,22 @@
       }
     });
     $('#symtpoms input').iCheck();
-    $('#symtpoms input').on('ifChanged', function(event) {
-      var answ, id, s_id, title;
-      title = $(this).parents('.question').find('h2').text();
+    $('#symtpoms-welcome').modal();
+    $('#symtpoms input').on('ifChecked', function(event, a) {
+      var answ, id, s_id;
+      $(this).iCheck('uncheck');
+      if ($('#buttons').hasClass('off')) {
+        $('#buttons').removeClass('off');
+      }
       s_id = $(this).parents('.section').data('id');
       id = $(this).parents('.question').data('id');
-      answ = $(this).parents('li').find('label').text();
-      $('#result .r' + s_id).append("<div data-id='" + id + "' class='ansver' id='a-" + id + "'>" + title + " – " + answ + "</div>");
-      $(this).parents('.question').fadeOut();
-      if ($('#result, #buttons').is(':hidden')) {
-        $('#result, #buttons').fadeIn();
-      }
-      if ($('#result .r' + s_id).is(':hidden')) {
-        $('#result .r' + s_id).show();
-      }
-      return $('#result .ansver').click(function(e) {
+      answ = $(this).data("answer");
+      $("#result .r" + s_id).append("<div data-id='" + id + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
+      $(this).parents('.question').hide();
+      return $("#result .ansver[data-id='" + id + "']").one('click', function(e) {
         id = $(this).data('id');
-        if ($(this).parents('.section').find('.ansver').length === 1) {
-          $(this).parents('.section').fadeOut();
-        }
+        $(".question[data-id='" + id + "']").show();
         $(this).remove();
-        $(".question[data-id='" + id + "']").fadeIn();
         return e.preventDefault();
       });
     });

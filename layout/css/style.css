@@ -1941,6 +1941,30 @@ input:focus, a:focus {
   line-height: 21px;
 }
 
+#symtpoms-welcome h2 {
+  margin-top: 20px;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+#symtpoms-welcome p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+#symtpoms-welcome a {
+  float: right;
+  width: 226px;
+  height: 53px;
+  color: white;
+  line-height: 53px;
+  text-align: center;
+  font-size: 28px;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #d5191d), color-stop(100%, #efadaf));
+  background-image: -webkit-linear-gradient(left, #d5191d 0%, #efadaf 100%);
+  background-image: -moz-linear-gradient(left, #d5191d 0%, #efadaf 100%);
+  background-image: -o-linear-gradient(left, #d5191d 0%, #efadaf 100%);
+  background-image: linear-gradient(left, #d5191d 0%, #efadaf 100%);
+}
+
 #symtpoms {
   float: left;
   width: 100%;
@@ -1972,6 +1996,12 @@ input:focus, a:focus {
   background: rgba(235, 34, 46, 0.5);
   border-radius: 0;
 }
+#symtpoms .frame .section {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding-right: 20px;
+}
 #symtpoms .frame h1 {
   text-transform: uppercase;
   font-size: 23px;
@@ -1996,8 +2026,7 @@ input:focus, a:focus {
   padding: 10px 10px 5px;
   color: white;
   float: left;
-  width: 46%;
-  margin-right: 2%;
+  width: 100%;
   margin-bottom: 15px;
   background:  url(../images/arrow-s.png) 97% 10px no-repeat;
   background-color: rgba(235, 34, 46, 0.85);
@@ -2021,11 +2050,14 @@ input:focus, a:focus {
   float: left;
   width: 100%;
   position: relative;
+  width: 95%;
   cursor: pointer;
   margin-bottom: 10px;
 }
 #symtpoms .frame .question h2 small {
   color: white;
+  float: left;
+  clear: both;
 }
 #symtpoms .frame .question.on {
   background:  url(../images/arrow-s2.png) 97% 10px no-repeat;
@@ -2057,7 +2089,7 @@ input:focus, a:focus {
   font-size: 14px;
 }
 #symtpoms #result {
-  display: none;
+  display: block;
   float: left;
   width: 100%;
   position: relative;
@@ -2066,6 +2098,7 @@ input:focus, a:focus {
   -moz-box-shadow: 0 0 13px rgba(8, 10, 14, 0.44);
   box-shadow: 0 0 13px rgba(8, 10, 14, 0.44);
   padding: 10px;
+  min-height: 600px;
 }
 #symtpoms #result h2 {
   font-weight: 300;
@@ -2076,7 +2109,7 @@ input:focus, a:focus {
   border-bottom: 1px solid #d1d1d1;
 }
 #symtpoms #result .section {
-  display: none;
+  display: block;
   float: left;
   width: 100%;
   position: relative;
@@ -2096,14 +2129,21 @@ input:focus, a:focus {
 }
 #symtpoms #result .section h3 {
   font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 300;
   margin: 8px 0 10px;
 }
 #symtpoms #buttons {
-  display: none;
   margin-top: 20px;
   float: left;
   width: 100%;
   position: relative;
+}
+#symtpoms #buttons.off {
+  pointer-events: none;
+}
+#symtpoms #buttons.off a {
+  background: #b3b3b3;
 }
 #symtpoms #buttons a {
   float: left;

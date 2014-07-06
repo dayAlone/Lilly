@@ -1477,6 +1477,24 @@ input:focus, a:focus
 				font-size: 19px
 				line-height: 21px
 
+#symtpoms-welcome
+	h2
+		margin-top: 20px
+		font-size: 36px
+		margin-bottom: 30px
+	p
+		font-size: 24px
+		margin-bottom: 30px
+	a
+		float: right
+		width: 226px
+		height: 53px
+		color: white
+		line-height: 53px
+		text-align: center
+		font-size: 28px
+		+background-image(linear-gradient(left, #d5191d 0%, #efadaf 100%))
+
 #symtpoms
 	+full-width
 	height: 670px
@@ -1499,6 +1517,9 @@ input:focus, a:focus
 			opacity: 1 !important
 			background: rgba(235,34,46,.5)
 			border-radius: 0
+		.section
+			+full-width
+			padding-right: 20px
 		h1
 			text-transform: uppercase
 			font-size: 23px
@@ -1514,8 +1535,7 @@ input:focus, a:focus
 			padding: 10px 10px 5px
 			color: white
 			float: left
-			width: 46%
-			margin-right: 2%
+			width: 100%
 			margin-bottom: 15px
 			+b('arrow-s.png', 97% 10px no-repeat)
 			background-color: rgba(235,34,46,.85)
@@ -1535,11 +1555,14 @@ input:focus, a:focus
 				min-height: 60px
 				margin: 0
 				+full-width
+				width: 95%
 				cursor: pointer
 				margin-bottom: 10px
 				color white
 				small
 					color: white
+					float: left
+					clear: both
 			&.on
 				h2
 					min-height: 0
@@ -1563,11 +1586,12 @@ input:focus, a:focus
 						width: 93%
 						font-size: 14px
 	#result
-		display: none
+		display: block
 		+full-width
 		min-height: 20px
 		+box-shadow(0 0 13px rgba(8,10,14,.44))
 		padding: 10px
+		min-height: 600px
 		h2
 			font-weight: 300
 			text-transform: uppercase
@@ -1576,7 +1600,7 @@ input:focus, a:focus
 			padding: 5px 15px 4px
 			border-bottom: 1px solid #d1d1d1
 		.section
-			display: none
+			display: block
 			+full-width
 			padding: 0 15px
 			.ansver
@@ -1589,9 +1613,14 @@ input:focus, a:focus
 				border-bottom: 0 !important
 			h3
 				font-size: 18px
+				text-transform: uppercase
+				font-weight: 300
 				margin: 8px 0 10px
 	#buttons
-		display: none
+		&.off
+			pointer-events: none
+			a
+				background: #b3b3b3
 		margin-top: 20px
 		+full-width
 		a
