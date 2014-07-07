@@ -74,7 +74,7 @@ init = ()->
             if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
                 $('body .frame').removeClass('animated fadeIn')
                 History.pushState({'url':url}, $(this).text(), url);
-            else if(url.indexOf('http')>=0)
+            else if(url.indexOf('http')>=0 || $(this).attr('target')=="_blank")
                 window.open(url, '_blank');
                 if($(this).parents('#locator').length>0)
                     $('#locator').modal('hide')
@@ -90,23 +90,42 @@ init = ()->
     
     $('#symptoms-welcome').modal()
     
+    symptoms_collect = ()->
+        test_result = {}
+        q = 0
+        $("#result .section").each ()->
+            questions = {}
+            a = 0
+            $(this).find(".ansver").each ()->
+                questions[a] = $(this).data('answer')
+                a++
+            test_result[q] =
+                name: $(this).find('h3').text()
+                questions: questions
+            q++
+        $.removeCookie 'test_result'
+        $.cookie 'test_result', JSON.stringify(test_result) 
+        console.log($.cookie('test_result'))
+
+    #$('#symtpoms .question li:first-child() input').iCheck('check');
     $('#symtpoms input').on 'ifChecked', (event, a)->
 
         $(this).iCheck('uncheck')
 
-
         s_id  = $(this).parents('.section').data('id')
         id    = $(this).parents('.question').data('id')
         answ  = $(this).data("answer")
+        a     = $(this).data('id')
 
-        $("#result .r#{s_id}").append "<div data-id='#{id}' class='ansver' id='a-#{id}'>#{answ}</div>"
+        $("#result .r#{s_id}").append "<div data-id='#{id}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
 
         $(this).parents('.question').hide()
 
         $(this).parents('.section').hide() if $(this).parents('.section').find('.question:visible').length == 0
 
         if $('.question:visible').length == 0
-            $('#buttons').removeClass('off') 
+            $('#buttons').removeClass('off')
+            symptoms_collect()
         else
             $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
 

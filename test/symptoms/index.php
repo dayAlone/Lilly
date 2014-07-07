@@ -63,7 +63,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 																}
 																?>
 																	<li>
-																		<input type="radio" data-answer="<?=$w?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>"><?=$answer?></label>
+																		<input type="radio" data-answer="<?=$w?>" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>"><?=$answer?></label>
 																	</li>
 																<?
 																$a++;
@@ -107,7 +107,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 				<div id="buttons" class="off">
 					<div class="row">
 						<div class="col-md-4">
-							<a href="#">Файл<br>для печати</a>
+							<a href="./print.php" target="_blank" class="no-ajax">Файл<br>для печати</a>
 						</div>
 						<div class="col-md-4">
 							<a class="find" data-toggle="modal" data-target="#locator" href="#locator">Найти врача</a>

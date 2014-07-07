@@ -181,6 +181,70 @@ a:hover, a span:hover, .shadow:hover {
   }
 }
 
+#print .container {
+  width: 540px;
+  font-weight: 300;
+}
+#print .section, #print .title {
+  float: left;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #bcbcbc;
+  padding: 8px 15px;
+}
+#print .title {
+  border: 0;
+}
+#print h1 {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+#print p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+#print h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fc1e2b;
+  margin: 0 0 8px;
+  page-break-before: always;
+}
+#print h4 {
+  font-weight: bold;
+  color: #f92334;
+  text-indent: -19px;
+  margin-left: 20px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#print .line + h4 {
+  margin-top: 20px;
+}
+#print .line {
+  float: left;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #bcbcbc;
+  height: 30px;
+}
+#print ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#print ul li {
+  font-size: 12px;
+  line-height: 19px;
+}
+#print .more {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
 #pretest_block {
   margin-bottom: 30px;
   float: left;

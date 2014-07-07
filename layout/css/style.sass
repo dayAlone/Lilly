@@ -28,6 +28,7 @@ body
 	font-family: 'DINPro', 'Helvetica Neue', Arial
 	background: white
 	font-size: 16px
+	bo-r
 	
 a, a span, .shadow
 	+transition-property(background-color, opacity, color, border, box-shadow, z-index)
@@ -124,7 +125,50 @@ a, a span, .shadow
 				span.small
 					font-size: 11px
 
-
+#print
+	.container
+		width: 540px
+		font-weight: 300
+	.section, .title
+		+full-width
+		border-top: 1px solid #bcbcbc
+		padding: 8px 15px
+	.title
+		border: 0
+	h1
+		font-size: 23px
+		text-transform: uppercase
+	p
+		font-size: 15px
+		margin-bottom: 0
+	h2
+		text-transform: uppercase
+		font-size: 18px
+		color: #fc1e2b
+		margin: 0 0 8px
+		page-break-before: always
+	h4
+		font-weight: bold
+		color: #f92334
+		text-indent: -19px
+		margin-left: 20px
+		+full-width
+	.line+h4
+		margin-top: 20px
+	.line
+		+full-width
+		border-bottom: 1px solid #bcbcbc
+		height: 30px
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		li
+			font-size: 12px
+			line-height: 19px
+	.more
+		+full-width
+		margin-top: 40px
 #pretest_block
 	margin-bottom: 30px
 	+full-width
@@ -1649,6 +1693,7 @@ input:focus, a:focus
 				text-transform: uppercase
 				font-weight: 300
 				margin: 8px 0 10px
+	
 	#buttons
 		&.off
 			pointer-events: none
