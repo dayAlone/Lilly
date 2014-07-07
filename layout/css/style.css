@@ -1982,6 +1982,7 @@ input:focus, a:focus {
   margin-top: 20px;
   font-size: 36px;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 #symptoms-welcome p {
   font-size: 24px;
@@ -2138,11 +2139,10 @@ input:focus, a:focus {
   min-height: 600px;
 }
 #symtpoms #result h2 {
-  font-weight: 300;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
-  padding: 5px 15px 4px;
+  padding: 5px 0px 12px 10px;
   border-bottom: 1px solid #d1d1d1;
 }
 #symtpoms #result .section {
@@ -2150,7 +2150,7 @@ input:focus, a:focus {
   float: left;
   width: 100%;
   position: relative;
-  padding: 0 15px;
+  padding: 0 10px;
   border-bottom: 1px solid #d1d1d1;
 }
 #symtpoms #result .section .ansver {

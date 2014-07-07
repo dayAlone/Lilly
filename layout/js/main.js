@@ -123,6 +123,9 @@
       answ = $(this).data("answer");
       $("#result .r" + s_id).append("<div data-id='" + id + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
       $(this).parents('.question').hide();
+      if ($(this).parents('.section').find('.question:visible').length === 0) {
+        $(this).parents('.section').hide();
+      }
       if ($('.question:visible').length === 0) {
         $('#buttons').removeClass('off');
       } else {
@@ -132,6 +135,9 @@
       }
       return $("#result .ansver[data-id='" + id + "']").one('click', function(e) {
         id = $(this).data('id');
+        if ($(".question[data-id='" + id + "']").parents('.section').is(':hidden')) {
+          $(".question[data-id='" + id + "']").parents('.section').show();
+        }
         $(".question[data-id='" + id + "']").show();
         $(this).remove();
         return e.preventDefault();

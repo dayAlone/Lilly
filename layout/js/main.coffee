@@ -95,8 +95,6 @@ init = ()->
         $(this).iCheck('uncheck')
 
 
-
-
         s_id  = $(this).parents('.section').data('id')
         id    = $(this).parents('.question').data('id')
         answ  = $(this).data("answer")
@@ -105,6 +103,8 @@ init = ()->
 
         $(this).parents('.question').hide()
 
+        $(this).parents('.section').hide() if $(this).parents('.section').find('.question:visible').length == 0
+
         if $('.question:visible').length == 0
             $('#buttons').removeClass('off') 
         else
@@ -112,6 +112,7 @@ init = ()->
 
         $("#result .ansver[data-id='#{id}']").one 'click', (e)->
             id = $(this).data('id')
+            $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
             $(".question[data-id='#{id}']").show()
             $(this).remove()
             e.preventDefault()
