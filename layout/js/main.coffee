@@ -88,13 +88,14 @@ init = ()->
 
     $('#symtpoms input').iCheck()
     
-    $('#symtpoms-welcome').modal()
+    $('#symptoms-welcome').modal()
     
     $('#symtpoms input').on 'ifChecked', (event, a)->
 
         $(this).iCheck('uncheck')
 
-        $('#buttons').removeClass('off') if $('#buttons').hasClass('off')
+
+
 
         s_id  = $(this).parents('.section').data('id')
         id    = $(this).parents('.question').data('id')
@@ -103,6 +104,11 @@ init = ()->
         $("#result .r#{s_id}").append "<div data-id='#{id}' class='ansver' id='a-#{id}'>#{answ}</div>"
 
         $(this).parents('.question').hide()
+
+        if $('.question:visible').length == 0
+            $('#buttons').removeClass('off') 
+        else
+            $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
 
         $("#result .ansver[data-id='#{id}']").one 'click', (e)->
             id = $(this).data('id')

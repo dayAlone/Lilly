@@ -387,8 +387,27 @@ a:hover, a span:hover, .shadow:hover {
 #promo.woman .block.big {
   height: 526px;
 }
+#symtpoms-articles #promo.woman .block.big {
+  height: 380px;
+}
+#symtpoms-articles #promo.woman .block.big .title {
+  font-size: 34px;
+}
+#symtpoms-articles #promo.woman .block.big .text {
+  font-size: 18px;
+}
 #promo.woman .block.medium {
   height: 256px;
+}
+#symtpoms-articles #promo.woman .block.medium {
+  height: 183px;
+}
+#symtpoms-articles #promo.woman .block.medium .title {
+  font-size: 21px;
+  line-height: 20px;
+}
+#symtpoms-articles #promo.woman .block.medium .text {
+  font-size: 13px;
 }
 #promo.woman .block .text .bb {
   display: inline-block;
@@ -1086,6 +1105,7 @@ input:focus, a:focus {
 
 .modal-dialog .close {
   background:  url(../images/close.png) center center no-repeat;
+  background-size: contain;
   opacity: 1;
   width: 20px;
   height: 20px;
@@ -1941,16 +1961,33 @@ input:focus, a:focus {
   line-height: 21px;
 }
 
-#symtpoms-welcome h2 {
+#symptoms-articles .close {
+  width: 30px;
+  height: 30px;
+}
+#symptoms-articles h3 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+#symptoms-articles .modal-content {
+  padding: 30px;
+}
+#symptoms-articles .modal-xxl {
+  width: 1100px;
+}
+
+#symptoms-welcome h2 {
   margin-top: 20px;
   font-size: 36px;
   margin-bottom: 30px;
 }
-#symtpoms-welcome p {
+#symptoms-welcome p {
   font-size: 24px;
   margin-bottom: 30px;
 }
-#symtpoms-welcome a {
+#symptoms-welcome a {
   float: right;
   width: 226px;
   height: 53px;
@@ -1969,7 +2006,7 @@ input:focus, a:focus {
   float: left;
   width: 100%;
   position: relative;
-  height: 670px;
+  min-height: 670px;
 }
 #symtpoms .frame {
   width: 748px;
@@ -2134,7 +2171,7 @@ input:focus, a:focus {
   margin: 8px 0 10px;
 }
 #symtpoms #buttons {
-  margin-top: 20px;
+  margin: 20px 0;
   float: left;
   width: 100%;
   position: relative;

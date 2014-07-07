@@ -114,18 +114,22 @@
       }
     });
     $('#symtpoms input').iCheck();
-    $('#symtpoms-welcome').modal();
+    $('#symptoms-welcome').modal();
     $('#symtpoms input').on('ifChecked', function(event, a) {
       var answ, id, s_id;
       $(this).iCheck('uncheck');
-      if ($('#buttons').hasClass('off')) {
-        $('#buttons').removeClass('off');
-      }
       s_id = $(this).parents('.section').data('id');
       id = $(this).parents('.question').data('id');
       answ = $(this).data("answer");
       $("#result .r" + s_id).append("<div data-id='" + id + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
       $(this).parents('.question').hide();
+      if ($('.question:visible').length === 0) {
+        $('#buttons').removeClass('off');
+      } else {
+        if (!$('#buttons').hasClass('off')) {
+          $('#buttons').addClass('off');
+        }
+      }
       return $("#result .ansver[data-id='" + id + "']").one('click', function(e) {
         id = $(this).data('id');
         $(".question[data-id='" + id + "']").show();

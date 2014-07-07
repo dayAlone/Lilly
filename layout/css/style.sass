@@ -282,8 +282,21 @@ a, a span, .shadow
 		.block
 			&.big
 				height: 526px
+				#symtpoms-articles &
+					height: 380px
+					.title
+						font-size: 34px
+					.text
+						font-size: 18px
 			&.medium
 				height: 256px
+				#symtpoms-articles &
+					height: 183px
+					.title
+						font-size: 21px
+						line-height: 20px
+					.text
+						font-size: 13px
 			.text
 				.bb
 					display: inline-block
@@ -837,6 +850,7 @@ input:focus, a:focus
 .modal-dialog
 	.close
 		+b('close.png')
+		background-size: contain
 		opacity: 1
 		width: 20px
 		height: 20px
@@ -1476,8 +1490,21 @@ input:focus, a:focus
 				font-weight: 500
 				font-size: 19px
 				line-height: 21px
+#symptoms-articles
+	.close
+		width: 30px
+		height: 30px
+	h3
+		font-size: 28px
+		font-weight: 300
+		margin-top: 0
+		margin-bottom: 30px
+	.modal-content
+		padding: 30px
+	.modal-xxl
+		width: 1100px
 
-#symtpoms-welcome
+#symptoms-welcome
 	h2
 		margin-top: 20px
 		font-size: 36px
@@ -1497,7 +1524,8 @@ input:focus, a:focus
 
 #symtpoms
 	+full-width
-	height: 670px
+	min-height: 670px
+	
 	.frame
 		width: 748px
 		height: 670px
@@ -1621,7 +1649,7 @@ input:focus, a:focus
 			pointer-events: none
 			a
 				background: #b3b3b3
-		margin-top: 20px
+		margin: 20px 0
 		+full-width
 		a
 			+full-width
