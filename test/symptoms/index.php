@@ -46,7 +46,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 									        }
 											?>
 												<div class="col-md-<?=12/$col?>">
-													<div class="question" data-id="1">
+													<div class="question" data-id="<?=$q?>">
 														<h2><?=$question['name']?></h2>
 														<ul>
 														<?
