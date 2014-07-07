@@ -1636,6 +1636,10 @@ input:focus, a:focus
 				font-size: 13px
 				margin-bottom: 10px
 				cursor: pointer
+				+transition-property(all)
+				+transition-duration(.3s)
+				&:hover
+					color: #eb222e
 			border-bottom: 1px solid #d1d1d1
 			&:last-of-type
 				border-bottom: 0 !important

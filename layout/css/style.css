@@ -2160,6 +2160,17 @@ input:focus, a:focus {
   font-size: 13px;
   margin-bottom: 10px;
   cursor: pointer;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+#symtpoms #result .section .ansver:hover {
+  color: #eb222e;
 }
 #symtpoms #result .section:last-of-type {
   border-bottom: 0 !important;
