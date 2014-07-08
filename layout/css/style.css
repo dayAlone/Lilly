@@ -196,6 +196,12 @@ a:hover, a span:hover, .shadow:hover {
   border-top: 1px solid #bcbcbc;
   padding: 8px 15px;
 }
+#print .questions {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 700px;
+}
 #print .title {
   border: 0;
 }

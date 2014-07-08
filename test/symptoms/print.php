@@ -23,6 +23,7 @@
   		<h1>Карта показателей мужского здоровья</h1>
 		<p>Покажите Карту врачу или ориентируйтесь на нее при разговоре с ним.</p>
   	</div>
+  	<div class="questions">
 	<?
 		if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 		{
@@ -40,53 +41,38 @@
 		        return $str;
 		    }
 		}
-		$JSON = (array)json_decode(file_get_contents('./questions.json'));
+		$JSON = json_decode(file_get_contents('./questions.json'), TRUE);
 		$select = json_decode($_COOKIE['test_result'], TRUE);
-		$s = 1;
-		$col = 2;
-		$q = 0;
-		foreach ($JSON as $section):
-			$section = (array)$section; 
-			$i=0;
+		foreach ($select as $ak => $section):
+			if (count($section['questions'])>0):
 			?>
-			<div class="section" data-id="<?=$s?>">
+			<div class="section">
 				<h2><?=$section['name']?></h2>
 				<?
-					foreach ($section['questions'] as $question):
-						$question = (array)$question;
-						
-							$a = 0;
-							$answ = @$select[$s]['questions'][$i];
+					foreach ($section['questions'] as $bk => $question):
+							$answ = @$JSON[$ak]['questions'][$bk];
 							?><ul><?
-							foreach ($question['answers'] as $key => $answer):
-								
-								if($a == $answ):
-									if(is_array($question['results']))
-										$w = $question['results'][$key];
-									else {
-										$r = array("#answer#", "#tanswer#");
-										$u = mb_ucfirst(strtolower($answer));
-										$p = array($answer, $u);
-										$w = str_ireplace($r, $p, $question['results']);
-									}
-								?>
-									<li>
-										<?=$w?>
-									</li>
-								<?
-								endif;
-								$a++;
-							endforeach;
-							?></ul><?
-					$i++;
-					$q++;
+							if(is_array($answ['results']))
+								$w = $answ['results'][$question];
+							else {
+								$r = array("#answer#", "#tanswer#");
+								$u = mb_ucfirst(strtolower($answ['answers'][$question]));
+								$p = array($answ['answers'][$question], $u);
+								$w = str_ireplace($r, $p, $answ['results']);
+							}
+							?>
+								<li>
+									<?=$w?>
+								</li>
+							</ul><?
 					endforeach;
 				?>
 			</div>
 			<?
-			$s++;
+			endif;
 		endforeach;
 	?>
+	</div>
 	<div class="more">
 		<div class="logo"><img src="/layout/images/logo.png" width="90"></div>
 		<h1></h1>

@@ -125,7 +125,7 @@
         questions = {};
         a = 0;
         $(this).find(".ansver").each(function() {
-          questions[a] = $(this).data('answer');
+          questions[$(this).data('count')] = $(this).data('answer');
           return a++;
         });
         test_result[q] = {
@@ -139,13 +139,16 @@
       return console.log($.cookie('test_result'));
     };
     $('#symtpoms input').on('ifChecked', function(event, a) {
-      var answ, id, s_id;
+      var answ, c, id, s_id;
       $(this).iCheck('uncheck');
       s_id = $(this).parents('.section').data('id');
       id = $(this).parents('.question').data('id');
+      c = $(this).parents('.question').data('count');
       answ = $(this).data("answer");
       a = $(this).data('id');
-      $("#result .r" + s_id).append("<div data-id='" + id + "' data-answer='" + a + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
+      if (!$(this).hasClass('skip')) {
+        $("#result .r" + s_id).append("<div data-id='" + id + "' data-count='" + c + "' data-answer='" + a + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
+      }
       $(this).parents('.question').hide();
       if ($(this).parents('.section').find('.question:visible').length === 0) {
         $(this).parents('.section').hide();

@@ -97,7 +97,7 @@ init = ()->
             questions = {}
             a = 0
             $(this).find(".ansver").each ()->
-                questions[a] = $(this).data('answer')
+                questions[$(this).data('count')] = $(this).data('answer')
                 a++
             test_result[q] =
                 name: $(this).find('h3').text()
@@ -114,10 +114,11 @@ init = ()->
 
         s_id  = $(this).parents('.section').data('id')
         id    = $(this).parents('.question').data('id')
+        c = $(this).parents('.question').data('count')
         answ  = $(this).data("answer")
         a     = $(this).data('id')
-
-        $("#result .r#{s_id}").append "<div data-id='#{id}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
+        if(!$(this).hasClass('skip'))
+            $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
 
         $(this).parents('.question').hide()
 

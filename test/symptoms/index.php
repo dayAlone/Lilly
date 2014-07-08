@@ -38,7 +38,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 								<div class="section" data-id="<?=$s?>">
 									<h1><?=$section['name']?></h1>
 									<?
-										foreach ($section['questions'] as $question):
+										foreach ($section['questions'] as $c => $question):
 											$question = (array)$question;
 											if($i % $col == 0) {
 									            if ($i != 0) echo "</div>";
@@ -46,7 +46,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 									        }
 											?>
 												<div class="col-md-<?=12/$col?>">
-													<div class="question" data-id="<?=$q?>">
+													<div class="question" data-id="<?=$q?>" data-count="<?=$c?>">
 														<h2><?=$question['name']?></h2>
 														<ul>
 														<?
@@ -69,6 +69,9 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 																$a++;
 															endforeach;
 														?>
+															<li>
+																<input type="radio" class="skip" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>">пропустить вопрос</label>
+															</li>
 														</ul>
 													</div>
 												</div>
