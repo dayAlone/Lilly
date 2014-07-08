@@ -76,6 +76,10 @@ a:hover, a span:hover, .shadow:hover {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+#toolbar #logo img {
+  width: 120px;
+  margin: 5px 0;
+}
 #toolbar.white .nav {
   color: white;
 }
