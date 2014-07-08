@@ -3,8 +3,8 @@
 ///////////////////////////////////////////////////////////////////////////////
  
 // api dependencies
-require_once $_SERVER['DOCUMENT_ROOT'].'/include/google/Client.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/include/google/Service/Analytics.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/include/Google/Client.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/include/Google/Service/Analytics.php';
 
 const CLIENT_ID         = '194409181325-kk7ludk25s8dfl8qnr0t3j2u184h8l0c.apps.googleusercontent.com';
 const SERVICE_EMAIL     = '194409181325-kk7ludk25s8dfl8qnr0t3j2u184h8l0c@developer.gserviceaccount.com';
