@@ -90,6 +90,10 @@ init = ()->
     
     $('#symptoms-welcome').modal()
     
+    $('#toolbar .trigger').click (e)->
+        $('#toolbar .nav').toggleClass('open')
+        e.preventDefault()
+
     symptoms_collect = ()->
         test_result = {}
         q = 0

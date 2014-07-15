@@ -106,9 +106,39 @@ a:hover, a span:hover, .shadow:hover {
   margin-top: 30px;
   list-style: none;
 }
+@media screen and (max-width: 1200px) {
+  #toolbar .nav {
+    left: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #toolbar .nav {
+    left: 30px;
+  }
+}
 @media (max-width: 640px) {
   #toolbar .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    z-index: 2000;
+    right: -240px;
+    background: rgba(0, 0, 0, 0.87);
+    width: 240px;
+    padding-top: 5px;
+    left: auto;
+    -moz-transition-property: right;
+    -o-transition-property: right;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  #toolbar .nav.open {
+    right: 0;
   }
 }
 #toolbar .nav li {
@@ -117,16 +147,44 @@ a:hover, a span:hover, .shadow:hover {
   line-height: 14px;
   padding: 0 2%;
 }
-@media (max-width: 1024px) {
-  #toolbar .nav li {
-    padding: 0 1%;
-  }
-}
-#toolbar .nav li:first-child {
+#toolbar .nav li:nth-child(2) {
   padding-left: 0;
 }
 #toolbar .nav li:last-child {
   padding-right: 0;
+}
+@media screen and (max-width: 1024px) {
+  #toolbar .nav li {
+    padding: 0 1.3%;
+  }
+}
+@media (max-width: 640px) {
+  #toolbar .nav li {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    padding: 0 !important;
+    margin-bottom: 5px;
+  }
+  #toolbar .nav li.hidden {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0;
+    padding: 0;
+  }
+  #toolbar .nav li.hidden a {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 20;
+    width: auto;
+    margin-top: 0;
+    border: 0;
+  }
+  #toolbar .nav li.hidden a:after {
+    display: none;
+  }
 }
 #toolbar .nav li a {
   display: inline-block;
@@ -143,6 +201,31 @@ a:hover, a span:hover, .shadow:hover {
 #toolbar .nav li a.active {
   font-weight: 700;
 }
+@media screen and (max-width: 1200px) {
+  #toolbar .nav li a {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #toolbar .nav li a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 640px) {
+  #toolbar .nav li a {
+    float: left;
+    width: 100%;
+    position: relative;
+    color: white;
+    font-size: 21px;
+    line-height: 35px;
+    padding: 0 8px !important;
+    margin-bottom: 0;
+  }
+  #toolbar .nav li a br {
+    display: none;
+  }
+}
 .user #toolbar .nav li:last-child a {
   background-image: -moz-linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%);
   background-image: -webkit-linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%);
@@ -158,6 +241,12 @@ a:hover, a span:hover, .shadow:hover {
     margin-left: 0;
   }
 }
+@media (max-width: 640px) {
+  .user #toolbar .nav li:last-child a {
+    margin-top: 10px;
+    text-shadow: none;
+  }
+}
 #toolbar .nav li span.small, #toolbar .nav li a.small {
   color: #5f5e4d;
   text-shadow: none;
@@ -168,36 +257,91 @@ a:hover, a span:hover, .shadow:hover {
   padding: 0;
   margin: 0;
 }
+@media screen and (max-width: 1200px) {
+  #toolbar .nav li span.small, #toolbar .nav li a.small {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #toolbar .nav li span.small, #toolbar .nav li a.small {
+    font-size: 11px;
+  }
+}
+@media (max-width: 640px) {
+  #toolbar .nav li span.small, #toolbar .nav li a.small {
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 13px;
+    line-height: 22px;
+    font-style: normal;
+    color: white;
+  }
+  #toolbar .nav li span.small br, #toolbar .nav li a.small br {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  #toolbar .nav li span.small {
+    padding: 0 8px;
+  }
+}
+@media (max-width: 640px) {
+  #toolbar .nav li a.small {
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+}
 #toolbar .nav li a.small:hover {
   color: red;
 }
 #toolbar .nav li a.small.active {
   font-weight: bold;
 }
-@media screen and (max-width: 1200px) {
-  #toolbar .nav {
-    left: 30px;
-  }
-  #toolbar .nav li a {
-    font-size: 19px;
-  }
-  #toolbar .nav li span.small {
-    font-size: 11px;
+#toolbar .enter {
+  float: right;
+  color: white;
+  background: #eb3a43;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 27px;
+  padding: 0 15px;
+  margin: 11px 14px;
+  display: none;
+}
+@media (max-width: 640px) {
+  #toolbar .enter {
+    display: block;
   }
 }
-@media screen and (max-width: 1024px) {
-  #toolbar .nav {
-    left: 30px;
+#toolbar .trigger {
+  float: right;
+  width: 22px;
+  height: 18px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+  margin-top: 16px;
+  display: none;
+}
+#toolbar .trigger svg {
+  height: 21px;
+  width: 13px;
+}
+#toolbar .trigger svg g, #toolbar .trigger svg path {
+  fill: white;
+}
+@media (max-width: 640px) {
+  #toolbar .trigger {
+    display: block;
   }
-  #toolbar .nav li {
-    padding: 0 1.3%;
-  }
-  #toolbar .nav li a {
-    font-size: 18px;
-  }
-  #toolbar .nav li span.small {
-    font-size: 11px;
-  }
+}
+#toolbar .trigger:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-top: 1px solid black;
+  width: 100%;
 }
 @media (max-width: 640px) {
   #toolbar {
@@ -205,6 +349,7 @@ a:hover, a span:hover, .shadow:hover {
     -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
     box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
     background: white;
+    overflow: visible;
     padding: 0;
     height: 48px;
     line-height: 48px;
@@ -502,6 +647,10 @@ a:hover, a span:hover, .shadow:hover {
   -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
   box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
 }
+#promo #more-link svg {
+  float: right;
+  margin-top: 12px;
+}
 @media (max-width: 640px) {
   #promo {
     padding: 0 8px;
@@ -675,7 +824,7 @@ a:hover, a span:hover, .shadow:hover {
   }
 }
 @media (max-width: 640px) {
-  .block.big .title {
+  .block.big .content .title {
     font-size: 14px;
     line-height: 14px;
   }
@@ -1458,6 +1607,11 @@ input:focus, a:focus {
   font-size: 13px;
   color: red;
 }
+@media (max-width: 640px) {
+  #doctor .agree {
+    width: 70px;
+  }
+}
 #doctor .checkbox {
   float: right;
   position: relative;
@@ -1497,6 +1651,13 @@ input:focus, a:focus {
   position: relative;
   top: 1px;
 }
+@media (max-width: 640px) {
+  .modal-dialog a.back {
+    font-size: 15px;
+    margin-top: 4px;
+    float: left;
+  }
+}
 .modal-dialog a.enter {
   margin-right: -20px;
   float: right;
@@ -1510,6 +1671,12 @@ input:focus, a:focus {
   width: 195px;
   height: 50px;
   background-size: cover;
+}
+@media (max-width: 640px) {
+  .modal-dialog a.enter {
+    width: 150px;
+    background-position: top left;
+  }
 }
 .modal-dialog a.go {
   display: inline-block;
@@ -1534,6 +1701,11 @@ input:focus, a:focus {
   -webkit-box-shadow: 0 0 7px rgba(3, 3, 8, 0.4);
   box-shadow: 0 0 7px rgba(3, 3, 8, 0.4);
 }
+@media (max-width: 640px) {
+  .modal-dialog .modal-content p {
+    font-size: 12px;
+  }
+}
 .modal-dialog .modal-content small {
   float: left;
   width: 100%;
@@ -1542,9 +1714,19 @@ input:focus, a:focus {
   line-height: 15px;
   opacity: 0.4;
 }
+@media (max-width: 640px) {
+  .modal-dialog .modal-content small {
+    font-size: 10px;
+  }
+}
 .modal-dialog .modal-content h3 {
   margin: 10px 0;
   font-weight: 700;
+}
+@media (max-width: 640px) {
+  .modal-dialog .modal-content h3 {
+    font-size: 17px;
+  }
 }
 
 .modal-backdrop {

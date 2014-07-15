@@ -67,19 +67,57 @@ a, a span, .shadow
 		margin: 0
 		margin-top: 30px
 		list-style: none
+		@media screen and (max-width: 1200px)
+			left: 30px
+		@media screen and (max-width: 1024px)
+			left: 30px
 		@media (max-width: 640px)
-			display: none
+			position: fixed
+			top: 0
+			margin: 0
+			height: 100%
+			z-index: 2000
+			right: -240px
+			background: rgba(0,0,0,.87)
+			width: 240px
+			padding-top: 5px
+			left: auto
+			+transition-property(right)
+			+transition-duration(.3s)
+			&.open
+				right: 0
 		li
 			float: left
 			text-align: center
 			line-height: 14px
 			padding: 0 2%
-			@media (max-width: 1024px)
-				padding: 0 1%
-			&:first-child
+			
+			&:nth-child(2)
 				padding-left: 0
 			&:last-child
 				padding-right: 0
+			@media screen and (max-width: 1024px)
+				padding: 0 1.3%
+			@media (max-width: 640px)
+				+full-width
+				text-align: left
+				padding: 0 !important
+				margin-bottom: 5px
+				&.hidden
+					display: block !important
+					visibility: visible !important
+					margin: 0
+					padding: 0
+					a
+						position: absolute
+						right: 5px
+						top: 5px
+						z-index: 20
+						width: auto
+						margin-top: 0
+						border: 0
+						&:after
+							display: none
 			a
 				display: inline-block
 				margin-bottom: 14px
@@ -92,6 +130,20 @@ a, a span, .shadow
 					background: transparent
 				&.active
 					font-weight: 700
+				@media screen and (max-width: 1200px)
+					font-size: 19px
+				@media screen and (max-width: 1024px)
+					font-size: 18px
+				@media (max-width: 640px)
+					+full-width
+					color: white
+					font-size: 21px
+					line-height: 35px
+					padding: 0 8px !important
+					margin-bottom: 0
+					br
+						display: none
+
 			.user &:last-child
 				a
 					+background-image(linear-gradient(bottom left, rgba(155,29,33,.8) -18.85%, rgba(233,33,45,.8) 81.15%)) 
@@ -102,6 +154,9 @@ a, a span, .shadow
 					color: white
 					@media screen and (max-width: 1024px)
 						margin-left: 0
+					@media (max-width: 640px)
+						margin-top: 10px
+						text-shadow: none
 			span.small, a.small
 				color: #5F5E4D
 				text-shadow: none	
@@ -111,32 +166,68 @@ a, a span, .shadow
 				line-height: 14px
 				padding: 0
 				margin: 0
+				@media screen and (max-width: 1200px)
+					font-size: 11px
+				@media screen and (max-width: 1024px)
+					font-size: 11px
+				@media (max-width: 640px)
+					+full-width
+					font-size: 13px
+					line-height: 22px
+					font-style: normal
+					color: white
+					br
+						display: none
+			span.small
+				@media (max-width: 640px)
+					padding: 0 8px
 			a.small
+				@media (max-width: 640px)
+					text-decoration: underline
+					text-transform: lowercase
 				&:hover
 					color: #FF0000
 				&.active
 					font-weight: bold
-					
-	@media screen and (max-width: 1200px)
-		.nav
-			left: 30px
-			li
-				a
-					font-size: 19px
-				span.small
-					font-size: 11px
-	@media screen and (max-width: 1024px)
-		.nav
-			left: 30px
-			li
-				padding: 0 1.3%
-				a
-					font-size: 18px
-				span.small
-					font-size: 11px
+	.enter
+		float: right
+		color: white
+		background: #eb3a43
+		text-transform: uppercase
+		font-weight: bold
+		line-height: 27px
+		padding: 0 15px
+		margin: 11px 14px
+		display: none
+		@media (max-width: 640px)
+			display: block
+	.trigger
+		float: right
+		width: 22px
+		height: 18px
+		border-top: 1px solid black
+		border-bottom: 1px solid black
+		position: relative
+		margin-top: 16px
+		display: none
+		svg
+			height: 21px
+			width: 13px
+			g, path
+				fill: white
+		@media (max-width: 640px)
+			display: block
+
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			border-top: 1px solid black
+			width: 100%
 	@media (max-width: 640px)
 		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
 		background: white
+		overflow: visible
 		padding: 0
 		height: 48px
 		line-height: 48px
@@ -353,6 +444,10 @@ a, a span, .shadow
 		line-height: 40px
 		font-size: 24px
 		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		svg
+			float: right
+			margin-top: 12px
+
 	@media (max-width: 640px)
 		padding: 0 8px
 		.block
@@ -477,10 +572,11 @@ a, a span, .shadow
 		height: 416px
 		@media (max-width: 640px)
 			height: auto
-		.title
-			@media (max-width: 640px)
-				font-size: 14px
-				line-height: 14px
+		.content
+			.title
+				@media (max-width: 640px)
+					font-size: 14px
+					line-height: 14px
 	&.small
 		height: 198px
 		@media (max-width: 640px)
@@ -1058,6 +1154,8 @@ input:focus, a:focus
 		margin-bottom: -10px
 		font-size: 13px
 		color: red
+		@media (max-width: 640px)
+			width: 70px
 	.checkbox
 		float: right
 		position: relative
@@ -1091,6 +1189,10 @@ input:focus, a:focus
 			font-size: 24px
 			position: relative
 			top: 1px
+		@media (max-width: 640px)
+			font-size: 15px
+			margin-top: 4px
+			float: left
 	a.enter
 		margin-right: -20px
 		float: right
@@ -1105,6 +1207,9 @@ input:focus, a:focus
 		width: 195px
 		height: 50px
 		background-size: cover
+		@media (max-width: 640px)
+			width: 150px
+			background-position: top left
 	
 	a.go
 		display: inline-block
@@ -1121,14 +1226,21 @@ input:focus, a:focus
 		border-radius: 0
 		padding: 20px
 		+box-shadow(0 0 7px rgba(3,3,8,.4)) 
+		@media (max-width: 640px)
+			p
+				font-size: 12px
 		small
 			+full-width
 			font-size: 13px
 			line-height: 15px
 			opacity: .4
+			@media (max-width: 640px)
+				font-size: 10px
 		h3
 			margin: 10px 0
 			font-weight: 700
+			@media (max-width: 640px)
+				font-size: 17px
 
 
 .modal-backdrop
