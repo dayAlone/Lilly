@@ -441,13 +441,15 @@ a, a span, .shadow
 		margin-bottom: 14px
 		text-transform: uppercase
 		padding: 0 8px
+		display: none
 		line-height: 40px
 		font-size: 24px
 		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
 		svg
 			float: right
 			margin-top: 12px
-
+		@media (max-width: 640px)
+			display: block
 	@media (max-width: 640px)
 		padding: 0 8px
 		margin-bottom: -14px
@@ -687,6 +689,8 @@ a, a span, .shadow
 #chapter-list
 	+full-width
 	margin-bottom: 30px
+	@media (max-width: 640px)
+		display: none
 	.block
 		height: 150px
 		width: 18.88%
@@ -1805,6 +1809,15 @@ input:focus, a:focus
 		@media (max-width: 640px)
 			height: auto
 			+box-shadow(1px 1px 2px rgba(8,10,14,.22)) 
+			.image
+				+full-width
+				height: 166px
+				background-color: black
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+				.shadow-1
+					opacity: .2
 		.arrow
 			position: absolute
 			width: 200px
@@ -1907,6 +1920,24 @@ input:focus, a:focus
 	> .content
 		+full-width
 		margin: 30px 0
+		@media (max-width: 640px)
+			margin: 14px 0 0
+			font-size: 14px
+			line-height: 18px
+			overflow: hidden
+			padding: 8px 0
+			background: white
+			iframe, object, embed
+				min-height: 50px
+				+full-width
+				max-width: 100%
+			img
+				max-width: 100%
+				height: auto
+				margin: 0
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			.fix
+				display: none
 		.row + .row
 			padding-top: 25px
 			
@@ -1925,6 +1956,11 @@ input:focus, a:focus
 			width: 90%
 			font-size: 16px
 			margin-bottom: 30px
+			@media (max-width: 640px)
+				+full-width
+				font-size: 14px
+				line-height: 18px
+				margin-bottom: 20px
 			img
 				max-width: 100%
 			&.highlight

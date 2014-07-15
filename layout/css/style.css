@@ -641,6 +641,7 @@ a:hover, a span:hover, .shadow:hover {
   margin-bottom: 14px;
   text-transform: uppercase;
   padding: 0 8px;
+  display: none;
   line-height: 40px;
   font-size: 24px;
   -moz-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
@@ -650,6 +651,11 @@ a:hover, a span:hover, .shadow:hover {
 #promo #more-link svg {
   float: right;
   margin-top: 12px;
+}
+@media (max-width: 640px) {
+  #promo #more-link {
+    display: block;
+  }
 }
 @media (max-width: 640px) {
   #promo {
@@ -990,6 +996,11 @@ a:hover, a span:hover, .shadow:hover {
   width: 100%;
   position: relative;
   margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  #chapter-list {
+    display: none;
+  }
 }
 #chapter-list .block {
   height: 150px;
@@ -2509,6 +2520,19 @@ input:focus, a:focus {
     -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
     box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
   }
+  #article > .top-title .image {
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 166px;
+    background-color: black;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #article > .top-title .image .shadow-1 {
+    opacity: 0.2;
+  }
 }
 #article > .top-title .arrow {
   position: absolute;
@@ -2665,6 +2689,34 @@ input:focus, a:focus {
   position: relative;
   margin: 30px 0;
 }
+@media (max-width: 640px) {
+  #article > .content {
+    margin: 14px 0 0;
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 8px 0;
+    background: white;
+    -moz-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+    -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+    box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+  }
+  #article > .content iframe, #article > .content object, #article > .content embed {
+    min-height: 50px;
+    float: left;
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+  }
+  #article > .content img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  #article > .content .fix {
+    display: none;
+  }
+}
 #article > .content .row + .row {
   padding-top: 25px;
 }
@@ -2686,6 +2738,16 @@ input:focus, a:focus {
   width: 90%;
   font-size: 16px;
   margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  #article > .content p {
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
 }
 #article > .content p img {
   max-width: 100%;
