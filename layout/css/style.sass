@@ -1802,10 +1802,14 @@ input:focus, a:focus
 		background-size: 90% auto
 		background-position: center center
 		background-repeat: no-repeat
-
+		@media (max-width: 640px)
+			height: auto
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22)) 
 		.arrow
 			position: absolute
 			width: 200px
+			@media (max-width: 640px)
+				display: none
 			&:hover
 				.text
 					opacity: 1
@@ -1864,21 +1868,42 @@ input:focus, a:focus
 		.container
 			position: relative
 			height: 420px
+			@media (max-width: 640px)
+				height: auto
+				padding: 0
 			.text
 				z-index: 3
 				width: 100%
 				position: absolute
 				color: white
 				bottom: 15px
+				@media (max-width: 640px)
+					background: white
+					position: relative
+					bottom: auto
+					+full-width
 				h1
 					font-weight: 700
 					font-size: 53px
 					padding-bottom: 0
 					margin-bottom: 0
 					line-height: 53px
+					@media (max-width: 640px)
+						font-size: 18px
+						line-height: 22px
+						+full-width
+						color: black
+						margin: 3px 0 5px
+						padding: 0 8px
 				h3
 					font-weight: 400
 					font-size: 25px
+					@media (max-width: 640px)
+						font-size: 14px
+						margin-top: 0
+						+full-width
+						color: black
+						padding: 0 8px
 	> .content
 		+full-width
 		margin: 30px 0
@@ -1906,6 +1931,9 @@ input:focus, a:focus
 				font-weight: 500
 				font-size: 19px
 				line-height: 21px
+	@media (max-width: 640px)
+		padding: 0 8px
+
 #symptoms-articles
 	.close
 		width: 30px

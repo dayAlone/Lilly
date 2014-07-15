@@ -28,9 +28,12 @@
 	$path = str_replace('index.php', '', $_SERVER['REAL_FILE_PATH']);
 ?> 
 	<div id="article" class="<?=($arResult['PROPERTIES']['VIDEO']['VALUE']?"video":"")?>">
-     <div class="top-title" style="background-image: url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$item['DETAIL_PICTURE']['SRC'])?$item['DETAIL_PICTURE']['SRC']:"http://ochenprosto.ru".$item['DETAIL_PICTURE']['SRC'])?>)">
+     <div class="top-title" style="background-image: url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$arResult['DETAIL_PICTURE']['SRC'])?$arResult['DETAIL_PICTURE']['SRC']:"http://ochenprosto.ru".$arResult['DETAIL_PICTURE']['SRC'])?>)">
        <div class="shadow-1"></div>
        <div class="shadow-2"></div>
+       <div class="image" style="background-image: url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$arResult['DETAIL_PICTURE']['SRC'])?$arResult['DETAIL_PICTURE']['SRC']:"http://ochenprosto.ru".$arResult['DETAIL_PICTURE']['SRC'])?>)">
+        <div class="shadow-1"></div>
+       </div>
        <? if($prev): ?>
 	       <a href="<?=$path?><?=$prev['CODE']?>/" class="arrow left" onmouseover="_gaq.push(['_trackEvent', 'Article', 'PrevArticle', 'Previous Article']);">
 	         <div class="icon"></div>

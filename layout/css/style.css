@@ -2502,6 +2502,14 @@ input:focus, a:focus {
   background-position: center center;
   background-repeat: no-repeat;
 }
+@media (max-width: 640px) {
+  #article > .top-title {
+    height: auto;
+    -moz-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+    -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+    box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+  }
+}
 #article > .top-title .arrow {
   position: absolute;
   width: 200px;
@@ -2513,6 +2521,11 @@ input:focus, a:focus {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+@media (max-width: 640px) {
+  #article > .top-title .arrow {
+    display: none;
+  }
 }
 #article > .top-title .arrow:hover .text {
   opacity: 1;
@@ -2589,12 +2602,28 @@ input:focus, a:focus {
   position: relative;
   height: 420px;
 }
+@media (max-width: 640px) {
+  #article > .top-title .container {
+    height: auto;
+    padding: 0;
+  }
+}
 #article > .top-title .container .text {
   z-index: 3;
   width: 100%;
   position: absolute;
   color: white;
   bottom: 15px;
+}
+@media (max-width: 640px) {
+  #article > .top-title .container .text {
+    background: white;
+    position: relative;
+    bottom: auto;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
 }
 #article > .top-title .container .text h1 {
   font-weight: 700;
@@ -2603,9 +2632,32 @@ input:focus, a:focus {
   margin-bottom: 0;
   line-height: 53px;
 }
+@media (max-width: 640px) {
+  #article > .top-title .container .text h1 {
+    font-size: 18px;
+    line-height: 22px;
+    float: left;
+    width: 100%;
+    position: relative;
+    color: black;
+    margin: 3px 0 5px;
+    padding: 0 8px;
+  }
+}
 #article > .top-title .container .text h3 {
   font-weight: 400;
   font-size: 25px;
+}
+@media (max-width: 640px) {
+  #article > .top-title .container .text h3 {
+    font-size: 14px;
+    margin-top: 0;
+    float: left;
+    width: 100%;
+    position: relative;
+    color: black;
+    padding: 0 8px;
+  }
 }
 #article > .content {
   float: left;
@@ -2642,6 +2694,11 @@ input:focus, a:focus {
   font-weight: 500;
   font-size: 19px;
   line-height: 21px;
+}
+@media (max-width: 640px) {
+  #article {
+    padding: 0 8px;
+  }
 }
 
 #symptoms-articles .close {
