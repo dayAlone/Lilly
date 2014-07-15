@@ -450,6 +450,7 @@ a, a span, .shadow
 
 	@media (max-width: 640px)
 		padding: 0 8px
+		margin-bottom: -14px
 		.block
 			&.first
 				.image
@@ -474,14 +475,19 @@ a, a span, .shadow
 		.block
 			&.big
 				height: 526px
+				@media (max-width: 640px)
+					height: auto
 				#symtpoms-articles &
 					height: 380px
+					
 					.title
 						font-size: 34px
 					.text
 						font-size: 18px
 			&.medium
 				height: 256px
+				@media (max-width: 640px)
+					height: auto
 				#symtpoms-articles &
 					height: 183px
 					.title
@@ -508,6 +514,7 @@ a, a span, .shadow
 		position: relative
 		background-size: cover
 		background-position: center center
+		background-repeat: no-repeat
 		.shadow
 			opacity: .3
 	@media (max-width: 640px)
@@ -977,6 +984,17 @@ input:focus, a:focus
 		background-position: top center
 		background-repeat: no-repeat
 		background-size: cover
+		@media (max-width: 640px)
+			background: white !important
+			margin-top: 0
+			height: auto
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			.image
+				+full-width
+				height: 166px
+				background-size: cover
+			> .shadow
+				display: none
 		.shadow
 			position: absolute
 			width: 100%
@@ -994,10 +1012,20 @@ input:focus, a:focus
 		p
 			font-size: 22px
 			font-weight: 300
+			@media (max-width: 640px)
+				font-size: 14px
+				color: black
 		h1
 			font-size: 60px
 			font-weight: 700
-
+			@media (max-width: 640px)
+				font-size: 18px
+				margin-top: -45px
+		@media (max-width: 640px)
+			padding-top: 0
+	@media (max-width: 640px)
+		padding: 0 8px
+		
 #faq
 	+full-width
 	.block
@@ -1709,6 +1737,12 @@ input:focus, a:focus
 	&:hover
 		opacity: .7
 		color: white
+	@media (max-width: 640px)
+		font-size: 18px
+		margin-bottom: 10px
+		line-height: 30px
+		padding: 0 15px
+		text-transform: none !important
 
 .center
 	text-align: center

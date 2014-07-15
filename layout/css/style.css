@@ -654,6 +654,7 @@ a:hover, a span:hover, .shadow:hover {
 @media (max-width: 640px) {
   #promo {
     padding: 0 8px;
+    margin-bottom: -14px;
   }
   #promo .block.first .image {
     float: left;
@@ -688,6 +689,11 @@ a:hover, a span:hover, .shadow:hover {
 #promo.woman .block.big {
   height: 526px;
 }
+@media (max-width: 640px) {
+  #promo.woman .block.big {
+    height: auto;
+  }
+}
 #symtpoms-articles #promo.woman .block.big {
   height: 380px;
 }
@@ -699,6 +705,11 @@ a:hover, a span:hover, .shadow:hover {
 }
 #promo.woman .block.medium {
   height: 256px;
+}
+@media (max-width: 640px) {
+  #promo.woman .block.medium {
+    height: auto;
+  }
 }
 #symtpoms-articles #promo.woman .block.medium {
   height: 183px;
@@ -733,6 +744,7 @@ a:hover, a span:hover, .shadow:hover {
   position: relative;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .block .image .shadow {
   opacity: 0.3;
@@ -1373,6 +1385,26 @@ input:focus, a:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 640px) {
+  #woman .woman-title {
+    background: white !important;
+    margin-top: 0;
+    height: auto;
+    -moz-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+    -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+    box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22);
+  }
+  #woman .woman-title .image {
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 166px;
+    background-size: cover;
+  }
+  #woman .woman-title > .shadow {
+    display: none;
+  }
+}
 #woman .woman-title .shadow {
   position: absolute;
   width: 100%;
@@ -1393,9 +1425,31 @@ input:focus, a:focus {
   font-size: 22px;
   font-weight: 300;
 }
+@media (max-width: 640px) {
+  #woman .container p {
+    font-size: 14px;
+    color: black;
+  }
+}
 #woman .container h1 {
   font-size: 60px;
   font-weight: 700;
+}
+@media (max-width: 640px) {
+  #woman .container h1 {
+    font-size: 18px;
+    margin-top: -45px;
+  }
+}
+@media (max-width: 640px) {
+  #woman .container {
+    padding-top: 0;
+  }
+}
+@media (max-width: 640px) {
+  #woman {
+    padding: 0 8px;
+  }
 }
 
 #faq {
@@ -2343,6 +2397,15 @@ input:focus, a:focus {
 .red-button:hover {
   opacity: 0.7;
   color: white;
+}
+@media (max-width: 640px) {
+  .red-button {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    padding: 0 15px;
+    text-transform: none !important;
+  }
 }
 
 .center {

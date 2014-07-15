@@ -1,6 +1,6 @@
 <?
 	global $nav;
-	if(!$_REQUEST['ELEMENT_CODE'])
+	if(!isset($_REQUEST['ELEMENT_CODE']))
 		$nav='white';
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Для женщин :: Lilly Answers That Matter");
@@ -16,7 +16,11 @@ $APPLICATION->SetPageProperty('DESCRIPTION', "У моего мужчины пр�
 	<div id="woman">
      <div class="woman-title" style="background-image: url(/layout/images/woman.jpg)">
        <div class="shadow"></div>
+       <div class="image" style="background-image: url(/layout/images/woman.jpg)">
+   			<div class="shadow"></div>
+   		</div>
        <div class="container">
+       		
          <div class="row">
            <div class="col-md-8 col-sm-12 col-xs-12">
              <h1>Как понять, что у вашего мужчины ЭД?</h1>
