@@ -3,6 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("FAQ :: Lilly Answers That Matter");
 $APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, аденома предстательной железы, симптомы гиперплазии предстательной железы, причины гиперплазии предстательной железы, лечение гиперплазии предстательной железы, мнение уролога, консультация уролога, разговор с подругой");
 $APPLICATION->SetPageProperty('DESCRIPTION', "FAQ: как не совершить роковую ошибку, как рассказать подруге о проблеме с эрекцией, ");
+$APPLICATION->SetPageProperty('mobile_title', '<strong>FAQ</strong><span>ответы на ваши <br>вопросы</span>');
 ?> 
  <div id="faq">
      <div class="container">

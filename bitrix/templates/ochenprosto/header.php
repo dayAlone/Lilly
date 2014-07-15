@@ -75,7 +75,9 @@
                  <a href="/" id="logo">
                     <img src="/layout/images/logo.png" alt="">
                  </a>
-
+                 <div class="mobile_title">
+                   <?=$APPLICATION->AddBufferContent("mobile_title");?>
+                 </div>
                  <a href="#" class="trigger"></a>
                  <a href="#" class="enter" onclick="_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click Mobile Ribbon']);">Войти</a>
               </div>

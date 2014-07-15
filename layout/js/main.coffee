@@ -92,6 +92,12 @@ init = ()->
     
     $('#toolbar .trigger').click (e)->
         $('#toolbar .nav').toggleClass('open')
+        $('body').toggleClass('nav-open')
+        e.preventDefault()
+
+    $('#overlay').on 'click scroll touchmove touchstart', (e)->
+        $('#toolbar .nav').removeClass('open')
+        $('body').removeClass('nav-open')
         e.preventDefault()
 
     symptoms_collect = ()->
