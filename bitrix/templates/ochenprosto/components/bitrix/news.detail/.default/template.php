@@ -28,7 +28,7 @@
 	$path = str_replace('index.php', '', $_SERVER['REAL_FILE_PATH']);
 ?> 
 	<div id="article" class="<?=($arResult['PROPERTIES']['VIDEO']['VALUE']?"video":"")?>">
-     <div class="top-title" style="background-image: url(<?=(file_exists($item['DETAIL_PICTURE']['SRC'])?$item['DETAIL_PICTURE']['SRC']:"http://ochenprosto.ru".$item['DETAIL_PICTURE']['SRC'])?>)">
+     <div class="top-title" style="background-image: url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$item['DETAIL_PICTURE']['SRC'])?$item['DETAIL_PICTURE']['SRC']:"http://ochenprosto.ru".$item['DETAIL_PICTURE']['SRC'])?>)">
        <div class="shadow-1"></div>
        <div class="shadow-2"></div>
        <? if($prev): ?>

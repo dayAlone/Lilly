@@ -11,7 +11,7 @@
       }
       ?>
          <div class="item no-ajax" target="_blank">
-            <div class="image" style="background-image:url(<?=(file_exists($item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC'])?>)">
+            <div class="image" style="background-image:url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC'])?>)">
                <div class="icon"></div>
             </div>
             <div class="content">
