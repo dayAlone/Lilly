@@ -17,7 +17,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
      <script type="text/javascript" src="/layout/js/jquery.js"></script>
-     <script type="text/javascript" src="/layout/js/plugins.js"></script>
+     <script type="text/javascript" src="/layout/js/plugins.min.js"></script>
      <script type="text/javascript" src="/layout/js/main.js"></script>
      <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
           <script>

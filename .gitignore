@@ -54,3 +54,5 @@ upload/tmp/
 config.codekit
 
 bitrix/.settings.php
+
+layout/js/min/plugins-ck.js

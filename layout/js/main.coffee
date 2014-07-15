@@ -186,6 +186,15 @@ init = ()->
             if !$('#enter').hasClass('dont-hide')
                 $('#enter').addClass('short')
 
+    $('#faq .block').click (e)->
+        if $(window).width() < 640
+            if !$(this).hasClass('open')
+                $('#faq .block').removeClass('open')
+                $(this).toggleClass('open');
+                offset = $(this).offset().top
+                $('html, body').animate({'scrollTop' : offset - $('#toolbar').height()-14 },300)
+        e.preventDefault()
+
     $('#faq .block .text .panel').slimscroll
         height : ()->
             return $(this).parents('.text').height()
