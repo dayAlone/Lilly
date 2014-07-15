@@ -12,9 +12,10 @@
     <meta charset="utf-8">
     <title><?php $APPLICATION->ShowTitle();?></title>
     
-    <meta name="viewport" content="width=850, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
      <script type="text/javascript" src="/layout/js/jquery.js"></script>
      <script type="text/javascript" src="/layout/js/plugins.js"></script>
      <script type="text/javascript" src="/layout/js/main.js"></script>

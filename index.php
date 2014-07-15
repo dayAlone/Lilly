@@ -29,6 +29,18 @@
 	</div>
 	<?}?>
 </div>
+<div id="small-buttons">
+	<div class="frame">
+		<div class="row">
+			<div class="col-xs-6">
+				<a href="#" data-toggle="modal" data-target="#locator" onClick="_gaq.push(['_trackEvent', 'DoctorLocator', 'ConsumerClick', 'DL Click Mobile']);">Найти уролога</a>
+			</div>
+			<div class="col-xs-6">
+				<a href="/test/man/">Пройти тест</a>
+			</div>
+		</div>
+	</div>
+</div>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"promo",
@@ -78,17 +90,19 @@
 	)
 );?>
 <div id="map">
-	<div class="shadow">
-	</div>
-	<div class="content">
-		<div class="title">
-			 Мужской выбор
+	<div class="frame">
+		<div class="shadow">
 		</div>
-		<p>
-			 Вам осталось только выбрать удобное вам время и место встречи <br>
-			 с врачом с помощью нашего онлайн-сервиса «Доктор-Локатор»!
-		</p>
-		<div class="form">
+		<div class="content">
+			<div class="title">
+				 Мужской выбор
+			</div>
+			<p>
+				 Вам осталось только выбрать удобное вам время и место встречи <br>
+				 с врачом с помощью нашего онлайн-сервиса «Доктор-Локатор»!
+			</p>
+			<div class="form">
+			</div>
 		</div>
 	</div>
 </div>

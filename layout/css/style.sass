@@ -28,7 +28,9 @@ body
 	font-family: 'DINPro', 'Helvetica Neue', Arial
 	background: white
 	font-size: 16px
-	bo-r
+	@media (max-width: 640px)
+		background: #e5e5e5
+		padding-top: 60px
 	
 a, a span, .shadow
 	+transition-property(background-color, opacity, color, border, box-shadow, z-index)
@@ -48,6 +50,8 @@ a, a span, .shadow
 		img
 			width: 120px
 			margin: 5px 0
+			@media (max-width: 640px)
+				width: 62px
 	&.white
 		.nav
 			color: white
@@ -63,13 +67,15 @@ a, a span, .shadow
 		margin: 0
 		margin-top: 30px
 		list-style: none
+		@media (max-width: 640px)
+			display: none
 		li
 			float: left
 			text-align: center
 			line-height: 14px
 			padding: 0 2%
 			@media (max-width: 1024px)
-				padding 0 1%
+				padding: 0 1%
 			&:first-child
 				padding-left: 0
 			&:last-child
@@ -128,7 +134,16 @@ a, a span, .shadow
 					font-size: 18px
 				span.small
 					font-size: 11px
-
+	@media (max-width: 640px)
+		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		background: white
+		padding: 0
+		height: 48px
+		line-height: 48px
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
 #print
 	.container
 		width: 540px
@@ -329,6 +344,37 @@ a, a span, .shadow
 #promo
 	+full-width
 	overflow: hidden
+	#more-link
+		+full-width
+		background: white
+		margin-bottom: 14px
+		text-transform: uppercase
+		padding: 0 8px
+		line-height: 40px
+		font-size: 24px
+		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+	@media (max-width: 640px)
+		padding: 0 8px
+		.block
+			&.first
+				.image
+					+full-width
+					height: 165px
+				.content
+					+full-width
+					padding: 8px 8px 14px 8px !important
+					.title
+						font-size: 18px
+						line-height: 18px
+						margin-bottom: 10px
+						position: relative
+						top: 0
+						left: 0
+						+transform(none)
+					.text
+						font-size: 14px
+						line-height: 15px
+						display: block
 	&.woman
 		.block
 			&.big
@@ -359,8 +405,32 @@ a, a span, .shadow
 	background-color: #071C23
 	background-position: center center
 	background-size: cover
+	background-repeat: no-repeat
 	margin-bottom: 14px
 	overflow: hidden
+	.image
+		display: none
+		position: relative
+		background-size: cover
+		background-position: center center
+		.shadow
+			opacity: .3
+	@media (max-width: 640px)
+		background: white !important
+		min-height: 90px
+		&.big, &.small, &.medium
+			height: auto
+		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		> .shadow
+			display: none
+		.image
+			display: block
+			float: left
+			width: 40%
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
 	&.message
 		background: white url(/layout/images/phone.png) right 82% no-repeat
 		.c
@@ -403,17 +473,26 @@ a, a span, .shadow
 					margin-top: -15px
 					color: #E10000
 					font-size: 45px
-
-
 	&.big
 		height: 416px
+		@media (max-width: 640px)
+			height: auto
+		.title
+			@media (max-width: 640px)
+				font-size: 14px
+				line-height: 14px
 	&.small
 		height: 198px
+		@media (max-width: 640px)
+			height: auto
 		.content
 			padding: 10px 5%
 			.title
 				font-size: 24px
 				line-height: 26px
+				@media (max-width: 640px)
+					font-size: 14px
+					line-height: 14px
 			.text
 				font-size: 17px
 			span
@@ -430,12 +509,17 @@ a, a span, .shadow
 					line-height: 25px
 	&.medium
 		height: 307px
+		@media (max-width: 640px)
+			height: auto
 		.content
 			padding: 20px 5%
 			.title
 				font-size: 36px
 				line-height: 33px
 				margin-bottom: 8px
+				@media (max-width: 640px)
+					font-size: 14px
+					line-height: 14px
 	
 	.shadow
 		position: absolute
@@ -466,8 +550,17 @@ a, a span, .shadow
 		left: 0
 		bottom: 0
 		font-size: 21px
+		@media (max-width: 640px)
+			position: relative
+			float: right
+			width: 60%
+			color: black
+			min-height: 90px
+			padding: 0 !important
 		.text
 			line-height: 18px
+			@media (max-width: 640px)
+				display: none
 		.name
 			text-decoration: underline
 		.title
@@ -476,6 +569,12 @@ a, a span, .shadow
 			line-height: 45px
 			margin-bottom: 5px
 			font-weight: 500
+			@media (max-width: 640px)
+				position: absolute
+				top: 50%
+				left: 8px
+				width: 90%
+				+transform(translateY(-50%))
 	color: white
 
 	&:hover
@@ -501,6 +600,7 @@ a, a span, .shadow
 
 .flag
 	position: fixed
+
 	z-index: 400
 	top: 80px
 	left: 0
@@ -508,6 +608,8 @@ a, a span, .shadow
 		top: 139px
 	&:hover
 		opacity: .5
+	@media (max-width: 640px)
+		display: none
 
 #main-block
 	+full-width
@@ -520,6 +622,13 @@ a, a span, .shadow
 	background-size: cover
 	background-position: top center
 	margin-bottom: 14px
+	@media (max-width: 640px)
+		width: 100%
+		padding: 0 8px
+		height: auto
+		margin-top: 0
+		background: transparent !important
+		overflow: visible
 	.video
 		width: 545px
 		height: 414px
@@ -530,6 +639,21 @@ a, a span, .shadow
 		left: 50%
 		margin-left: -273px
 		+b('index-video.png', top center no-repeat)
+		@media (max-width: 640px)
+			width: 100%
+			top: 0
+			left: 0
+			margin: 0
+			height: auto
+			background: transparent
+			position: relative
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			iframe
+				max-width: 100%
+				width: 100%
+				height: auto
+				min-height: 225px
+				margin-bottom: -5px
 		&.v-2
 			width: 700px
 			height: 393px
@@ -551,6 +675,8 @@ a, a span, .shadow
 		pointer-events: none !important
 		position: absolute
 		width: 100%
+		@media (max-width: 640px)
+			display: none
 		&.bottom
 			bottom: 0
 			left: 0
@@ -569,12 +695,30 @@ a, a span, .shadow
 	+b('map.jpg', top center)
 	background-size: cover
 	color: white
+	@media (max-width: 640px)
+		background: transparent
+		padding: 0 8px
+		height: auto
+		.frame
+			+full-width
+			position: relative
+			+b('map.jpg', top center)
+			background-size: cover
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
 	.content
 		pointer-events: none
 		position: absolute
 		z-index: 2
 		top: 30px
 		left: 30px
+		@media (max-width: 640px)
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			position: relative
+			top: 0
+			left: 0
+			padding: 8px
+			height: 155px
+			width: 85%
 		input[type=text]
 			border-radius: 0
 			border: 0
@@ -596,11 +740,16 @@ a, a span, .shadow
 	.title
 		font-size: 53px
 		font-weight: 500
+		@media (max-width: 640px)
+			font-size: 21px
 	p
 		margin-bottom: 25px
 		font-size: 26px
 		line-height: 26px
 		font-weight: 300
+		@media (max-width: 640px)
+			font-size: 14px
+			line-height: 15px
 	.shadow
 		position: absolute
 		top: 0
@@ -608,6 +757,8 @@ a, a span, .shadow
 		width: 100%
 		height: 100%
 		+background-image(linear-gradient(bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 100%)) 
+		@media (max-width: 640px)
+			+background-image(linear-gradient(bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 60%)) 
 
 input:focus, a:focus
 	outline: 0
@@ -631,6 +782,8 @@ input:focus, a:focus
 	background-size: cover
 	right: 0
 	overflow: hidden
+	@media (max-width: 640px)
+		display: none
 	&.dont-hide
 		top: auto
 		bottom: 0
@@ -810,6 +963,28 @@ input:focus, a:focus
 					line-height: 30px
 				p
 					font-size: 15px
+
+#small-buttons
+	+full-width
+	padding: 0 8px
+	margin-bottom: 14px
+	display: none
+	@media (max-width: 640px)
+		display: block
+	.frame
+		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+	a
+		+full-width
+		margin: 8px 0
+		background: #ec5761
+		line-height: 30px
+		padding-bottom: 1px
+		text-align: center
+		color: white
+		font-size: 18px
+	.row
+		background: white
+		margin: 0
 
 #enter-button
 	width: 242px
@@ -1292,6 +1467,25 @@ input:focus, a:focus
 	+full-width
 	padding: 20px 0
 	font-weight: 400
+	@media (max-width: 640px)
+		padding: 0px 8px 0
+		margin-bottom: 14px
+		position: relative
+		.col-md-1
+			position: absolute
+			left: 0px
+			bottom: 8px
+			img
+				width: 48px
+		.container
+			background: white
+			margin-top: 16px
+			padding-top: 35px
+			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		.col-md-4
+			position: absolute
+			left: 8px
+			top: 26px
 	p
 		color: #333333
 		font-size: 15px
@@ -1307,10 +1501,17 @@ input:focus, a:focus
 		color: #A3A3A3
 		margin-top: 10px
 		display: inline-block
+		@media (max-width: 640px)
+			font-size: 12px
+			line-height: 14px
+			margin-bottom: 12px
+			float: right
+			width: 75%
 	.menu
 		position: relative
 		left: 25px
 		margin-top: 5px
+
 	.search
 		float: right
 		width: 100%
@@ -1347,25 +1548,43 @@ input:focus, a:focus
 				line-height: 28px
 				padding: 0 4px
 				font-weight: 500
+				@media screen and (max-width: 1200px)
+					font-size: 22px
+				@media (max-width: 640px)
+					font-size: 15px
+					line-height: 20px
 			&.t
 				line-height: 14px
 				position: relative
+				@media screen and (max-width: 1200px)
+					top: 1px
+					font-size: 13px
+				@media (max-width: 640px)
+					font-size: 11px
+					line-height: 12px
+					top: 3px
+
 	@media screen and (max-width: 1200px)
 		.menu
 			a
 				font-size: 13px
 			span.copyright
 				font-size: 13px
-		.counter
-			span
-				&.n
-					font-size: 22px
-				&.t
-					top: 1px
-					font-size: 13px
 		.search
 			input[type=text]
 				width: 254px
+	@media (max-width: 640px)
+		.menu
+			left: 0
+			text-align: left
+			a
+				text-align: left
+				margin: 0 5px
+				font-size: 12px
+				&:last-of-type
+					margin-left: 0
+				&:first-child
+					margin-left: 0
 
 .red-button
 	display: inline-block
