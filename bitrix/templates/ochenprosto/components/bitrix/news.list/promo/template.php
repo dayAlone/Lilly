@@ -1,3 +1,6 @@
+<?
+$this->setFrameMode(true);
+?>
 <div id="promo">
 <?
    function item_promo($item, $size, &$i) {

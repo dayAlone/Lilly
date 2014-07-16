@@ -1,3 +1,6 @@
+<?
+$this->setFrameMode(true);
+?>
 <div id="video-list">
       <div class="container">
          

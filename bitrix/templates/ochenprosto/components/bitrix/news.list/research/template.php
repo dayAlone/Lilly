@@ -1,3 +1,6 @@
+<?
+$this->setFrameMode(true);
+?>
 <div class="row">
 <div class="col-md-6">
 <?

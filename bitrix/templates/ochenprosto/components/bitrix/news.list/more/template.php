@@ -1,4 +1,7 @@
 <?
+$this->setFrameMode(true);
+?>
+<?
    global $doctors;
    if(!function_exists('item_more')) {
       function item_more($item, $size) {

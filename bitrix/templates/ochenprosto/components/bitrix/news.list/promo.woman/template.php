@@ -1,3 +1,6 @@
+<?
+$this->setFrameMode(true);
+?>
 <div id="promo" class="woman">
 <?
    function item_w($item, $size) {

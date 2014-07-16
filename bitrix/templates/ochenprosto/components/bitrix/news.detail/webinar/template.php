@@ -1,4 +1,7 @@
 <?
+$this->setFrameMode(true);
+?>
+<?
   global $doctors;
   $db_old_groups = CIBlockElement::GetElementGroups($arResult['ID'], false);
   $categorys = array();
