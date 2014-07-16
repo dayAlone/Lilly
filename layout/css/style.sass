@@ -2022,6 +2022,8 @@ input:focus, a:focus
 				+transition-property(all)
 				+transition-duration(.3s)
 				+b('play.png', no-repeat)
+				@media (max-width: 640px)
+					display: none
 			.video-block
 				+full-width
 				z-index: 29
@@ -2034,6 +2036,15 @@ input:focus, a:focus
 					float: none !important
 					+transition-property(all)
 					+transition-duration(.3s)
+					@media (max-width: 640px)
+						height: auto !important
+						width: 100% !important
+						max-width: 100%
+						min-height: 200px
+						opacity: 1
+			.image
+				@media (max-width: 640px)
+					display: none
 			.container
 				z-index: 20
 				.text
@@ -2042,9 +2053,18 @@ input:focus, a:focus
 					h1
 						font-size: 45px
 						line-height: 45px
+						@media (max-width: 640px)
+							font-size: 14px
+							line-height: 16px
+							margin-bottom: 10px
 					h3
 						font-size: 25px
 						line-height: 27px
+			@media (max-width: 640px)
+				height: auto
+				background: white !important
+				.shadow-1, .shadow-2
+					display: none
 	> .top-title
 		overflow: hidden
 		+full-width
