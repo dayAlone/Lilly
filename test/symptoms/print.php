@@ -1,4 +1,6 @@
-<? if($_COOKIE['test_result']): ?>
+<? 
+//if(isset($_COOKIE['test_result'])): 
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -103,4 +105,6 @@
 	</div>
 </div>
 </body>
-<? endif;?>
+<? 
+//endif;
+?>
