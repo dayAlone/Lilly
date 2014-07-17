@@ -79,7 +79,7 @@
                    <?=$APPLICATION->AddBufferContent("mobile_title");?>
                  </div>
                  <a href="#" class="trigger"></a>
-                 <a href="#" class="enter" onclick="_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click Mobile Ribbon']);">Войти</a>
+                 <a href="#" class="enter" data-toggle="modal" data-target="#doctor"  onclick="_gaq.push(['_trackEvent', 'EntryRibbon', 'Click', 'Click Mobile Ribbon']);">Войти</a>
               </div>
               <div class="col-md-10">
                  <ul class="nav">
