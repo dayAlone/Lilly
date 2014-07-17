@@ -2,7 +2,9 @@
 	var answers = [],
 		balls = 0;
 	$(document).ready(function(){
+
 		$( "#test_block input" ).change(function() {
+
 			var parent   = $(this).parent(),
 				parentOL = $(parent).parent(),
 				index  	 = $(parentOL).find('li').index(parent) + 1,

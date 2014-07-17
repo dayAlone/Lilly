@@ -100,6 +100,40 @@ init = ()->
         $('body').removeClass('nav-open')
         e.preventDefault()
 
+    symtpoms_select = (el)->
+
+        s_id = el.parents('.section').data('id')
+        id   = el.data('id')
+        c    = el.data('count')
+        
+        if !el.hasClass 'multy'
+            inpt = el.find '.checked input'
+            console.log inpt
+            answ = inpt.data("answer")
+            a    = inpt.data('id')
+
+        
+        if(!inpt.hasClass('skip'))
+            $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
+
+        el.hide().removeClass 'done'
+
+        el.parents('.section').hide() if el.parents('.section').find('.question:visible').length == 0
+
+        if $('.question:visible').length == 0
+            $('#buttons').removeClass('off')
+            symptoms_collect()
+        else
+            $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
+
+        $("#result .ansver[data-id='#{id}']").one 'click', (e)->
+                id = $(this).data('id')
+                $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
+                $(".question[data-id='#{id}']").show()
+                $(this).remove()
+            e.preventDefault()
+        
+
     symptoms_collect = ()->
         test_result = {}
         q = 0
@@ -115,40 +149,12 @@ init = ()->
             q++
         $.removeCookie 'test_result'
         $.cookie 'test_result', JSON.stringify(test_result) 
-        console.log($.cookie('test_result'))
 
     #$('#symtpoms .question li:first-child() input').iCheck('check');
-    $('#symtpoms input').on 'ifChecked', (event, a)->
-
-        $(this).iCheck('uncheck')
-
-        s_id  = $(this).parents('.section').data('id')
-        id    = $(this).parents('.question').data('id')
-        c = $(this).parents('.question').data('count')
-        answ  = $(this).data("answer")
-        a     = $(this).data('id')
-        if(!$(this).hasClass('skip'))
-            $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
-
-        $(this).parents('.question').hide()
-
-        $(this).parents('.section').hide() if $(this).parents('.section').find('.question:visible').length == 0
-
-        if $('.question:visible').length == 0
-            $('#buttons').removeClass('off')
-            symptoms_collect()
-        else
-            $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
-
-        $("#result .ansver[data-id='#{id}']").one 'click', (e)->
-            id = $(this).data('id')
-            $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
-            $(".question[data-id='#{id}']").show()
-            $(this).remove()
-            e.preventDefault()
-
-
     
+
+    $('#symtpoms input').on 'ifChecked', (event, a)->
+        $(this).parents('.question').addClass 'done'
 
 
     $('#symtpoms .frame').perfectScrollbar
@@ -156,6 +162,10 @@ init = ()->
 
     $('#symtpoms .question h2').click (e)->
         $(this).parents('.question').toggleClass('on')
+
+        $('#symtpoms .question.done').each ()->
+            symtpoms_select($(this))
+
         $('#symtpoms .frame').perfectScrollbar('update')
         e.preventDefault()
 
@@ -193,7 +203,7 @@ init = ()->
                 $('#enter').addClass('short')
 
     $('#faq .block').click (e)->
-        if $(window).width() < 640
+        if $(window).width() < 780
             if !$(this).hasClass('open')
                 $('#faq .block').removeClass('open')
                 $(this).toggleClass('open');
