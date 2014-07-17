@@ -1,5 +1,8 @@
 bind = false
 
+String.prototype.capitalize = ()->
+    return this.charAt(0).toUpperCase() + this.slice(1)
+
 size = ()-> 
 	
 	h = $(window).height()
@@ -106,14 +109,30 @@ init = ()->
         id   = el.data('id')
         c    = el.data('count')
         
+        skip = false
+
         if !el.hasClass 'multy'
             inpt = el.find '.checked input'
-            console.log inpt
             answ = inpt.data("answer")
             a    = inpt.data('id')
+            if inpt.hasClass 'skip'
+                skip = true
+        else
+            answ = []
+            a = []
+            el.find('.checked input').each ()->
+                if $(this).hasClass 'skip'
+                    skip = true
+                text = $(this).data("text")
+                answ.push text
+                a.push $(this).data("id")
+            if el.find('input').data('answer').indexOf("#tanswer#") >= 0
+                answ[0] = answ[0].capitalize()
+                answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.'
+            else
+                answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
 
-        
-        if(!inpt.hasClass('skip'))
+        if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
 
         el.hide().removeClass 'done'
@@ -155,6 +174,8 @@ init = ()->
 
     $('#symtpoms input').on 'ifChecked', (event, a)->
         $(this).parents('.question').addClass 'done'
+        if $('.question:visible').length == 0
+            symtpoms_select($(this).parents('.question'))
 
 
     $('#symtpoms .frame').perfectScrollbar

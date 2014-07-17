@@ -46,8 +46,8 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 									        }
 											?>
 												<div class="col-md-<?=12/$col?>">
-													<div class="question" data-id="<?=$q?>" data-count="<?=$c?>">
-														<h2><?=$question['name']?></h2>
+													<div class="question <?=(isset($question['multy'])?"multy":"")?>" data-id="<?=$q?>" data-count="<?=$c?>">
+														<h2><?=$question['name']?> </h2>
 														<ul>
 														<?
 															$a = 0;
@@ -55,6 +55,9 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 																$answer = iconv("UTF-8", "UTF-8//IGNORE",$answer);
 																if(is_array($question['results']))
 																	$w = $question['results'][$key];
+																else if(isset($question['multy'])) {
+																	$w = $question['results'];
+																}
 																else {
 																	$r = array("#answer#", "#tanswer#");
 																	$u = mb_ucfirst(strtolower($answer));
@@ -63,7 +66,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 																}
 																?>
 																	<li>
-																		<input type="radio" data-answer="<?=$w?>" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>"><?=$answer?></label>
+																		<input type="<?=(isset($question['multy'])?"checkbox":"radio")?>" data-text="<?=$answer?>" data-answer="<?=$w?>" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>"><?=$answer?></label>
 																	</li>
 																<?
 																$a++;

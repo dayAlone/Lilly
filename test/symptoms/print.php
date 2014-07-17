@@ -54,14 +54,36 @@
 					foreach ($section['questions'] as $bk => $question):
 							$answ = @$JSON[$ak]['questions'][$bk];
 							?><ul><?
-							if(is_array($answ['results']))
-								$w = $answ['results'][$question];
+							
+							$array = preg_split("/[\s,]+/", $question);
+							$w = "";
+							
+							if(is_array($answ['results'])) {
+								if(count($array)>1) {
+									foreach ($array as $value)
+										$w .= mb_ucfirst(strtolower($answ['results'][$value]))." ";
+								}
+								else
+									$w = $answ['results'][$question];
+							}
 							else {
+								$q = "";
+								if(count($array)>1) {
+									$tmp = [];
+									foreach ($array as $value)
+										$tmp[] = $answ['answers'][$value];
+									$q = implode(", ", $tmp);
+								}
+								else 
+									$q = $answ['answers'][$question];
+
 								$r = array("#answer#", "#tanswer#");
-								$u = mb_ucfirst(strtolower($answ['answers'][$question]));
-								$p = array($answ['answers'][$question], $u);
+								$u = mb_ucfirst(strtolower($q));
+								$p = array($q, $u);
+								
 								$w = str_ireplace($r, $p, $answ['results']);
 							}
+							
 							?>
 								<li>
 									<?=$w?>

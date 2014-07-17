@@ -695,6 +695,7 @@ a, a span, .shadow
 						font-size: 14px
 						line-height: 15px
 						display: block
+
 	&.woman
 		.block
 			&.big
@@ -806,6 +807,9 @@ a, a span, .shadow
 		.content
 			.title
 				@media (max-width: 770px)
+					font-size: 17px
+					line-height: 17px
+				@media (max-width: 540px)
 					font-size: 14px
 					line-height: 14px
 	&.small
@@ -818,6 +822,9 @@ a, a span, .shadow
 				font-size: 24px
 				line-height: 26px
 				@media (max-width: 770px)
+					font-size: 17px
+					line-height: 17px
+				@media (max-width: 540px)
 					font-size: 14px
 					line-height: 14px
 			.text
@@ -845,6 +852,9 @@ a, a span, .shadow
 				line-height: 33px
 				margin-bottom: 8px
 				@media (max-width: 770px)
+					font-size: 17px
+					line-height: 17px
+				@media (max-width: 540px)
 					font-size: 14px
 					line-height: 14px
 	
@@ -1317,9 +1327,12 @@ input:focus, a:focus
 				line-height: 36px
 				font-weight: 500
 				@media (max-width: 770px)
-					font-size: 14px
+					font-size: 17px
 					line-height: 16px
 					color: white
+				@media (max-width: 540px)
+					font-size: 14px
+					line-height: 16px
 		&.medium
 			height: 332px
 			@media (max-width: 770px)
@@ -1329,9 +1342,12 @@ input:focus, a:focus
 				line-height: 30px
 				font-weight: 500
 				@media (max-width: 770px)
-					font-size: 14px
+					font-size: 17px
 					line-height: 16px
 					color: white
+				@media (max-width: 540px)
+					font-size: 14px
+					line-height: 16px
 			.text
 				h2
 					font-size: 30px
@@ -1714,9 +1730,16 @@ input:focus, a:focus
 
 	@media (max-width: 770px)
 		margin-top: -14px
+		display: block
 		width: 100%
+		max-width: 520px
+		float: none
+		margin: 0 auto
+		position: relative
 		padding-top: 8px
 		padding-bottom: 240px
+		.container
+			max-width: 360px
 		.col-md-8
 			position: initial
 #product

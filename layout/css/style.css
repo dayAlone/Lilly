@@ -208,12 +208,14 @@ a:hover, a span:hover, .shadow:hover { text-decoration: none; }
 .block.message p.phone span { float: left; clear: left; margin-top: -15px; color: #e10000; font-size: 45px; }
 .block.big { height: 416px; }
 @media (max-width: 770px) { .block.big { height: auto; } }
-@media (max-width: 770px) { .block.big .content .title { font-size: 14px; line-height: 14px; } }
+@media (max-width: 770px) { .block.big .content .title { font-size: 17px; line-height: 17px; } }
+@media (max-width: 540px) { .block.big .content .title { font-size: 14px; line-height: 14px; } }
 .block.small { height: 198px; }
 @media (max-width: 770px) { .block.small { height: auto; } }
 .block.small .content { padding: 10px 5%; }
 .block.small .content .title { font-size: 24px; line-height: 26px; }
-@media (max-width: 770px) { .block.small .content .title { font-size: 14px; line-height: 14px; } }
+@media (max-width: 770px) { .block.small .content .title { font-size: 17px; line-height: 17px; } }
+@media (max-width: 540px) { .block.small .content .title { font-size: 14px; line-height: 14px; } }
 .block.small .content .text { font-size: 17px; }
 .block.small .content span { color: white; }
 .block.small .content span.bbb { font-weight: 300; font-size: 115px; line-height: 25px; }
@@ -223,7 +225,8 @@ a:hover, a span:hover, .shadow:hover { text-decoration: none; }
 @media (max-width: 770px) { .block.medium { height: auto; } }
 .block.medium .content { padding: 20px 5%; }
 .block.medium .content .title { font-size: 36px; line-height: 33px; margin-bottom: 8px; }
-@media (max-width: 770px) { .block.medium .content .title { font-size: 14px; line-height: 14px; } }
+@media (max-width: 770px) { .block.medium .content .title { font-size: 17px; line-height: 17px; } }
+@media (max-width: 540px) { .block.medium .content .title { font-size: 14px; line-height: 14px; } }
 .block .shadow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background:  url(../images/block-shadow.png) center center no-repeat; background-size: cover; z-index: 0; opacity: 0.7; }
 .block span { color: white; }
 .block span.bbb { font-weight: 300; font-size: 215px; line-height: 25px; }
@@ -338,11 +341,13 @@ input:focus, a:focus { outline: 0; }
 #faq .block.big { height: 505px; }
 @media (max-width: 770px) { #faq .block.big { height: auto; } }
 #faq .block.big .title { font-size: 36px; line-height: 36px; font-weight: 500; }
-@media (max-width: 770px) { #faq .block.big .title { font-size: 14px; line-height: 16px; color: white; } }
+@media (max-width: 770px) { #faq .block.big .title { font-size: 17px; line-height: 16px; color: white; } }
+@media (max-width: 540px) { #faq .block.big .title { font-size: 14px; line-height: 16px; } }
 #faq .block.medium { height: 332px; }
 @media (max-width: 770px) { #faq .block.medium { height: auto; } }
 #faq .block.medium .title { font-size: 30px; line-height: 30px; font-weight: 500; }
-@media (max-width: 770px) { #faq .block.medium .title { font-size: 14px; line-height: 16px; color: white; } }
+@media (max-width: 770px) { #faq .block.medium .title { font-size: 17px; line-height: 16px; color: white; } }
+@media (max-width: 540px) { #faq .block.medium .title { font-size: 14px; line-height: 16px; } }
 #faq .block.medium .text h2 { font-size: 30px; line-height: 30px; }
 #faq .block.medium .text p { font-size: 15px; }
 @media (max-width: 770px) { #faq .block { background: #ce1920 !important; }
@@ -426,7 +431,8 @@ input:focus, a:focus { outline: 0; }
   #products-promo #product-2 img { position: absolute; height: 210px; margin-top: 0px; top: -35px; left: -50px; -moz-transform: rotate(8deg); -ms-transform: rotate(8deg); -webkit-transform: rotate(8deg); transform: rotate(8deg); }
   #products-promo #product-2 p { float: left; width: 100%; position: relative; }
   #products-promo #product-2 p a { position: absolute; top: -50px; right: 10px; } }
-@media (max-width: 770px) { #products-promo { margin-top: -14px; width: 100%; padding-top: 8px; padding-bottom: 240px; }
+@media (max-width: 770px) { #products-promo { margin-top: -14px; display: block; width: 100%; max-width: 520px; float: none; margin: 0 auto; position: relative; padding-top: 8px; padding-bottom: 240px; }
+  #products-promo .container { max-width: 360px; }
   #products-promo .col-md-8 { position: initial; } }
 
 #product { float: left; width: 100%; position: relative; overflow: hidden; min-height: 800px; background-position: top center; background-repeat: no-repeat; background-size: cover; margin-top: -128px; padding-top: 130px; }
