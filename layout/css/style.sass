@@ -2342,6 +2342,8 @@ input:focus, a:focus
 		@media (max-width: 770px)
 			height: auto
 			+box-shadow(1px 1px 2px rgba(8,10,14,.22)) 
+			> .shadow-1, >.shadow-2
+				display: none
 			.image
 				+full-width
 				height: 166px
@@ -2350,7 +2352,9 @@ input:focus, a:focus
 				background-position: center center
 				background-repeat: no-repeat
 				.shadow-1
-					opacity: .2
+					opacity: .6
+					background: url(../images/block-shadow.png)
+					background-size: cover
 		.arrow
 			position: absolute
 			width: 200px

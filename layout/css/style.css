@@ -583,8 +583,9 @@ input:focus, a:focus { outline: 0; }
   #article.video > .top-title .shadow-1, #article.video > .top-title .shadow-2 { display: none; } }
 #article > .top-title { overflow: hidden; float: left; width: 100%; position: relative; height: 420px; background-color: black; background-size: 90% auto; background-position: center center; background-repeat: no-repeat; }
 @media (max-width: 770px) { #article > .top-title { height: auto; -moz-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22); -webkit-box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22); box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22); }
+  #article > .top-title > .shadow-1, #article > .top-title > .shadow-2 { display: none; }
   #article > .top-title .image { float: left; width: 100%; position: relative; height: 166px; background-color: black; background-size: cover; background-position: center center; background-repeat: no-repeat; }
-  #article > .top-title .image .shadow-1 { opacity: 0.2; } }
+  #article > .top-title .image .shadow-1 { opacity: 0.6; background: url(../images/block-shadow.png); background-size: cover; } }
 #article > .top-title .arrow { position: absolute; width: 200px; min-height: 100px; z-index: 5; cursor: pointer; top: 50%; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 @media (max-width: 770px) { #article > .top-title .arrow { display: none; } }
 #article > .top-title .arrow:hover .text { opacity: 1; }
