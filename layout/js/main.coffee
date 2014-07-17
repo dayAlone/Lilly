@@ -207,6 +207,10 @@ init = ()->
                 $('#doctor').modal('hide')
             return true
 
+    $('#toolbar .enter').click (e)->
+        $('#doctor').modal()
+        e.preventDefault()
+
     $('#enter.short a').hoverIntent
         over: ()->
             $('#enter.short').removeClass('short')
