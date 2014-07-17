@@ -1951,6 +1951,10 @@ input:focus, a:focus
 	@media (max-width: 770px)
 		margin-top: -14px
 		padding-bottom: 0
+.text-frame
+	@media (max-width: 770px)
+		+full-width
+		padding: 0 8px
 
 #text
 	p
@@ -1963,12 +1967,20 @@ input:focus, a:focus
 		text-transform: uppercase
 		font-size: 30px
 		margin-bottom: 25px
+		@media (max-width: 770px)
+			margin-bottom: 10px
+			font-size: 18px
+			margin-top: 10px
+			+full-width
 	h2
 		font-size: 19px
 		margin-top: 30px
 		font-weight: 600
 		text-transform: uppercase
 		margin-bottom: 15px
+		@media (max-width: 770px)
+			font-size: 16px
+			margin-top: 15px
 	img
 		max-width: 100%
 		min-width: 100%
@@ -1981,16 +1993,30 @@ input:focus, a:focus
 			margin-bottom: 10px
 			list-style: none
 			position: relative
+			@media (max-width: 770px)
+				font-size: 12px
+				line-height: 13px
 			&:before
 				content: "\22c5"
 				font-size: 23px
 				position: absolute
 				top: -6px
 				left: 3px
+				@media (max-width: 770px)
+					top: -1px
 	a
 		text-decoration: underline
 		color: red
-
+	@media (max-width: 770px)
+		background: white
+		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		padding: 0 8px
+		+full-width
+		p
+			+full-width
+			font-size: 12px
+			line-height: 14px
+			margin-bottom: 15px
 .frame
 	overflow: hidden
 

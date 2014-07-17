@@ -6,7 +6,8 @@
 ?>
 
 <div class="row">
-	<div class="col-md-6 col-md-offset-3">
+	<div class="col-md-6 col-md-offset-3 text-frame">
+		<div class="text-frame">
 		<div id="text">
 			<h1>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h1>
 			<p>Уважаемый пользователь! <br>
@@ -66,7 +67,7 @@
 			<small>ED-PM-191-131212</small>
 
 		</div>
-
+		</div>
 	</div>
 </div>
 <?
