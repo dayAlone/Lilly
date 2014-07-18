@@ -185,6 +185,7 @@
           $('#buttons').addClass('off');
         }
       }
+      symptoms_collect();
       return $("#result .ansver[data-id='" + id + "']").one('click', function(e) {
         id = $(this).data('id');
         if ($(".question[data-id='" + id + "']").parents('.section').is(':hidden')) {

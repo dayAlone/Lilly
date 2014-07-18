@@ -152,6 +152,8 @@ init = ()->
         else
             $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
 
+        symptoms_collect()
+
         $("#result .ansver[data-id='#{id}']").one 'click', (e)->
             id = $(this).data('id')
             $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')

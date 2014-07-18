@@ -132,5 +132,6 @@
 </div>
 </body>
 <? 
+unset($_COOKIE['test_result']);
 //endif;
 ?>
