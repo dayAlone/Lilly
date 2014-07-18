@@ -133,7 +133,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
      <div class="modal-dialog modal-xxl">
        <div class="modal-content">
        <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
-       	<h3>Узнайте больше об эректильной дисфункции а аденоме предстательной железы.</h3>
+       	<h3>Узнайте больше об эректильной дисфункции и аденоме предстательной железы.</h3>
        	<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
 			"promo.woman",
