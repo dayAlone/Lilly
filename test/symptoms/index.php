@@ -136,7 +136,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
        	<h3>Узнайте больше об эректильной дисфункции и аденоме предстательной железы.</h3>
        	<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
-			"promo.woman",
+			"promo.popup",
 			Array(
 				"IBLOCK_TYPE" => "content",
 				"IBLOCK_ID" => "1",
