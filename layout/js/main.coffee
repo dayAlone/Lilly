@@ -123,7 +123,7 @@ init = ()->
             el.find('.checked input').each ()->
                 if $(this).hasClass 'skip'
                     skip = true
-                if $(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#tanswer#") >= 0
+                if $(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#answer#") >= 0
                     text = $(this).data("text")
                 else
                     text = $(this).data("answer")
@@ -133,11 +133,10 @@ init = ()->
             if el.find('input').data('answer').indexOf("#tanswer#") >= 0
                 answ[0] = answ[0].capitalize()
                 answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.'
-            else if el.find('input').data('answer').indexOf("#tanswer#") >= 0
+            else if el.find('input').data('answer').indexOf("#answer#") >= 0
                 answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
             else
                 answ = answ.join(' ')
-                console.log 123123
 
         if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
@@ -182,7 +181,8 @@ init = ()->
     $('#symtpoms input').on 'ifChecked', (event, a)->
         $(this).parents('.question').addClass 'done'
         if $('.question:visible').length == 1
-            symtpoms_select($(this).parents('.question'))
+            $('#symtpoms .question.done').each ()->
+                symtpoms_select($(this))
 
 
     $('#symtpoms .frame').perfectScrollbar
