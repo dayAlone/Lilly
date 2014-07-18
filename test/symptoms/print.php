@@ -15,7 +15,14 @@
     <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="/layout/css/plugins.css" rel="stylesheet" />
 	<link href="/layout/css/style.css" rel="stylesheet" />
- 
+ 	<script type="text/javascript" src="/layout/js/jquery.js"></script>
+     <script type="text/javascript" src="/layout/js/plugins.min.js"></script>
+     <script type="text/javascript" src="/layout/js/main.js"></script>
+     <script type="text/javascript" charset="utf-8" async defer>
+     $(function(){
+     	$.removeCookie('test_result')
+     })
+     </script>
   </head>
 
   <body id="print">
@@ -132,6 +139,6 @@
 </div>
 </body>
 <? 
-unset($_COOKIE['test_result']);
+
 //endif;
 ?>
