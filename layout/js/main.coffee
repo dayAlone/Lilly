@@ -104,7 +104,7 @@ init = ()->
         e.preventDefault()
 
     symtpoms_select = (el)->
-
+        console.log el
         s_id = el.parents('.section').data('id')
         id   = el.data('id')
         c    = el.data('count')
@@ -113,6 +113,7 @@ init = ()->
 
         if !el.hasClass 'multy'
             inpt = el.find '.checked input'
+            console.log inpt
             answ = inpt.data("answer")
             a    = inpt.data('id')
             if inpt.hasClass 'skip'
@@ -152,10 +153,10 @@ init = ()->
             $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
 
         $("#result .ansver[data-id='#{id}']").one 'click', (e)->
-                id = $(this).data('id')
-                $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
-                $(".question[data-id='#{id}']").show()
-                $(this).remove()
+            id = $(this).data('id')
+            $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
+            $(".question[data-id='#{id}']").show()
+            $(this).remove()
             e.preventDefault()
         
 
@@ -181,8 +182,9 @@ init = ()->
     $('#symtpoms input').on 'ifChecked', (event, a)->
         $(this).parents('.question').addClass 'done'
         if $('.question:visible').length == 1
-            $('#symtpoms .question.done').each ()->
-                symtpoms_select($(this))
+            delay 400, ()->
+                $('#symtpoms .question.done').each ()->
+                    symtpoms_select($(this))
 
 
     $('#symtpoms .frame').perfectScrollbar
@@ -234,14 +236,14 @@ init = ()->
             if !$('#enter').hasClass('dont-hide')
                 $('#enter').addClass('short')
 
-    $('#faq .block').click (e)->
+    $('#faq .block').click (ev)->
         if $(window).width() < 780
             if !$(this).hasClass('open')
                 $('#faq .block').removeClass('open')
                 $(this).toggleClass('open');
                 offset = $(this).offset().top
                 $('html, body').animate({'scrollTop' : offset - $('#toolbar').height()-14 },300)
-        e.preventDefault()
+        ev.preventDefault()
 
     $('#faq .block .text .panel').slimscroll
         height : ()->
