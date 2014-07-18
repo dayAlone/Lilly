@@ -22,9 +22,12 @@
   <div class="container">
   	<div class="title">
   		<div class="logo"><img src="/layout/images/logo.png" width="90"></div>
+  		<?if(isset($_COOKIE['test_result'])): ?>
   		<h1>Карта показателей мужского здоровья</h1>
 		<p>Поздравляем, вы сделали первый шаг на пути выздоровлению. Уверенно отправляйтесь на консультацию со специалистом и захватите “Карту показателей мужского здоровья” с собой!</p>
+		<? endif; ?>
   	</div>
+  	<?if(isset($_COOKIE['test_result'])): ?>
   	<div class="questions">
 	<?
 		if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
@@ -97,6 +100,7 @@
 		endforeach;
 	?>
 	</div>
+	<? endif; ?>
 	<div class="more">
 		<h1></h1>
 		<p>Чтобы предоставить врачу все необходимые для лечения сведения, ответьте, пожалуйста, на следующие вопросы: </p>

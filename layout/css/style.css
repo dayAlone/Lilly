@@ -667,8 +667,8 @@ input:focus, a:focus { outline: 0; }
 #symtpoms #result .section:last-of-type { border-bottom: 0 !important; }
 #symtpoms #result .section h3 { font-size: 18px; text-transform: uppercase; font-weight: 300; margin: 8px 0 10px; }
 #symtpoms #buttons { margin: 20px 0; float: left; width: 100%; position: relative; }
-#symtpoms #buttons.off { pointer-events: none; }
-#symtpoms #buttons.off a { background: #b3b3b3; }
+#symtpoms #buttons.off a { background: #b3b3b3; pointer-events: none; }
+#symtpoms #buttons.off a.print { pointer-events: all; background: #ec4149; }
 #symtpoms #buttons a { float: left; width: 100%; position: relative; background: #ec4149; text-transform: uppercase; color: white; padding: 3px 10px 4px; font-weight: 500; height: 45px; line-height: 18px; }
 #symtpoms #buttons a.find { line-height: 40px; }
 

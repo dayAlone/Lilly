@@ -2688,9 +2688,12 @@ input:focus, a:focus
 	
 	#buttons
 		&.off
-			pointer-events: none
 			a
 				background: #b3b3b3
+				pointer-events: none
+				&.print
+					pointer-events: all
+					background: #ec4149
 		margin: 20px 0
 		+full-width
 		a
