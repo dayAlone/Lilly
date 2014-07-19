@@ -176,7 +176,7 @@ init = ()->
                 questions: questions
             q++
         $.removeCookie 'test_result'
-        $.cookie 'test_result', JSON.stringify(test_result) 
+        $.cookie 'test_result', JSON.stringify(test_result)
 
     #$('#symtpoms .question li:first-child() input').iCheck('check');
     
