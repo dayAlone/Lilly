@@ -60,6 +60,13 @@ load = (url)->
                     $('.frame').addClass('index')
                 else
                     $('.frame').removeClass('index')
+
+                if $(data).filter('.frame').hasClass('doctor')
+                    $('.frame').addClass('doctor').removeClass('user')
+                else
+                    $('.frame').addClass('user').removeClass('doctor')
+
+
                 $.scrollTo(0, 500)
                 init()
 
@@ -80,7 +87,7 @@ init = ()->
         History = window.History;
         url = $(this).attr('href')
         e.preventDefault()
-        if (History.enabled)
+        if (History.enabled && url != '#')
             if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
                 $('body .frame').removeClass('animated fadeIn')
                 History.pushState({'url':url}, $(this).text(), url);
@@ -91,8 +98,14 @@ init = ()->
             else if($(this).hasClass('no-ajax'))
                 window.open(url, '_blank')
 
+    $('#doctor').off('shown.bs.modal').on 'shown.bs.modal', ()->
+        if $('.frame').hasClass 'doctor'
+            $('#doctor a.back').attr 'href', '/'
+        else
+            $('#doctor a.back').attr 'href', '#'
+        
+        console.log $('.frame').hasClass 'doctor'
 
-    $('#doctor').on 'shown.bs.modal', ()->
         if($.cookie('checkbox')=='true')
             $('#doctor .checkbox').addClass('checked')
 
@@ -100,12 +113,12 @@ init = ()->
     
     $('#symptoms-welcome').modal()
     
-    $('#toolbar .trigger').click (e)->
+    $('#toolbar .trigger').off('click').on 'click', (e)->
         $('#toolbar .nav').toggleClass('open')
         $('body').toggleClass('nav-open')
         e.preventDefault()
 
-    $('#overlay').on 'click scroll touchmove touchstart', (e)->
+    $('#overlay').off('click scroll touchmove touchstart').on 'click scroll touchmove touchstart', (e)->
         $('#toolbar .nav').removeClass('open')
         $('body').removeClass('nav-open')
         e.preventDefault()

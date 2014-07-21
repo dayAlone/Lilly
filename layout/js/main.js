@@ -81,6 +81,11 @@
         } else {
           $('.frame').removeClass('index');
         }
+        if ($(data).filter('.frame').hasClass('doctor')) {
+          $('.frame').addClass('doctor').removeClass('user');
+        } else {
+          $('.frame').addClass('user').removeClass('doctor');
+        }
         $.scrollTo(0, 500);
         return init();
       }
@@ -107,7 +112,7 @@
       History = window.History;
       url = $(this).attr('href');
       e.preventDefault();
-      if (History.enabled) {
+      if (History.enabled && url !== '#') {
         if (!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) !== '#' && url.indexOf('http') < 0 && $(this).parents('#panel,.bx-component-opener').length === 0) {
           $('body .frame').removeClass('animated fadeIn');
           return History.pushState({
@@ -123,19 +128,25 @@
         }
       }
     });
-    $('#doctor').on('shown.bs.modal', function() {
+    $('#doctor').off('shown.bs.modal').on('shown.bs.modal', function() {
+      if ($('.frame').hasClass('doctor')) {
+        $('#doctor a.back').attr('href', '/');
+      } else {
+        $('#doctor a.back').attr('href', '#');
+      }
+      console.log($('.frame').hasClass('doctor'));
       if ($.cookie('checkbox') === 'true') {
         return $('#doctor .checkbox').addClass('checked');
       }
     });
     $('#symtpoms input').iCheck();
     $('#symptoms-welcome').modal();
-    $('#toolbar .trigger').click(function(e) {
+    $('#toolbar .trigger').off('click').on('click', function(e) {
       $('#toolbar .nav').toggleClass('open');
       $('body').toggleClass('nav-open');
       return e.preventDefault();
     });
-    $('#overlay').on('click scroll touchmove touchstart', function(e) {
+    $('#overlay').off('click scroll touchmove touchstart').on('click scroll touchmove touchstart', function(e) {
       $('#toolbar .nav').removeClass('open');
       $('body').removeClass('nav-open');
       return e.preventDefault();

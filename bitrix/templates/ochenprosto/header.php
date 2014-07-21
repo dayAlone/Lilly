@@ -21,7 +21,9 @@
      <script type="text/javascript" src="/layout/js/main.js"></script>
      <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
           <script>
-            $('#doctor').modal();
+            $(function(){
+              $('#doctor').modal();  
+            })
           </script>
     <?}?>
     <?php $APPLICATION->ShowHead();?>
