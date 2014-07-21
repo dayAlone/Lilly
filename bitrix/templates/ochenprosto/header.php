@@ -25,6 +25,7 @@
           </script>
     <?}?>
     <?php $APPLICATION->ShowHead();?>
+    <?/*
     <? if($APPLICATION->GetCurPage()=='/') {?>
     
     <!-- Google Analytics Content Experiment code -->
@@ -42,7 +43,8 @@
       </script><script>utmx('url','A/B');</script>
     <!-- End of Google Analytics Content Experiment code -->
 
-<? }?>
+    <? }?>
+    */?>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31297918-1']);
