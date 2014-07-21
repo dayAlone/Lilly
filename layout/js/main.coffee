@@ -69,7 +69,7 @@ init = ()->
         alert()
   
 
-    $('a').on 'click', (e)->
+    $('a').off('click').on 'click', (e)->
         History = window.History;
         url = $(this).attr('href')
         e.preventDefault()
