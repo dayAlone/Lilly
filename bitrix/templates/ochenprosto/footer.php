@@ -102,7 +102,7 @@
          с положениями действующего законодательства РФ Вы не имеете права доступа к информации, размещенной в данном разделе веб-сайта, в связи с чем просим Вас незамедлительно покинуть данный раздел веб-сайта.</p>
 
          <p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВХОД», чтобы начать работу.</p>
-         <a <?=(!$doctors? 'href="/doctors/"':'href="#" data-dismiss="modal" aria-hidden="true"')?> class="no-ajax enter">Вход</a>
+         <a <?=(!$doctors? 'href="/doctors/"':'href="#" data-dismiss="modal" aria-hidden="true"')?> class="enter">Вход</a>
          <div class="checkbox"></div>
          <a <?=($doctors? 'href="/"':'href="#"')?> data-dismiss="modal" aria-hidden="true" class="back"> <span>&lsaquo;</span> ВЕРНУТЬСЯ</a>
          <span class="agree">подтверждаю</span>

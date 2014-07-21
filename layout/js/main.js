@@ -131,8 +131,10 @@
     $('#doctor').off('shown.bs.modal').on('shown.bs.modal', function() {
       if ($('.frame').hasClass('doctor')) {
         $('#doctor a.back').attr('href', '/');
+        $('#doctor a.enter').attr('href', '#');
       } else {
         $('#doctor a.back').attr('href', '#');
+        $('#doctor a.enter').attr('href', '/doctors/');
       }
       console.log($('.frame').hasClass('doctor'));
       if ($.cookie('checkbox') === 'true') {
