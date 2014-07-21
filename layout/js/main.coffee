@@ -67,7 +67,14 @@ load = (url)->
 init = ()->
     $(window).on "navigate", (event, data)->
         alert()
-  
+
+    if $('#test-woman').length > 0 
+        $.getScript "/test_women/js/script.js", ()->
+            console.log 'done'
+    if $('#test-man').length > 0 
+        $.getScript "/test_man/js/script.js", ()->
+            console.log 'done'
+
 
     $('a').off('click').on 'click', (e)->
         History = window.History;

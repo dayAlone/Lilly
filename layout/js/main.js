@@ -92,6 +92,16 @@
     $(window).on("navigate", function(event, data) {
       return alert();
     });
+    if ($('#test-woman').length > 0) {
+      $.getScript("/test_women/js/script.js", function() {
+        return console.log('done');
+      });
+    }
+    if ($('#test-man').length > 0) {
+      $.getScript("/test_man/js/script.js", function() {
+        return console.log('done');
+      });
+    }
     $('a').off('click').on('click', function(e) {
       var History, url;
       History = window.History;

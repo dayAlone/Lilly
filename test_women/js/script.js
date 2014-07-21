@@ -1,7 +1,7 @@
 (function($){
 	var answers = [],
 		balls = 0;
-	$(document).ready(function(){
+	
 		$( "#test_block input" ).change(function() {
 			var parent   = $(this).parent(),
 				parentOL = $(parent).parent(),
@@ -49,6 +49,6 @@
 				$('#test_block input[type="radio"]').parent().addClass('selected');
 			} else {}
 		});*/
-	})
+	
 
 })(jQuery)

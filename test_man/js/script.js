@@ -1,8 +1,7 @@
 (function($){
 	var answers = [],
 		balls = 0;
-	$(document).ready(function(){
-
+		console.log('loaded')
 		$( "#test_block input" ).change(function() {
 
 			var parent   = $(this).parent(),
@@ -50,6 +49,4 @@
 				$('#test_block input[type="radio"]').parent().addClass('selected');
 			} else {}
 		});
-	})
-
 })(jQuery)
