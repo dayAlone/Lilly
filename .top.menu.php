@@ -18,7 +18,7 @@ $aMenuLinks = Array(
 		"FAQ", 
 		"/faq/", 
 		Array(), 
-		Array("MORE"=>"ответы<br/>на ваши вопросы"), 
+		Array("MORE"=>"ответы <br/>на ваши вопросы"), 
 		"" 
 	),
 	Array(

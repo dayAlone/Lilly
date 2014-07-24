@@ -1,4 +1,6 @@
-<? if($_COOKIE['test_result']): ?>
+<? 
+//if(isset($_COOKIE['test_result'])): 
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -13,16 +15,26 @@
     <link href="/layout/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="/layout/css/plugins.css" rel="stylesheet" />
 	<link href="/layout/css/style.css" rel="stylesheet" />
- 
+ 	<script type="text/javascript" src="/layout/js/jquery.js"></script>
+     <script type="text/javascript" src="/layout/js/plugins.min.js"></script>
+     <script type="text/javascript" src="/layout/js/main.js"></script>
+     <script type="text/javascript" charset="utf-8" async defer>
+     $(function(){
+     	$.removeCookie('test_result')
+     })
+     </script>
   </head>
 
   <body id="print">
   <div class="container">
   	<div class="title">
   		<div class="logo"><img src="/layout/images/logo.png" width="90"></div>
+  		<?if(isset($_COOKIE['test_result'])): ?>
   		<h1>Карта показателей мужского здоровья</h1>
-		<p>Покажите Карту врачу или ориентируйтесь на нее при разговоре с ним.</p>
+		<p>Поздравляем, вы сделали первый шаг на пути выздоровлению. Уверенно отправляйтесь на консультацию со специалистом и захватите “Карту показателей мужского здоровья” с собой!</p>
+		<? endif; ?>
   	</div>
+  	<?if(isset($_COOKIE['test_result'])): ?>
   	<div class="questions">
 	<?
 		if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
@@ -52,14 +64,36 @@
 					foreach ($section['questions'] as $bk => $question):
 							$answ = @$JSON[$ak]['questions'][$bk];
 							?><ul><?
-							if(is_array($answ['results']))
-								$w = $answ['results'][$question];
+							
+							$array = preg_split("/[\s,]+/", $question);
+							$w = "";
+							
+							if(is_array($answ['results'])) {
+								if(count($array)>1) {
+									foreach ($array as $value)
+										$w .= mb_ucfirst(strtolower($answ['results'][$value]))." ";
+								}
+								else
+									$w = $answ['results'][$question];
+							}
 							else {
+								$q = "";
+								if(count($array)>1) {
+									$tmp = [];
+									foreach ($array as $value)
+										$tmp[] = $answ['answers'][$value];
+									$q = implode(", ", $tmp);
+								}
+								else 
+									$q = $answ['answers'][$question];
+
 								$r = array("#answer#", "#tanswer#");
-								$u = mb_ucfirst(strtolower($answ['answers'][$question]));
-								$p = array($answ['answers'][$question], $u);
+								$u = mb_ucfirst(strtolower($q));
+								$p = array($q, $u);
+								
 								$w = str_ireplace($r, $p, $answ['results']);
 							}
+							
 							?>
 								<li>
 									<?=$w?>
@@ -73,11 +107,11 @@
 		endforeach;
 	?>
 	</div>
+	<? endif; ?>
 	<div class="more">
-		<div class="logo"><img src="/layout/images/logo.png" width="90"></div>
 		<h1></h1>
 		<p>Чтобы предоставить врачу все необходимые для лечения сведения, ответьте, пожалуйста, на следующие вопросы: </p>
-		<h4>1. Если вы регулярно принимаете лекарства, укажите их названия и дозировку. </h4>
+		<h4>1. Укажите названия лекарств, которые вы принимаете регулярно.</h4>
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
@@ -93,7 +127,7 @@
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
-		<h4>3. Что еще вас беспокоит?</h4>
+		<h4>3. Что еще вас беспокоит.</h4>
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
@@ -104,4 +138,7 @@
 	</div>
 </div>
 </body>
-<? endif;?>
+<? 
+
+//endif;
+?>

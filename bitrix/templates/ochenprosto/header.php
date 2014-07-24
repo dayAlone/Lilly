@@ -12,18 +12,22 @@
     <meta charset="utf-8">
     <title><?php $APPLICATION->ShowTitle();?></title>
     
-    <meta name="viewport" content="width=850, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
      <script type="text/javascript" src="/layout/js/jquery.js"></script>
-     <script type="text/javascript" src="/layout/js/plugins.js"></script>
+     <script type="text/javascript" src="/layout/js/plugins.min.js"></script>
      <script type="text/javascript" src="/layout/js/main.js"></script>
      <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
           <script>
-            $('#doctor').modal();
+            $(function(){
+              $('#doctor').modal();  
+            })
           </script>
     <?}?>
     <?php $APPLICATION->ShowHead();?>
+    <?/*
     <? if($APPLICATION->GetCurPage()=='/') {?>
     
     <!-- Google Analytics Content Experiment code -->
@@ -41,7 +45,8 @@
       </script><script>utmx('url','A/B');</script>
     <!-- End of Google Analytics Content Experiment code -->
 
-<? }?>
+    <? }?>
+    */?>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31297918-1']);
@@ -74,9 +79,25 @@
                  <a href="/" id="logo">
                     <img src="/layout/images/logo.png" alt="">
                  </a>
+                 <div class="mobile_title">
+                   <?=$APPLICATION->AddBufferContent("mobile_title");?>
+                 </div>
+                 <a href="#" class="trigger"></a>
+                 <a class="enter" data-toggle="modal" data-target="#doctor" href="#doctor">Войти</a>
               </div>
               <div class="col-md-10">
                  <ul class="nav">
+                    <li class="hidden">
+                      <a class="trigger" href="#">
+                        <svg width="10px" height="18px" viewBox="0 0 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                           <g id="Portrait" sketch:type="MSArtboardGroup" transform="translate(-318.000000, -451.000000)" fill="#020202">
+                               <path d="M324.968048,460.268375 L324.967471,458.945116 L318.318025,466.487624 L319.818264,467.810229 L326.46771,460.26772 L327.051224,459.605836 L326.467133,458.944462 L319.749542,451.338044 L318.250458,452.661956 L324.968048,460.268375 Z" id="Imported-Layers" sketch:type="MSShapeGroup"></path>
+                           </g>
+                          </g>
+                         </svg>
+                      </a>
+                    </li>
                     <?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
                     	"ROOT_MENU_TYPE" => "top",
                     	"MENU_CACHE_TYPE" => "A",
@@ -99,7 +120,7 @@
            </div>
         </div>
      </div>
-     <?if(!$doctors):?>
+     <?if(!$doctors&&!defined('ERROR_404')):?>
        <? /*<a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>*/?>
        <a href="/test/man/" class="flag test"><img src="/layout/images/flag-test.png"></a>
      
@@ -156,4 +177,3 @@
       </div>
       */?>
      <?endif;?>
-   

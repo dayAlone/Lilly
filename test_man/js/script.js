@@ -1,8 +1,9 @@
 (function($){
 	var answers = [],
 		balls = 0;
-	$(document).ready(function(){
+		console.log('loaded')
 		$( "#test_block input" ).change(function() {
+
 			var parent   = $(this).parent(),
 				parentOL = $(parent).parent(),
 				index  	 = $(parentOL).find('li').index(parent) + 1,
@@ -48,6 +49,4 @@
 				$('#test_block input[type="radio"]').parent().addClass('selected');
 			} else {}
 		});
-	})
-
 })(jQuery)

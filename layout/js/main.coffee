@@ -1,5 +1,8 @@
 bind = false
 
+String.prototype.capitalize = ()->
+    return this.charAt(0).toUpperCase() + this.slice(1)
+
 size = ()-> 
 	
 	h = $(window).height()
@@ -57,6 +60,13 @@ load = (url)->
                     $('.frame').addClass('index')
                 else
                     $('.frame').removeClass('index')
+
+                if $(data).filter('.frame').hasClass('doctor')
+                    $('.frame').addClass('doctor').removeClass('user')
+                else
+                    $('.frame').addClass('user').removeClass('doctor')
+
+
                 $.scrollTo(0, 500)
                 init()
 
@@ -64,13 +74,20 @@ load = (url)->
 init = ()->
     $(window).on "navigate", (event, data)->
         alert()
-  
 
-    $('a').on 'click', (e)->
+    if $('#test-woman').length > 0 
+        $.getScript "/test_women/js/script.js", ()->
+            console.log 'done'
+    if $('#test-man').length > 0 
+        $.getScript "/test_man/js/script.js", ()->
+            console.log 'done'
+
+
+    $('a').off('click').on 'click', (e)->
         History = window.History;
         url = $(this).attr('href')
         e.preventDefault()
-        if (History.enabled)
+        if (History.enabled && url != '#')
             if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
                 $('body .frame').removeClass('animated fadeIn')
                 History.pushState({'url':url}, $(this).text(), url);
@@ -81,8 +98,16 @@ init = ()->
             else if($(this).hasClass('no-ajax'))
                 window.open(url, '_blank')
 
+    $('#doctor').off('shown.bs.modal').on 'shown.bs.modal', ()->
+        if $('.frame').hasClass 'doctor'
+            $('#doctor a.back').attr 'href', '/'
+            $('#doctor a.enter').attr 'href', '#'
+        else
+            $('#doctor a.back').attr 'href', '#'
+            $('#doctor a.enter').attr 'href', '/doctors/'
+        
+        console.log $('.frame').hasClass 'doctor'
 
-    $('#doctor').on 'shown.bs.modal', ()->
         if($.cookie('checkbox')=='true')
             $('#doctor .checkbox').addClass('checked')
 
@@ -90,6 +115,75 @@ init = ()->
     
     $('#symptoms-welcome').modal()
     
+    $('#toolbar .trigger').off('click').on 'click', (e)->
+        $('#toolbar .nav').toggleClass('open')
+        $('body').toggleClass('nav-open')
+        e.preventDefault()
+
+    $('#overlay').off('click scroll touchmove touchstart').on 'click scroll touchmove touchstart', (e)->
+        $('#toolbar .nav').removeClass('open')
+        $('body').removeClass('nav-open')
+        e.preventDefault()
+
+    symtpoms_select = (el)->
+        console.log el
+        s_id = el.parents('.section').data('id')
+        id   = el.data('id')
+        c    = el.data('count')
+        
+        skip = false
+
+        if !el.hasClass 'multy'
+            inpt = el.find '.checked input'
+            console.log inpt
+            answ = inpt.data("answer")
+            a    = inpt.data('id')
+            if inpt.hasClass 'skip'
+                skip = true
+        else
+            answ = []
+            a = []
+            el.find('.checked input').each ()->
+                if $(this).hasClass 'skip'
+                    skip = true
+                if $(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#answer#") >= 0
+                    text = $(this).data("text")
+                else
+                    text = $(this).data("answer")
+                answ.push text
+                a.push $(this).data("id")
+
+            if el.find('input').data('answer').indexOf("#tanswer#") >= 0
+                answ[0] = answ[0].capitalize()
+                answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.'
+            else if el.find('input').data('answer').indexOf("#answer#") >= 0
+                answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
+            else
+                answ = answ.join(' ')
+
+        if(!skip)
+            $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
+
+        el.hide().removeClass 'done'
+
+        el.parents('.section').hide() if el.parents('.section').find('.question:visible').length == 0
+
+        if $('.question:visible').length == 0
+            $('#buttons').removeClass('off')
+            symptoms_collect()
+        else
+            $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
+
+        symptoms_collect()
+
+        $("#result .ansver[data-id='#{id}']").one 'click', (e)->
+            id = $(this).data('id')
+            $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
+            $(".question[data-id='#{id}']").show()
+            $(this).remove()
+            e.preventDefault()
+        
+
     symptoms_collect = ()->
         test_result = {}
         q = 0
@@ -104,41 +198,17 @@ init = ()->
                 questions: questions
             q++
         $.removeCookie 'test_result'
-        $.cookie 'test_result', JSON.stringify(test_result) 
-        console.log($.cookie('test_result'))
+        $.cookie 'test_result', JSON.stringify(test_result)
 
     #$('#symtpoms .question li:first-child() input').iCheck('check');
-    $('#symtpoms input').on 'ifChecked', (event, a)->
-
-        $(this).iCheck('uncheck')
-
-        s_id  = $(this).parents('.section').data('id')
-        id    = $(this).parents('.question').data('id')
-        c = $(this).parents('.question').data('count')
-        answ  = $(this).data("answer")
-        a     = $(this).data('id')
-        if(!$(this).hasClass('skip'))
-            $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
-
-        $(this).parents('.question').hide()
-
-        $(this).parents('.section').hide() if $(this).parents('.section').find('.question:visible').length == 0
-
-        if $('.question:visible').length == 0
-            $('#buttons').removeClass('off')
-            symptoms_collect()
-        else
-            $('#buttons').addClass('off') if !$('#buttons').hasClass('off') 
-
-        $("#result .ansver[data-id='#{id}']").one 'click', (e)->
-            id = $(this).data('id')
-            $(".question[data-id='#{id}']").parents('.section').show() if $(".question[data-id='#{id}']").parents('.section').is(':hidden')
-            $(".question[data-id='#{id}']").show()
-            $(this).remove()
-            e.preventDefault()
-
-
     
+
+    $('#symtpoms input').on 'ifChecked', (event, a)->
+        $(this).parents('.question').addClass 'done'
+        if $('.question:visible').length == 1
+            delay 400, ()->
+                $('#symtpoms .question.done').each ()->
+                    symtpoms_select($(this))
 
 
     $('#symtpoms .frame').perfectScrollbar
@@ -146,6 +216,10 @@ init = ()->
 
     $('#symtpoms .question h2').click (e)->
         $(this).parents('.question').toggleClass('on')
+
+        $('#symtpoms .question.done').each ()->
+            symtpoms_select($(this))
+
         $('#symtpoms .frame').perfectScrollbar('update')
         e.preventDefault()
 
@@ -166,6 +240,10 @@ init = ()->
                 $('#doctor').modal('hide')
             return true
 
+    $('#toolbar .enter').click (e)->
+        $('#doctor').modal()
+        e.preventDefault()
+
     $('#enter.short a').hoverIntent
         over: ()->
             $('#enter.short').removeClass('short')
@@ -181,6 +259,15 @@ init = ()->
         out: ()->
             if !$('#enter').hasClass('dont-hide')
                 $('#enter').addClass('short')
+
+    $('#faq .block').click (ev)->
+        if $(window).width() < 780
+            if !$(this).hasClass('open')
+                $('#faq .block').removeClass('open')
+                $(this).toggleClass('open');
+                offset = $(this).offset().top
+                $('html, body').animate({'scrollTop' : offset - $('#toolbar').height()-14 },300)
+        ev.preventDefault()
 
     $('#faq .block .text .panel').slimscroll
         height : ()->

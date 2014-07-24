@@ -52,3 +52,7 @@ bitrix/cache/
 bitrix/managed_cache/
 upload/tmp/
 config.codekit
+
+bitrix/.settings.php
+
+layout/js/min/plugins-ck.js

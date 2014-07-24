@@ -46,8 +46,8 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 									        }
 											?>
 												<div class="col-md-<?=12/$col?>">
-													<div class="question" data-id="<?=$q?>" data-count="<?=$c?>">
-														<h2><?=$question['name']?></h2>
+													<div class="question <?=(isset($question['multy'])?"multy":"")?>" data-id="<?=$q?>" data-count="<?=$c?>">
+														<h2><?=$question['name']?> </h2>
 														<ul>
 														<?
 															$a = 0;
@@ -55,6 +55,9 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 																$answer = iconv("UTF-8", "UTF-8//IGNORE",$answer);
 																if(is_array($question['results']))
 																	$w = $question['results'][$key];
+																else if(isset($question['multy'])) {
+																	$w = $question['results'];
+																}
 																else {
 																	$r = array("#answer#", "#tanswer#");
 																	$u = mb_ucfirst(strtolower($answer));
@@ -63,14 +66,14 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 																}
 																?>
 																	<li>
-																		<input type="radio" data-answer="<?=$w?>" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>"><?=$answer?></label>
+																		<input type="<?=(isset($question['multy'])?"checkbox":"radio")?>" data-text="<?=$answer?>" data-answer="<?=$w?>" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>"><?=$answer?></label>
 																	</li>
 																<?
 																$a++;
 															endforeach;
 														?>
 															<li>
-																<input type="radio" class="skip" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>">пропустить вопрос</label>
+																<input type="radio" class="skip" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>" class="skip">пропустить вопрос</label>
 															</li>
 														</ul>
 													</div>
@@ -110,7 +113,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 				<div id="buttons" class="off">
 					<div class="row">
 						<div class="col-md-4">
-							<a href="./print.php" target="_blank" class="no-ajax">Файл<br>для печати</a>
+							<a href="./print.php" target="_blank" class="no-ajax print">Файл<br>для печати</a>
 						</div>
 						<div class="col-md-4">
 							<a class="find" data-toggle="modal" data-target="#locator" href="#locator">Найти врача</a>
@@ -130,10 +133,10 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
      <div class="modal-dialog modal-xxl">
        <div class="modal-content">
        <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
-       	<h3>Узнайте больше об эректильной дисфункции а аденоме предстательной железы.</h3>
+       	<h3>Узнайте больше об эректильной дисфункции и аденоме предстательной железы.</h3>
        	<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
-			"promo.woman",
+			"promo.popup",
 			Array(
 				"IBLOCK_TYPE" => "content",
 				"IBLOCK_ID" => "1",
@@ -192,7 +195,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 
 		<p>В этом вам поможет «Карта показателей мужского здоровья». Вы сможете составить ее, ответив на вопросы небольшого теста. В ней будет отражена информация, которая пригодится врачу на приеме. Она поможет вам подготовиться к визиту к врачу и может быть предоставлена непосредственно специалисту.</p>
 
-		<p>С «Карта показателей мужского здоровья» вы сделаете первый шаг на пути к выздоровлению!</p>
+		<p>С «Картой показателей мужского здоровья» вы сделаете первый шаг на пути к выздоровлению!</p>
 		
 		<a href="#" data-dismiss="modal">Продолжить</a>
        </div>

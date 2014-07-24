@@ -4,6 +4,10 @@
 
   bind = false;
 
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  };
+
   size = function() {
     var h;
     h = $(window).height();
@@ -77,6 +81,11 @@
         } else {
           $('.frame').removeClass('index');
         }
+        if ($(data).filter('.frame').hasClass('doctor')) {
+          $('.frame').addClass('doctor').removeClass('user');
+        } else {
+          $('.frame').addClass('user').removeClass('doctor');
+        }
         $.scrollTo(0, 500);
         return init();
       }
@@ -84,16 +93,26 @@
   };
 
   init = function() {
-    var symptoms_collect;
+    var symptoms_collect, symtpoms_select;
     $(window).on("navigate", function(event, data) {
       return alert();
     });
-    $('a').on('click', function(e) {
+    if ($('#test-woman').length > 0) {
+      $.getScript("/test_women/js/script.js", function() {
+        return console.log('done');
+      });
+    }
+    if ($('#test-man').length > 0) {
+      $.getScript("/test_man/js/script.js", function() {
+        return console.log('done');
+      });
+    }
+    $('a').off('click').on('click', function(e) {
       var History, url;
       History = window.History;
       url = $(this).attr('href');
       e.preventDefault();
-      if (History.enabled) {
+      if (History.enabled && url !== '#') {
         if (!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) !== '#' && url.indexOf('http') < 0 && $(this).parents('#panel,.bx-component-opener').length === 0) {
           $('body .frame').removeClass('animated fadeIn');
           return History.pushState({
@@ -109,13 +128,97 @@
         }
       }
     });
-    $('#doctor').on('shown.bs.modal', function() {
+    $('#doctor').off('shown.bs.modal').on('shown.bs.modal', function() {
+      if ($('.frame').hasClass('doctor')) {
+        $('#doctor a.back').attr('href', '/');
+        $('#doctor a.enter').attr('href', '#');
+      } else {
+        $('#doctor a.back').attr('href', '#');
+        $('#doctor a.enter').attr('href', '/doctors/');
+      }
+      console.log($('.frame').hasClass('doctor'));
       if ($.cookie('checkbox') === 'true') {
         return $('#doctor .checkbox').addClass('checked');
       }
     });
     $('#symtpoms input').iCheck();
     $('#symptoms-welcome').modal();
+    $('#toolbar .trigger').off('click').on('click', function(e) {
+      $('#toolbar .nav').toggleClass('open');
+      $('body').toggleClass('nav-open');
+      return e.preventDefault();
+    });
+    $('#overlay').off('click scroll touchmove touchstart').on('click scroll touchmove touchstart', function(e) {
+      $('#toolbar .nav').removeClass('open');
+      $('body').removeClass('nav-open');
+      return e.preventDefault();
+    });
+    symtpoms_select = function(el) {
+      var a, answ, c, id, inpt, s_id, skip;
+      console.log(el);
+      s_id = el.parents('.section').data('id');
+      id = el.data('id');
+      c = el.data('count');
+      skip = false;
+      if (!el.hasClass('multy')) {
+        inpt = el.find('.checked input');
+        console.log(inpt);
+        answ = inpt.data("answer");
+        a = inpt.data('id');
+        if (inpt.hasClass('skip')) {
+          skip = true;
+        }
+      } else {
+        answ = [];
+        a = [];
+        el.find('.checked input').each(function() {
+          var text;
+          if ($(this).hasClass('skip')) {
+            skip = true;
+          }
+          if ($(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#answer#") >= 0) {
+            text = $(this).data("text");
+          } else {
+            text = $(this).data("answer");
+          }
+          answ.push(text);
+          return a.push($(this).data("id"));
+        });
+        if (el.find('input').data('answer').indexOf("#tanswer#") >= 0) {
+          answ[0] = answ[0].capitalize();
+          answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.';
+        } else if (el.find('input').data('answer').indexOf("#answer#") >= 0) {
+          answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '));
+        } else {
+          answ = answ.join(' ');
+        }
+      }
+      if (!skip) {
+        $("#result .r" + s_id).append("<div data-id='" + id + "' data-count='" + c + "' data-answer='" + a + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
+      }
+      el.hide().removeClass('done');
+      if (el.parents('.section').find('.question:visible').length === 0) {
+        el.parents('.section').hide();
+      }
+      if ($('.question:visible').length === 0) {
+        $('#buttons').removeClass('off');
+        symptoms_collect();
+      } else {
+        if (!$('#buttons').hasClass('off')) {
+          $('#buttons').addClass('off');
+        }
+      }
+      symptoms_collect();
+      return $("#result .ansver[data-id='" + id + "']").one('click', function(e) {
+        id = $(this).data('id');
+        if ($(".question[data-id='" + id + "']").parents('.section').is(':hidden')) {
+          $(".question[data-id='" + id + "']").parents('.section').show();
+        }
+        $(".question[data-id='" + id + "']").show();
+        $(this).remove();
+        return e.preventDefault();
+      });
+    };
     symptoms_collect = function() {
       var q, test_result;
       test_result = {};
@@ -135,47 +238,26 @@
         return q++;
       });
       $.removeCookie('test_result');
-      $.cookie('test_result', JSON.stringify(test_result));
-      return console.log($.cookie('test_result'));
+      return $.cookie('test_result', JSON.stringify(test_result));
     };
     $('#symtpoms input').on('ifChecked', function(event, a) {
-      var answ, c, id, s_id;
-      $(this).iCheck('uncheck');
-      s_id = $(this).parents('.section').data('id');
-      id = $(this).parents('.question').data('id');
-      c = $(this).parents('.question').data('count');
-      answ = $(this).data("answer");
-      a = $(this).data('id');
-      if (!$(this).hasClass('skip')) {
-        $("#result .r" + s_id).append("<div data-id='" + id + "' data-count='" + c + "' data-answer='" + a + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
+      $(this).parents('.question').addClass('done');
+      if ($('.question:visible').length === 1) {
+        return delay(400, function() {
+          return $('#symtpoms .question.done').each(function() {
+            return symtpoms_select($(this));
+          });
+        });
       }
-      $(this).parents('.question').hide();
-      if ($(this).parents('.section').find('.question:visible').length === 0) {
-        $(this).parents('.section').hide();
-      }
-      if ($('.question:visible').length === 0) {
-        $('#buttons').removeClass('off');
-        symptoms_collect();
-      } else {
-        if (!$('#buttons').hasClass('off')) {
-          $('#buttons').addClass('off');
-        }
-      }
-      return $("#result .ansver[data-id='" + id + "']").one('click', function(e) {
-        id = $(this).data('id');
-        if ($(".question[data-id='" + id + "']").parents('.section').is(':hidden')) {
-          $(".question[data-id='" + id + "']").parents('.section').show();
-        }
-        $(".question[data-id='" + id + "']").show();
-        $(this).remove();
-        return e.preventDefault();
-      });
     });
     $('#symtpoms .frame').perfectScrollbar({
       suppressScrollX: true
     });
     $('#symtpoms .question h2').click(function(e) {
       $(this).parents('.question').toggleClass('on');
+      $('#symtpoms .question.done').each(function() {
+        return symtpoms_select($(this));
+      });
       $('#symtpoms .frame').perfectScrollbar('update');
       return e.preventDefault();
     });
@@ -201,6 +283,10 @@
         return true;
       }
     });
+    $('#toolbar .enter').click(function(e) {
+      $('#doctor').modal();
+      return e.preventDefault();
+    });
     $('#enter.short a').hoverIntent({
       over: function() {
         return $('#enter.short').removeClass('short');
@@ -218,6 +304,20 @@
           return $('#enter').addClass('short');
         }
       }
+    });
+    $('#faq .block').click(function(ev) {
+      var offset;
+      if ($(window).width() < 780) {
+        if (!$(this).hasClass('open')) {
+          $('#faq .block').removeClass('open');
+          $(this).toggleClass('open');
+          offset = $(this).offset().top;
+          $('html, body').animate({
+            'scrollTop': offset - $('#toolbar').height() - 14
+          }, 300);
+        }
+      }
+      return ev.preventDefault();
     });
     $('#faq .block .text .panel').slimscroll({
       height: function() {
