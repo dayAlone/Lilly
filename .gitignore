@@ -45,7 +45,7 @@ bitrix/urlrewrite.php
 bitrix/virtual_file_system.php
 bitrix/web.config
 bitrix/wizards/
-
+layout/old_images/
 bitrix/php_interface/dbconn.php
 
 bitrix/cache/
