@@ -113,7 +113,7 @@ init = ()->
 
     $('#symtpoms input').iCheck()
     
-    $('#symptoms-welcome').modal()
+    #$('#symptoms-welcome').modal()
     
     $('#toolbar .trigger').off('click').on 'click', (e)->
         $('#toolbar .nav').toggleClass('open')
@@ -125,8 +125,9 @@ init = ()->
         $('body').removeClass('nav-open')
         e.preventDefault()
 
-    symtpoms_select = (el)->
-        console.log el
+    symtpoms_select = (el, hide="true")->
+        
+
         s_id = el.parents('.section').data('id')
         id   = el.data('id')
         c    = el.data('count')
@@ -161,10 +162,13 @@ init = ()->
             else
                 answ = answ.join(' ')
 
+            $("#result .ansver[data-id='#{id}']").remove()
+
         if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
 
-        el.hide().removeClass 'done'
+        if hide
+            el.hide().removeClass 'done'
 
         el.parents('.section').hide() if el.parents('.section').find('.question:visible').length == 0
 
@@ -204,11 +208,28 @@ init = ()->
     
 
     $('#symtpoms input').on 'ifChecked', (event, a)->
+        
         $(this).parents('.question').addClass 'done'
-        if $('.question:visible').length == 1
-            delay 400, ()->
+        
+        id = $(this).parents('.question').data('id')
+        index = id+1
+
+        if $(this).parents('.question').hasClass 'multy'
+            delay 200, ()->
+                console.log index
+                $("#symtpoms .question.done:not(.q-#{id})").each ()->
+                    symtpoms_select($(this))
+                $('#symtpoms .question.done').each ()->
+                    symtpoms_select($(this), false)
+                
+        else
+            delay 200, ()->
                 $('#symtpoms .question.done').each ()->
                     symtpoms_select($(this))
+
+        while !$("#symtpoms .question[data-id='#{index}']").length
+            index++
+        $("#symtpoms .question[data-id='#{index}']").addClass 'on'
 
 
     $('#symtpoms .frame').perfectScrollbar

@@ -46,7 +46,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 									        }
 											?>
 												<div class="col-md-<?=12/$col?>">
-													<div class="question <?=(isset($question['multy'])?"multy":"")?>" data-id="<?=$q?>" data-count="<?=$c?>">
+													<div class="question <?=(isset($question['multy'])?"multy":"")?> q-<?=$q?>" data-id="<?=$q?>" data-count="<?=$c?>">
 														<h2><?=$question['name']?> </h2>
 														<ul>
 														<?

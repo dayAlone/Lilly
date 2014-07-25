@@ -127,7 +127,7 @@
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
-		<h4>3. Что еще вас беспокоит.</h4>
+		<h4>3. Что еще вас беспокоит?</h4>
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
