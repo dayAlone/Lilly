@@ -136,7 +136,6 @@ init = ()->
 
         if !el.hasClass 'multy'
             inpt = el.find '.checked input'
-            console.log inpt
             answ = inpt.data("answer")
             a    = inpt.data('id')
             if inpt.hasClass 'skip'
@@ -227,9 +226,12 @@ init = ()->
                 $('#symtpoms .question.done').each ()->
                     symtpoms_select($(this))
 
-        while !$("#symtpoms .question[data-id='#{index}']").length
-            index++
-        $("#symtpoms .question[data-id='#{index}']").addClass 'on'
+        console.log $("#symtpoms .question:visible").length
+
+        if $("#symtpoms .question:visible").length > 1
+            while !$("#symtpoms .question[data-id='#{index}']").length
+                index++
+            $("#symtpoms .question[data-id='#{index}']").addClass 'on'
 
 
     $('#symtpoms .frame').perfectScrollbar

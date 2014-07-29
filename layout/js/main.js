@@ -163,7 +163,6 @@
       skip = false;
       if (!el.hasClass('multy')) {
         inpt = el.find('.checked input');
-        console.log(inpt);
         answ = inpt.data("answer");
         a = inpt.data('id');
         if (inpt.hasClass('skip')) {
@@ -266,10 +265,13 @@
           });
         });
       }
-      while (!$("#symtpoms .question[data-id='" + index + "']").length) {
-        index++;
+      console.log($("#symtpoms .question:visible").length);
+      if ($("#symtpoms .question:visible").length > 1) {
+        while (!$("#symtpoms .question[data-id='" + index + "']").length) {
+          index++;
+        }
+        return $("#symtpoms .question[data-id='" + index + "']").addClass('on');
       }
-      return $("#symtpoms .question[data-id='" + index + "']").addClass('on');
     });
     $('#symtpoms .frame').perfectScrollbar({
       suppressScrollX: true
