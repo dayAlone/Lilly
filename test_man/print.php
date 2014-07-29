@@ -44,8 +44,8 @@ if(!empty($token)){
 		echo $template;
 		die();
 	} else {
-		header('Location: index.html');
+		header('Location: index.php');
 	}
 } else {
-	header('Location: index.html');
+	header('Location: index.php');
 }
