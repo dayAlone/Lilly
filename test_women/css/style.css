@@ -38,12 +38,12 @@
 }
 	#wrapper h1 {
 		color: #333333;
-		font: 44px/24px "Helvetica Neue", Arial,sans-serif;
+		font: 44px/24px "Myriad Pro",sans-serif;
 		text-transform:uppercase;
 	}
 	#wrapper h2 {
 		color: #CE0000;
-		font: normal 36px/42px "Helvetica Neue", Arial,sans-serif;
+		font: normal 36px/42px  "Myriad Pro", sans-serif;
 		text-transform:uppercase;
 		margin: 15px 0 0;
 	}
@@ -121,7 +121,7 @@
 		#test_block h3,
 		#result_block h3 {
 			color: #CE0000;
-			font: normal 20px/24px "Helvetica Neue", Arial,sans-serif;
+			font: normal 20px/24px  "Arial Narrow", Arial, sans-serif;
 			text-transform: uppercase;
 			height: auto !important;
 			overflow: hidden;
@@ -133,7 +133,7 @@
 			#test_block h3 .counter {
 				display: block;
 				float: left;
-				font: normal 14px/18px "Helvetica Neue", Arial,sans-serif;
+				font: normal 14px/18px  "Arial Narrow", Arial, sans-serif;
 				text-align: center;
 				text-transform: uppercase;
 				vertical-align: top;
@@ -143,7 +143,7 @@
 				.counter .digit {
 					color: #fff;
 					background: none repeat scroll 0 0 #CE0000;
-					font: normal 48px/56px "Helvetica Neue", Arial,sans-serif;
+					font: normal 48px/56px  "Arial Narrow", Arial, sans-serif;
 					display: block;
 					height: 56px;
 					width: 56px;
@@ -241,7 +241,7 @@
 	#print h1 {
 		background: url(../img/print_ok.jpg) no-repeat 75% 0;
 		color: #333;
-		font: normal 28px/40px "Helvetica Neue", Arial,sans-serif;
+		font: normal 28px/40px  "Myriad Pro", sans-serif;
 		text-transform:uppercase;
 		margin: 15px 0;
 		height: 80px;
@@ -253,7 +253,7 @@
 	}
 	#print h2 {
 		color: #333;
-		font: normal 24px/24px "Helvetica Neue", Arial,sans-serif;
+		font: normal 24px/24px  "Myriad Pro", sans-serif;
 		margin: 15px 0;
 	}
 	#print ol {
