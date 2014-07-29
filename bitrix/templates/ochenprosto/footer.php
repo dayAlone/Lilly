@@ -164,4 +164,22 @@
   <noscript><div><img src="//mc.yandex.ru/watch/21460912" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
 </body>
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Bh6DI5ReSHIvsQsemv1SLKV6jKW8*qviv*I2ezvg/tqn4jZ439vgbfkzR2dG26Go/i4c*k6YC/B9MYPQWEEndGWVz/h81y8wBJjErUivrgccc5*4bzV4R7pAEENut9J/C8TyNd1rlJDD78OlhjcsIrNKOogMjYcoqSHHRNmNgbo-';</script>
+<? 
+
+$APPLICATION->SetAdditionalCSS("/layout/css/bootstrap.min.css", true);
+$APPLICATION->SetAdditionalCSS("/layout/css/plugins.css", true);
+$APPLICATION->SetAdditionalCSS("/layout/css/style.css", true);
+
+$APPLICATION->AddHeadScript('/layout/js/jquery.js');
+$APPLICATION->AddHeadScript('/layout/js/plugins.min.js');
+$APPLICATION->AddHeadScript('/layout/js/main.js');
+?>
 <?php $APPLICATION->ShowHead();?>
+<?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
+          <script>
+            $(function(){
+              $('#doctor').modal();  
+            })
+          </script>
+    <?}?>
