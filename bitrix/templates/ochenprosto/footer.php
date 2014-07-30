@@ -181,7 +181,9 @@ $APPLICATION->AddHeadScript('/layout/js/main.js');
 <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
           <script>
             $(function(){
-              $('#doctor').modal();  
+              $('#doctor').modal({
+                backdrop: 'static'
+              });  
             })
           </script>
     <?}?>
