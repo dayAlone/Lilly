@@ -284,18 +284,19 @@
       $('#symtpoms .frame').perfectScrollbar('update');
       return e.preventDefault();
     });
+    if ($.cookie('checkbox') === "true") {
+      $('.checkbox').addClass("checked");
+    }
     $('.checkbox').off('click').on('click', function() {
       $(this).toggleClass('checked');
       if ($(this).hasClass('checked')) {
-        $.cookie('checkbox', 'true', {
-          expires: .5
-        });
+        $.cookie('checkbox', 'true');
       } else {
         $.removeCookie('checkbox');
       }
       return $(this).parent().find('a').toggleClass('no-ajax');
     });
-    $('#enter a, a.enter').off('click').on('click', function() {
+    $('#enter a, a.enter, .landing .enter a').off('click').on('click', function() {
       if (!$(this).parent().find('.checkbox').hasClass("checked")) {
         anim($(this).parent().find('.checkbox'), 'tada');
         return false;

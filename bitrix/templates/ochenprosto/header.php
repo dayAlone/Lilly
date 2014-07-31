@@ -72,6 +72,7 @@
                  <a href="#" class="trigger"></a>
                  <a class="enter" data-toggle="modal" data-target="#doctor" href="#doctor">Войти</a>
               </div>
+              <? if(!$APPLICATION->GetDirProperty("hide_nav")):?>
               <div class="col-md-10">
                  <ul class="nav">
                     <li class="hidden">
@@ -104,13 +105,14 @@
                     );?>
                  </ul>
               </div>
+              <? endif;?>
            </div>
         </div>
      </div>
      <?if(!$doctors&&!defined('ERROR_404')):?>
        <? /*<a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>*/?>
        <a href="/test/man/" class="flag test"><img src="/layout/images/flag-test.png"></a>
-     
+      <? if(!$APPLICATION->GetDirProperty("hide_enter")):?>
       <div id="enter" class="short">
         <div class="container">
           <div class="row">
@@ -153,6 +155,7 @@
           <p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВХОД», чтобы начать работу.</p>
         </div>
       </div>
+      <?endif;?>
      <? else:?>
      <?/*
       <div id="event">

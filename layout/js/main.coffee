@@ -246,15 +246,18 @@ init = ()->
         $('#symtpoms .frame').perfectScrollbar('update')
         e.preventDefault()
 
+    if $.cookie('checkbox') == "true"
+        $('.checkbox').addClass("checked")
+
     $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')
         if($(this).hasClass('checked'))
-            $.cookie('checkbox', 'true', { expires: .5 });
+            $.cookie('checkbox', 'true');
         else
             $.removeCookie('checkbox');
         $(this).parent().find('a').toggleClass('no-ajax')
     
-    $('#enter a, a.enter').off('click').on 'click', ()->
+    $('#enter a, a.enter, .landing .enter a').off('click').on 'click', ()->
         if(!$(this).parent().find('.checkbox').hasClass("checked"))
             anim($(this).parent().find('.checkbox'),'tada')
             return false
