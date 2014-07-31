@@ -28,6 +28,9 @@
 						if(response.error == false){
 							//_gaq.push(['_trackEvent', 'Test', 'Result_load', response.balls, 1, true]);
 							$('#result_block').html(response.response);
+							$('#sendButton').click(function(){
+								$('#modal-email a').attr('href', $(this).data('url'))
+							})
 						} else {
 							$('#result_block').html('<h3>Ошибка</h3>');
 							alert(response.message);

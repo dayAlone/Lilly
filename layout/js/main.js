@@ -98,14 +98,10 @@
       return alert();
     });
     if ($('#test-woman').length > 0) {
-      $.getScript("/test_women/js/script.js", function() {
-        return console.log('done');
-      });
+      $.getScript("/test_women/js/script.js");
     }
     if ($('#test-man').length > 0) {
-      $.getScript("/test_man/js/script.js", function() {
-        return console.log('done');
-      });
+      $.getScript("/test_man/js/script.js");
     }
     $('a').off('click').on('click', function(e) {
       var History, url;
@@ -376,13 +372,37 @@
     $('[data-toggle=tooltip]').tooltip();
     if (!bind) {
       bind = true;
-      return History.Adapter.bind(window, 'statechange', function() {
+      History.Adapter.bind(window, 'statechange', function() {
         var State;
         State = History.getState();
         console.log(State);
         return load(State.url);
       });
     }
+    return $('#modal-email a').off('click').on('click', function(e) {
+      var email, url;
+      $('#modal-email input').removeClass('error');
+      email = $('#modal-email input').val();
+      url = $(this).attr('href');
+      console.log(validateEmail(email));
+      if (validateEmail(email)) {
+        $.ajax({
+          url: url,
+          data: {
+            email: email
+          },
+          success: function(data) {
+            console.log(data);
+            if (data === "success") {
+              return $('#modal-email').addClass('done');
+            }
+          }
+        });
+      } else {
+        $('#modal-email input').addClass('error');
+      }
+      return e.preventDefault();
+    });
   };
 
   $(document).ready(function() {
@@ -393,6 +413,9 @@
       return Pace.stop();
     });
     init();
+    $('#popup-test').on('hidden.bs.modal', function() {
+      return $('#popup-test').removeClass('done');
+    });
     return $('body').imagesLoaded(function() {
       $('.frame').css({
         opacity: 1

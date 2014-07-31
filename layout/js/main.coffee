@@ -76,12 +76,10 @@ init = ()->
         alert()
 
     if $('#test-woman').length > 0 
-        $.getScript "/test_women/js/script.js", ()->
-            console.log 'done'
+        $.getScript "/test_women/js/script.js"
+    
     if $('#test-man').length > 0 
-        $.getScript "/test_man/js/script.js", ()->
-            console.log 'done'
-
+        $.getScript "/test_man/js/script.js"
 
     $('a').off('click').on 'click', (e)->
         History = window.History;
@@ -329,16 +327,36 @@ init = ()->
             console.log(State)
             load(State.url)
 
+    $('#modal-email a').off('click').on 'click', (e)->
+        $('#modal-email input').removeClass 'error'
+        email = $('#modal-email input').val()
+        url = $(this).attr 'href'
+        console.log validateEmail(email)
+        if(validateEmail(email))
+            $.ajax 
+                url : url
+                data :
+                    email: email
+                success :
+                    (data)-> 
+                        console.log data
+                        if data == "success"
+                            $('#modal-email').addClass 'done'
+        else
+            $('#modal-email input').addClass 'error'
+        e.preventDefault()
 
 $(document).ready ()->
-
-    
 
     $(document).ajaxStart ()-> Pace.restart()
     $(document).ajaxStop ()-> Pace.stop()
 
     init()
 
+    $('#popup-test').on 'hidden.bs.modal', ()->
+        $('#popup-test').removeClass 'done'
+
+    
     $('body').imagesLoaded ()->
         $('.frame').css({opacity:1}).attr('css', '');
         $.lockfixed "#article .fix",

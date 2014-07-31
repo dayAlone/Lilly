@@ -383,7 +383,11 @@ a, a span, .shadow
 	#pow, #results_p
 		float: left
 		width: 60%
-	#printButton, #testRepeat
+
+	#printButton
+		@media screen and (max-width: 770px)
+			display: none !important
+	#printButton, #testRepeat, #sendButton
 		float: left
 		clear: both
 		margin-top: 20px
@@ -394,8 +398,18 @@ a, a span, .shadow
 		font-weight: 600
 		color: white
 		background: red
+		span
+			display: inline-block
+			vertical-align: middle
+			color: white
 		&:hover
 			opacity: 0.7
+	#sendButton
+		display: none
+		padding: 0 20px
+		font-size: 13px !important
+		@media screen and (max-width: 770px)
+			display: block
 	#testRepeat
 		background: #aaa
 	.button_block
@@ -424,6 +438,10 @@ a, a span, .shadow
 			+full-width
 	.questions
 		+full-width
+		h3
+			@media (max-width: 1024px)
+				background-color: #cf1920 !important
+				background-size: auto 100% !important
 	input[type="radio"]
 		float: left
 	label
@@ -2878,3 +2896,34 @@ input:focus, a:focus
 					font-size: 24px
 					@media (max-width: 1200px)
 						font-size: 27px
+
+#modal-email
+	text-align: center
+	.success
+		display: none
+		font-size: 18px
+		text-align: center
+		+full-width
+	&.done
+		.success
+			display: block
+		input, a
+			display: none
+	input
+		+full-width
+		border: 1px solid #bfbfbf
+		line-height: 40px
+		text-align: center
+		margin-bottom: 10px
+		&.error
+			border-color: #fc091b
+	a
+		background: #fc091b
+		display: inline-block
+
+		line-height: 40px
+		text-transform: uppercase
+		color: white
+		font-style: 14px
+		font-weight: bold
+		padding: 0 40px

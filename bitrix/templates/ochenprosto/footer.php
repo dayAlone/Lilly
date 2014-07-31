@@ -73,6 +73,15 @@
       </div>
    </div>
 </div>
+<div class="modal fade" id="modal-email" tabindex="-1" role="dialog" aria-labelledby="modal-email" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="success">Результаты успешно отправлены</div>
+      <input type="email" placeholder="Введите адрес эл. почты">
+      <a href="#">Отправить результаты теста</a>
+    </div>
+  </div>
+</div>
    <div class="modal fade" id="locator" tabindex="-1" role="dialog" aria-labelledby="locator" aria-hidden="true">
      <div class="modal-dialog">
        <div class="modal-content">
@@ -177,7 +186,6 @@ if($APPLICATION->GetCurDir()=='/')
   $APPLICATION->AddHeadScript('/layout/js/vimeo.js');
 $APPLICATION->AddHeadScript('/layout/js/main.js');
 ?>
-<?php $APPLICATION->ShowHead();?>
 <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>
           <script>
             $(function(){

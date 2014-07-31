@@ -118,7 +118,7 @@ $APPLICATION->SetPageProperty('DESCRIPTION', "Интерактивный тес�
     <div class="locator-frame">
         <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
     </div>
-        <script type = "text/javascript" src="/test_women/js/script.js"></script>
+        
 		</div>
 	</div>
 </div>
