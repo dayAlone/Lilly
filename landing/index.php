@@ -9,32 +9,32 @@
 	<div class="row">
 		<div class="col-md-9">
 			<div class="acticles">
-				<div class="item">
+				<a class="item" href="/materials/erektilnaya-disfunktsiya-chto-eto/">
 					<div class="image" style="background-image: url(http://ochenprosto.ru/upload/iblock/048/048efe3b57d65f69093c3dec88657999.jpg)"><div class="shadow-1"></div></div>
 					<div class="title">Эректильная дисфункция – что это?</div>
 					<p>Эректильная дисфункция (ЭД) — это постоянная или периодически повторяющаяся<br> неспособность мужчины получить и/или поддерживать эрекцию, достаточную<br> для успешного полового акта.</p>
-					<a href="/materials/erektilnaya-disfunktsiya-chto-eto/">ЧТО ДЕЛАТЬ?</a>
-				</div>
-				<div class="item">
+					<div class="link">ЧТО ДЕЛАТЬ?</div>
+				</a>
+				<a class="item" href="/materials/kak-erektilnaya-disfunktsiya-vliyaet-na-zhizn-muzhchiny/">
 					<div class="image" style="background-image: url(http://ochenprosto.ru/upload/iblock/aa1/aa172735ea123a54d4f47560402e7029.jpg)">
 				        <div class="shadow-1"></div>
 				       </div>
 					<div class="title">Как эректильная дисфункция влияет на жизнь мужчины?</div>
 					<p>Вначале немного статистики: сегодня более 50% мужчин в возрасте 40–70 лет<br> подвержены риску возникновения эректильной дисфункции (ЭД).</p>
-					<a href="/materials/kak-erektilnaya-disfunktsiya-vliyaet-na-zhizn-muzhchiny/">УЗНАТЬ БОЛЬШЕ</a>
-				</div>
-				<div class="item">
+					<div class="link">УЗНАТЬ БОЛЬШЕ</div>
+				</a>
+				<a href="/materials/pochemu-muzhchiny-otkazyvayutsya-ot-seksa/" class="item">
 					<div class="image" style="background-image: url(http://ochenprosto.ru/upload/iblock/ecb/ecb2898faa9d69729ffd39901930bc54.png)"><div class="shadow-1"></div></div>
 					<div class="title">Почему мужчины отказываются от секса?</div>
 					<p>Отказываетесь от секса, объясняя это усталостью? <br>Есть сигналы организма, которым стоит уделить особенное внимание!</p>
-					<a href="/materials/pochemu-muzhchiny-otkazyvayutsya-ot-seksa/">КАК ПОБЕДИТЬ?</a>
-				</div>
-				<div class="item map">
+					<div class="link">КАК ПОБЕДИТЬ?</div>
+				</a>
+				<a href="#" data-toggle="modal" data-target="#locator" class="item map">
 					<div class="image" style="background-image: url(http://ochenprosto.ru/layout/images/map.jpg)"><div class="shadow-1"></div></div>
 					<div class="title">Мужской выбор</div>
 					<p>Вам осталось только выбрать удобное вам время и место встречи <br>с врачом с помощью нашего онлайн-сервиса «Доктор-Локатор»!</p>
-					<a href="#" data-toggle="modal" data-target="#locator">Найти уролога</a>
-				</div>
+					<div class="link">Найти уролога</div>
+				</a>
 			</div>
 		</div>
 		<div class="col-md-3">

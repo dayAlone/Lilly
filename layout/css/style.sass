@@ -2732,6 +2732,8 @@ input:focus, a:focus
 			+full-width
 			margin-bottom: 15px
 			padding: 10px 0
+			&:hover
+				color: black
 			&.map
 				padding: 30px 0
 				.title
@@ -2740,14 +2742,14 @@ input:focus, a:focus
 					font-weight: 400
 					font-size: 24px
 					line-height: 24px
-				a
+				.link
 					font-weight: 300
 					text-transform: none
 					line-height: 40px
 					font-size: 35px
 					padding: 0 20px 4px
 					margin-top: 7px
-					float: left
+					
 					color: white
 					border: 0
 					+background-image(linear-gradient(bottom left, rgba(155,29,33,.8) -18.85%, rgba(233,33,45,.8) 81.15%)) 
@@ -2771,16 +2773,18 @@ input:focus, a:focus
 					height: 100%
 			&:nth-child(2)
 				.image
-					background-position: 230px -160px
+					background-position: 230px -140px
 			.title
 				+full-width
 				font-size: 30px
 				font-weight: bold
 				margin-bottom: 5px
 			p
+				+full-width
 				font-size: 18px
 				line-height: 18px
-			a
+			.link
+				float: left
 				font-weight: bold
 				text-transform: uppercase
 				color: #eb2833
