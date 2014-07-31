@@ -78,7 +78,7 @@
     <div class="modal-content">
       <div class="success">Результаты успешно отправлены</div>
       <input type="email" placeholder="Введите адрес эл. почты">
-      <a href="#">Отправить результаты теста</a>
+      <a href="#">Отправить</a>
     </div>
   </div>
 </div>
