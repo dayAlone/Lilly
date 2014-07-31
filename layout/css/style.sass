@@ -2761,9 +2761,11 @@ input:focus, a:focus
 				left: 0
 				width: 100%
 				height: 100%
-				background-size: cover
+				background-size: 100% auto
 				background-position: 230px -80px
 				background-repeat: no-repeat
+				@media (max-width: 1200px)
+					background-position: 200px -60px
 				.shadow-1
 					+background-image(linear-gradient(right, rgba(255,255,255,.0) 0%, #fff 70%)) 
 					position: absolute
@@ -2774,16 +2776,27 @@ input:focus, a:focus
 			&:nth-child(2)
 				.image
 					background-position: 230px -140px
+					@media (max-width: 1200px)
+						background-position: 10px -120px
+						background-size: 150% auto
+			&:nth-child(4)
+				.image
+					@media (max-width: 1200px)
+						background-position: 230px 0px
+						background-size: cover
 			.title
 				+full-width
 				font-size: 30px
+				line-height: 30px
 				font-weight: bold
 				margin-bottom: 5px
 			p
 				+full-width
 				font-size: 18px
 				line-height: 18px
+				width: 80%
 			.link
+				clear: both
 				float: left
 				font-weight: bold
 				text-transform: uppercase
@@ -2793,7 +2806,7 @@ input:focus, a:focus
 	.enter
 		+full-width
 		+b('back.jpg')
-		background-size cover
+		background-size: cover
 		min-height: 628px
 		color: white
 		padding: 20px 0
@@ -2853,9 +2866,15 @@ input:focus, a:focus
 					line-height: 47px
 					width: 102%
 					margin-left: -1%
+					@media (max-width: 1200px)
+						font-size: 55px
 				&:nth-child(2)
 					font-size: 30px
 					line-height: 30px
 					margin-top: 7px
+					@media (max-width: 1200px)
+						font-size: 33px
 				&:nth-child(3)
 					font-size: 24px
+					@media (max-width: 1200px)
+						font-size: 27px
