@@ -31,7 +31,7 @@ if(!empty($token)){
 		$to = $_REQUEST['email'];
 
 		// тема письма
-		$subject = 'Результаты теста «Оценка эректильной функции*» на сайте ochenprosto.ru';
+		$subject = 'Результаты теста &laquo;Как понять, что у вашего<br>мужчины ЭД*?&raquo; на сайте ochenprosto.ru';
 
 
 		// Для отправки HTML-письма должен быть установлен заголовок Content-type
