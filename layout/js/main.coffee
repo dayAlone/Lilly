@@ -111,7 +111,7 @@ init = ()->
 
     $('#symtpoms input').iCheck()
     
-    #$('#symptoms-welcome').modal()
+    $('#symptoms-welcome').modal()
     
     $('#toolbar .trigger').off('click').on 'click', (e)->
         $('#toolbar .nav').toggleClass('open')

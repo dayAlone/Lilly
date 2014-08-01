@@ -138,6 +138,7 @@
       }
     });
     $('#symtpoms input').iCheck();
+    $('#symptoms-welcome').modal();
     $('#toolbar .trigger').off('click').on('click', function(e) {
       $('#toolbar .nav').toggleClass('open');
       $('body').toggleClass('nav-open');
