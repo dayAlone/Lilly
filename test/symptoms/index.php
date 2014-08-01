@@ -73,7 +73,7 @@ if (!function_exists('mb_ucfirst') && extension_loaded('mbstring'))
 															endforeach;
 														?>
 															<li>
-																<input type="radio" class="skip" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>" class="skip">пропустить вопрос</label>
+																<input type="<?=(isset($question['multy'])?"checkbox":"radio")?>" class="skip" data-id="<?=$a?>" name="q<?=$q?>" id="a_<?=$q?>_<?=$a?>"> <label for="a_<?=$q?>_<?=$a?>" class="skip">пропустить вопрос</label>
 															</li>
 														</ul>
 													</div>

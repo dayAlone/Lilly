@@ -144,27 +144,31 @@ init = ()->
             el.find('.checked input').each ()->
                 if $(this).hasClass 'skip'
                     skip = true
-                if $(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#answer#") >= 0
-                    text = $(this).data("text")
                 else
-                    text = $(this).data("answer")
-                answ.push text
-                a.push $(this).data("id")
-
-            if el.find('input').data('answer').indexOf("#tanswer#") >= 0
-                answ[0] = answ[0].capitalize()
-                answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.'
-            else if el.find('input').data('answer').indexOf("#answer#") >= 0
-                answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
-            else
-                answ = answ.join(' ')
+                    if $(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#answer#") >= 0
+                        text = $(this).data("text")
+                    else
+                        text = $(this).data("answer")
+                    answ.push text
+                    a.push $(this).data("id")
+            if el.find('input').data('answer').length > 0
+                if el.find('input').data('answer').indexOf("#tanswer#") >= 0
+                    answ[0] = answ[0].capitalize()
+                    answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.'
+                else if el.find('input').data('answer').indexOf("#answer#") >= 0
+                    answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
+                else
+                    answ = answ.join(' ')
 
             $("#result .ansver[data-id='#{id}']").remove()
+
+
+        console.log 123,skip
 
         if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
 
-        if hide
+        if hide || skip
             el.hide().removeClass 'done'
 
         el.parents('.section').hide() if el.parents('.section').find('.question:visible').length == 0
@@ -184,7 +188,6 @@ init = ()->
             $(this).remove()
             e.preventDefault()
         
-
     symptoms_collect = ()->
         test_result = {}
         q = 0
