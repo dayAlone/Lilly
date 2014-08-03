@@ -111,7 +111,7 @@ init = ()->
 
     $('#symtpoms input').iCheck()
     
-    $('#symptoms-welcome').modal()
+    #$('#symptoms-welcome').modal()
     
     $('#toolbar .trigger').off('click').on 'click', (e)->
         $('#toolbar .nav').toggleClass('open')
@@ -126,18 +126,21 @@ init = ()->
     symtpoms_select = (el, hide="true")->
         
 
-        s_id = el.parents('.section').data('id')
-        id   = el.data('id')
-        c    = el.data('count')
-        
-        skip = false
+        s_id  = el.parents('.section').data('id')
+        id    = el.data('id')
+        c     = el.data('count')
+        label = el.find('h2').text().split('(')[0]
+        skip  = false
 
         if !el.hasClass 'multy'
             inpt = el.find '.checked input'
-            answ = inpt.data("answer")
-            a    = inpt.data('id')
             if inpt.hasClass 'skip'
                 skip = true
+            else
+                answ = inpt.data("text").capitalize()
+                answ = label + "<strong>" + answ + ".</strong>"
+                a    = inpt.data('id')
+            
         else
             answ = []
             a = []
@@ -151,6 +154,7 @@ init = ()->
                         text = $(this).data("answer")
                     answ.push text
                     a.push $(this).data("id")
+            ###
             if el.find('input').data('answer').length > 0
                 if el.find('input').data('answer').indexOf("#tanswer#") >= 0
                     answ[0] = answ[0].capitalize()
@@ -159,11 +163,10 @@ init = ()->
                     answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
                 else
                     answ = answ.join(' ')
-
+            ###
+            answ[0] = answ[0].capitalize()
+            answ = label + "<strong>" + answ.join(', ') + '</strong>.'
             $("#result .ansver[data-id='#{id}']").remove()
-
-
-        console.log 123,skip
 
         if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"

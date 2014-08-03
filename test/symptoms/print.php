@@ -20,7 +20,7 @@
      <script type="text/javascript" src="/layout/js/main.js"></script>
      <script type="text/javascript" charset="utf-8" async defer>
      $(function(){
-     	$.removeCookie('test_result')
+     	//$.removeCookie('test_result')
      })
      </script>
   </head>
@@ -68,7 +68,7 @@
 							$array = preg_split("/[\s,]+/", $question);
 							$w = "";
 							
-							if(is_array($answ['results'])) {
+							/*if(is_array($answ['results'])) {
 								if(count($array)>1) {
 									foreach ($array as $value)
 										$w .= mb_ucfirst(strtolower($answ['results'][$value]))." ";
@@ -76,7 +76,7 @@
 								else
 									$w = $answ['results'][$question];
 							}
-							else {
+							else {*/
 								$q = "";
 								if(count($array)>1) {
 									$tmp = [];
@@ -87,12 +87,16 @@
 								else 
 									$q = $answ['answers'][$question];
 
-								$r = array("#answer#", "#tanswer#");
 								$u = mb_ucfirst(strtolower($q));
-								$p = array($q, $u);
 								
-								$w = str_ireplace($r, $p, $answ['results']);
-							}
+								$w = $answ['name'].' <strong>'.$u."</strong>.";
+
+								$pattern = '/(<small>(.*)<\/small>)/i';
+	   							$w = preg_replace($pattern, "", $w);
+								/*$r = array("#answer#", "#tanswer#");
+								$p = array($q, $u);
+								$w = str_ireplace($r, $p, $answ['results']);*/
+							//}
 							
 							?>
 								<li>

@@ -138,7 +138,6 @@
       }
     });
     $('#symtpoms input').iCheck();
-    $('#symptoms-welcome').modal();
     $('#toolbar .trigger').off('click').on('click', function(e) {
       $('#toolbar .nav').toggleClass('open');
       $('body').toggleClass('nav-open');
@@ -150,20 +149,23 @@
       return e.preventDefault();
     });
     symtpoms_select = function(el, hide) {
-      var a, answ, c, id, inpt, s_id, skip;
+      var a, answ, c, id, inpt, label, s_id, skip;
       if (hide == null) {
         hide = "true";
       }
       s_id = el.parents('.section').data('id');
       id = el.data('id');
       c = el.data('count');
+      label = el.find('h2').text().split('(')[0];
       skip = false;
       if (!el.hasClass('multy')) {
         inpt = el.find('.checked input');
-        answ = inpt.data("answer");
-        a = inpt.data('id');
         if (inpt.hasClass('skip')) {
           skip = true;
+        } else {
+          answ = inpt.data("text").capitalize();
+          answ = label + "<strong>" + answ + ".</strong>";
+          a = inpt.data('id');
         }
       } else {
         answ = [];
@@ -182,19 +184,21 @@
             return a.push($(this).data("id"));
           }
         });
-        if (el.find('input').data('answer').length > 0) {
-          if (el.find('input').data('answer').indexOf("#tanswer#") >= 0) {
-            answ[0] = answ[0].capitalize();
-            answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.';
-          } else if (el.find('input').data('answer').indexOf("#answer#") >= 0) {
-            answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '));
-          } else {
-            answ = answ.join(' ');
-          }
-        }
+
+        /*
+        if el.find('input').data('answer').length > 0
+            if el.find('input').data('answer').indexOf("#tanswer#") >= 0
+                answ[0] = answ[0].capitalize()
+                answ = el.find('input').data('answer').replace(/#tanswer#/gi, answ.join(', ')) + '.'
+            else if el.find('input').data('answer').indexOf("#answer#") >= 0
+                answ = el.find('input').data('answer').replace(/#answer#/gi, answ.join(', '))
+            else
+                answ = answ.join(' ')
+         */
+        answ[0] = answ[0].capitalize();
+        answ = label + "<strong>" + answ.join(', ') + '</strong>.';
         $("#result .ansver[data-id='" + id + "']").remove();
       }
-      console.log(123, skip);
       if (!skip) {
         $("#result .r" + s_id).append("<div data-id='" + id + "' data-count='" + c + "' data-answer='" + a + "' class='ansver' id='a-" + id + "'>" + answ + "</div>");
       }
