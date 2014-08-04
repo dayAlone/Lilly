@@ -111,7 +111,7 @@ init = ()->
 
     $('#symtpoms input').iCheck()
     
-    #$('#symptoms-welcome').modal()
+    $('#symptoms-welcome').modal()
     
     $('#toolbar .trigger').off('click').on 'click', (e)->
         $('#toolbar .nav').toggleClass('open')
@@ -164,9 +164,10 @@ init = ()->
                 else
                     answ = answ.join(' ')
             ###
-            answ[0] = answ[0].capitalize()
-            answ = label + "<strong>" + answ.join(', ') + '</strong>.'
-            $("#result .ansver[data-id='#{id}']").remove()
+            if(!skip)            
+                answ[0] = answ[0].capitalize()
+                answ = label + "<strong>" + answ.join(', ') + '</strong>.'
+                $("#result .ansver[data-id='#{id}']").remove()
 
         if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
