@@ -148,10 +148,12 @@ init = ()->
                 if $(this).hasClass 'skip'
                     skip = true
                 else
+                    ###
                     if $(this).data('answer').indexOf("#tanswer#") >= 0 || $(this).data('answer').indexOf("#answer#") >= 0
                         text = $(this).data("text")
                     else
-                        text = $(this).data("answer")
+                    ###
+                    text = $(this).data("text")
                     answ.push text
                     a.push $(this).data("id")
             ###
@@ -167,7 +169,7 @@ init = ()->
             if(!skip)            
                 answ[0] = answ[0].capitalize()
                 answ = label + "<strong>" + answ.join(', ') + '</strong>.'
-                $("#result .ansver[data-id='#{id}']").remove()
+            $("#result .ansver[data-id='#{id}']").remove()
 
         if(!skip)
             $("#result .r#{s_id}").append "<div data-id='#{id}' data-count='#{c}' data-answer='#{a}' class='ansver' id='a-#{id}'>#{answ}</div>"
