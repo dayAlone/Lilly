@@ -79,7 +79,7 @@
 							else {*/
 								$q = "";
 								if(count($array)>1) {
-									$tmp = [];
+									$tmp = array();
 									foreach ($array as $value)
 										$tmp[] = $answ['answers'][$value];
 									$q = implode(", ", $tmp);
