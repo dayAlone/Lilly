@@ -39,6 +39,7 @@
 
     <? }?>
     */?>
+    <? if(!$APPLICATION->GetDirProperty("hide_metric")):?>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31297918-1']);
@@ -51,7 +52,7 @@
       })();
 
     </script>
- 
+    <? endif;?>
   </head>
 
   <body>
