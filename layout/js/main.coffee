@@ -271,6 +271,7 @@ init = ()->
         else
             if($(this).parents('.modal-dialog').length>0)
                 $('#doctor').modal('hide')
+            _gaq.push(['_trackEvent', 'Doctors', 'PopupClick', 'Docs Click Popup']);
             return true
 
     $('#toolbar .enter').click (e)->
