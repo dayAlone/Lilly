@@ -1,5 +1,5 @@
 <?
-   if(ERROR_404=="Y" && !$APPLICATION->GetCurDir('/404.php'))
+   if(ERROR_404=="Y" && $APPLICATION->GetCurPage()!='/404.php')
     LocalRedirect('/404.php');
    global $doctors;
    function NumberEnd($number, $titles) {
