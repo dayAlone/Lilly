@@ -1,4 +1,6 @@
 <?
+   if(ERROR_404=="Y" && !$APPLICATION->GetCurDir('/404.php'))
+    LocalRedirect('/404.php');
    global $doctors;
    function NumberEnd($number, $titles) {
     $cases = array (2, 0, 1, 1, 1, 2);
