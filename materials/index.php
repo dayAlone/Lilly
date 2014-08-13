@@ -102,7 +102,7 @@ $APPLICATION->IncludeComponent("bitrix:news.detail", ".default", array(
 	"META_KEYWORDS" => "-",
 	"META_DESCRIPTION" => "-",
 	"BROWSER_TITLE" => "-",
-	"SET_STATUS_404" => "N",
+	"SET_STATUS_404" => "Y",
 	"SET_TITLE" => "Y",
 	"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 	"ADD_SECTIONS_CHAIN" => "Y",
