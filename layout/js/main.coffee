@@ -82,19 +82,20 @@ init = ()->
         $.getScript "/test_man/js/script.js"
 
     $('a').off('click').on 'click', (e)->
-        History = window.History;
-        url = $(this).attr('href')
-        e.preventDefault()
-        if (History.enabled && url != '#')
-            if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0 && $(this).parents('#panel,.bx-component-opener').length==0)
-                $('body .frame').removeClass('animated fadeIn')
-                History.pushState({'url':url}, $(this).text(), url);
-            else if(url.indexOf('http')>=0 || $(this).attr('target')=="_blank")
-                window.open(url, '_blank');
-                if($(this).parents('#locator').length>0)
-                    $('#locator').modal('hide')
-            else if($(this).hasClass('no-ajax'))
-                window.open(url, '_blank')
+        if $(this).parents('#panel, .bx-component-opener').length==0
+            History = window.History;
+            url = $(this).attr('href')
+            e.preventDefault()
+            if (History.enabled && url != '#')
+                if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0)
+                    $('body .frame').removeClass('animated fadeIn')
+                    History.pushState({'url':url}, $(this).text(), url);
+                else if(url.indexOf('http')>=0 || $(this).attr('target')=="_blank")
+                    window.open(url, '_blank');
+                    if($(this).parents('#locator').length>0)
+                        $('#locator').modal('hide')
+                else if($(this).hasClass('no-ajax'))
+                    window.open(url, '_blank')
 
     $('#doctor').off('shown.bs.modal').on 'shown.bs.modal', ()->
         if $('.frame').hasClass 'doctor'
