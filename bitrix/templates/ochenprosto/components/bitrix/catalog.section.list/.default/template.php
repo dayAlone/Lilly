@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 			<div class="col-md-4">
                <a href="/doctors/video/<?=$ob['CODE']?>/" class="item">
                	  <div class="header">
-	                  <span class="title <?=(strlen($item['NAME'])>120?"medium":"")?> <?=(strlen($item['NAME'])>135?"small":"")?>">
+	                  <span class="title <?=strlen($item['NAME'])?> <?=(strlen($item['NAME'])>120?"medium":"")?> <?=(strlen($item['NAME'])>135?"small":"")?>">
 	                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
 	                  </span>
 	                  <div class="date"><?=$item["UF_DATE"]?></div>
