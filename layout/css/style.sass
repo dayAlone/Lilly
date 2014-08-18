@@ -1884,16 +1884,26 @@ input:focus, a:focus
 				line-height: 14px
 				br:first-child
 					display: none
+		.date
+			+full-width
+			font-size: 15px
+			min-height: 20px
+		.header
+			+full-width
+			min-height: 115px
 		.title
 			float: left
 			font-weight: 500
 			color: #eb222e
 			font-size: 25px
 			line-height: 25px
-			min-height: 100px
 			width: 95%
 			margin-bottom: 20px
 			text-transform: uppercase
+			&.medium
+				font-size: 21px
+			&.small
+				font-size: 16px
 			@media (max-width: 770px)
 				width: 100%
 				min-height: 0
