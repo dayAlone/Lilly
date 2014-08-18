@@ -2,9 +2,7 @@
 $this->setFrameMode(true);
 ?>
 <div id="video-list">
-      <div class="container">
-         
-<?
+      <div class="container"><?
 	$i=0;
 	foreach ($arResult['SECTIONS'] as $item) {
 		if($i%3==0)	{
@@ -18,9 +16,14 @@ $this->setFrameMode(true);
 		?>
 			<div class="col-md-4">
                <a href="/doctors/video/<?=$ob['CODE']?>/" class="item">
-                  <span class="title">
-                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
-                  </span>
+               	  <div class="header">
+	                  <span class="title <?=(strlen($item['NAME'])>120?"medium":"")?> <?=(strlen($item['NAME'])>135?"small":"")?>">
+	                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
+	                  </span>
+	                  <div class="date">
+	                  	<?=$item["UF_DATE"]?>
+	                  </div>
+                  </div>
                   <span class="image" style="background-image:url(http://ochenprosto.ru<?=CFile::GetPath($item['PICTURE'])?>)">
 					<? if($item["UF_SOON"]) { ?>
 						<span class="soon">Скоро</span>	
