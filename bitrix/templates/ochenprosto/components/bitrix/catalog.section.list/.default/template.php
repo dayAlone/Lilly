@@ -20,9 +20,7 @@ $this->setFrameMode(true);
 	                  <span class="title <?=(strlen($item['NAME'])>120?"medium":"")?> <?=(strlen($item['NAME'])>135?"small":"")?>">
 	                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
 	                  </span>
-	                  <div class="date">
-	                  	<?=$item["UF_DATE"]?>
-	                  </div>
+	                  <div class="date"><?=$item["UF_DATE"]?></div>
                   </div>
                   <span class="image" style="background-image:url(http://ochenprosto.ru<?=CFile::GetPath($item['PICTURE'])?>)">
 					<? if($item["UF_SOON"]) { ?>
