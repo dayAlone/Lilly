@@ -20,6 +20,7 @@
 			0 => "UF_SOON",
 			1 => "UF_PARTS",
 			2 => "UF_TIME",
+			3 => "UF_DATE",
 		),
 		"SECTION_URL" => "",
 		"CACHE_TYPE" => "A",
