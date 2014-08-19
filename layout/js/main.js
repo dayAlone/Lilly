@@ -374,11 +374,11 @@
       return player.api('play');
     });
     if ($('#article .container .col-md-8').height() < $('#article .container .col-md-4.side').height()) {
-      if ($('#article .container .col-md-4.side .block:last').length === 0) {
-        $('#article .container .col-md-4.side').remove();
-      }
       while ($('#article .container .col-md-8').height() < $('#article .container .col-md-4.side').height() && $('#article .container .col-md-4.side .block:last').length > 0) {
         $('#article .container .col-md-4.side .block:last').remove();
+        if ($('#article .container .col-md-4.side .block:last').length === 0) {
+          $('#article .container .col-md-4.side').remove();
+        }
       }
     }
     $('#video .icon').click(function() {
