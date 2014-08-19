@@ -21,6 +21,7 @@
 			1 => "UF_PARTS",
 			2 => "UF_TIME",
 			3 => "UF_DATE",
+			4 => "UF_WEBINAR",
 		),
 		"SECTION_URL" => "",
 		"CACHE_TYPE" => "A",
