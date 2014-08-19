@@ -27,7 +27,7 @@ $this->setFrameMode(true);
 						<span class="soon">Скоро</span>	
 					<? } ?>
 					<? if($item["UF_PARTS"]) { ?>
-						<span class="parts"><?=$item["UF_PARTS"]?></span>	
+						<span class="parts <?=(strlen($item['UF_PARTS'])>9?"small":"")?>"><?=$item["UF_PARTS"]?></span>	
 					<? } ?>
 					<? if($item["UF_TIME"]) { ?>
 						<span class="minutes"><?=$item["UF_TIME"]?></span>	
