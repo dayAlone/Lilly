@@ -7,7 +7,7 @@ function sort_sections($a, $b)
 	    }
 	    return ($a['ID'] > $b['ID']) ? -1 : 1;
     }
-    return ($a['SORT'] > $b['SORT']) ? -1 : 1;
+    return ($a['SORT'] < $b['SORT']) ? -1 : 1;
 }
 usort($arResult['SECTIONS'], "sort_sections");
 ?>
