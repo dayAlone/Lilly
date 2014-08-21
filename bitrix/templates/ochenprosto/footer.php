@@ -21,7 +21,7 @@
                   <img src="/layout/images/logo2.png" alt="">
                </a>
             </div>
-            <div class="col-md-7 center menu">
+            <div class="<? if(!$doctors):?>col-md-7 center<?else:?>col-md-11 right<?endif;?> menu">
                <div class="menu">
                   <?$APPLICATION->IncludeComponent("bitrix:menu","bottom",Array(
                         "ROOT_MENU_TYPE" => "bottom", 
