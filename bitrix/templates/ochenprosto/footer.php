@@ -182,6 +182,7 @@ $APPLICATION->AddHeadScript('/layout/js/plugins.js');
 $APPLICATION->AddHeadScript('//f.vimeocdn.com/js/froogaloop2.min.js');
 if($APPLICATION->GetCurDir()=='/')
   $APPLICATION->AddHeadScript('/layout/js/vimeo.js');
+
 $APPLICATION->AddHeadScript('/layout/js/main.js');
 ?>
 <?if($_COOKIE['checkbox']!=='true'&&$doctors){?>

@@ -70,6 +70,17 @@ load = (url)->
                 $.scrollTo(0, 500)
                 init()
 
+strstr = ( haystack, needle, bool )->
+    pos = 0;
+    pos = haystack.indexOf( needle );
+    if( pos == -1 )
+        return false;
+    else
+        if( bool )
+            return haystack.substr( 0, pos );
+        else
+            return haystack.slice( pos );
+
 
 init = ()->
     $(window).on "navigate", (event, data)->
@@ -85,7 +96,8 @@ init = ()->
         if $(this).parents('#panel, .bx-component-opener').length==0
             History = window.History;
             url = $(this).attr('href')
-            if($(url).length>0)
+            console.log strstr(url,'#')
+            if(strstr(url,'#'))
                 return true
             e.preventDefault()
             if (History.enabled && url != '#')
@@ -363,8 +375,8 @@ init = ()->
 
 $(document).ready ()->
 
-    $(document).ajaxStart ()-> Pace.restart()
-    $(document).ajaxStop ()-> Pace.stop()
+    #$(document).ajaxStart ()-> Pace.restart()
+    #$(document).ajaxStop ()-> Pace.stop()
 
     init()
 
