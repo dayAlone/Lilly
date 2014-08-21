@@ -86,6 +86,8 @@ init = ()->
             History = window.History;
             url = $(this).attr('href')
             e.preventDefault()
+            if($(url).length>0)
+                return true
             if (History.enabled && url != '#')
                 if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0)
                     $('body .frame').removeClass('animated fadeIn')
