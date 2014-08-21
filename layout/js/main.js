@@ -109,6 +109,7 @@
         History = window.History;
         url = $(this).attr('href');
         e.preventDefault();
+        console.log($(url).length);
         if ($(url).length > 0) {
           return true;
         }
