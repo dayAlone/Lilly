@@ -85,10 +85,9 @@ init = ()->
         if $(this).parents('#panel, .bx-component-opener').length==0
             History = window.History;
             url = $(this).attr('href')
-            e.preventDefault()
-            console.log($(url).length)
             if($(url).length>0)
                 return true
+            e.preventDefault()
             if (History.enabled && url != '#')
                 if(!$(this).hasClass('no-ajax') && !$(this).hasClass('prevent') && url.charAt(0) != '#' && url.indexOf('http')<0)
                     $('body .frame').removeClass('animated fadeIn')
