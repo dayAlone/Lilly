@@ -327,7 +327,7 @@
       }
       return $(this).parent().find('a').toggleClass('no-ajax');
     });
-    $('#enter a, a.enter, .landing .enter a').off('click').on('click', function() {
+    $('#enter a, a.enter, .landing .enter a, .landing .enter2 a').off('click').on('click', function() {
       if (!$(this).parent().find('.checkbox').hasClass("checked")) {
         anim($(this).parent().find('.checkbox'), 'tada');
         return false;

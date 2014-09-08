@@ -279,7 +279,7 @@ init = ()->
             $.removeCookie('checkbox');
         $(this).parent().find('a').toggleClass('no-ajax')
     
-    $('#enter a, a.enter, .landing .enter a').off('click').on 'click', ()->
+    $('#enter a, a.enter, .landing .enter a, .landing .enter2 a').off('click').on 'click', ()->
         if(!$(this).parent().find('.checkbox').hasClass("checked"))
             anim($(this).parent().find('.checkbox'),'tada')
             return false
