@@ -193,7 +193,7 @@
 		<div class="col-md-3">
 			<? if($_REQUEST['v']==1): ?>
 			<div class="landing">
-				<div class="enter index" data-spy="affix" data-offset-top="60">
+				<div class="enter index" data-spy="affix" data-offset-top="60" data-offset-bottom="150">
 					<div class="title">
 						<span>ВХОД ДЛЯ </span>
 						<span>СПЕЦИАЛИСТОВ </span>
