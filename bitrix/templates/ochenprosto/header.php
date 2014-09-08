@@ -64,7 +64,7 @@
         <div class="container">
            <div class="row">
               <div class="col-md-2">
-                 <a href="/" id="logo">
+                 <a href="http://ochenprosto.ru/" id="logo">
                     <img src="/layout/images/logo.png" alt="">
                  </a>
                  <div class="mobile_title">
