@@ -1733,7 +1733,9 @@ input:focus, a:focus
 					position: absolute
 					top: -50px
 					right: 10px
-
+		@media (max-width: 570px)
+			img
+				top: 50px
 	#product-2
 		margin-top: 0
 		img
@@ -1924,9 +1926,13 @@ input:focus, a:focus
 			color: #eb222e
 			min-height: 20px
 			margin-bottom: 10px
+			@media (max-width: 770px)
+				min-height: 0
 		.header
 			+full-width
 			min-height: 115px
+			@media (max-width: 770px)
+				min-height: 0
 		.title
 			float: left
 			font-weight: 500
@@ -1944,8 +1950,8 @@ input:focus, a:focus
 				width: 100%
 				min-height: 0
 				padding: 5px 8px 0
-				font-size: 14px
-				line-height: 14px
+				font-size: 14px !important
+				line-height: 14px !important
 				margin-bottom: 0
 				color: black
 				margin-bottom: 0

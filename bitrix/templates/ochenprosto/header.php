@@ -20,7 +20,7 @@
     <?php $APPLICATION->ShowHead();?>    
     
     
-    <? if($APPLICATION->GetCurPage()=='/') {?>
+    <? if($APPLICATION->GetCurPage()=='/' && $_SERVER['SERVER_NAME']=='ochenprosto.ru') {?>
     
     <!-- Google Analytics Content Experiment code -->
 <script>function utmx_section(){}function utmx(){}(function(){var
