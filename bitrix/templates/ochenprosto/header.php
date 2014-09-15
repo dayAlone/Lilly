@@ -66,7 +66,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
         <div class="container">
            <div class="row">
               <div class="col-md-2">
-                 <a href="<?=($_SERVER['SERVER_NAME']=='ochenprosto.ru'||$_SERVER['SERVER_NAME']=='l.local'?'/':'http://ochenprosto.ru/')?>" id="logo">
+                 <a href="<?=($_SERVER['SERVER_NAME']=='ochenprosto.ru'||$_SERVER['SERVER_NAME']=='l.local'?'/':'http://ochenprosto.ru/')?><?=(isset($_SESSION['v'])?"?v=".$_SESSION['v']:"")?>" id="logo">
                     <img src="/layout/images/logo.png" alt="">
                  </a>
                  <div class="mobile_title">
