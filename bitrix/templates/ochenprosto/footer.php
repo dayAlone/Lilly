@@ -194,3 +194,6 @@ $APPLICATION->AddHeadScript('/layout/js/main.js');
             })
           </script>
     <?}?>
+<?
+  var_dump($_SESSION);
+?>
