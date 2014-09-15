@@ -2,6 +2,9 @@
   global $nav;
   global $doctors;
   global $index;
+  if(isset($_REQUEST['v'])){
+      $_SESSION['v'] = $_REQUEST['v'];
+  }
   if(strstr($_SERVER['REQUEST_URI'],'doctors'))
     $doctors = true;
   

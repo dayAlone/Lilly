@@ -14,10 +14,4 @@
 			return $APPLICATION->GetPageProperty('mobile_title');
 		}
 	}
-	
-	  if(isset($_REQUEST['v'])){
-	    $_SESSION['v'] = $_REQUEST['v'];
-	    var_dump($_REQUEST['v']);
-	    var_dump($_SESSION['v']);
-	  }
 ?>
