@@ -15,7 +15,8 @@
 		}
 	}
 	
-	  if(isset($_REQUEST['v'])){
+	  if($_REQUEST['v']>0){
+	  	var_dump( $_REQUEST['v']);
 	    $_SESSION['v'] = $_REQUEST['v'];
 	  }
 ?>
