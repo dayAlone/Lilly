@@ -45,15 +45,14 @@ $this->setFrameMode(true);
          <div id="chapter-list">
            <?
             if($doctors):
-              global $arFilter;
-              $arFilter = array('!ID'=>$arResult['ID']);
+              
               $APPLICATION->IncludeComponent("bitrix:news.list", "more", 
               array(
                  "IBLOCK_ID"           => 4,
-                 "NEWS_COUNT"          => 5,
+                 "NEWS_COUNT"          => 999999,
                  "SORT_BY1"            => "SORT",
                  "SORT_ORDER1"         => "ASC",
-                 "FILTER_NAME"         => "arFilter",
+                 "CURRENT"             => $arResult['ID'],
                  "FIELD_CODE"          => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE"),
                  "PROPERTY_CODE"       => array("AUTHOR","HTML_TITLE"),
                  "DETAIL_URL"          => "/materials/#ELEMENT_CODE#/",
@@ -64,6 +63,8 @@ $this->setFrameMode(true);
                  ),
                  false
               );
+              ?>
+              <?
             else:
               global $arFilter;
 
