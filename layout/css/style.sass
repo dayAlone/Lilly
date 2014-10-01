@@ -100,6 +100,8 @@ a, a span, .shadow
 
 	.nav
 		+full-width
+		@media (max-width: 1024px)
+			width: 101%
 		padding: 0
 		margin: 0
 		margin-top: 30px
@@ -107,7 +109,7 @@ a, a span, .shadow
 		@media screen and (max-width: 1200px)
 			left: 30px
 		@media screen and (max-width: 1024px)
-			left: 30px
+			left: 20px
 		@media (max-width: 770px)
 			position: fixed
 			top: 0
@@ -1146,6 +1148,12 @@ input:focus, a:focus
 		top: 299px
 	a.flag.test
 		top: 290px
+	iframe
+		+full-width
+		max-width: 100%
+		margin-bottom: 20px
+.embed-responsive + #promo
+	padding-top 20px
 
 #enter
 	+full-width
@@ -1442,6 +1450,7 @@ input:focus, a:focus
 	width: 242px
 	height: 121px
 	+b('enter2.png')
+	background-size: cover
 	position: absolute
 	right: 0
 	top: 30px
@@ -1724,7 +1733,7 @@ input:focus, a:focus
 			img
 				position: absolute
 				left: -40px
-				top: 10px
+				top: 50px
 				height: 210px
 			p
 				+full-width
@@ -1807,12 +1816,14 @@ input:focus, a:focus
 			padding: 0 8px
 	p
 		margin-top: 40px
+		li
 		@media (max-width: 770px)
 			width: 100%
 	p, a
 		color: white
 		font-weight: 300
 		font-size: 24px
+		line-height: 27px
 		span.r
 			font-size: 36px
 			line-height: 24px
@@ -2860,6 +2871,9 @@ input:focus, a:focus
 				color: #eb2833
 				font-size: 18px
 				border-bottom: 1px solid #eb2833
+	@media (max-width: 770px)
+		.enter, .enter2
+			display: none
 	.enter
 		+full-width
 		+b('back.jpg')
@@ -2938,6 +2952,7 @@ input:focus, a:focus
 	.enter2
 		+full-width
 		+b('bg3.jpg')
+		background-size: cover
 		background-position: top left
 		min-height: 628px
 		color: white
@@ -2961,6 +2976,8 @@ input:focus, a:focus
 		.frame
 			+full-width
 			width: 313px
+			@media (max-width: 1024px)
+				width: 240px
 			height: 39px
 			padding-left: 40px
 			line-height: 38px
@@ -3026,6 +3043,8 @@ input:focus, a:focus
 	position: fixed !important
 	&.enter, &.enter2
 		width: 273px
+		@media (max-width: 1024px)
+			width: 186px
 		top: 10px
 
 
