@@ -118,7 +118,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
      <?if(!$doctors&&!defined('ERROR_404')):?>
        <? /*<a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>*/?>
        <a href="/test/man/" class="flag test"><img src="/layout/images/flag-test.png"></a>
-      <? if(!$APPLICATION->GetDirProperty("hide_enter") && !isset($_REQUEST['v'])):?>
+      <? if(!$APPLICATION->GetDirProperty("hide_enter") && $APPLICATION->GetCurDir()!='/')?>
       <div id="enter" class="short">
         <div class="container">
           <div class="row">
