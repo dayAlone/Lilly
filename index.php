@@ -29,7 +29,7 @@
 		<?/*
 		<? if($_REQUEST['v']==2) {?>
 		<div class="video v-2">
-			<iframe src="//player.vimeo.com/video/87844279?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<? 
+			<iframe src="//player.vimeo.com/video/86238673?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<? 
 			global $USER;
 			if($USER->isAdmin()) echo 0;
 			else echo 1;
