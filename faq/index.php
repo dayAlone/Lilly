@@ -157,9 +157,10 @@ $APPLICATION->SetPageProperty('mobile_title', '<strong>FAQ</strong><span>отв�
 
         </div>
       </div>  
-     </div>
-     <p>
+      <p>
        <small>ED-EM-2069-061014</small>
-     </p>
+      </p>
+     </div>
+     
    </div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
