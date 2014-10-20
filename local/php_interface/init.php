@@ -6,6 +6,7 @@
         $props = array("SORT" => $SORT);
         $bs = new CIBlockSection;
         $bs->Update($arFields["ID"], $props);
+        $bs->Update(17, array("SORT" => $SORT-10));
     }
 
 	function mobile_title() {
