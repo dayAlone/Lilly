@@ -6,33 +6,31 @@
 	$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, мужское здоровье, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, аденома предстательной железы, симптомы гиперплазии предстательной железы, причины гиперплазии предстательной железы, лечение гиперплазии предстательной железы, профилактика эректильной дисфункции, профилактика ДГПЖ, проблема мочеиспускания");
 	$APPLICATION->SetPageProperty('DESCRIPTION', "Сайт о проблеме эректильной дисфункции и гиперплазии предстательной железы: что это такое, причины, симптомы, лечение. ");
 ?>
+<div class="embed-responsive embed-responsive-16by9" style="margin-top:-120px;">
+<iframe src="//player.vimeo.com/video/110882748?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<? 
+global $USER;
+if($USER->isAdmin()) echo 0;
+else echo 1;
+?>" width="851" height="478" style="margin-bottom: 10px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
-<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="embed-responsive embed-responsive-16by9">
-			<iframe src="//player.vimeo.com/video/110882748?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<? 
-			global $USER;
-			if($USER->isAdmin()) echo 0;
-			else echo 1;
-			?>" width="851" height="478" style="margin-bottom: 10px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			
 			<div style="height:13px;width:100%"></div>
 			<?
-			global $f;
-			$f = array('ID'=>array(8,111,42));
 			$APPLICATION->IncludeComponent(
 				"bitrix:news.list",
-				"promo3",
+				"promo",
 				Array(
 					"IBLOCK_TYPE" => "content",
 					"IBLOCK_ID" => "1",
-					"NEWS_COUNT" => "3",
+					"NEWS_COUNT" => "30",
 					"SORT_BY1" => "SORT",
 					"SORT_ORDER1" => "ASC",
 					"SORT_BY2" => "",
 					"SORT_ORDER2" => "",
-					"FILTER_NAME" => "f",
+					"FILTER_NAME" => "",
 					"FIELD_CODE" => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
 					"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE"),
 					"CHECK_DATES" => "Y",
@@ -89,8 +87,6 @@
 		</div>
 	</div>
 
-	
-</div>
 <?
 	//endif;
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
