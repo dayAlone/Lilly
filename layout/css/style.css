@@ -4402,6 +4402,7 @@ a:focus {
 }
 #fullwidth-list {
   margin-top: -120px;
+  padding: 0 20px;
 }
 #fullwidth-list .enter2 {
   margin-bottom: 20px;
