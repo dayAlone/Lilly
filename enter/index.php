@@ -1,6 +1,7 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	global $index;
+	global $doctors;
 	global $USER;
 	$index = true;
 	$APPLICATION->SetTitle("Lilly Answers That Matter");
@@ -9,13 +10,18 @@
 ?>
 <div id="fullwidth-list" class="<?=($_REQUEST['f']==1?"overlay":'')?>">
 <div class="row">
-	<div class="<?=($_REQUEST['f']==1?"col-xs-12":"col-lg-9 col-xs-8")?>">
+	<?=($_REQUEST['f']==1?"":"<div class='col-lg-9 col-xs-8'>")?>
+		<h1><?=(isset($_REQUEST['v'])?"Как мужчины решают проблемы в постели? <br>Ответ в ролике!":"Мучают проблемы в постели? <br>Очень простое решение — в ролике!")?></h1>
+		<?=($_REQUEST['f']==1?"<div class='video-frame'>":"")?>
 		<?=($_REQUEST['f']==1?'<div class="embed-responsive embed-responsive-16by9">':"")?>
-		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"112069684":"110882748")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="617" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"112069684":"110882748")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="516" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		<?=($_REQUEST['f']==1?'</div>':"")?>
-	</div>
-	<?=($_REQUEST['f']==1?"":'<div class="col-lg-3 col-xs-4">')?>
+	
+	<?=($_REQUEST['f']==1?"":'</div><div class="col-lg-3 col-xs-4">')?>
 		<div class="landing">
+			<a data-toggle="modal" data-target="#doctor" onClick="_gaq.push(['_trackEvent', 'Doctors', 'LandingClick', 'Docs Click Landing']);" class="locator">
+				<img src="/layout/images/locator.png" alt="">
+			</a>
 			<div class="enter2 index">
 				<div class="title">
 					<span>Вход</span>
@@ -35,9 +41,7 @@
 				с положениями действующего законодательства РФ Вы не имеете права доступа к информации, размещенной в данном разделе веб-сайта, в связи с чем просим Вас незамедлительно покинуть данный раздел веб-сайта.</p>
 				<p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВОЙТИ», чтобы начать работу.</p>
 			</div>
-			<a data-toggle="modal" data-target="#doctor" onClick="_gaq.push(['_trackEvent', 'Doctors', 'LandingClick', 'Docs Click Landing']);" class="locator">
-				<img src="/layout/images/locator.png" alt="">
-			</a>
+			
 		</div>
 	<?=($_REQUEST['f']==1?"":'</div>')?>
 </div>
@@ -115,6 +119,17 @@
 		</div>
 	</div>
 </div>
+<style>
+	.flag {
+		margin-top: 150px;
+	}
+	#toolbar .container {
+		max-width: none !important;
+		width: 100%;
+		padding: 0 20px;
+	}
+
+</style>
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

@@ -4401,8 +4401,20 @@ a:focus {
   padding-bottom: 75%;
 }
 #fullwidth-list {
-  margin-top: -120px;
+  margin-top: 20px;
   padding: 0 20px;
+}
+#fullwidth-list.overlay {
+  margin-top: 0;
+}
+#fullwidth-list.overlay .video-frame {
+  position: relative;
+}
+#fullwidth-list.overlay h1 {
+  font-size: 42px;
+}
+#fullwidth-list.overlay h1 br {
+  display: none;
 }
 #fullwidth-list.overlay .landing {
   position: absolute;
@@ -4410,8 +4422,19 @@ a:focus {
   right: 40px;
   width: 273px;
 }
-#fullwidth-list .enter2 {
+#fullwidth-list h1 {
+  font-weight: 700;
+  margin-top: 0;
   margin-bottom: 20px;
+  font-size: 36px;
+}
+#fullwidth-list .locator {
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#fullwidth-list .enter2 {
   background: url("/layout/images/bg3.png") center center no-repeat;
 }
 #fullwidth-list #promo .block {
