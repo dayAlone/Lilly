@@ -1,31 +1,38 @@
-@import "compass/css3/"
+$orange = #ffba00
 
-$orange         : #FFBA00
-
-$i : '../images/'
-
-@mixin full-width
+full-width()
 	float: left
 	width: 100%
 	position: relative
 
-@mixin b($img, $position: center center no-repeat, $color: '')
-	background: #{$color} url(#{$i}#{$img}) $position
+b(name=null, position=center center no-repeat, color=null)
+	background: color url(/layout/images/name) position
 
-+font-face('DINPro', font-files('/layout/fonts/dinpro-light.eot', '/layout/fonts/dinpro-light.ttf', '/layout/fonts/dinpro-light.woff'),'/layout/fonts/dinpro-light.eot', 300,'normal')
-+font-face('DINPro', font-files('/layout/fonts/dinpro-regular.eot', '/layout/fonts/dinpro-regular.ttf', '/layout/fonts/dinpro-regular.woff'),'/layout/fonts/dinpro-regular.eot', 400,'normal')
-+font-face('DINPro', font-files('/layout/fonts/dinpro-medium.eot', '/layout/fonts/dinpro-medium.ttf', '/layout/fonts/dinpro-medium.woff'),'/layout/fonts/dinpro-medium.eot', 500,'normal')
-+font-face('DINPro', font-files('/layout/fonts/dinpro-bold.eot', '/layout/fonts/dinpro-bold.ttf', '/layout/fonts/dinpro-bold.woff'),'/layout/fonts/dinpro-medium.eot', 600,'normal')
-
+@font-face
+	font-family 'DINPro'
+	src url("/layout/fonts/dinpro-light.ttf")
+	font-weight 300
+@font-face
+	font-family 'DINPro'
+	src url("/layout/fonts/dinpro-regular.ttf")
+	font-weight normal
+@font-face
+	font-family 'DINPro'
+	src url("/layout/fonts/dinpro-medium.ttf")
+	font-weight 500
+@font-face
+	font-family 'DINPro'
+	src url("/layout/fonts/dinpro-bold.ttf")
+	font-weight 700
+ 
 html, body
 	min-height: 100%
-
 body
 	min-height: 100%
-	+full-width
+	full-width()
 	max-width: 100%
 	color: black
-	font-family: 'DINPro', 'Helvetica Neue', Arial
+	font-family: "DINPro", "Helvetica Neue", Arial
 	background: white
 	font-size: 16px
 	@media (max-width: 770px)
@@ -33,18 +40,15 @@ body
 		padding-top: 46px
 		> .frame
 			padding-top: 14px
-	
 a, a span, .shadow
-	+transition-property(background-color, opacity, color, border, box-shadow, z-index, font-size)
-	+transition-duration(.3s)
+	transition-property: background-color, opacity, color, border, box-shadow, z-index, font-size	
+	transition-duration: 0.3s	
 	color: black
 	&:hover
 		text-decoration: none
-
 #panel
 	@media (max-width: 770px)
 		display: none
-
 #overlay
 	position: fixed
 	top: 0
@@ -62,8 +66,8 @@ a, a span, .shadow
 	z-index: 100
 	padding-top: 20px
 	padding-bottom: 20px
-	+transition-property(width, color, border, font-size, max-width)
-	+transition-duration(.3s)
+	transition-property: width, color, border, font-size, max-width	
+	transition-duration: 0.3s	
 	.mobile_title
 		position: absolute
 		display: none
@@ -72,13 +76,13 @@ a, a span, .shadow
 		line-height: 20px
 		font-size: 12px
 		strong, span
-			+full-width
+			full-width()
 			line-height: 13px
 		span
 			font-size: 10px
 			line-height: 10px
 		.bottom
-			+full-width
+			full-width()
 			margin-top: 16px
 		display: none
 		@media (max-width: 770px)
@@ -94,12 +98,11 @@ a, a span, .shadow
 			color: white
 			a
 				color: white
-				+text-shadow(-1px 2px 3px rgba(1,1,4,.67)) 
+				text-shadow: -1px 2px 3px rgba(1, 1, 4, 0.67)
 			.small
-				color: rgba(255,255,255,.7)
-
+				color: rgba(255, 255, 255, 0.7)
 	.nav
-		+full-width
+		full-width()
 		@media (max-width: 1024px)
 			width: 101%
 		padding: 0
@@ -116,13 +119,13 @@ a, a span, .shadow
 			margin: 0
 			height: 100%
 			z-index: 2000
-			right: -240px
-			background: rgba(0,0,0,.87)
+			right: -1*240px
+			background: rgba(0, 0, 0, 0.87)
 			width: 240px
 			padding-top: 5px
 			left: auto
-			+transition-property(right)
-			+transition-duration(.3s)
+			transition-property: right	
+			transition-duration: 0.3s	
 			&.open
 				right: 0
 		li
@@ -130,7 +133,6 @@ a, a span, .shadow
 			text-align: center
 			line-height: 14px
 			padding: 0 2%
-			
 			&:nth-child(2)
 				padding-left: 0
 			&:last-child
@@ -138,7 +140,7 @@ a, a span, .shadow
 			@media screen and (max-width: 1024px)
 				padding: 0 1.3%
 			@media (max-width: 770px)
-				+full-width
+				full-width()
 				text-align: left
 				padding: 0 !important
 				margin-bottom: 5px
@@ -165,9 +167,9 @@ a, a span, .shadow
 				font-size: 21px
 				margin-bottom: 10px
 				font-weight: 300
-				color: #5F5E4D
+				color: #5f5e4d
 				&:hover
-					color: #FF0000
+					color: red
 					background: transparent
 				&.active
 					font-weight: 700
@@ -176,7 +178,7 @@ a, a span, .shadow
 				@media screen and (max-width: 1024px)
 					font-size: 18px
 				@media (max-width: 770px)
-					+full-width
+					full-width()
 					color: white
 					font-size: 21px
 					line-height: 21px
@@ -184,14 +186,13 @@ a, a span, .shadow
 					margin-bottom: 0
 					br
 						display: none
-
 			.user &:last-child
 				a
-					+background-image(linear-gradient(bottom left, rgba(155,29,33,.8) -18.85%, rgba(233,33,45,.8) 81.15%)) 
+					background-image: linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%)
 					line-height: 30px
 					padding: 2px 15px 3px 15px
-					margin-left: -15px
-					margin-top: -9px
+					margin-left: -1*15px
+					margin-top: -1*9px
 					color: white
 					@media screen and (max-width: 1024px)
 						margin-left: 0
@@ -199,9 +200,9 @@ a, a span, .shadow
 						margin-top: 10px
 						text-shadow: none
 			span.small, a.small
-				color: #5F5E4D
-				text-shadow: none	
-				font-family: 'Helvetica Neue', Arial
+				color: #5f5e4d
+				text-shadow: none
+				font-family: "Helvetica Neue", Arial
 				font-style: italic
 				font-size: 12px
 				line-height: 14px
@@ -212,7 +213,7 @@ a, a span, .shadow
 				@media screen and (max-width: 1024px)
 					font-size: 11px
 				@media (max-width: 770px)
-					+full-width
+					full-width()
 					font-size: 13px
 					padding: 0 8px !important
 					line-height: 22px
@@ -228,7 +229,7 @@ a, a span, .shadow
 					text-decoration: underline
 					text-transform: lowercase
 				&:hover
-					color: #FF0000
+					color: red
 				&.active
 					font-weight: bold
 	.enter
@@ -261,7 +262,6 @@ a, a span, .shadow
 				fill: white
 		@media (max-width: 770px)
 			display: block
-
 		&:after
 			content: ""
 			position: absolute
@@ -269,7 +269,7 @@ a, a span, .shadow
 			border-top: 1px solid black
 			width: 100%
 	@media (max-width: 770px)
-		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 		background: white
 		overflow: visible
 		padding: 0
@@ -280,16 +280,15 @@ a, a span, .shadow
 		left: 0
 		width: 100%
 #print
-
 	.container
 		width: 540px
 		font-weight: 300
 	.section, .title
-		+full-width
+		full-width()
 		border-top: 1px solid #bcbcbc
 		padding: 8px 15px
 	.questions
-		+full-width
+		full-width()
 		height: 700px
 	.logo
 		float: left
@@ -299,47 +298,47 @@ a, a span, .shadow
 	h1
 		font-size: 23px
 		text-transform: uppercase
-		+full-width
+		full-width()
 	p
 		font-size: 15px
 		margin-bottom: 0
 		font-weight: 400
-		+full-width
+		full-width()
 	h2
 		text-transform: uppercase
 		font-size: 18px
 		color: #fc1e2b
 		margin: 0 0 8px
 		page-break-before: always
-		+full-width
+		full-width()
 	h4
 		font-weight: bold
 		color: #f92334
-		text-indent: -19px
+		text-indent: -1*19px
 		margin-left: 20px
-		+full-width
+		full-width()
 	.line+h4
 		margin-top: 20px
 	.line
-		+full-width
+		full-width()
 		border-bottom: 1px solid #bcbcbc
 		height: 30px
 	ul
 		list-style: none
 		padding: 0
-		+full-width
+		full-width()
 		margin: 0
 		li
-			+full-width
+			full-width()
 			font-size: 12px
 			line-height: 19px
 			font-weight: 400
 	.more
-		+full-width
+		full-width()
 		margin-top: 40px
 #pretest_block
 	margin-bottom: 30px
-	+full-width
+	full-width()
 #test-woman, #test-man
 	h2
 		text-transform: uppercase
@@ -347,14 +346,14 @@ a, a span, .shadow
 		margin-bottom: 20px
 	p
 		font-size: 15px
-		+full-width
+		full-width()
 	p.small
 		font-size: 14px
 		margin-top: 25px
 		color: #929292
 	h3
-		+full-width
-		+b('text_md.png', top right no-repeat)
+		full-width()
+		b("text_md.png", top right no-repeat)
 		padding: 12px 0
 		color: white
 		margin-top: 20px
@@ -390,7 +389,6 @@ a, a span, .shadow
 		width: 60%
 		@media screen and (max-width: 770px)
 			width: 100%
-
 	#printButton
 		@media screen and (max-width: 770px)
 			display: none !important
@@ -418,24 +416,24 @@ a, a span, .shadow
 		@media screen and (max-width: 770px)
 			display: block
 	#testRepeat
-		background: #aaa
+		background: #aaaaaa
 	.button_block
-		margin-top: -100px
+		margin-top: -1*100px
 		float: right
 		width: 40%
 		height: 200px
-		+b('ok.png')
+		b("ok.png")
 		background-size: contain
 		@media screen and (max-width: 770px)
 			display: none
 	#q_3, #q_5
 		h3
-			+b('test_sm.png', top right no-repeat)
+			b("test_sm.png", top right no-repeat)
 		.counter
 			height: 46px
 	#q_7
 		h3
-			+b('test_bg.png', top right no-repeat)
+			b("test_bg.png", top right no-repeat)
 		.counter
 			height: 82px
 	h3
@@ -444,9 +442,9 @@ a, a span, .shadow
 		padding-left: 0
 		li
 			list-style: none
-			+full-width
+			full-width()
 	.questions
-		+full-width
+		full-width()
 		h3
 			@media (max-width: 1024px)
 				background-color: #cf1920 !important
@@ -460,12 +458,12 @@ a, a span, .shadow
 	h3.red
 		background: transparent
 		color: red
-		margin-top: -30px
+		margin-top: -1*30px
 	a.doctor
 		width: 209px
 		height: 44px
 		float: left
-		+b('doctor.png')
+		b("doctor.png")
 		color: white
 		line-height: 44px
 		font-weight: 600
@@ -476,9 +474,9 @@ a, a span, .shadow
 			color: white
 	@media (max-width: 770px)
 		.test_frame
-			+full-width
+			full-width()
 			background: white
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			padding: 0 8px
 			margin-top: 0px
 			h2
@@ -488,27 +486,25 @@ a, a span, .shadow
 			p
 				font-size: 12px
 			margin-bottom: 14px
-
 		.test_content
-			+full-width
+			full-width()
 			background: white
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			padding: 0 8px 15px
 			#footer
-				+full-width
+				full-width()
 				padding: 0
-				margin-bottom: -3px
+				margin-bottom: -1*3px
 				h3
 					font-size: 14px
 					margin: 0
 					padding: 0
 			.small
-				+full-width
+				full-width()
 				font-size: 10px
 				margin-top: 5px !important
 				br
 					display: none
-
 			#pretest_block
 				margin-bottom: 0
 				h3
@@ -521,17 +517,17 @@ a, a span, .shadow
 					padding: 5px 0
 					margin-top: 4px
 			h2
-				+full-width
+				full-width()
 				font-size: 14px
 				margin-bottom: 5px
 			&.man
 				#q_0, #q_4
 					.counter
-						height: 14px 
+						height: 14px
 						line-height: 14px
 				#q_3
 					.counter
-						height: 24px 
+						height: 24px
 						line-height: 24px
 				#q_1
 					.counter
@@ -544,11 +540,11 @@ a, a span, .shadow
 			&.woman
 				#q_0, #q_1, #q_2, #q_4, #q_6
 					.counter
-						height: 24px 
+						height: 24px
 						line-height: 24px
 				#q_3, #q_5
 					.counter
-						height: 24px 
+						height: 24px
 						line-height: 24px
 				#q_7
 					.counter
@@ -580,11 +576,10 @@ a, a span, .shadow
 						font-size: 28px
 						width: 20px
 						text-indent: 3px
-				
 				ol
 					li
 						line-height: 20px
-						+full-width
+						full-width()
 						input
 							width: 12px
 							border-color: white
@@ -596,17 +591,16 @@ a, a span, .shadow
 							line-height: 11px
 							margin: 4px 0
 							color: #ce181f
-
 	@media (max-width: 540px)
 		.test_content
 			&.man
 				#q_0, #q_4
 					.counter
-						height: 24px 
+						height: 24px
 						line-height: 24px
 				#q_3
 					.counter
-						height: 37px 
+						height: 37px
 						line-height: 37px
 				#q_1
 					.counter
@@ -619,11 +613,11 @@ a, a span, .shadow
 			&.woman
 				#q_0, #q_1, #q_2, #q_4, #q_6
 					.counter
-						height: 37px 
+						height: 37px
 						line-height: 37px
 				#q_3, #q_5
 					.counter
-						height: 24px 
+						height: 24px
 						line-height: 24px
 				#q_7
 					.counter
@@ -632,9 +626,9 @@ a, a span, .shadow
 	.locator-frame
 		@media (max-width: 770px)
 			background: white
-			+full-width
+			full-width()
 			padding: 8px
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			margin-top: 14px
 			a.doctor
 				margin-bottom: 0 !important
@@ -642,19 +636,16 @@ a, a span, .shadow
 				font-size: 14px
 				line-height: 35px
 				height: 35px
-
 .test_container
 	@media (max-width: 770px)
 		padding: 0 !important
-
-
 #test-man
 	#result_block
 		margin-top: 40px
-		+full-width
+		full-width()
 	#q_3, #q_00
 		h3
-			+b('text_md.png', top right no-repeat)
+			b("text_md.png", top right no-repeat)
 		.counter
 			height: 78px
 	#q_00
@@ -662,10 +653,9 @@ a, a span, .shadow
 			padding-left: 30px
 			@media screen and (max-width: 1024px)
 				padding-left: 10px
-
 	#q_4, #q_0
 		h3
-			+b('test_sm.png', top right no-repeat)
+			b("test_sm.png", top right no-repeat)
 		.counter
 			height: 46px
 			@media screen and (max-width: 1024px)
@@ -675,14 +665,14 @@ a, a span, .shadow
 			font-size: 22px
 	#q_2, #q_1
 		h3
-			+b('test_bg.png', top right no-repeat)
+			b("test_bg.png", top right no-repeat)
 		.counter
 			height: 82px
 		@media screen and (max-width: 1024px)
 			.counter
 				height: 100px
 #more-link
-	+full-width
+	full-width()
 	background: white
 	margin-bottom: 14px
 	text-transform: uppercase
@@ -690,27 +680,25 @@ a, a span, .shadow
 	display: none
 	line-height: 40px
 	font-size: 24px
-	+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+	box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 	svg
 		float: right
 		margin-top: 12px
 	@media (max-width: 770px)
 		display: block
-
 #promo
-	+full-width
+	full-width()
 	overflow: hidden
-	
 	@media (max-width: 770px)
 		padding: 0 8px
-		margin-bottom: -14px
+		margin-bottom: -1*14px
 		.block
 			&.first
 				.image
-					+full-width
+					full-width()
 					height: 165px
 				.content
-					+full-width
+					full-width()
 					padding: 8px 8px 14px 8px !important
 					.title
 						font-size: 18px
@@ -719,12 +707,11 @@ a, a span, .shadow
 						position: relative
 						top: 0
 						left: 0
-						+transform(none)
+						transform(none)
 					.text
 						font-size: 14px
 						line-height: 15px
 						display: block
-
 	&.woman
 		.block
 			&.big
@@ -733,7 +720,6 @@ a, a span, .shadow
 					height: auto
 				#symtpoms-articles &
 					height: 380px
-					
 					.title
 						font-size: 34px
 					.text
@@ -754,10 +740,9 @@ a, a span, .shadow
 					display: inline-block
 					font-weight: 300
 					line-height: 100px !important
-
 .block
-	+full-width
-	background-color: #071C23
+	full-width()
+	background-color: #071c23
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
@@ -770,13 +755,13 @@ a, a span, .shadow
 		background-position: center center
 		background-repeat: no-repeat
 		.shadow
-			opacity: .3
+			opacity: 0.3
 	@media (max-width: 770px)
 		background: white !important
 		min-height: 90px
 		&.big, &.small, &.medium
 			height: auto
-		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 		> .shadow
 			display: none
 		.image
@@ -795,7 +780,7 @@ a, a span, .shadow
 			margin-top: 5px
 		h1
 			text-transform: uppercase
-			color: #E10000
+			color: #e10000
 			font-weight: 600
 			margin-bottom: 0px
 		h2
@@ -809,25 +794,25 @@ a, a span, .shadow
 		p
 			color: black
 			font-size: 23px
-			+full-width
+			full-width()
 			strong
 				text-transform: uppercase
-				color: #E10000
+				color: #e10000
 			small
 				font-size: 18px
-				color: #727272	
+				color: #727272
 				font-weight: 300
 				float: left
 				clear: left
-				margin-top: -3px
+				margin-top: -1*3px
 			&.phone
 				text-transform: uppercase
 				font-weight: 600
 				span
 					float: left
 					clear: left
-					margin-top: -15px
-					color: #E10000
+					margin-top: -1*15px
+					color: #e10000
 					font-size: 45px
 	&.big
 		height: 416px
@@ -897,17 +882,16 @@ a, a span, .shadow
 				@media (max-width: 540px)
 					font-size: 14px
 					line-height: 14px
-	
 	.shadow
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
 		height: 100%
-		+b('block-shadow.png', center center no-repeat)
+		b("block-shadow.png", center center no-repeat)
 		background-size: cover
 		z-index: 0
-		opacity: .7
+		opacity: 0.7
 	span
 		color: white
 		&.bbb
@@ -951,22 +935,21 @@ a, a span, .shadow
 				top: 50%
 				left: 8px
 				width: 90%
-				+transform(translateY(-50%))
+				transform(translateY(-50%))
 	color: white
-
 	&:hover
 		color: white
 		.shadow
-			background-color: rgba(0,0,0,.4)
+			background-color: rgba(0, 0, 0, 0.4)
 #chapter-list
-	+full-width
+	full-width()
 	margin-bottom: 30px
 	@media (max-width: 770px)
 		display: none
 	.block
 		height: 150px
 		width: 18.88%
-		margin: 0 .7%
+		margin: 0 0.7%
 		.title
 			font-size: 16px
 			line-height: 17px
@@ -974,29 +957,24 @@ a, a span, .shadow
 			margin-left: 0
 		&:last-of-type
 			margin-right: 0
-
-
-
 .flag
 	position: fixed
-
 	z-index: 400
 	top: 80px
 	left: 0
 	&.test
 		top: 139px
 	&:hover
-		opacity: .5
+		opacity: 0.5
 	@media (max-width: 770px)
 		display: none
-
 #main-block
-	+full-width
+	full-width()
 	overflow: hidden
-	background: #FBFA96
+	background: #fbfa96
 	position: relative
 	height: 540px
-	margin-top: -128px
+	margin-top: -1*128px
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: top center
@@ -1013,11 +991,11 @@ a, a span, .shadow
 		height: 414px
 		position: absolute
 		top: 125px
-		+box-shadow(0 29px 29px rgba(3,3,8,.37)) 
+		box-shadow: 0 29px 29px rgba(3, 3, 8, 0.37)
 		z-index: 1
 		left: 50%
-		margin-left: -273px
-		+b('index-video.png', top center no-repeat)
+		margin-left: -1*273px
+		b("index-video.png", top center no-repeat)
 		@media (max-width: 770px)
 			width: 100%
 			top: 0
@@ -1026,18 +1004,18 @@ a, a span, .shadow
 			height: auto
 			background: transparent
 			position: relative
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			iframe
 				max-width: 100%
 				width: 100%
 				height: auto
 				min-height: 225px
-				margin-bottom: -5px
+				margin-bottom: -1*5px
 		&.v-2
 			width: 700px
 			height: 393px
 			top: 150px
-			margin-left: -350px
+			margin-left: -1*350px
 		.icon
 			position: absolute
 			width: 100%
@@ -1045,10 +1023,10 @@ a, a span, .shadow
 			left: 50%
 			width: 80px
 			height: 80px
-			margin-left: -40px
-			margin-top: -40px
+			margin-left: -1*40px
+			margin-top: -1*40px
 			cursor: pointer
-			+b('play2.png')
+			b("play2.png")
 			cursor: pointer
 	.shadow
 		pointer-events: none !important
@@ -1061,17 +1039,17 @@ a, a span, .shadow
 			left: 0
 			height: 37px
 			z-index: 5
-			+b('index-down-shadow.png', top center)
+			b("index-down-shadow.png", top center)
 			background-size: cover
 .full-width
 	float: left
 	width: 100% !important
 	position: relative
 #map
-	+full-width
+	full-width()
 	cursor: pointer
 	height: 475px
-	+b('map.jpg', top center)
+	b("map.jpg", top center)
 	background-size: cover
 	color: white
 	@media (max-width: 770px)
@@ -1080,11 +1058,11 @@ a, a span, .shadow
 		margin-top: 14px
 		height: auto
 		.frame
-			+full-width
+			full-width()
 			position: relative
-			+b('map.jpg', top center)
+			b("map.jpg", top center)
 			background-size: cover
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 	.content
 		pointer-events: none
 		position: absolute
@@ -1092,7 +1070,7 @@ a, a span, .shadow
 		top: 30px
 		left: 30px
 		@media (max-width: 770px)
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			position: relative
 			top: 0
 			left: 0
@@ -1108,7 +1086,7 @@ a, a span, .shadow
 			color: black
 		input[type=submit]
 			float: left
-			background: #B5B5B5
+			background: #b5b5b5
 			border: 0
 			line-height: 30px
 			margin-left: 2px
@@ -1136,32 +1114,29 @@ a, a span, .shadow
 		left: 0
 		width: 100%
 		height: 100%
-		+background-image(linear-gradient(bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 100%)) 
+		background-image: linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%)
 		@media (max-width: 770px)
-			+background-image(linear-gradient(bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 60%)) 
-
+			background-image: linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%)
 input:focus, a:focus
 	outline: 0
-
 .index
 	#enter
 		top: 299px
 	a.flag.test
 		top: 290px
 	iframe
-		+full-width
+		full-width()
 		max-width: 100%
 		margin-bottom: 20px
 .embed-responsive + #promo
 	padding-top: 20px
-
 #enter
-	+full-width
+	full-width()
 	position: fixed
 	z-index: 300
 	top: 139px
 	min-height: 200px
-	+b('enter-bg.png', top center)
+	b("enter-bg.png", top center)
 	margin-bottom: 14px
 	padding: 30px 0
 	color: white
@@ -1176,12 +1151,12 @@ input:focus, a:focus
 		margin-bottom: 0 !important
 	&.v2
 		background-image: none
-		background-color: rgba(189,34,39,.9)
+		background-color: rgba(189, 34, 39, 0.9)
 		border-radius: 30px 30px 0 0
 		height: 150px
 		min-height: 0
 		a
-			background: rgba(235,34,45,.8)
+			background: rgba(235, 34, 45, 0.8)
 			border-radius: 30px 30px 0 0
 			padding-left: 90px
 		.block
@@ -1190,7 +1165,7 @@ input:focus, a:focus
 			top: 75px
 			padding-top: 12px
 			p
-				margin-top: -170px
+				margin-top: -1*170px
 				width: 100%
 		.checkbox
 			top: 19px
@@ -1213,9 +1188,7 @@ input:focus, a:focus
 		.checkbox, .container
 			opacity: 0
 		a
-			opacity: .75
-
-
+			opacity: 0.75
 	.checkbox
 		position: absolute
 		width: 32px
@@ -1226,7 +1199,7 @@ input:focus, a:focus
 		top: 37px
 		left: 25px
 		&.checked
-			+b('checkbox.png', center center, white)
+			b("checkbox.png", center center, white)
 	a
 		float: left
 		color: white
@@ -1237,14 +1210,13 @@ input:focus, a:focus
 		padding-left: 70px
 		width: 247px
 		height: 94px
-		+b('enter.png', no-repeat)
+		b("enter.png", no-repeat)
 	.block
 		position: absolute
 		background: transparent
 		width: 245px
 		right: 0
 		top: 20px
-
 		p
 			float: right
 			width: 80%
@@ -1256,14 +1228,13 @@ input:focus, a:focus
 		font-size: 32px
 		font-weight: 700
 		margin-bottom: 15px
-
 #woman
-	+full-width
+	full-width()
 	margin-bottom: 16px
 	.woman-title
-		+full-width
+		full-width()
 		height: 600px
-		margin-top: -128px
+		margin-top: -1*128px
 		background-position: top center
 		background-repeat: no-repeat
 		background-size: cover
@@ -1273,9 +1244,9 @@ input:focus, a:focus
 			background: white !important
 			margin-top: 0
 			height: auto
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			.image
-				+full-width
+				full-width()
 				height: 166px
 				background-size: cover
 			> .shadow
@@ -1287,7 +1258,7 @@ input:focus, a:focus
 			height: 100%
 			top: 0
 			left: 0
-			+b('woman-fade.png', top center)
+			b("woman-fade.png", top center)
 			background-size: cover
 	.container
 		padding-top: 130px
@@ -1305,20 +1276,19 @@ input:focus, a:focus
 			font-weight: 700
 			@media (max-width: 770px)
 				font-size: 18px
-				margin-top: -26px
+				margin-top: -1*26px
 			@media (max-width: 540px)
-				margin-top: -45px
+				margin-top: -1*45px
 		@media (max-width: 770px)
 			padding-top: 0
 	@media (max-width: 770px)
 		padding: 0 8px
-		
 #faq
-	+full-width
+	full-width()
 	.block
 		&:hover
 			> .shadow
-				background: #E00000
+				background: #e00000
 				opacity: 1
 				@media (max-width: 770px)
 					opacity: 0
@@ -1326,19 +1296,16 @@ input:focus, a:focus
 				opacity: 0
 				@media (max-width: 770px)
 					opacity: 1
-
 			.text
 				opacity: 1
-	
 		.text
 			opacity: 0
-			
 			height: 100%
 			.panel
-				+full-width
+				full-width()
 				background: transparent
 			z-index: 3
-			+full-width
+			full-width()
 			padding: 20px
 			h2
 				padding: 0
@@ -1358,7 +1325,7 @@ input:focus, a:focus
 					margin-bottom: 0
 			p+small
 				padding-top: 15px
-				+full-width
+				full-width()
 				font-size: 12px
 			a
 				color: white
@@ -1422,20 +1389,20 @@ input:focus, a:focus
 						line-height: 16px
 						margin-bottom: 15px
 	@media (max-width: 770px)
-		margin-bottom: -14px
+		margin-bottom: -1*14px
 		.container
 			width: 100%
 #small-buttons
-	+full-width
+	full-width()
 	padding: 0 8px
 	margin-bottom: 14px
 	display: none
 	@media (max-width: 770px)
 		display: block
 	.frame
-		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 	a
-		+full-width
+		full-width()
 		margin: 8px 0
 		background: #ec5761
 		line-height: 30px
@@ -1446,11 +1413,10 @@ input:focus, a:focus
 	.row
 		background: white
 		margin: 0
-
 #enter-button
 	width: 242px
 	height: 121px
-	+b('enter2.png')
+	b("enter2.png")
 	background-size: cover
 	position: absolute
 	right: 0
@@ -1461,16 +1427,15 @@ input:focus, a:focus
 	color: white
 	line-height: 121px
 	padding-left: 60px
-
 #event
 	position: absolute
 	z-index: 150
-	+transition-property(right)
-	+transition-duration(.3s)
+	transition-property: right	
+	transition-duration: 0.3s	
 	width: 225px
 	height: 180px
-	+b('event.png', center center no-repeat)
-	right: -180px
+	b("event.png", center center no-repeat)
+	right: -1*180px
 	top: 150px
 	padding: 15px 15px 15px 45px
 	color: black
@@ -1481,7 +1446,7 @@ input:focus, a:focus
 	.day
 		font-size: 48px
 		line-height: 30px
-		color: #FF0011
+		color: #ff0011
 		margin-right: 4px
 	.month
 		font-size: 28px
@@ -1492,7 +1457,7 @@ input:focus, a:focus
 		font-weight: 300
 		font-size: 18px
 	.title
-		+full-width
+		full-width()
 		font-size: 11px
 		margin-top: 13px
 		margin-bottom: 10px
@@ -1506,8 +1471,7 @@ input:focus, a:focus
 		padding: 3px 10px 2px
 		float: left
 		&:hover
-			opacity: .7
-
+			opacity: 0.7
 #doctor
 	h3
 		margin-top: 0
@@ -1517,7 +1481,7 @@ input:focus, a:focus
 		float: right
 		clear: both
 		width: 115px
-		margin-bottom: -10px
+		margin-bottom: -1*10px
 		font-size: 13px
 		color: red
 		@media (max-width: 770px)
@@ -1525,7 +1489,7 @@ input:focus, a:focus
 	.checkbox
 		float: right
 		position: relative
-		+box-shadow(0 0 6px rgba(3,3,8,.31))
+		box-shadow: 0 0 6px rgba(3, 3, 8, 0.31)
 		width: 27px
 		height: 27px
 		cursor: pointer
@@ -1533,13 +1497,12 @@ input:focus, a:focus
 		background: white
 		border-radius: 4px
 		top: 26px
-		right: -50px
+		right: -1*50px
 		&.checked
-			+b('checkbox.png', center center, white)
-
+			b("checkbox.png", center center, white)
 .modal-dialog
 	.close
-		+b('close.png')
+		b("close.png")
 		background-size: contain
 		opacity: 1
 		width: 20px
@@ -1549,9 +1512,9 @@ input:focus, a:focus
 		right: 10px
 	a.back
 		font-weight: bold
-		color: #FF0000
+		color: red
 		span
-			color: #FF0000
+			color: red
 			font-size: 24px
 			position: relative
 			top: 1px
@@ -1560,7 +1523,7 @@ input:focus, a:focus
 			margin-top: 4px
 			float: left
 	a.enter
-		margin-right: -20px
+		margin-right: -1*20px
 		float: right
 		font-weight: bold
 		text-align: center
@@ -1568,15 +1531,13 @@ input:focus, a:focus
 		font-size: 24px
 		color: white
 		text-transform: uppercase
-
-		+b('enter.png')
+		b("enter.png")
 		width: 195px
 		height: 50px
 		background-size: cover
 		@media (max-width: 770px)
 			width: 150px
 			background-position: top left
-	
 	a.go
 		display: inline-block
 		padding: 0 60px
@@ -1585,21 +1546,21 @@ input:focus, a:focus
 		color: white
 		line-height: 35px
 		text-transform: uppercase
-		background-color: #FF000E
-		+background-image(linear-gradient(left, #fff -20%, rgba(234,33,44,0) 71.77%)) 
+		background-color: #ff000e
+		background-image: linear-gradient(left, white -20%, rgba(234, 33, 44, 0) 71.77%)
 	.modal-content
-		+full-width
+		full-width()
 		border-radius: 0
 		padding: 20px
-		+box-shadow(0 0 7px rgba(3,3,8,.4)) 
+		box-shadow: 0 0 7px rgba(3, 3, 8, 0.4)
 		@media (max-width: 770px)
 			p
 				font-size: 12px
 		small
-			+full-width
+			full-width()
 			font-size: 13px
 			line-height: 15px
-			opacity: .4
+			opacity: 0.4
 			@media (max-width: 770px)
 				font-size: 10px
 		h3
@@ -1607,22 +1568,19 @@ input:focus, a:focus
 			font-weight: 700
 			@media (max-width: 770px)
 				font-size: 17px
-
-
 .modal-backdrop
 	background: white
 	&.in
-		opacity: .7
-
+		opacity: 0.7
 #products-promo
-	+full-width
+	full-width()
 	overflow: hidden
 	min-height: 800px
 	@media screen and (max-width: 1024px)
 		min-height: 700px
-	+b('products-promo.jpg', top center)
+	b("products-promo.jpg", top center)
 	background-size: cover
-	margin-top: -128px
+	margin-top: -1*128px
 	padding-top: 130px
 	color: white
 	h1
@@ -1635,68 +1593,66 @@ input:focus, a:focus
 	.container
 		position: relative
 	#video
-		+b('ipad.png', top center no-repeat)
+		b("ipad.png", top center no-repeat)
 		background-size: contain
-		margin-left: -9%
+		margin-left: -1*9%
 		width: 100%
 		text-align: center
 		line-height: 506px
 		iframe
 			vertical-align: middle
 			opacity: 0
-			+transition-property(all)
-			+transition-duration(.3s)
+			transition-property: all	
+			transition-duration: 0.3s	
 			display: inline-block
 			max-width: 75%
 			max-height: 82%
 		max-width: 100%
 		height: 506px
 		.icon
-			+transition-property(all)
-			+transition-duration(.3s)
+			transition-property: all	
+			transition-duration: 0.3s	
 			z-index: 22
 			cursor: pointer
 			width: 78px
 			height: 80px
 			position: absolute
 			left: 40%
-			margin-left: -39px
+			margin-left: -1*39px
 			top: 47%
-			margin-top: -30px
-			+b('play.png')
+			margin-top: -1*30px
+			b("play.png")
 			z-index: 3
 			@media (max-width: 770px)
 				width: 35px
 				height: 35px
 				background-size: cover
 				left: 50%
-				margin-left: -17px
+				margin-left: -1*17px
 				top: 50%
-				margin-top: -17px
+				margin-top: -1*17px
 		@media screen and (max-width: 1024px)
-			margin-left: -17%
+			margin-left: -1*17%
 		@media (max-width: 770px)
 			position: absolute
-			bottom: -220px
+			bottom: -1*220px
 			margin: 0
 			left: 0
 			height: 220px
 			line-height: 220px
-
-
 	#product-1, #product-2
 		float: right
-		margin-right: -100px
+		margin-right: -1*100px
 		width: 600px
 		margin-top: 130px
 		img
 			max-width: none
 			float: right
-			margin-top: -95px
+			margin-top: -1*95px
 			left: 30px
 			position: relative
 		p
-			margin-right: -90px
+			margin-right: -1*90px
 			position: relative
 			z-index: 4
 			width: 50%
@@ -1709,39 +1665,39 @@ input:focus, a:focus
 			text-decoration: underline
 			text-transform: uppercase
 			font-size: 18px
-			+text-shadow(-2px 3px 5px rgba(1,1,4,.67))
+			text-shadow: -2px 3px 5px rgba(1, 1, 4, 0.67)
 			font-weight: 500
 			margin-top: 10px
 			float: right
 			&:hover
-				opacity: .7
+				opacity: 0.7
 		@media screen and (max-width: 1024px)
 			width: 500px
-			margin-right: -40px
+			margin-right: -1*40px
 			margin-top: 20px
 			img
 				max-width: 300px
-				margin-top: -70px
+				margin-top: -1*70px
 			p
 				margin-top: 20px
 	#product-1
 		margin-top: 50px
 		@media (max-width: 770px)
-			+full-width
+			full-width()
 			margin: 0
 			padding-top: 130px
 			padding-bottom: 10px
 			img
 				position: absolute
-				left: -40px
+				left: -1*40px
 				top: 50px
 				height: 210px
 			p
-				+full-width
+				full-width()
 				text-align: left
 				a
 					position: absolute
-					top: -50px
+					top: -1*50px
 					right: 10px
 		@media (max-width: 570px)
 			img
@@ -1750,11 +1706,11 @@ input:focus, a:focus
 		margin-top: 0
 		img
 			float: left
-			margin-top: -200px
-			left: -50px
+			margin-top: -1*200px
+			left: -1*50px
 			@media screen and (max-width: 1024px)
-				margin-top: -180px
-				left: -35px
+				margin-top: -1*180px
+				left: -1*35px
 		p
 			float: right
 			margin-right: 0
@@ -1767,28 +1723,27 @@ input:focus, a:focus
 		@media screen and (max-width: 1024px)
 			margin-top: 20px
 			img
-				margin-top: -200px
+				margin-top: -1*200px
 		@media (max-width: 770px)
 			padding-top: 130px
-			+full-width
+			full-width()
 			position: relative
 			margin: 0
 			img
 				position: absolute
 				height: 210px
 				margin-top: 0px
-				top: -35px
-				left: -50px
-				+transform(rotate(8deg))
+				top: -1*35px
+				left: -1*50px
+				transform(rotate(8deg))
 			p
-				+full-width
+				full-width()
 				a
 					position: absolute
-					top: -50px
+					top: -1*50px
 					right: 10px
-
 	@media (max-width: 770px)
-		margin-top: -14px
+		margin-top: -1*14px
 		display: block
 		width: 100%
 		max-width: 520px
@@ -1802,13 +1757,13 @@ input:focus, a:focus
 		.col-md-8
 			position: initial
 #product
-	+full-width
+	full-width()
 	overflow: hidden
 	min-height: 800px
 	background-position: top center
 	background-repeat: no-repeat
 	background-size: cover
-	margin-top: -128px
+	margin-top: -1*128px
 	padding-top: 130px
 	img
 		display: none
@@ -1851,17 +1806,16 @@ input:focus, a:focus
 				font-size: 18px
 				position: relative
 				float: right
-
 		&.next
 			margin-top: 50px
-			opacity: .6
+			opacity: 0.6
 			display: inline-block
 			&:hover
 				opacity: 1
 			span.r
 				display: inline-block
-				+rotate(-90deg)
-				left: -5px
+				rotate(-90deg)
+				left: -1*5px
 			@media (max-width: 770px)
 				display: none
 	&.product-2
@@ -1872,46 +1826,42 @@ input:focus, a:focus
 				text-align: left
 		a.back
 			margin-left: 30px
-
 		a.next
 			position: absolute
 			right: 0
-			top: -40px
+			top: -1*40px
 			.r
-				+rotate(90deg)
+				rotate(90deg)
 				left: 0
 		a.manual
 			margin-top: 30px
 			@media (max-width: 770px)
 				margin-top: 0
 	a:hover
-		opacity: .6
+		opacity: 0.6
 	@media (max-width: 770px)
 		margin-top: 0
 		min-height: 340px
-		margin-top: -14px
+		margin-top: -1*14px
 		padding-top: 180px
 		padding-bottom: 20px
-		+b('products-promo.jpg', top center !important)
+		b("products-promo.jpg", top center !important)
 		img
 			display: block
 			position: absolute
 		&.product-1
 			img
 				width: 282px
-				top: -188px
-				right: -40px
+				top: -1*188px
+				right: -1*40px
 		&.product-2
 			img
 				width: 282px
-				top: -188px
-				left: -50px
-				+transform(rotate(8deg))
-
-
-
+				top: -1*188px
+				left: -1*50px
+				transform(rotate(8deg))
 #video-list
-	+full-width
+	full-width()
 	padding-bottom: 30px
 	.row+.row
 		padding-top: 30px
@@ -1919,9 +1869,9 @@ input:focus, a:focus
 			padding-top: 0
 	.item
 		margin-top: 30px
-		+full-width
+		full-width()
 		.description
-			+full-width
+			full-width()
 			font-weight: 400
 			font-style: 18px
 			line-height: 20px
@@ -1932,7 +1882,7 @@ input:focus, a:focus
 				br:first-child
 					display: none
 		.date
-			+full-width
+			full-width()
 			font-size: 12px
 			color: #eb222e
 			min-height: 20px
@@ -1943,7 +1893,7 @@ input:focus, a:focus
 				padding-top: 3px
 				margin-bottom: 0px
 		.header
-			+full-width
+			full-width()
 			min-height: 115px
 			@media (max-width: 770px)
 				min-height: 0
@@ -1970,7 +1920,7 @@ input:focus, a:focus
 				color: black
 				margin-bottom: 0
 		.image
-			+full-width
+			full-width()
 			height: 230px
 			position: relative
 			background-repeat: no-repeat
@@ -1981,16 +1931,16 @@ input:focus, a:focus
 				position: absolute
 				left: 50%
 				top: 50%
-				margin-top: -40px
-				margin-left: -40px
+				margin-top: -1*40px
+				margin-left: -1*40px
 				width: 80px
 				height: 80px
-				+b('play2.png')
+				b("play2.png")
 			.soon, .parts, .minutes
 				min-width: 100px
 				height: 40px
 				padding-right: 25px
-				+b('test_sm_1.png')
+				b("test_sm_1.png")
 				position: absolute
 				background-size: cover
 				background-position: top right
@@ -2007,7 +1957,7 @@ input:focus, a:focus
 					height: 30px
 					line-height: 30px
 			.parts
-				+b('test_sm2.png')
+				b("test_sm2.png")
 				background-size: cover
 				background-position: top right
 				&.small
@@ -2015,7 +1965,7 @@ input:focus, a:focus
 			.minutes
 				left: auto
 				right: 0
-				+b('test_sm_2.png')
+				b("test_sm_2.png")
 				background-position: top left
 				background-size: cover
 				text-transform: none
@@ -2026,24 +1976,23 @@ input:focus, a:focus
 				height: 166px
 		@media (max-width: 770px)
 			background: white
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			padding-top: 166px
 			margin-top: 14px
 	@media (max-width: 770px)
-		margin-top: -14px
+		margin-top: -1*14px
 		padding-bottom: 0
 .text-frame
 	@media (max-width: 770px)
-		+full-width
+		full-width()
 		padding: 0 8px
-
 #text
 	p
 		font-size: 15px
 		line-height: 17px
 		margin-bottom: 22px
 	h1
-		color: #E50000
+		color: #e50000
 		font-weight: 700
 		text-transform: uppercase
 		font-size: 30px
@@ -2052,7 +2001,7 @@ input:focus, a:focus
 			margin-bottom: 10px
 			font-size: 18px
 			margin-top: 10px
-			+full-width
+			full-width()
 	h2
 		font-size: 19px
 		margin-top: 30px
@@ -2081,37 +2030,35 @@ input:focus, a:focus
 				content: "\22c5"
 				font-size: 23px
 				position: absolute
-				top: -6px
+				top: -1*6px
 				left: 3px
 				@media (max-width: 770px)
-					top: -1px
+					top: -1*1px
 	a
 		text-decoration: underline
 		color: red
 	@media (max-width: 770px)
 		background: white
-		+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+		box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 		padding: 0 8px
-		+full-width
+		full-width()
 		p
-			+full-width
+			full-width()
 			font-size: 12px
 			line-height: 14px
 			margin-bottom: 15px
 .frame
 	overflow: hidden
-
-
 #research
-	+full-width
+	full-width()
 	padding: 0 0 25px 0
 	@media (max-width: 770px)
 		padding-bottom: 0
 	.item
-		+full-width
+		full-width()
 		width: 98%
 		margin-top: 32px
-		background: #F2F2F2
+		background: #f2f2f2
 		min-height: 130px
 		padding: 10px 65px 18px 18px
 		.content
@@ -2139,17 +2086,17 @@ input:focus, a:focus
 			position: relative
 			float: left
 			width: 175px
-			margin-top: -25px
+			margin-top: -1*25px
 			height: 125px
 			background-position: center center
 			background-size: cover
 			.icon
-				+b('pdf.jpg', center center)
+				b("pdf.jpg", center center)
 				position: absolute
 				width: 32px
 				height: 33px
-				bottom: -10px
-				right: -10px
+				bottom: -1*10px
+				right: -1*10px
 			@media (max-width: 770px)
 				width: 96px
 				height: 67px
@@ -2157,44 +2104,41 @@ input:focus, a:focus
 					height: 16px
 					width: 16px
 					background-size: cover
-					bottom: -8px
-					right: -8px
+					bottom: -1*8px
+					right: -1*8px
 		.corner, .buttons
 			position: absolute
 			top: 0
 			right: 0
 			width: 63px
 			height: 95px
-			+b('corner.jpg', top center)
+			b("corner.jpg", top center)
 			a
 				float: left
 				width: 27px
 				height: 20px
 			@media (max-width: 770px)
-				+b('corner-top.png', top right)
+				b("corner-top.png", top right)
 				background-size: auto 100%
 				background-repeat: no-repeat
-				top: -1px
-				right: -4px
-
+				top: -1*1px
+				right: -1*4px
 		.buttons
 			bottom: 0
 			top: auto
 			background-position: bottom center
 			height: 35px
 			@media (max-width: 770px)
-				+b('c-buttons.jpg', 3px 1px)
+				b("c-buttons.jpg", 3px 1px)
 				background-size: auto 50%
 				background-repeat: no-repeat
-				bottom: -5px
+				bottom: -1*5px
 		@media (max-width: 770px)
 			background: white
 			width: 100%
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
-
-
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 #footer
-	+full-width
+	full-width()
 	padding: 20px 0
 	font-weight: 400
 	@media (max-width: 770px)
@@ -2212,7 +2156,7 @@ input:focus, a:focus
 			margin-top: 16px
 			padding-top: 35px
 			width: 100%
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 		.col-md-4
 			position: absolute
 			left: 8px
@@ -2231,7 +2175,7 @@ input:focus, a:focus
 			font-weight: 600
 			text-decoration: none
 	span.copyright
-		color: #A3A3A3
+		color: #a3a3a3
 		margin-top: 10px
 		display: inline-block
 		@media (max-width: 770px)
@@ -2245,7 +2189,6 @@ input:focus, a:focus
 		position: relative
 		left: 25px
 		margin-top: 5px
-
 	.search
 		float: right
 		width: 100%
@@ -2259,23 +2202,22 @@ input:focus, a:focus
 			border: 0
 			width: 302px
 			padding: 1px 10px
-			background: #D7D7D7
+			background: #d7d7d7
 			line-height: 26px
-
 		input[type=submit]
 			float: right
 			margin-left: 2px
 			width: 28px
 			height: 28px
-			+b('search.png')
+			b("search.png")
 			border: 0
 	.counter
 		float: right
-		margin-top: -2px
+		margin-top: -1*2px
 		span
 			display: inline-block
 			&.n
-				background: #E50000
+				background: #e50000
 				color: white
 				margin: 0 1px
 				font-size: 28px
@@ -2297,7 +2239,6 @@ input:focus, a:focus
 					font-size: 11px
 					line-height: 12px
 					top: 3px
-
 	@media screen and (max-width: 1200px)
 		.menu
 			a
@@ -2319,17 +2260,16 @@ input:focus, a:focus
 					margin-left: 0
 				&:first-child
 					margin-left: 0
-
 .red-button
 	display: inline-block
-	background: #FF0011
+	background: #ff0011
 	line-height: 48px
 	padding: 0 25px
 	font-weight: 500
 	color: white
 	font-size: 24px
 	&:hover
-		opacity: .7
+		opacity: 0.7
 		color: white
 	@media (max-width: 770px)
 		font-size: 18px
@@ -2337,17 +2277,14 @@ input:focus, a:focus
 		line-height: 30px
 		padding: 0 15px
 		text-transform: none !important
-
 .center
 	text-align: center
 .left
 	text-align: left
 .right
 	text-align: right
-
-
 #article
-	+full-width
+	full-width()
 	#more-link
 		margin-top: 14px
 		margin-bottom: 0
@@ -2361,17 +2298,17 @@ input:focus, a:focus
 				top: 50%
 				cursor: pointer
 				z-index: 35
-				margin-top: -80px
-				margin-left: -40px
+				margin-top: -1*80px
+				margin-left: -1*40px
 				width: 80px
 				height: 80px
-				+transition-property(all)
-				+transition-duration(.3s)
-				+b('play.png', no-repeat)
+				transition-property: all	
+				transition-duration: 0.3s	
+				b("play.png", no-repeat)
 				@media (max-width: 770px)
 					display: none
 			.video-block
-				+full-width
+				full-width()
 				z-index: 29
 				text-align: center
 				iframe
@@ -2380,8 +2317,8 @@ input:focus, a:focus
 					width: 745px !important
 					height: 420px !important
 					float: none !important
-					+transition-property(all)
-					+transition-duration(.3s)
+					transition-property: all	
+					transition-duration: 0.3s	
 					@media (max-width: 770px)
 						height: auto !important
 						width: 100% !important
@@ -2393,10 +2330,9 @@ input:focus, a:focus
 					display: none
 			.container
 				z-index: 20
-
 				.text
-					+transition-property(all)
-					+transition-duration(.3s)
+					transition-property: all	
+					transition-duration: 0.3s	
 					h1
 						font-size: 45px
 						line-height: 45px
@@ -2414,7 +2350,7 @@ input:focus, a:focus
 					display: none
 	> .top-title
 		overflow: hidden
-		+full-width
+		full-width()
 		height: 420px
 		background-color: black
 		background-size: 90% auto
@@ -2422,18 +2358,18 @@ input:focus, a:focus
 		background-repeat: no-repeat
 		@media (max-width: 770px)
 			height: auto
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22)) 
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			> .shadow-1, >.shadow-2
 				display: none
 			.image
-				+full-width
+				full-width()
 				height: 166px
 				background-color: black
 				background-size: cover
 				background-position: center center
 				background-repeat: no-repeat
 				.shadow-1
-					opacity: .6
+					opacity: 0.6
 					background: url(../images/block-shadow.png)
 					background-size: cover
 		.arrow
@@ -2445,18 +2381,18 @@ input:focus, a:focus
 				.text
 					opacity: 1
 			.text
-				+transition-property(all)
-				+transition-duration(.3s)
+				transition-property: all	
+				transition-duration: 0.3s	
 				opacity: 0
 				position: absolute
 				color: white
 				top: 50%
-				+transform(translateY(-50%))
+				transform(translateY(-50%))
 			min-height: 100px
 			z-index: 5
 			cursor: pointer
 			top: 50%
-			+transform(translateY(-50%))
+			transform(translateY(-50%))
 			&.left
 				left: 0
 				.text
@@ -2471,11 +2407,10 @@ input:focus, a:focus
 					background-position: right top
 					right: 30px
 			.icon
-				+b('article-arrows.png', left top)
-				+transform(translateY(-50%))
+				b("article-arrows.png", left top)
+				transform(translateY(-50%))
 				width: 16px
 				top: 50%
-				
 				height: 31px
 				position: absolute
 		.shadow-1
@@ -2485,7 +2420,7 @@ input:focus, a:focus
 			height: 100%
 			top: 0
 			left: 0
-			+b('article-fade.png', top center repeat-y)
+			b("article-fade.png", top center repeat-y)
 			background-size: cover
 		.shadow-2
 			position: absolute
@@ -2494,7 +2429,7 @@ input:focus, a:focus
 			height: 100%
 			top: 0
 			left: 0
-			+b('article-fade2.png', bottom center repeat-y)
+			b("article-fade2.png", bottom center repeat-y)
 			background-size: cover
 		.container
 			position: relative
@@ -2513,7 +2448,7 @@ input:focus, a:focus
 					background: white
 					position: relative
 					bottom: auto
-					+full-width
+					full-width()
 				h1
 					font-weight: 700
 					font-size: 53px
@@ -2523,7 +2458,7 @@ input:focus, a:focus
 					@media (max-width: 770px)
 						font-size: 18px
 						line-height: 22px
-						+full-width
+						full-width()
 						color: black
 						margin: 3px 0 5px
 						padding: 0 8px
@@ -2533,11 +2468,11 @@ input:focus, a:focus
 					@media (max-width: 770px)
 						font-size: 14px
 						margin-top: 0
-						+full-width
+						full-width()
 						color: black
 						padding: 0 8px
 	> .content
-		+full-width
+		full-width()
 		margin: 30px 0
 		@media (max-width: 770px)
 			margin: 14px 0 0
@@ -2548,25 +2483,24 @@ input:focus, a:focus
 			background: white
 			iframe, object, embed
 				min-height: 50px
-				+full-width
+				full-width()
 				width: 100% !important
 				max-width: 100% !important
 			img
 				max-width: 100%
 				height: auto
 				margin: 0
-			+box-shadow(1px 1px 2px rgba(8,10,14,.22))
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
 			.fix
 				display: none
 			.container
 				width: 100%
 		.row + .row
 			padding-top: 25px
-			
 		.side
 			h4
 				font-size: 30px
-				+full-width
+				full-width()
 				margin-top: 30px
 				color: #959595
 				margin-bottom: 20px
@@ -2581,7 +2515,7 @@ input:focus, a:focus
 			font-size: 16px
 			margin-bottom: 30px
 			@media (max-width: 770px)
-				+full-width
+				full-width()
 				font-size: 14px
 				line-height: 18px
 				margin-bottom: 20px
@@ -2593,7 +2527,6 @@ input:focus, a:focus
 				line-height: 21px
 	@media (max-width: 770px)
 		padding: 0 8px
-
 #symptoms-articles
 	.close
 		width: 30px
@@ -2607,7 +2540,6 @@ input:focus, a:focus
 		padding: 30px
 	.modal-xxl
 		width: 1100px
-
 #symptoms-welcome
 	h2
 		margin-top: 20px
@@ -2625,33 +2557,31 @@ input:focus, a:focus
 		line-height: 53px
 		text-align: center
 		font-size: 28px
-		+background-image(linear-gradient(left, #d5191d 0%, #efadaf 100%))
-
+		background-image: linear-gradient(left, #d5191d 0%, #efadaf 100%)
 #symtpoms
-	+full-width
+	full-width()
 	min-height: 670px
-	
 	.frame
 		width: 748px
 		height: 670px
 		padding-left: 100px
 		.scroll
-			+full-width
-		margin-left: -100px
-		+b('symptoms.jpg')
+			full-width()
+		margin-left: -1*100px
+		b("symptoms.jpg")
 		.ps-scrollbar-y-rail
 			position: absolute
 			top: 0 !important
-			left: -30px !important
+			left: (-30px) !important
 			opacity: 1 !important
-			background: rgba(0,0,0,.3)
+			background: rgba(0, 0, 0, 0.3)
 			border-radius: 0
 		.ps-scrollbar-y
 			opacity: 1 !important
-			background: rgba(235,34,46,.5)
+			background: rgba(235, 34, 46, 0.5)
 			border-radius: 0
 		.section
-			+full-width
+			full-width()
 			padding-right: 20px
 		h1
 			text-transform: uppercase
@@ -2661,17 +2591,17 @@ input:focus, a:focus
 			font-weight: 700
 			margin-bottom: 10px
 			margin-top: 5px
-			+full-width
+			full-width()
 		.question
-			+transition-property(all)
-			+transition-duration(.3s)
+			transition-property: all	
+			transition-duration: 0.3s	
 			padding: 10px 10px 5px
 			color: white
 			float: left
 			width: 100%
 			margin-bottom: 15px
-			+b('arrow-s.png', 97% 10px no-repeat)
-			background-color: rgba(235,34,46,.85)
+			b("arrow-s.png", 97% 10px no-repeat)
+			background-color: rgba(235, 34, 46, 0.85)
 			.iradio, .icheckbox
 				width: 12px
 				height: 12px
@@ -2679,7 +2609,6 @@ input:focus, a:focus
 				background: white
 				border-radius: 3px
 				margin-top: 6px
-				
 				margin-right: 5px
 				&.checked
 					background: white url(/layout/images/c.png) 2px 2px no-repeat
@@ -2687,7 +2616,7 @@ input:focus, a:focus
 				font-size: 19px
 				min-height: 60px
 				margin: 0
-				+full-width
+				full-width()
 				width: 95%
 				cursor: pointer
 				margin-bottom: 10px
@@ -2701,16 +2630,15 @@ input:focus, a:focus
 					min-height: 0
 				ul
 					display: block
-				+b('arrow-s2.png', 97% 10px no-repeat)
-				background-color: rgba(235,34,46,.85)
-				
+				b("arrow-s2.png", 97% 10px no-repeat)
+				background-color: rgba(235, 34, 46, 0.85)
 			ul
 				margin: 0
 				display: none
 				padding: 0
 				list-style: none
 				li
-					+full-width
+					full-width()
 					clear: both
 					margin-bottom: 0
 					label
@@ -2719,17 +2647,16 @@ input:focus, a:focus
 						width: 93%
 						font-size: 14px
 						&.skip
-							font-family: 'Helvetica neue', Arial
+							font-family: "Helvetica neue", Arial
 							font-style: italic
 	#result
 		display: block
-		+full-width
+		full-width()
 		min-height: 20px
-		+box-shadow(0 0 13px rgba(8,10,14,.44))
+		box-shadow: 0 0 13px rgba(8, 10, 14, 0.44)
 		padding: 10px
 		min-height: 600px
 		h2
-			
 			text-transform: uppercase
 			font-size: 20px
 			margin: 0
@@ -2737,15 +2664,15 @@ input:focus, a:focus
 			border-bottom: 1px solid #d1d1d1
 		.section
 			display: block
-			+full-width
+			full-width()
 			padding: 0 10px
 			.ansver
-				+full-width
+				full-width()
 				font-size: 13px
 				margin-bottom: 10px
 				cursor: pointer
-				+transition-property(all)
-				+transition-duration(.3s)
+				transition-property: all	
+				transition-duration: 0.3s	
 				&:hover
 					color: #eb222e
 			border-bottom: 1px solid #d1d1d1
@@ -2756,7 +2683,6 @@ input:focus, a:focus
 				text-transform: uppercase
 				font-weight: 300
 				margin: 8px 0 10px
-	
 	#buttons
 		&.off
 			a
@@ -2766,9 +2692,9 @@ input:focus, a:focus
 					pointer-events: all
 					background: #ec4149
 		margin: 20px 0
-		+full-width
+		full-width()
 		a
-			+full-width
+			full-width()
 			background: #ec4149
 			text-transform: uppercase
 			color: white
@@ -2778,7 +2704,6 @@ input:focus, a:focus
 			line-height: 18px
 			&.find
 				line-height: 40px
-
 @media (max-width: 770px)
 	body
 		max-width: 540px
@@ -2786,18 +2711,14 @@ input:focus, a:focus
 		float: none
 		.container
 			max-width: 100%
-
 .pace-activity
 	@media (max-width: 770px)
 		display: none !important
-
-
-
 .landing
 	.acticles
-		+full-width
+		full-width()
 		.item
-			+full-width
+			full-width()
 			margin-bottom: 15px
 			padding: 10px 0
 			&:hover
@@ -2817,13 +2738,12 @@ input:focus, a:focus
 					font-size: 35px
 					padding: 0 20px 4px
 					margin-top: 7px
-					
 					color: white
 					border: 0
-					+background-image(linear-gradient(bottom left, rgba(155,29,33,.8) -18.85%, rgba(233,33,45,.8) 81.15%)) 
+					background-image: linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%)
 			.image
-				opacity: .6
-				z-index: -1
+				opacity: 0.6
+				z-index: -1*1
 				position: absolute
 				top: 0
 				left: 0
@@ -2835,7 +2755,7 @@ input:focus, a:focus
 				@media (max-width: 1200px)
 					background-position: 200px -60px
 				.shadow-1
-					+background-image(linear-gradient(right, rgba(255,255,255,.0) 0%, #fff 70%)) 
+					background-image: linear-gradient(right, rgba(255, 255, 255, 0) 0%, white 70%)
 					position: absolute
 					top: 0
 					left: 0
@@ -2853,13 +2773,13 @@ input:focus, a:focus
 						background-position: 230px 0px
 						background-size: cover
 			.title
-				+full-width
+				full-width()
 				font-size: 30px
 				line-height: 30px
 				font-weight: bold
 				margin-bottom: 5px
 			p
-				+full-width
+				full-width()
 				font-size: 18px
 				line-height: 18px
 				width: 80%
@@ -2875,16 +2795,16 @@ input:focus, a:focus
 		.enter, .enter2
 			display: none
 	.enter
-		+full-width
-		+b('back.jpg')
+		full-width()
+		b("back.jpg")
 		background-size: cover
 		min-height: 628px
 		color: white
 		padding: 20px 0
 		margin-bottom: 20px
 		.frame
-			+full-width
-			background: rgba(0,0,0,.4)
+			full-width()
+			background: rgba(0, 0, 0, 0.4)
 			min-height: 40px
 			margin-bottom: 20px
 			margin-top: 5px
@@ -2899,7 +2819,7 @@ input:focus, a:focus
 				display: inline-block
 				vertical-align: middle
 			.checkbox
-				display:  inline-block
+				display: inline-block
 				vertical-align: middle
 				border-radius: 3px
 				position: relative
@@ -2911,10 +2831,10 @@ input:focus, a:focus
 				&.checked
 					&:after
 						position: absolute
-						+b('check.png')
+						b("check.png")
 						background-size: contain
-						left: -3px
-						top: -6px
+						left: -1*3px
+						top: -1*6px
 						background-repeat: no-repeat
 						width: 28px
 						height: 24px
@@ -2929,14 +2849,14 @@ input:focus, a:focus
 			text-align: center
 			padding: 0 20px
 			margin-bottom: 20px
-			+full-width
+			full-width()
 			span
-				+full-width
+				full-width()
 				&:nth-child(1)
 					font-size: 49px
 					line-height: 47px
 					width: 102%
-					margin-left: -1%
+					margin-left: -1*1%
 					@media (max-width: 1200px)
 						font-size: 55px
 					@media screen and (max-width: 1200px)
@@ -2945,7 +2865,6 @@ input:focus, a:focus
 					font-size: 30px
 					line-height: 30px
 					margin-top: 7px
-					
 					@media (max-width: 1200px)
 						font-size: 33px
 					@media screen and (max-width: 1200px)
@@ -2957,41 +2876,41 @@ input:focus, a:focus
 					@media screen and (max-width: 1200px)
 						font-size: 18px
 	.enter2
-		+full-width
-		+b('bg3.jpg')
+		full-width()
+		max-width 273px
+		b("bg3.jpg")
 		background-size: cover
 		background-position: top left
 		min-height: 480px
 		color: white
 		padding: 20px 13px
 		margin-bottom: 20px
-		border-radius: 0 40px 40px 0
 		p
 			font-size: 12px
 			line-height: 13px
 			width: 97%
 		.title
-			+full-width
+			full-width()
 			margin-bottom: 15px
 			span
-				+full-width
+				full-width()
 				font-size: 24px
 				line-height: 24px
 				&:first-of-type
 					font-size: 48px
-					margin-top: -5px
+					margin-top: -1*5px
 					line-height: 48px
-		.frame
-			+full-width
+		.b-frame
+			full-width()
 			width: 313px
 			@media (max-width: 1024px)
 				width: 240px
 			height: 39px
 			padding-left: 40px
 			line-height: 38px
-			+b('r2.png')
+			b("r2.png")
 			margin-bottom: 15px
-			margin-left: -13px
+			margin-left: -1*13px
 			.checkbox
 				left: 13px
 				top: 10px
@@ -3004,10 +2923,10 @@ input:focus, a:focus
 				&.checked
 					&:after
 						position: absolute
-						+b('check2.png')
+						b("check2.png")
 						background-size: contain
-						left: -3px
-						top: -6px
+						left: -1*3px
+						top: -1*6px
 						background-repeat: no-repeat
 						width: 28px
 						height: 24px
@@ -3022,14 +2941,14 @@ input:focus, a:focus
 		display: none
 		font-size: 18px
 		text-align: center
-		+full-width
+		full-width()
 	&.done
 		.success
 			display: block
 		input, a
 			display: none
 	input
-		+full-width
+		full-width()
 		border: 1px solid #bfbfbf
 		line-height: 40px
 		text-align: center
@@ -3039,14 +2958,12 @@ input:focus, a:focus
 	a
 		background: #fc091b
 		display: inline-block
-
 		line-height: 40px
 		text-transform: uppercase
 		color: white
 		font-style: 14px
 		font-weight: bold
 		padding: 0 40px
-
 .affix
 	position: fixed !important
 	&.enter, &.enter2
@@ -3054,8 +2971,6 @@ input:focus, a:focus
 		@media (max-width: 1024px)
 			width: 186px
 		top: 10px
-
-
 .landing
 	width: 100%
 	margin: 0 auto
@@ -3071,25 +2986,23 @@ input:focus, a:focus
 	.bold
 		font-weight: 500
 	.list
-		+full-width
+		full-width()
 		list-style: none
 		padding: 0
 		margin-bottom: 40px
 		li
-			+full-width
+			full-width()
 			margin-bottom: 10px
 			line-height: 18px
 			a
 				color: #eb222e
-				text-decoration:  underline
-
+				text-decoration: underline
 .embed-responsive
 	position: relative
 	display: block
 	height: 0
 	padding: 0
 	overflow: hidden
-
 .embed-responsive .embed-responsive-item,
 .embed-responsive iframe,
 .embed-responsive embed,
@@ -3101,7 +3014,6 @@ input:focus, a:focus
 	width: 100%
 	height: 100%
 	border: 0
-
 .embed-responsive.embed-responsive-16by9
 	padding-bottom: 56.25%
 .embed-responsive.embed-responsive-4by3

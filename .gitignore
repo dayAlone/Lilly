@@ -2,6 +2,7 @@
 1.htaccess
 .sass-cache
 .htaccess
+node_modules/
 *.scssc
 # files
 .DS_Store

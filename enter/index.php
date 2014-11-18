@@ -1,17 +1,44 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	global $index;
+	global $USER;
 	$index = true;
 	$APPLICATION->SetTitle("Lilly Answers That Matter");
 	$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, мужское здоровье, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, аденома предстательной железы, симптомы гиперплазии предстательной железы, причины гиперплазии предстательной железы, лечение гиперплазии предстательной железы, профилактика эректильной дисфункции, профилактика ДГПЖ, проблема мочеиспускания");
 	$APPLICATION->SetPageProperty('DESCRIPTION', "Сайт о проблеме эректильной дисфункции и гиперплазии предстательной железы: что это такое, причины, симптомы, лечение. ");
 ?>
-<div class="embed-responsive embed-responsive-16by9" style="margin-top:-120px;">
-<iframe src="//player.vimeo.com/video/110882748?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<? 
-global $USER;
-if($USER->isAdmin()) echo 0;
-else echo 1;
-?>" width="851" height="478" style="margin-bottom: 10px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div id="fullwidth-list">
+<div class="row">
+	<div class="col-lg-9 col-xs-8">
+		<iframe src="//player.vimeo.com/video/110882748?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="614" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+	</div>
+	<div class="col-lg-3 col-xs-4">
+		<div class="landing">
+			<div class="enter2 index">
+				<div class="title">
+					<span>Вход</span>
+					<span>для специалистов </span>
+					<span>здравоохранения</span>
+				</div>
+
+				<div class="b-frame" css="" style="opacity: 1;">
+					<div class="checkbox"></div>
+					<a href="/doctors/" class="no-ajax">Войти</a>
+				</div>
+
+				<p>Вход для специалистов здравоохранения. Вся информация, размещенная в данном разделе веб-сайта, предназначена исключительно для специалистов здравоохранения – медицинских 
+				и фармацевтических работников. </p>
+
+				<p>Если Вы не являетесь специалистом здравоохранения, в соответствии 
+				с положениями действующего законодательства РФ Вы не имеете права доступа к информации, размещенной в данном разделе веб-сайта, в связи с чем просим Вас незамедлительно покинуть данный раздел веб-сайта.</p>
+				<p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВОЙТИ», чтобы начать работу.</p>
+			</div>
+			<a href="" class="locator">
+				<img src="/layout/images/locator.png" alt="">
+			</a>
+		</div>
+	</div>
 </div>
 
 	<div class="row">
@@ -86,18 +113,7 @@ else echo 1;
 			</div>
 		</div>
 	</div>
-<style>
-	#promo .block {
-		 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-	    filter: gray; /* IE6-9 */
-	    -webkit-filter: grayscale(100%);
-	}
-	#promo .block:hover {
-		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-    	-webkit-filter: grayscale(0%);
-	}
-</style>
-
+</div>
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

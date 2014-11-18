@@ -126,6 +126,7 @@
 			else echo 1;
 			?>" width="851" height="478" style="margin-bottom: 10px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
+			<div style="height:20px;width:100%;float:left;"></div>
 			<?$APPLICATION->IncludeComponent(
 				"bitrix:news.list",
 				"promo2",
@@ -226,7 +227,7 @@
 						<span>здравоохранения</span>
 					</div>
 
-					<div class="frame" css="" style="opacity: 1;">
+					<div class="b-frame" css="" style="opacity: 1;">
 						<div class="checkbox"></div>
 						<a href="/doctors/" class="no-ajax">Войти</a>
 					</div>
