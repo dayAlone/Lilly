@@ -7,13 +7,14 @@
 	$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, мужское здоровье, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, гиперплазия предстательной железы, ДГПЖ, аденома предстательной железы, симптомы гиперплазии предстательной железы, причины гиперплазии предстательной железы, лечение гиперплазии предстательной железы, профилактика эректильной дисфункции, профилактика ДГПЖ, проблема мочеиспускания");
 	$APPLICATION->SetPageProperty('DESCRIPTION', "Сайт о проблеме эректильной дисфункции и гиперплазии предстательной железы: что это такое, причины, симптомы, лечение. ");
 ?>
-<div id="fullwidth-list">
+<div id="fullwidth-list" class="<?=($_REQUEST['f']==1?"overlay":'')?>">
 <div class="row">
-	<div class="col-lg-9 col-xs-8">
-		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"112069684":"110882748")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="614" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		
+	<div class="<?=($_REQUEST['f']==1?"col-xs-12":"col-lg-9 col-xs-8")?>">
+		<?=($_REQUEST['f']==1?'<div class="embed-responsive embed-responsive-16by9">':"")?>
+		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"112069684":"110882748")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="617" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<?=($_REQUEST['f']==1?'</div>':"")?>
 	</div>
-	<div class="col-lg-3 col-xs-4">
+	<?=($_REQUEST['f']==1?"":'<div class="col-lg-3 col-xs-4">')?>
 		<div class="landing">
 			<div class="enter2 index">
 				<div class="title">
@@ -38,7 +39,7 @@
 				<img src="/layout/images/locator.png" alt="">
 			</a>
 		</div>
-	</div>
+	<?=($_REQUEST['f']==1?"":'</div>')?>
 </div>
 
 	<div class="row">
