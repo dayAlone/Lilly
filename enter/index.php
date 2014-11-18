@@ -35,7 +35,7 @@
 				с положениями действующего законодательства РФ Вы не имеете права доступа к информации, размещенной в данном разделе веб-сайта, в связи с чем просим Вас незамедлительно покинуть данный раздел веб-сайта.</p>
 				<p>Если Вы являетесь специалистом здравоохранения, в качестве подтверждения нажмите «ВОЙТИ», чтобы начать работу.</p>
 			</div>
-			<a href="" class="locator">
+			<a data-toggle="modal" data-target="#doctor" onClick="_gaq.push(['_trackEvent', 'Doctors', 'LandingClick', 'Docs Click Landing']);" class="locator">
 				<img src="/layout/images/locator.png" alt="">
 			</a>
 		</div>
