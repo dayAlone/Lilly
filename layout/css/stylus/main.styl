@@ -605,7 +605,7 @@ a, a span, .shadow
 		.content
 			.title
 				@media (max-width: 1024px)
-					font-size: 34px
+					font-size: 32px
 				@media (max-width: 770px)
 					font-size: 17px
 					line-height: 17px
@@ -616,11 +616,12 @@ a, a span, .shadow
 		height: 198px
 		@media (max-width: 770px)
 			height: auto
+			display: block
 		.content
 			padding: 10px 5%
 			.title
-				font-size: 24px
-				line-height: 26px
+				font-size: 26px
+				line-height: 23px
 				@media (max-width: 1024px)
 					font-size: 21px
 					line-height: 20px
@@ -631,10 +632,12 @@ a, a span, .shadow
 					font-size: 14px
 					line-height: 14px
 			.text
-				font-size: 17px
+				font-size: 14px
+				line-height: 14px
 				@media (max-width: 1024px)
-					font-size: 14px
-					line-height: 14px
+					font-size: 13px
+					line-height: 13px
+				display none
 			span
 				color: white
 				&.bbb
@@ -653,10 +656,13 @@ a, a span, .shadow
 			height: auto
 		.content
 			padding: 20px 5%
+			.text
+				margin-top: 8px
+				font-size: 16px
+				line-height: 18px
 			.title
-				font-size: 36px
-				line-height: 33px
-				margin-bottom: 8px
+				font-size: 30px
+				line-height: 30px
 				@media (max-width: 1024px)
 					font-size: 30px
 					line-height: 31px
@@ -676,6 +682,7 @@ a, a span, .shadow
 		background-size: cover
 		z-index: 0
 		opacity: 0.7
+		background-color: rgba(0, 0, 0, 0.15)
 	span
 		color: white
 		&.bbb
@@ -693,7 +700,7 @@ a, a span, .shadow
 		padding: 20px 2.5%
 		position: absolute
 		left: 0
-		bottom: 0
+		bottom: 0px
 		font-size: 21px
 		@media (max-width: 770px)
 			position: relative
@@ -703,28 +710,27 @@ a, a span, .shadow
 			min-height: 90px
 			padding: 0 !important
 		.text
-			line-height: 18px
+			line-height: 24px
 			@media (max-width: 770px)
 				display: none
 		.name
 			text-decoration: underline
 		.title
 			line-height: 40px
-			font-size: 47px
-			line-height: 45px
-			margin-bottom: 5px
+			font-size: 44px
+			margin-bottom: 14px
 			font-weight: 500
 			@media (max-width: 770px)
 				position: absolute
 				top: 50%
 				left: 8px
 				width: 90%
-				transform(translateY(-50%))
+				transform: translateY(-50%)
 	color: white
 	&:hover
 		color: white
 		.shadow
-			background-color: rgba(0, 0, 0, 0.4)
+			background-color: rgba(0, 0, 0, 0.6)
 #chapter-list
 	full-width()
 	margin-bottom: 30px
@@ -920,13 +926,12 @@ input:focus, a:focus
 	margin-bottom: 16px
 	.woman-title
 		full-width()
-		height: 600px
-		margin-top: -1*128px
+		height: 500px
 		background-position: top center
 		background-repeat: no-repeat
 		background-size: cover
 		@media (max-width: 770px)
-			.container
+			.content
 				width: 100%
 			background: white !important
 			margin-top: 0
@@ -947,29 +952,31 @@ input:focus, a:focus
 			left: 0
 			b("woman-fade.png", top center)
 			background-size: cover
-	.container
-		padding-top: 130px
+	.content
+		full-width()
 		color: white
 		position: relative
 		z-index: 22
+		padding 120px 25px
 		p
-			font-size: 22px
+			font-size: 20px
 			font-weight: 300
+			full-width()
+			margin-bottom 25px
 			@media (max-width: 770px)
 				font-size: 14px
 				color: black
 		h1
-			font-size: 60px
+			font-size: 57px
 			font-weight: 700
 			@media (max-width: 770px)
 				font-size: 18px
 				margin-top: -1*26px
-			@media (max-width: 540px)
+			@media (max-width: 360px)
 				margin-top: -1*45px
+			
 		@media (max-width: 770px)
-			padding-top: 0
-	@media (max-width: 770px)
-		padding: 0 8px
+			padding 0 15px
 #faq
 	full-width()
 	.block

@@ -5,8 +5,8 @@ $APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфунк
 $APPLICATION->SetPageProperty('DESCRIPTION', "Интерактивный тест: как понять, что у вашего мужчины эректильная дисфункция?");
 
 ?> 
-<div class="container test_container">
-	<div class="col-md-6 col-md-offset-3">
+<div class="test_container">
+	<div class="col-md-8 col-md-offset-2">
 		<div id="test-woman">
 			<div id="wrapper" class="default">
     <div class="test_frame">
@@ -114,7 +114,7 @@ $APPLICATION->SetPageProperty('DESCRIPTION', "Интерактивный тес�
         </div>
         
     </div>
-</div>
+    </div>
     <div class="locator-frame">
         <a href="#locator" class="doctor" data-toggle="modal" data-target="#locator">узнать у врача</a>
     </div>

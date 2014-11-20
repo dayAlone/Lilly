@@ -1,37 +1,29 @@
 <?
-	global $nav;
-	if(!isset($_REQUEST['ELEMENT_CODE']))
-		$nav='white';
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	$APPLICATION->SetTitle("Для женщин :: Lilly Answers That Matter");
 
-?><?
  if(!$_REQUEST['ELEMENT_CODE']) {
-
-$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, эрекция, мужское здоровье, сексуальное здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, мужские проблемы женщины, женщина и эрекция, эрекция мужа, помочь мужчине");
-$APPLICATION->SetPageProperty('DESCRIPTION', "У моего мужчины проблема с потенцией: что такое эректильная дисфункция, чем можно помочь и как себя вести.");
-$APPLICATION->SetPageProperty('mobile_title', '<strong>Для женщин</strong><span>как помочь,<br>если у него ЭД?</span>');
+	$APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, эрекция, мужское здоровье, сексуальное здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, симптомы эректильной дисфункции, причины эректильной дисфункции, мужские проблемы женщины, женщина и эрекция, эрекция мужа, помочь мужчине");
+	$APPLICATION->SetPageProperty('DESCRIPTION', "У моего мужчины проблема с потенцией: что такое эректильная дисфункция, чем можно помочь и как себя вести.");
+	$APPLICATION->SetPageProperty('mobile_title', '<strong>Для женщин</strong><span>как помочь,<br>если у него ЭД?</span>');
  ?>
 
 	<div id="woman">
      <div class="woman-title" style="background-image: url(/layout/images/woman.jpg)">
        <div class="shadow"></div>
-       <div class="image" style="background-image: url(/layout/images/woman.jpg)">
-   			<div class="shadow"></div>
-   		</div>
-       <div class="container">
-       		
-         <div class="row">
-           <div class="col-md-8 col-sm-12 col-xs-12">
-             <h1>Как понять, что у вашего мужчины ЭД?</h1>
-              <p>Переживаете, что у вашего партнера эректильная дисфункция? Хотите быть уверены, что в вашей сексуальной жизни все в порядке? Этот несложный тест поможет понять, нужно ли вам и вашему мужчине беспокоиться из-за возможных проблем, или для тревоги нет причин.
-              </p>
-              <a href="/test/woman/" class="red-button">НАЧАТЬ ТЕСТ</a>
-           </div>
-         </div>
+       <div class="image" style="background-image: url(/layout/images/woman.jpg)"><div class="shadow"></div></div>
+       <div class="content">
+		<h1>Как понять, что у вашего мужчины ЭД?</h1>
+		<p>
+			Переживаете, что у вашего партнера эректильная дисфункция? 
+			Хотите быть уверены, что в вашей сексуальной жизни все в порядке? 
+			Этот несложный тест поможет понять, нужно ли вам и вашему мужчине беспокоиться 
+			из-за возможных проблем, или для тревоги нет причин.
+		</p>
+		<a href="/test/woman/" class="red-button">НАЧАТЬ ТЕСТ</a>
        </div>
+      </div>
      </div>
-   </div>
 
  <?
  $APPLICATION->IncludeComponent(

@@ -1250,7 +1250,7 @@ a span:hover,
 }
 @media (max-width: 1024px) {
   .block.big .content .title {
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 @media (max-width: 770px) {
@@ -1271,14 +1271,15 @@ a span:hover,
 @media (max-width: 770px) {
   .block.small {
     height: auto;
+    display: block;
   }
 }
 .block.small .content {
   padding: 10px 5%;
 }
 .block.small .content .title {
-  font-size: 24px;
-  line-height: 26px;
+  font-size: 26px;
+  line-height: 23px;
 }
 @media (max-width: 1024px) {
   .block.small .content .title {
@@ -1299,12 +1300,14 @@ a span:hover,
   }
 }
 .block.small .content .text {
-  font-size: 17px;
+  font-size: 14px;
+  line-height: 14px;
+  display: none;
 }
 @media (max-width: 1024px) {
   .block.small .content .text {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 13px;
+    line-height: 13px;
   }
 }
 .block.small .content span {
@@ -1334,10 +1337,14 @@ a span:hover,
 .block.medium .content {
   padding: 20px 5%;
 }
+.block.medium .content .text {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 18px;
+}
 .block.medium .content .title {
-  font-size: 36px;
-  line-height: 33px;
-  margin-bottom: 8px;
+  font-size: 30px;
+  line-height: 30px;
 }
 @media (max-width: 1024px) {
   .block.medium .content .title {
@@ -1367,6 +1374,7 @@ a span:hover,
   background-size: cover;
   z-index: 0;
   opacity: 0.7;
+  background-color: rgba(0,0,0,0.15);
 }
 .block span {
   color: #fff;
@@ -1389,7 +1397,7 @@ a span:hover,
   padding: 20px 2.5%;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
   font-size: 21px;
 }
 @media (max-width: 770px) {
@@ -1403,7 +1411,7 @@ a span:hover,
   }
 }
 .block .content .text {
-  line-height: 18px;
+  line-height: 24px;
 }
 @media (max-width: 770px) {
   .block .content .text {
@@ -1415,9 +1423,8 @@ a span:hover,
 }
 .block .content .title {
   line-height: 40px;
-  font-size: 47px;
-  line-height: 45px;
-  margin-bottom: 5px;
+  font-size: 44px;
+  margin-bottom: 14px;
   font-weight: 500;
 }
 @media (max-width: 770px) {
@@ -1426,13 +1433,16 @@ a span:hover,
     top: 50%;
     left: 8px;
     width: 90%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 .block:hover {
   color: #fff;
 }
 .block:hover .shadow {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.6);
 }
 #chapter-list {
   float: left;
@@ -1705,8 +1715,7 @@ a:focus {
   float: left;
   width: 100%;
   position: relative;
-  height: 600px;
-  margin-top: -128px;
+  height: 500px;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1718,7 +1727,7 @@ a:focus {
     height: auto;
     box-shadow: 1px 1px 2px rgba(8,10,14,0.22);
   }
-  #woman .woman-title .container {
+  #woman .woman-title .content {
     width: 100%;
   }
   #woman .woman-title .image {
@@ -1742,45 +1751,47 @@ a:focus {
   background: url("/layout/images/woman-fade.png") top center;
   background-size: cover;
 }
-#woman .container {
-  padding-top: 130px;
+#woman .content {
+  float: left;
+  width: 100%;
+  position: relative;
   color: #fff;
   position: relative;
   z-index: 22;
+  padding: 120px 25px;
 }
-#woman .container p {
-  font-size: 22px;
+#woman .content p {
+  font-size: 20px;
   font-weight: 300;
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
 }
 @media (max-width: 770px) {
-  #woman .container p {
+  #woman .content p {
     font-size: 14px;
     color: #000;
   }
 }
-#woman .container h1 {
-  font-size: 60px;
+#woman .content h1 {
+  font-size: 57px;
   font-weight: 700;
 }
 @media (max-width: 770px) {
-  #woman .container h1 {
+  #woman .content h1 {
     font-size: 18px;
     margin-top: -26px;
   }
 }
-@media (max-width: 540px) {
-  #woman .container h1 {
+@media (max-width: 360px) {
+  #woman .content h1 {
     margin-top: -45px;
   }
 }
 @media (max-width: 770px) {
-  #woman .container {
-    padding-top: 0;
-  }
-}
-@media (max-width: 770px) {
-  #woman {
-    padding: 0 8px;
+  #woman .content {
+    padding: 0 15px;
   }
 }
 #faq {

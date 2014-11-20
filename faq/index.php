@@ -6,7 +6,7 @@ $APPLICATION->SetPageProperty('DESCRIPTION', "FAQ: как не совершит�
 $APPLICATION->SetPageProperty('mobile_title', '<strong>FAQ</strong><span>ответы на ваши <br>вопросы</span>');
 ?> 
  <div id="faq">
-     <div class="container">
+     
       <div class="row">
         <div class="col-md-7">
             <div class="block big" style="background-image:url(/layout/images/img-15.jpg)" onmouseover="_gaq.push(['_trackEvent', 'FAQ', 'Q1', 'FAQ Substitue']);">
@@ -160,7 +160,5 @@ $APPLICATION->SetPageProperty('mobile_title', '<strong>FAQ</strong><span>отв�
       <p>
        <small>ED-EM-2069-061014</small>
       </p>
-     </div>
-     
-   </div>
+</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

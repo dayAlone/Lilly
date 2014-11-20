@@ -5,8 +5,8 @@ $APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфунк
 $APPLICATION->SetPageProperty('DESCRIPTION', "Протестировать свою эрекцию: субъективная оценка эректильной дисфункции.");
 
 ?> 
-<div class="container test_container">
-	<div class="col-md-6 col-md-offset-3">
+<div class="test_container">
+    <div class="col-md-8 col-md-offset-2">
 		<div id="test-man">
 	   <div id="wrapper" class="default">
         <div class="test_frame">
