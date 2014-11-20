@@ -3595,15 +3595,15 @@ a:focus {
   top: 50%;
   cursor: pointer;
   z-index: 35;
-  margin-top: -80px;
-  margin-left: -40px;
-  width: 80px;
-  height: 80px;
+  margin-top: -102px;
+  margin-left: -51px;
+  width: 102px;
+  height: 102px;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  background: transparent url("/layout/images/play.png") no-repeat;
+  background: transparent url("/layout/images/play.png") no-repeat center center;
   background-size: cover;
 }
 @media (max-width: 770px) {
