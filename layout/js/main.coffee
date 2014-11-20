@@ -388,13 +388,12 @@ $(document).ready ()->
     $('body').imagesLoaded ()->
         $('.frame').css({opacity:1}).attr('css', '');
         
-        $("#fullwidth-list .landing").scrollToFixed
+
+
+        $("#fullwidth-list .landing, .enter2.index, #article .fix").scrollToFixed
             marginTop: 20
             limit: $('#footer').offset().top-30
         
-        $("#article .fix").scrollToFixed
-            marginTop: 20
-            limit: $('#footer').offset().top-30
 
         
                 

@@ -62,12 +62,16 @@ loadPlugins = (x, y)->
 
 gulp.task 'js', ->
 	gulp.src [ "#{layout}/js/main.coffee" ]
+	.pipe plumber
+		errorHandler: notify.onError("Error: <%= error.message %>")
 	.pipe coffee()
 	.pipe uglify()
 	.pipe gulp.dest path.js.frontend
 
 gulp.task 'js_plugins', ->
 	gulp.src [ "#{layout}/js/plugins.js" ]
+	.pipe plumber
+		errorHandler: notify.onError("Error: <%= error.message %>")
 	.pipe uglify()
 	.pipe rename "plugins.min.js"
 	.pipe gulp.dest "#{layout}/js/" 

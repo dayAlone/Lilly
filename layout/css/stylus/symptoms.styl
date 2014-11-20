@@ -1,0 +1,177 @@
+#symptoms-articles
+	.close
+		width: 30px
+		height: 30px
+	h3
+		font-size: 28px
+		font-weight: 300
+		margin-top: 0
+		margin-bottom: 30px
+	.modal-content
+		padding: 30px
+	.modal-xxl
+		width: 1100px
+#symptoms-welcome
+	h2
+		margin-top: 20px
+		font-size: 36px
+		margin-bottom: 30px
+		text-transform: uppercase
+	p
+		font-size: 24px
+		margin-bottom: 30px
+	a
+		float: right
+		width: 226px
+		height: 53px
+		color: white
+		line-height: 53px
+		text-align: center
+		font-size: 28px
+		background-image: linear-gradient(left, #d5191d 0%, #efadaf 100%)
+#symtpoms
+	full-width()
+	min-height: 670px
+	.frame
+		width: 748px
+		height: 670px
+		padding-left: 100px
+		.scroll
+			full-width()
+		margin-left: -1*100px
+		b("symptoms.jpg")
+		.ps-scrollbar-y-rail
+			position: absolute
+			top: 0 !important
+			left: (-30px) !important
+			opacity: 1 !important
+			background: rgba(0, 0, 0, 0.3)
+			border-radius: 0
+		.ps-scrollbar-y
+			opacity: 1 !important
+			background: rgba(235, 34, 46, 0.5)
+			border-radius: 0
+		.section
+			full-width()
+			padding-right: 20px
+		h1
+			text-transform: uppercase
+			font-size: 23px
+			line-height: 30px
+			margin: 0
+			font-weight: 700
+			margin-bottom: 10px
+			margin-top: 5px
+			full-width()
+		.question
+			transition-property: all	
+			transition-duration: 0.3s	
+			padding: 10px 10px 5px
+			color: white
+			float: left
+			width: 100%
+			margin-bottom: 15px
+			b("arrow-s.png", 97% 10px no-repeat)
+			background-color: rgba(235, 34, 46, 0.85)
+			.iradio, .icheckbox
+				width: 12px
+				height: 12px
+				float: left
+				background: white
+				border-radius: 3px
+				margin-top: 6px
+				margin-right: 5px
+				&.checked
+					background: white url(/layout/images/c.png) 2px 2px no-repeat
+			h2
+				font-size: 19px
+				min-height: 60px
+				margin: 0
+				full-width()
+				width: 95%
+				cursor: pointer
+				margin-bottom: 10px
+				color: white
+				small
+					color: white
+					float: left
+					clear: both
+			&.on
+				h2
+					min-height: 0
+				ul
+					display: block
+				b("arrow-s2.png", 97% 10px no-repeat)
+				background-color: rgba(235, 34, 46, 0.85)
+			ul
+				margin: 0
+				display: none
+				padding: 0
+				list-style: none
+				li
+					full-width()
+					clear: both
+					margin-bottom: 0
+					label
+						font-weight: 400
+						float: right
+						width: 93%
+						font-size: 14px
+						&.skip
+							font-family: "Helvetica neue", Arial
+							font-style: italic
+	#result
+		display: block
+		full-width()
+		min-height: 20px
+		box-shadow: 0 0 13px rgba(8, 10, 14, 0.44)
+		padding: 10px
+		min-height: 600px
+		h2
+			text-transform: uppercase
+			font-size: 20px
+			margin: 0
+			padding: 5px 0px 12px 10px
+			border-bottom: 1px solid #d1d1d1
+		.section
+			display: block
+			full-width()
+			padding: 0 10px
+			.ansver
+				full-width()
+				font-size: 13px
+				margin-bottom: 10px
+				cursor: pointer
+				transition-property: all	
+				transition-duration: 0.3s	
+				&:hover
+					color: #eb222e
+			border-bottom: 1px solid #d1d1d1
+			&:last-of-type
+				border-bottom: 0 !important
+			h3
+				font-size: 18px
+				text-transform: uppercase
+				font-weight: 300
+				margin: 8px 0 10px
+	#buttons
+		&.off
+			a
+				background: #b3b3b3
+				pointer-events: none
+				&.print
+					pointer-events: all
+					background: #ec4149
+		margin: 20px 0
+		full-width()
+		a
+			full-width()
+			background: #ec4149
+			text-transform: uppercase
+			color: white
+			padding: 3px 10px 4px
+			font-weight: 500
+			height: 45px
+			line-height: 18px
+			&.find
+				line-height: 40px

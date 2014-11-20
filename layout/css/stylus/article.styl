@@ -1,0 +1,244 @@
+#article
+	full-width()
+	#more-link
+		margin-top: 14px
+		margin-bottom: 0
+	#event
+		top: 0
+	&.video
+		> .top-title
+			.icon-play
+				position: absolute
+				left: 50%
+				top: 50%
+				cursor: pointer
+				z-index: 35
+				margin-top: -1*80px
+				margin-left: -1*40px
+				width: 80px
+				height: 80px
+				transition-property: all	
+				transition-duration: 0.3s	
+				b("play.png", no-repeat)
+				@media (max-width: 770px)
+					display: none
+			.video-block
+				full-width()
+				z-index: 29
+				text-align: center
+				iframe
+					opacity: 0
+					display: inline-block
+					width: 745px !important
+					height: 420px !important
+					float: none !important
+					transition-property: all	
+					transition-duration: 0.3s	
+					@media (max-width: 770px)
+						height: auto !important
+						width: 100% !important
+						max-width: 100%
+						min-height: 200px
+						opacity: 1
+			.image
+				@media (max-width: 770px)
+					display: none
+			.container
+				z-index: 20
+				.text
+					transition-property: all	
+					transition-duration: 0.3s	
+					h1
+						font-size: 45px
+						line-height: 45px
+						@media (max-width: 770px)
+							font-size: 14px
+							line-height: 16px
+							margin-bottom: 10px
+					h3
+						font-size: 25px
+						line-height: 27px
+			@media (max-width: 770px)
+				height: auto
+				background: white !important
+				.shadow-1, .shadow-2
+					display: none
+	> .top-title
+		overflow: hidden
+		full-width()
+		height: 420px
+		background-color: black
+		background-size: 90% auto
+		background-position: center center
+		background-repeat: no-repeat
+		@media (max-width: 770px)
+			height: auto
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
+			> .shadow-1, >.shadow-2
+				display: none
+			.image
+				full-width()
+				height: 166px
+				background-color: black
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+				.shadow-1
+					opacity: 0.6
+					background: url(../images/block-shadow.png)
+					background-size: cover
+		.arrow
+			position: absolute
+			width: 200px
+			@media (max-width: 770px)
+				display: none
+			&:hover
+				.text
+					opacity: 1
+			.text
+				transition-property: all	
+				transition-duration: 0.3s	
+				opacity: 0
+				position: absolute
+				color: white
+				top: 50%
+				transform(translateY(-50%))
+			min-height: 100px
+			z-index: 5
+			cursor: pointer
+			top: 50%
+			transform(translateY(-50%))
+			&.left
+				left: 0
+				.text
+					left: 70px
+				.icon
+					left: 30px
+			&.right
+				right: 0
+				.text
+					right: 70px
+				.icon
+					background-position: right top
+					right: 30px
+			.icon
+				b("article-arrows.png", left top)
+				transform(translateY(-50%))
+				width: 16px
+				top: 50%
+				height: 31px
+				position: absolute
+		.shadow-1
+			position: absolute
+			width: 100%
+			z-index: 2
+			height: 100%
+			top: 0
+			left: 0
+			b("article-fade.png", top center repeat-y)
+			background-size: cover
+		.shadow-2
+			position: absolute
+			width: 100%
+			z-index: 3
+			height: 100%
+			top: 0
+			left: 0
+			b("article-fade2.png", bottom center repeat-y)
+			background-size: cover
+		.container
+			position: relative
+			height: 420px
+			@media (max-width: 770px)
+				height: auto
+				padding: 0
+				width: 100%
+			.text
+				z-index: 3
+				width: 100%
+				position: absolute
+				color: white
+				bottom: 15px
+				@media (max-width: 770px)
+					background: white
+					position: relative
+					bottom: auto
+					full-width()
+				h1
+					font-weight: 700
+					font-size: 53px
+					padding-bottom: 0
+					margin-bottom: 0
+					line-height: 53px
+					@media (max-width: 770px)
+						font-size: 18px
+						line-height: 22px
+						full-width()
+						color: black
+						margin: 3px 0 5px
+						padding: 0 8px
+				h3
+					font-weight: 400
+					font-size: 25px
+					@media (max-width: 770px)
+						font-size: 14px
+						margin-top: 0
+						full-width()
+						color: black
+						padding: 0 8px
+	> .content
+		full-width()
+		margin: 30px 0
+		@media (max-width: 770px)
+			margin: 14px 0 0
+			font-size: 14px
+			line-height: 18px
+			overflow: hidden
+			padding: 8px 0
+			background: white
+			iframe, object, embed
+				min-height: 50px
+				full-width()
+				width: 100% !important
+				max-width: 100% !important
+			img
+				max-width: 100%
+				height: auto
+				margin: 0
+			box-shadow: 1px 1px 2px rgba(8, 10, 14, 0.22)
+			.fix
+				display: none
+			.container
+				width: 100%
+		.row + .row
+			padding-top: 25px
+		.side
+			h4
+				font-size: 30px
+				full-width()
+				margin-top: 30px
+				color: #959595
+				margin-bottom: 20px
+		h2
+			font-size: 27px
+			font-weight: 700
+			margin-bottom: 30px
+		iframe
+			max-width: 100%
+		p
+			width: 90%
+			font-size: 16px
+			margin-bottom: 30px
+			@media (max-width: 770px)
+				full-width()
+				font-size: 14px
+				line-height: 18px
+				margin-bottom: 20px
+			img
+				max-width: 100%
+			&.highlight
+				font-weight: 500
+				font-size: 19px
+				line-height: 21px
+	@media (max-width: 770px)
+		padding: 0 8px
