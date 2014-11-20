@@ -3697,6 +3697,9 @@ a:focus {
   background-position: center center;
   background-repeat: no-repeat;
 }
+.user #article > .top-title {
+  background-size: cover;
+}
 @media (max-width: 770px) {
   #article > .top-title {
     height: auto;
