@@ -1,3 +1,4 @@
+
 <?
    if(ERROR_404=="Y" && $APPLICATION->GetCurPage()!='/404.php')
     LocalRedirect('/404.php');
