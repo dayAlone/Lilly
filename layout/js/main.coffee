@@ -392,7 +392,12 @@ $(document).ready ()->
 
         $("#fullwidth-list .landing, .enter2.index, #article .fix").scrollToFixed
             marginTop: 20
-            limit: $('#footer').offset().top-30
+            preAbsolute: ()-> 
+                console.log 0
+                $(this).css 'left', 0
+            limit: ()->
+                limit = $('#footer').offset().top - $(this).outerHeight(true) + 30
+                return limit;
         
 
         

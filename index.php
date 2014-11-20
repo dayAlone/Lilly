@@ -69,7 +69,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 side-bar__right">
 			<div class="landing">
 				<div class="enter2 index" data-spy="affix" data-offset-top="60" data-offset-bottom="150">
 					<div class="title">
