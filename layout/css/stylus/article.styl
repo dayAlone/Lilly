@@ -36,6 +36,7 @@
 					display: none
 			.video-block
 				full-width()
+				margin-left -30px
 				z-index: 29
 				text-align: center
 				iframe
@@ -45,8 +46,12 @@
 					height: 420px !important
 					float: none !important
 					transition-property: all	
-					transition-duration: 0.3s	
-					@media (max-width: 770px)
+					transition-duration: 0.3s
+				@media (max-width: 1280px)
+					margin-left: -80px
+				@media (max-width: 770px)
+					margin-left 0
+					iframe
 						height: auto !important
 						width: 100% !important
 						max-width: 100%
