@@ -1278,7 +1278,7 @@ a span:hover,
   padding: 10px 5%;
 }
 .block.small .content .title {
-  font-size: 26px;
+  font-size: 23px;
   line-height: 23px;
 }
 @media (max-width: 1024px) {
