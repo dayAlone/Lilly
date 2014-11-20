@@ -1,10 +1,13 @@
 <?
 $this->setFrameMode(true);
+$blank = false;
+if(strlen($arParams['TARGET'])>0)
+   $blank = true;
 ?>
 <div id="promo">
 <?
-   function item_promo($item, $size, &$i) {
-      echo '<a href="/materials/'.$item['CODE'].'/" class="block '.$size.' '.($i==0?"first":"").'" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')">
+   function item_promo($item, $size, &$i, $blank) {
+      echo '<a href="/materials/'.$item['CODE'].'/" '.($blank?"target='_blank'":"").' class="block '.$size.' '.($i==0?"first":"").'" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')">
                   <div class="shadow"></div>
                   <div class="image" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')"><div class="shadow"></div></div>
                   <div class="content">
@@ -24,14 +27,14 @@ $this->setFrameMode(true);
      ?>
       <div class="row">
          <div class="col-md-7">
-            <?if($item[0]) item_promo($item[0],'big', $count);?>
+            <?if($item[0]) item_promo($item[0],'big', $count, $blank);?>
 
             <div class="row">
                <div class="col-md-6">
-                  <?if($item[3]) item_promo($item[3],'small', $count);?>                  
+                  <?if($item[3]) item_promo($item[3],'small', $count, $blank);?>                  
                </div>
                <div class="col-md-6">
-                  <?if($item[4]) item_promo($item[4],'small', $count);?>
+                  <?if($item[4]) item_promo($item[4],'small', $count, $blank);?>
                </div>
             </div>
          </div>
@@ -52,9 +55,9 @@ $this->setFrameMode(true);
                   </div>
                </a>
             <? else: ?>*/?>
-               <?if($item[1]) item_promo($item[1],'medium', $count);?>
+               <?if($item[1]) item_promo($item[1],'medium', $count, $blank);?>
             <?/*<? endif;?>*/?>
-            <?if($item[2]) item_promo($item[2],'medium', $count);?>
+            <?if($item[2]) item_promo($item[2],'medium', $count, $blank);?>
          </div>
       </div>
          

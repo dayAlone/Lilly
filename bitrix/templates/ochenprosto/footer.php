@@ -76,6 +76,9 @@
       </div>
    </div>
 </div>
+<div class="scroll-fix">
+  
+</div>
 <div class="modal fade" id="modal-email" tabindex="-1" role="dialog" aria-labelledby="modal-email" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -179,7 +182,7 @@ $APPLICATION->SetAdditionalCSS("/layout/css/plugins.css", true);
 $APPLICATION->SetAdditionalCSS("/layout/css/style.css", true);
 
 $APPLICATION->AddHeadScript('/layout/js/jquery.js');
-$APPLICATION->AddHeadScript('/layout/js/plugins.js');
+$APPLICATION->AddHeadScript('/layout/js/plugins.min.js');
 $APPLICATION->AddHeadScript('//f.vimeocdn.com/js/froogaloop2.min.js');
 if($APPLICATION->GetCurDir()=='/')
   $APPLICATION->AddHeadScript('/layout/js/vimeo.js');

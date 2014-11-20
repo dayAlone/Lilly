@@ -84,8 +84,6 @@ strstr = ( haystack, needle, bool )->
 
 
 init = ()->
-    $(window).on "navigate", (event, data)->
-        alert()
 
     if $('#test-woman').length > 0 
         $.getScript "/test_women/js/script.js"
@@ -94,7 +92,7 @@ init = ()->
         $.getScript "/test_man/js/script.js"
 
     $('a').off('click').on 'click', (e)->
-        if $(this).parents('#panel, .bx-component-opener').length==0
+        if $(this).parents('#panel, .bx-component-opener').length==0 && $(this).attr('target').length == 0
             History = window.History;
             url = $(this).attr('href')
             console.log strstr(url,'#')
@@ -125,10 +123,6 @@ init = ()->
         if($.cookie('checkbox')=='true')
             $('#doctor .checkbox').addClass('checked')
 
-    $('#symtpoms input').iCheck()
-    
-    $('#symptoms-welcome').modal()
-    
     $('#toolbar .trigger').off('click').on 'click', (e)->
         $('#toolbar .nav').toggleClass('open')
         $('body').toggleClass('nav-open')
@@ -249,13 +243,14 @@ init = ()->
                 $('#symtpoms .question.done').each ()->
                     symtpoms_select($(this))
 
-        console.log $("#symtpoms .question:visible").length
-
         if $("#symtpoms .question:visible").length > 1
             while !$("#symtpoms .question[data-id='#{index}']").length
                 index++
             $("#symtpoms .question[data-id='#{index}']").addClass 'on'
 
+    $('#symtpoms input').iCheck()
+    
+    $('#symptoms-welcome').modal()
 
     $('#symtpoms .frame').perfectScrollbar
         suppressScrollX: true
@@ -298,8 +293,6 @@ init = ()->
         over: ()->
             $('#enter.short').removeClass('short')
         out: ()->
-
-    
 
     $('#enter').hoverIntent
         over: ()->
@@ -379,6 +372,13 @@ $(document).ready ()->
     #$(document).ajaxStart ()-> Pace.restart()
     #$(document).ajaxStop ()-> Pace.stop()
 
+    fixTimer = false
+
+    $(window).on 'scroll', ()->
+        $('.scroll-fix').addClass 'on'
+        clearTimeout fixTimer
+        fixTimer = delay 300, ()->
+            $('.scroll-fix').removeClass 'on'
     init()
 
     $('#popup-test').on 'hidden.bs.modal', ()->
@@ -387,13 +387,16 @@ $(document).ready ()->
     
     $('body').imagesLoaded ()->
         $('.frame').css({opacity:1}).attr('css', '');
-        $.lockfixed "#article .fix",
-            offset: 
-                top: 0
-                bottom: $('#footer').height() + 30
+        
+        $("#fullwidth-list .landing").scrollToFixed
+            marginTop: 20
+            limit: $('#footer').offset().top-30
+        
+        $("#article .fix").scrollToFixed
+            marginTop: 20
+            limit: $('#footer').offset().top-30
 
-    
-
+        
                 
 
 $(window).resize ->

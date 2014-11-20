@@ -4400,8 +4400,19 @@ a:focus {
 .embed-responsive.embed-responsive-4by3 {
   padding-bottom: 75%;
 }
+.scroll-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.scroll-fix.on {
+  pointer-events: initial;
+}
 #fullwidth-list {
-  margin-top: 20px;
+  margin-top: -100px;
   padding: 0 20px;
 }
 #fullwidth-list.overlay {
@@ -4418,15 +4429,24 @@ a:focus {
 }
 #fullwidth-list.overlay .landing {
   position: absolute;
+}
+#fullwidth-list .landing.affix {
   top: 20px;
-  right: 40px;
-  width: 273px;
 }
 #fullwidth-list h1 {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 36px;
+}
+#fullwidth-list h1 small {
+  font-size: 20px;
+  float: left;
+  width: 100%;
+  position: relative;
+  line-height: 20px;
+  margin-top: 4px;
+  margin-bottom: 25px;
 }
 #fullwidth-list .locator {
   margin-bottom: 20px;
@@ -4438,11 +4458,9 @@ a:focus {
   background: url("/layout/images/bg3.png") center center no-repeat;
 }
 #fullwidth-list #promo .block {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
   filter: #808080; /* IE6-9 */
   -webkit-filter: grayscale(100%);
 }
 #fullwidth-list #promo .block:hover {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(0%);
 }

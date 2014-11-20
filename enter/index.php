@@ -10,14 +10,17 @@
 ?>
 <div id="fullwidth-list" class="<?=($_REQUEST['f']==1?"overlay":'')?>">
 <div class="row">
-	<?=($_REQUEST['f']==1?"":"<div class='col-lg-9 col-xs-8'>")?>
-		<h1><?=(isset($_REQUEST['v'])?"Как мужчины решают проблемы в постели? <br>Ответ в ролике!":"Мучают проблемы в постели? <br>Очень простое решение — в ролике!")?></h1>
-		<?=($_REQUEST['f']==1?"<div class='video-frame'>":"")?>
-		<?=($_REQUEST['f']==1?'<div class="embed-responsive embed-responsive-16by9">':"")?>
+	<div class='col-lg-9 col-xs-8'>
+		<div class="row">
+			<div class="col-xs-9 col-xs-offset-3 col-lg-10 col-lg-offset-2">
+				<h1><?=(isset($_REQUEST['v'])?"Как мужчины решают проблемы в постели? <br>":"Мучают проблемы в постели? <br>")?><small>У вашего уролога теперь есть эффективное решение для лечения эректильной дисфункции и аденомы предстательной железы!</small></h1>
+			</div>
+		</div>
+		
+		
 		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"112069684":"110882748")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="516" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<?=($_REQUEST['f']==1?'</div>':"")?>
-	
-	<?=($_REQUEST['f']==1?"":'</div><div class="col-lg-3 col-xs-4">')?>
+		
+	</div><div class="col-lg-3 col-xs-4">
 		<div class="landing">
 			<a data-toggle="modal" data-target="#doctor" onClick="_gaq.push(['_trackEvent', 'Doctors', 'LandingClick', 'Docs Click Landing']);" class="locator">
 				<img src="/layout/images/locator.png" alt="">
@@ -47,7 +50,7 @@
 </div>
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-lg-9 col-xs-8">
 			
 			<div style="height:13px;width:100%"></div>
 			<?
@@ -96,7 +99,8 @@
 					"PAGER_SHOW_ALWAYS" => "Y",
 					"PAGER_DESC_NUMBERING" => "N",
 					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-					"PAGER_SHOW_ALL" => "Y"
+					"PAGER_SHOW_ALL" => "Y",
+					"TARGET" => "_blank"
 				)
 			);?>
 			<div id="map">

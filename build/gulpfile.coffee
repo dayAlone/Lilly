@@ -1,6 +1,7 @@
 gulp         = require 'gulp'
 
 autoprefixer = require 'gulp-autoprefixer'
+rename       = require "gulp-rename"
 csscomb      = require 'gulp-csscomb'
 coffee       = require 'gulp-coffee'
 concat       = require 'gulp-concat'
@@ -64,6 +65,12 @@ gulp.task 'js', ->
 	.pipe coffee()
 	.pipe uglify()
 	.pipe gulp.dest path.js.frontend
+
+gulp.task 'js_plugins', ->
+	gulp.src [ "#{layout}/js/plugins.js" ]
+	.pipe uglify()
+	.pipe rename "plugins.min.js"
+	.pipe gulp.dest "#{layout}/js/" 
 
 # CSS functions
 
@@ -139,6 +146,9 @@ gulp.task 'default', ->
 
 	gulp.watch "#{layout}/js/main.coffee", ->
 		sequence 'js', 'reload'
+	
+	gulp.watch [ "#{layout}/js/plugins.js" ], ->
+		sequence 'js_plugins', 'reload'
 	
 	gulp.watch "#{layout}/css/**/*.styl", ->
 		sequence 'css', 'reload'
