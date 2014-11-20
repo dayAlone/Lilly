@@ -116,13 +116,13 @@ $this->setFrameMode(true);
            </div>
           <? if(!$doctors&&$arResult['IBLOCK_ID']!=5) :
           ?>
-           <div class="col-md-4 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
-            <div class="fix">
+           <div class="col-md-8 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
+            
               <h4>Другие публикации</h4>
               <?php
                   global $arFilter;
                   $arFilter = array('!ID'=>$arResult['ID']);
-                  $APPLICATION->IncludeComponent("bitrix:news.list", "more", 
+                  $APPLICATION->IncludeComponent("bitrix:news.list", "promo3", 
                   array(
                      "IBLOCK_ID"           => 1,
                      "NEWS_COUNT"          => "3",
@@ -141,7 +141,7 @@ $this->setFrameMode(true);
                      false
                   );
               ?>
-              </div>
+              
            </div>
           <? endif;?>
          </div>

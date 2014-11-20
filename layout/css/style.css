@@ -3571,6 +3571,16 @@ a:focus {
   width: 100%;
   position: relative;
 }
+.user #article .top-title .arrow .text {
+  background: #153a3a !important;
+}
+.user #article .top-title .container {
+  max-width: 100%;
+  padding: 0 80px;
+}
+.user #article .top-title .container .text {
+  max-width: 80%;
+}
 #article #more-link {
   margin-top: 14px;
   margin-bottom: 0;
@@ -3708,6 +3718,9 @@ a:focus {
   z-index: 5;
   cursor: pointer;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 @media (max-width: 770px) {
   #article > .top-title .arrow {
@@ -3726,6 +3739,9 @@ a:focus {
   position: absolute;
   color: #fff;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 #article > .top-title .arrow.left {
   left: 0;
@@ -3748,6 +3764,9 @@ a:focus {
 }
 #article > .top-title .arrow .icon {
   background: url("/layout/images/article-arrows.png") left top;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 16px;
   top: 50%;
   height: 31px;

@@ -1,5 +1,16 @@
 #article
 	full-width()
+	.user &
+		.top-title
+			.arrow
+					.text
+						background alpha(#153a3a, 1) !important
+			.container
+				max-width 100%
+				padding 0 80px
+				.text
+					max-width 80%
+					
 	#more-link
 		margin-top: 14px
 		margin-bottom: 0
@@ -102,12 +113,12 @@
 				position: absolute
 				color: white
 				top: 50%
-				transform(translateY(-50%))
+				transform translateY(-50%)
 			min-height: 100px
 			z-index: 5
 			cursor: pointer
 			top: 50%
-			transform(translateY(-50%))
+			transform translateY(-50%)
 			&.left
 				left: 0
 				.text
@@ -123,7 +134,7 @@
 					right: 30px
 			.icon
 				b("article-arrows.png", left top)
-				transform(translateY(-50%))
+				transform translateY(-50%)
 				width: 16px
 				top: 50%
 				height: 31px
