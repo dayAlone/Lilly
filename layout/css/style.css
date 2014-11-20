@@ -2666,6 +2666,7 @@ a:focus {
   top: 47%;
   margin-top: -30px;
   background: url("/layout/images/play.png") center center no-repeat;
+  background-size: cover;
   z-index: 3;
 }
 @media (max-width: 770px) {
@@ -3602,7 +3603,8 @@ a:focus {
   transition-property: all;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  background: url("/layout/images/play.png") no-repeat;
+  background: transparent url("/layout/images/play.png") no-repeat;
+  background-size: cover;
 }
 @media (max-width: 770px) {
   #article.video > .top-title .icon-play {
