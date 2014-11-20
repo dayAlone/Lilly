@@ -22,7 +22,7 @@ $this->setFrameMode(true);
 	                  </span>
 	                  <div class="date"><?=$item["UF_DATE"]?></div>
                   </div>
-                  <span class="image" style="background-image:url(http://ochenprosto.ru<?=CFile::GetPath($item['PICTURE'])?>)">
+                  <span class="image" style="background-image:url(http://ochenprosto.ru<?=$item['PICTURE']['SRC']?>)">
 					<? if($item["UF_SOON"]) { ?>
 						<span class="soon">Скоро</span>	
 					<? } ?>
