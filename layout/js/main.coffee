@@ -52,7 +52,6 @@ load = (url)->
         url : url
         success :
             (data)-> 
-                #console.log($(data).filter('.frame'));
                 $('body .frame').html($(data).filter('.frame').html())
                 anim($('body .frame'),'fadeIn')
                 document.title = $(data).filter('title').text()
@@ -85,6 +84,12 @@ strstr = ( haystack, needle, bool )->
 
 init = ()->
 
+    $("#fullwidth-list .landing, .enter2.index, #article .fix").scrollToFixed
+        marginTop: 20
+        limit: ()->
+            limit = $('#footer').offset().top - $(this).outerHeight(true) + 30
+            return limit;
+
     if $('#test-woman').length > 0 
         $.getScript "/test_women/js/script.js"
     
@@ -95,7 +100,6 @@ init = ()->
         if $(this).parents('#panel, .bx-component-opener').length==0 && $(this).attr('target') != "_blank"
             History = window.History;
             url = $(this).attr('href')
-            console.log strstr(url,'#')
             if(strstr(url,'#'))
                 return true
             e.preventDefault()
@@ -117,8 +121,6 @@ init = ()->
         else
             $('#doctor a.back').attr 'href', '#'
             $('#doctor a.enter').attr 'href', '/doctors/'
-        
-        console.log $('.frame').hasClass 'doctor'
 
         if($.cookie('checkbox')=='true')
             $('#doctor .checkbox').addClass('checked')
@@ -232,7 +234,6 @@ init = ()->
 
         if $(this).parents('.question').hasClass 'multy'
             delay 200, ()->
-                console.log index
                 $("#symtpoms .question.done:not(.q-#{id})").each ()->
                     symtpoms_select($(this))
                 $('#symtpoms .question.done').each ()->
@@ -345,14 +346,12 @@ init = ()->
         bind = true
         History.Adapter.bind window,'statechange',()->
             State = History.getState();
-            console.log(State)
             load(State.url)
 
     $('#modal-email a').off('click').on 'click', (e)->
         $('#modal-email input').removeClass 'error'
         email = $('#modal-email input').val()
         url = $(this).attr 'href'
-        console.log validateEmail(email)
         if(validateEmail(email))
             $.ajax 
                 url : url
@@ -360,7 +359,6 @@ init = ()->
                     email: email
                 success :
                     (data)-> 
-                        console.log data
                         if data == "success"
                             $('#modal-email').addClass 'done'
         else
@@ -388,16 +386,6 @@ $(document).ready ()->
     $('body').imagesLoaded ()->
         $('.frame').css({opacity:1}).attr('css', '');
         
-
-
-        $("#fullwidth-list .landing, .enter2.index, #article .fix").scrollToFixed
-            marginTop: 20
-            preAbsolute: ()-> 
-                console.log 0
-                $(this).css 'left', 0
-            limit: ()->
-                limit = $('#footer').offset().top - $(this).outerHeight(true) + 30
-                return limit;
         
 
         
