@@ -77,6 +77,7 @@
       </div>
    </div>
 </div>
+</div>
 <div class="scroll-fix">
   
 </div>

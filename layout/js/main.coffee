@@ -52,6 +52,7 @@ load = (url)->
         url : url
         success :
             (data)-> 
+                console.log $(data).filter('.frame')
                 $('body .frame').html($(data).filter('.frame').html())
                 anim($('body .frame'),'fadeIn')
                 document.title = $(data).filter('title').text()
