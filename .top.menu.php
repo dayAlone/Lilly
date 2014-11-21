@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Специалистам", 
-		"#doctor", 
+		"/doctors/", 
 		Array(), 
 		Array("ADDITIONAL"=>"data-toggle=\"modal\" data-target=\"#doctor\" onClick=\"_gaq.push(['_trackEvent', 'Doctors', 'MenuClick', 'Docs Click Menu']);\""), 
 		"" 
