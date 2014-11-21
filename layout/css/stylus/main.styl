@@ -1364,9 +1364,9 @@ input:focus, a:focus
 		@media (max-width: 770px)
 			display: none
 	a
-		margin: 0 10px
+		margin: 0 5px
 		text-decoration: underline
-		font-size: 16px
+		font-size: 14px
 		&.active
 			font-weight: 600
 			text-decoration: none
@@ -1552,3 +1552,11 @@ input:focus, a:focus
 	pointer-events none
 	&.on
 		pointer-events initial
+.map-columns
+	full-width()
+	margin 30px 0
+	.map-level-0>li
+		margin-bottom 15px
+	.map-level-1
+		margin-top 5px
+		padding-left: 20px

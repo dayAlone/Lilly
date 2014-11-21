@@ -2351,9 +2351,9 @@ a:focus {
   }
 }
 #footer a {
-  margin: 0 10px;
+  margin: 0 5px;
   text-decoration: underline;
-  font-size: 16px;
+  font-size: 14px;
 }
 #footer a.active {
   font-weight: 600;
@@ -2598,6 +2598,19 @@ a:focus {
 }
 .scroll-fix.on {
   pointer-events: initial;
+}
+.map-columns {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: 30px 0;
+}
+.map-columns .map-level-0>li {
+  margin-bottom: 15px;
+}
+.map-columns .map-level-1 {
+  margin-top: 5px;
+  padding-left: 20px;
 }
 #products-promo {
   float: left;

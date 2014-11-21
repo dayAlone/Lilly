@@ -6,7 +6,7 @@
 ?>
 
 <div class="row">
-	<div class="col-md-6 col-md-offset-3">
+	<div class="col-md-8 col-md-offset-2">
 		<div class="text-frame">
 		<div id="text">
 			<h1>ПОЛОЖЕНИЕ <br>О КОНФИДЕНЦИАЛЬНОСТИ</h1>
