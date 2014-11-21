@@ -92,7 +92,7 @@ init = ()->
         $.getScript "/test_man/js/script.js"
 
     $('a').off('click').on 'click', (e)->
-        if $(this).parents('#panel, .bx-component-opener').length==0 && $(this).attr('target').length == 0
+        if $(this).parents('#panel, .bx-component-opener').length==0 && $(this).attr('target') != "_blank"
             History = window.History;
             url = $(this).attr('href')
             console.log strstr(url,'#')
