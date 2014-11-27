@@ -22,7 +22,7 @@
 		
 	</div><div class="col-lg-3 col-xs-4">
 		<div class="landing">
-			<a data-toggle="modal" data-target="#doctor" onClick="_gaq.push(['_trackEvent', 'Doctors', 'LandingClick', 'Docs Click Landing']);" class="locator">
+			<a data-toggle="modal" data-target="#locator" class="locator">
 				<img src="/layout/images/locator.png" alt="">
 			</a>
 			<div class="enter2 index">
