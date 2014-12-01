@@ -18,7 +18,7 @@
 		</div>
 		
 		
-		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"112069684":"110882748")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="516" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"113091823":"113089811")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="516" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		
 	</div><div class="col-lg-3 col-xs-4">
 		<div class="landing">
