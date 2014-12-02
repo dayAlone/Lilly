@@ -48,25 +48,6 @@
        false
     );
 ?>
-<div id="map">
-	<div class="frame">
-		<div class="shadow">
-		</div>
-		<div class="content">
-			<div class="title">
-				 Мужской выбор
-			</div>
-			<p>
-				 Вам осталось только выбрать удобное вам время и место встречи <br>
-				 с врачом с помощью нашего онлайн-сервиса «Доктор-Локатор»!
-			</p>
-			<div class="form">
-			</div>
-		</div>
-	</div>
-</div>
-	
-
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>
