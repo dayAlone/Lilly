@@ -1091,7 +1091,7 @@ a span:hover,
     line-height: 18px;
     margin-bottom: 10px;
     position: relative;
-    top: 0;
+    top: 20px;
     left: 0;
   }
   #promo .block.first .content .text {
@@ -1704,6 +1704,19 @@ a:focus {
 }
 .embed-responsive + #promo {
   padding-top: 20px;
+}
+@media (max-width: 770px) {
+  .video {
+    padding: 0 8px;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .video .video__frame {
+    padding: 10px;
+    box-shadow: 1px 1px 2px rgba(8,10,14,0.22);
+    background: #fff;
+  }
 }
 #woman {
   float: left;
@@ -3591,6 +3604,11 @@ a:focus {
 .user #article .top-title .container {
   max-width: 100%;
   padding: 0 80px;
+}
+@media (max-width: 770px) {
+  .user #article .top-title .container {
+    padding: 0;
+  }
 }
 .user #article .top-title .container .text {
   max-width: 80%;
