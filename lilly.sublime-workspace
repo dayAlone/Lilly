@@ -5,7 +5,7 @@
 		[
 			[
 				"ba",
-				"background-size"
+				"background"
 			],
 			[
 				"tr",
@@ -328,26 +328,10 @@
 	"buffers":
 	[
 		{
-			"file": "include/header.php",
+			"file": "woman/index.php",
 			"settings":
 			{
-				"buffer_size": 8883,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "include/footer.php",
-			"settings":
-			{
-				"buffer_size": 9624,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "enter/index.php",
-			"settings":
-			{
-				"buffer_size": 5074,
+				"buffer_size": 4036,
 				"line_ending": "Unix"
 			}
 		},
@@ -355,48 +339,48 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 2355,
+				"buffer_size": 2431,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "robots.txt",
+			"file": "layout/css/stylus/main.styl",
 			"settings":
 			{
-				"buffer_size": 35,
+				"buffer_size": 29018,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "local/templates/ochenprosto_public/header.php",
+			"file": "layout/css/stylus/article.styl",
 			"settings":
 			{
-				"buffer_size": 136,
+				"buffer_size": 5305,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "local/templates/ochenprosto_public/footer.php",
+			"file": "layout/css/stylus/toolbar.styl",
 			"settings":
 			{
-				"buffer_size": 1583,
+				"buffer_size": 4513,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "layout/js/main.coffee",
+			"file": "local/templates/.default/components/bitrix/news.list/promo/result_modifier.php",
 			"settings":
 			{
-				"buffer_size": 13992,
+				"buffer_size": 275,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "woman/index.php",
+			"file": "layout/css/style.styl",
 			"settings":
 			{
-				"buffer_size": 4036,
-				"line_ending": "Unix"
+				"buffer_size": 219,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -436,13 +420,28 @@
 	"expanded_folders":
 	[
 		"/Users/slider/Documents/Projects/Lilly/public_html",
+		"/Users/slider/Documents/Projects/Lilly/public_html/.codekit-cache",
 		"/Users/slider/Documents/Projects/Lilly/public_html/include",
+		"/Users/slider/Documents/Projects/Lilly/public_html/layout",
+		"/Users/slider/Documents/Projects/Lilly/public_html/layout/css",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates",
+		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default",
+		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default/components",
+		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default/components/bitrix",
+		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default/components/bitrix/news.list",
+		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default/components/bitrix/news.list/promo",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto_public"
 	],
 	"file_history":
 	[
+		"/Users/slider/Documents/Projects/Lilly/public_html/layout/js/main.coffee",
+		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto_public/footer.php",
+		"/Users/slider/Documents/Projects/Lilly/public_html/robots.txt",
+		"/Users/slider/Documents/Projects/Lilly/public_html/index.php",
+		"/Users/slider/Documents/Projects/Lilly/public_html/enter/index.php",
+		"/Users/slider/Documents/Projects/Lilly/public_html/include/footer.php",
+		"/Users/slider/Documents/Projects/Lilly/public_html/include/header.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/map/index.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default/components/bitrix/menu/top/template.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/layout/css/stylus/doctors.styl",
@@ -462,17 +461,12 @@
 		"/Users/slider/Documents/Projects/Lilly/public_html/about/agreement/index.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/faq/index.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default/components/bitrix/news.detail/.default/template.php",
-		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto_public/footer.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/layout/css/style.styl",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto_public/header.php",
-		"/Users/slider/Documents/Projects/Lilly/public_html/index.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto/footer.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto/header.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/ochenprosto_public/description.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/local/templates/.default",
-		"/Users/slider/Documents/Projects/Lilly/public_html/include/footer.php",
-		"/Users/slider/Documents/Projects/Lilly/public_html/layout/js/main.coffee",
-		"/Users/slider/Documents/Projects/Lilly/public_html/enter/index.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/bitrix/templates/ochenprosto/footer.php",
 		"/Users/slider/Documents/Projects/Lilly/public_html/layout/css/stylus/landing.styl",
 		"/Users/slider/Documents/Projects/Lilly/public_html/layout/js/plugins.js",
@@ -568,9 +562,7 @@
 		"/Users/slider/Documents/Merkado/news/index.php",
 		"/Users/slider/Documents/Merkado/.top.menu.php",
 		"/Users/slider/Documents/Merkado/articles/index.php",
-		"/Users/slider/Documents/Merkado/bitrix/templates/supermerkado/components/bitrix/news/.default/bitrix/news.list/.default/template.php",
-		"/Users/slider/Documents/Merkado/bitrix/templates/supermerkado/components/bitrix/sale.basket.basket.small/.default/template.php",
-		"/Users/slider/Documents/Merkado/layout/css/plugins.css"
+		"/Users/slider/Documents/Merkado/bitrix/templates/supermerkado/components/bitrix/news/.default/bitrix/news.list/.default/template.php"
 	],
 	"find":
 	{
@@ -589,6 +581,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"mobile_title",
+			"top-title",
+			"max-width: 100%",
+			"max-width: 100%;",
+			".block.first",
 			"$.get",
 			"cons",
 			"footer",
@@ -706,260 +703,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "include/header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8883,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								653,
-								693
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "php",
-							"buffer_scroll_name": "934c74f8",
-							"open_with_edit": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "include/footer.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3496,
-								3496
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "php",
-							"buffer_scroll_name": "308b2837",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "enter/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5074,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1416,
-								1416
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "php",
-							"buffer_scroll_name": "dcf28b01",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 21.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2355,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2290,
-								2290
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "php",
-							"buffer_scroll_name": "84bb9385",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "robots.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 35,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35,
-								35
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "plain text",
-							"buffer_scroll_name": "4369b302",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "local/templates/ochenprosto_public/header.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 136,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "php",
-							"buffer_scroll_name": "75696638",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "local/templates/ochenprosto_public/footer.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1583,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								247,
-								247
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "php",
-							"buffer_scroll_name": "f00ea78a",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "layout/js/main.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13992,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1754,
-								1759
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "coffeescript",
-							"buffer_scroll_name": "1c2a374d",
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 648.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "woman/index.php",
 					"semi_transient": false,
 					"settings":
@@ -983,10 +731,193 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1649,
+								1212
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "php",
+							"buffer_scroll_name": "84bb9385",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "layout/css/stylus/main.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20139,
+								20141
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "stylus",
+							"buffer_scroll_name": "8b4f0670",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12443.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "layout/css/stylus/article.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "stylus",
+							"buffer_scroll_name": "5e9b494b",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "layout/css/stylus/toolbar.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								260,
+								260
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "stylus",
+							"buffer_scroll_name": "3828a733",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "local/templates/.default/components/bitrix/news.list/promo/result_modifier.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								257
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "php",
+							"buffer_scroll_name": "54133c09",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "layout/css/style.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "stylus",
+							"buffer_scroll_name": "3dc7ff75",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

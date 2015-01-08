@@ -36,6 +36,12 @@ $arUrlRewrite = array(
 		"ID" => "",
 		"PATH" => "/woman/index.php",
 	),
+	array(
+		"CONDITION" => "#^/enter/v/#",
+		"RULE" => "v=2",
+		"ID" => "",
+		"PATH" => "/enter/index.php",
+	),
 );
 
 ?>

@@ -1,5 +1,6 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+	var_dump($_REQUEST);
 	global $index;
 	global $doctors;
 	global $USER;
