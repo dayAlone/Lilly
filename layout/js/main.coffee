@@ -272,7 +272,7 @@ init = ()->
     $('.checkbox').off('click').on 'click', ()->
         $(this).toggleClass('checked')
         if($(this).hasClass('checked'))
-            $.cookie('checkbox', 'true');
+            $.cookie('checkbox', 'true', {path:"/"});
         else
             $.removeCookie('checkbox');
         $(this).parent().find('a').toggleClass('no-ajax')

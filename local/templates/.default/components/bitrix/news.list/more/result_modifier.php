@@ -15,6 +15,25 @@
               slidesToScroll: 5,
               
               infinite: false,
+              responsive: [
+			    {
+			      breakpoint: 1024,
+			      settings: {
+			        slidesToShow: 5
+			      }
+			    },
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 3
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 2
+			      }
+			    }],
               onInit: function(){
               	$('.slick-slide[index="<?=$currentSort?>"]').addClass('slick-current')
               }

@@ -250,9 +250,19 @@
 			a
 				color: #eb222e
 				text-decoration: underline
-				
+.fullwidth-list
+	&__title
+		padding 0 10px		
+		@media (min-width: 770px)
+			padding 0
+		iframe
+			max-height 200px
+			@media (min-width: 770px)
+				max-height none
 #fullwidth-list
-	margin-top -100px
+	@media (min-width: 770px)
+		margin-top -100px
+		padding 0 20px
 	&.overlay
 		margin-top 0
 		.video-frame
@@ -263,8 +273,6 @@
 				display none
 		.landing
 			position: absolute
-			
-	padding 0 20px
 	.landing
 		&.affix
 			top 20px

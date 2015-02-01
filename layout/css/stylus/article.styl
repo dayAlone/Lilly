@@ -263,3 +263,49 @@
 				line-height: 21px
 	@media (max-width: 770px)
 		padding: 0 8px
+
+#chapter-list
+	full-width()
+	margin-bottom: 30px
+	@media (max-width: 770px)
+		padding: 0 20px
+	.slick-prev
+		@media (max-width: 770px)
+			left -5px
+	.slick-next
+		@media (max-width: 770px)
+			right -5px
+	& + .row
+		full-width()
+	.block
+		height: 150px
+		width: 18.88%
+		margin: 0 0.7%
+		@media (max-width: 770px)
+			height auto
+		.image
+			@media (max-width: 770px)
+				width 100%
+				position relative
+				min-height 100px
+		.content
+			@media (max-width: 770px)
+				width 100%
+				position relative
+				padding 5px 10px 0 !important
+		.title
+			font-size: 16px
+			line-height: 17px
+			@media (max-width: 770px)
+				width 100%
+				position relative
+				top 0
+				font-size 12px
+				line-height 14px
+				margin-bottom 10px
+				transform none
+				left 0
+		&:first-of-type
+			margin-left: 0
+		&:last-of-type
+			margin-right: 0

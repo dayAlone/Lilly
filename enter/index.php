@@ -9,10 +9,10 @@
 	$APPLICATION->SetPageProperty('DESCRIPTION', "Сайт о проблеме эректильной дисфункции и гиперплазии предстательной железы: что это такое, причины, симптомы, лечение. ");
 ?>
 <div id="fullwidth-list" class="<?=($_REQUEST['f']==1?"overlay":'')?>">
-<div class="row">
-	<div class='col-lg-9 col-xs-8'>
+<div class="row fullwidth-list__title">
+	<div class='col-lg-9 col-md-8'>
 		<div class="row">
-			<div class="col-xs-9 col-xs-offset-3 col-lg-10 col-lg-offset-2">
+			<div class="col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2">
 				<h1><?=(isset($_REQUEST['v'])?"Как мужчины решают проблемы в постели? <br>":"Мучают проблемы в постели? <br>")?><small>У вашего уролога теперь есть эффективное решение для лечения эректильной дисфункции и аденомы предстательной железы!</small></h1>
 			</div>
 		</div>
@@ -20,7 +20,8 @@
 		
 		<iframe src="//player.vimeo.com/video/<?=(isset($_REQUEST['v'])?"113091823":"113089811")?>?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;color=d11414&amp;autoplay=<?=($USER->isAdmin()?"0":"1")?>" width="100%" height="516" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		
-	</div><div class="col-lg-3 col-xs-4">
+	</div>
+	<div class="col-lg-3 col-md-4 visible-md visible-lg">
 		<div class="landing">
 			<a data-toggle="modal" data-target="#locator" class="locator">
 				<img src="/layout/images/locator.png" alt="">
@@ -50,7 +51,7 @@
 </div>
 
 	<div class="row">
-		<div class="col-lg-9 col-xs-8">
+		<div class="col-lg-9 col-md-8">
 			
 			<div style="height:13px;width:100%"></div>
 			<?
