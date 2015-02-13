@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 			<div class="col-md-4">
                <a href="<?=($item["UF_WEBINAR"]?"http://webinar.".$_SERVER['SERVER_NAME']:"")?>/doctors/video/<?=$ob['CODE']?>/" class="item">
                	  <div class="header">
-	                  <span class="title <?=strlen($item['NAME'])?> <?=(strlen($item['NAME'])>51?"medium":"")?> <?=(strlen($item['NAME'])>75?"small":"")?>">
+	                  <span class="title <?=strlen($item['NAME'])?> <?=(strlen($item['NAME'])>50?"medium":"")?> <?=(strlen($item['NAME'])>75?"small":"")?>">
 	                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
 	                  </span>
 	                  <div class="date"><?=$item["UF_DATE"]?></div>
