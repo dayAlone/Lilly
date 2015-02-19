@@ -314,10 +314,11 @@ init = ()->
                 $('html, body').animate({'scrollTop' : offset - $('#toolbar').height()-14 },300)
         ev.preventDefault()
 
+    ###
     $('#faq .block .text .panel').slimscroll
         height : ()->
             return $(this).parents('.text').height()
-
+    ###
     $('#map').click ()->
         _gaq.push(['_trackEvent', 'DoctorLocator', 'BannerClick', 'DL BannerMain Click']); 
         $('#locator').modal()
