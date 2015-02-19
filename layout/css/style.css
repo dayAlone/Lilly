@@ -1516,9 +1516,9 @@ a:focus {
   width: 95%;
 }
 #faq .block .text p {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 18px;
   margin-bottom: 20px;
   width: 95%;
 }
@@ -1542,7 +1542,7 @@ a:focus {
   }
 }
 #faq .block.big {
-  height: 505px;
+  height: 565px;
 }
 @media (max-width: 770px) {
   #faq .block.big {
@@ -1568,7 +1568,7 @@ a:focus {
   }
 }
 #faq .block.medium {
-  height: 332px;
+  height: 372px;
 }
 @media (max-width: 770px) {
   #faq .block.medium {
@@ -1594,8 +1594,8 @@ a:focus {
   }
 }
 #faq .block.medium .text h2 {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 26px;
+  line-height: 24px;
 }
 #faq .block.medium .text p {
   font-size: 15px;
