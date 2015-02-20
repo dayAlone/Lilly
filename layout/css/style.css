@@ -3331,10 +3331,25 @@ a:focus {
 }
 @media (max-width: 770px) {
   #research .item .buttons {
-    background: url("/layout/images/c-buttons.jpg") 3px 1px;
-    background-size: auto 50%;
-    background-repeat: no-repeat;
-    bottom: -5px;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+  }
+  #research .item .buttons .tooltip {
+    display: none !important;
+  }
+}
+@media (max-width: 770px) {
+  #research .item .buttons a {
+    display: none;
+  }
+  #research .item .buttons a:first-of-type {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    background: transparent;
   }
 }
 @media (max-width: 770px) {

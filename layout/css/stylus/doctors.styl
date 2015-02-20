@@ -489,10 +489,21 @@
 			background-position: bottom center
 			height: 35px
 			@media (max-width: 770px)
-				b("c-buttons.jpg", 3px 1px)
-				background-size: auto 50%
-				background-repeat: no-repeat
-				bottom: -1*5px
+				background transparent
+				width 100%
+				height 100%
+				.tooltip
+					display none !important	
+			a
+				@media (max-width: 770px)
+					display none
+					&:first-of-type
+						display block
+						position absolute
+						width 100%
+						height 100%
+						z-index: 300
+						background transparent
 		@media (max-width: 770px)
 			background: white
 			width: 100%
