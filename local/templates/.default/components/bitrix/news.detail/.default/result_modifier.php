@@ -1,5 +1,6 @@
 <?
-	
+	if(strlen($arResult['PROPERTIES']['LINK']['VALUE'])>0 && $arResult['PROPERTIES']['LINK']['VALUE'] != $APPLICATION->GetCurDir())
+		LocalRedirect($arResult['PROPERTIES']['LINK']['VALUE']);
 	$small = CFile::ResizeImageGet($arResult['DETAIL_PICTURE'], Array("width" => 1200, "height" => 1200), BX_RESIZE_IMAGE_PROPORTIONAL, false, false, false, 70);
 	$arResult['DETAIL_PICTURE']['SRC'] = $small['src'];
 	$db_old_groups = CIBlockElement::GetElementGroups($arResult['ID'], false);

@@ -953,6 +953,9 @@ a span:hover,
 .block.small {
   height: 198px;
 }
+.index .block.small {
+  height: 235px;
+}
 @media (max-width: 770px) {
   .block.small {
     height: auto;

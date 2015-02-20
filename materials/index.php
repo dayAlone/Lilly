@@ -43,7 +43,7 @@
 			"SORT_ORDER2" => "",
 			"FILTER_NAME" => "",
 			"FIELD_CODE" => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
-			"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE"),
+			"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE", "LINK", "VIDEO_ICON"),
 			"CHECK_DATES" => "Y",
 			"DETAIL_URL" => "",
 			"AJAX_MODE" => "N",
@@ -83,7 +83,7 @@ else
 		"ELEMENT_CODE"  => $_REQUEST["ELEMENT_CODE"],
 		"CHECK_DATES"   => "Y",
 		"FIELD_CODE"    => Array("ID"),
-		"PROPERTY_CODE" => Array("HTML_TITLE","AUTHOR","VIDEO","FULLWIDTH","PARENT"),
+		"PROPERTY_CODE" => Array("HTML_TITLE","AUTHOR","VIDEO","FULLWIDTH","PARENT","LINK"),
 	));
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

@@ -7,7 +7,7 @@ if(strlen($arParams['TARGET'])>0)
 <div id="promo">
 <?
    function item_promo($item, $size, &$i, $blank) {
-      echo '<a href="/materials/'.$item['CODE'].'/" '.($blank?"target='_blank'":"").' class="block '.$size.' '.($i==0?"first":"").'" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')">
+      echo '<a href="'.(strlen($item['PROPERTIES']['LINK']['VALUE'])>0?$item['PROPERTIES']['LINK']['VALUE']:"/materials/".$item['CODE']."/").'" '.($blank?"target='_blank'":"").' class="block '.$size.' '.($i==0?"first":"").'" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')">
                   <div class="shadow"></div>
                   <div class="image" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')"><div class="shadow"></div></div>
                   <div class="content">

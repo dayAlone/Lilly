@@ -34,19 +34,18 @@
 <?php
     $APPLICATION->IncludeComponent("bitrix:news.list", "promo2", 
     array(
-    "IBLOCK_ID"           => 1,
-    "NEWS_COUNT"          => "5",
-    "SORT_BY1"            => "SORT",
-    "SORT_ORDER1"         => "ASC",
-    "FIELD_CODE" => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
-	"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE"),
-    "PROPERTY_CODE"       => "",
-    "DETAIL_URL"          => "/news/#SECTION_ID#/#ELEMENT_ID#/",
-    "CACHE_TYPE"          => "A",
-    "DISPLAY_PANEL"       => "N",
-    "PARENT_SECTION"      => "",
-    "PARENT_SECTION_CODE" => "index",
-    "SET_TITLE"           => "N"
+	"IBLOCK_ID"           => 1,
+	"NEWS_COUNT"          => "5",
+	"SORT_BY1"            => "SORT",
+	"SORT_ORDER1"         => "ASC",
+	"FIELD_CODE"          => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
+	"PROPERTY_CODE"       => array("AUTHOR","HTML_TITLE", "LINK", "VIDEO_ICON"),
+	"DETAIL_URL"          => "/news/#SECTION_ID#/#ELEMENT_ID#/",
+	"CACHE_TYPE"          => "A",
+	"DISPLAY_PANEL"       => "N",
+	"PARENT_SECTION"      => "",
+	"PARENT_SECTION_CODE" => "index",
+	"SET_TITLE"           => "N"
        ),
        false
     );

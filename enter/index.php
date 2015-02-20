@@ -55,6 +55,8 @@
 			
 			<div style="height:13px;width:100%"></div>
 			<?
+			global $promoFilter;
+			$promoFilter = array('PROPERTY_LINK' => false);
 			$APPLICATION->IncludeComponent(
 				"bitrix:news.list",
 				"promo",
@@ -66,7 +68,7 @@
 					"SORT_ORDER1" => "ASC",
 					"SORT_BY2" => "",
 					"SORT_ORDER2" => "",
-					"FILTER_NAME" => "",
+					"FILTER_NAME" => "promoFilter",
 					"FIELD_CODE" => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
 					"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE"),
 					"CHECK_DATES" => "Y",

@@ -87,7 +87,7 @@ $APPLICATION->IncludeComponent("bitrix:news.detail", ".default", array(
 	),
 	"PROPERTY_CODE" => array(
 		0 => "",
-		1 => "",
+		1 => "LINK"
 	),
 	"IBLOCK_URL" => "",
 	"AJAX_MODE" => "N",
