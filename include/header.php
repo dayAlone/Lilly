@@ -60,9 +60,9 @@
     <? endif;?>
   </head>
 
-  <body>
+  <body class="">
   
-   <div class="frame <?=(!$doctors?'user':'doctor')?> <?=($index?'index':'')?>" style="opacity: 0">
+   <div class="frame <?=(!$doctors?'user':'doctor')?> <?=($index?'index':'')?> <?=$APPLICATION->AddBufferContent("body_class");?>" style="opacity: 0">
      <div id="panel"><?$APPLICATION->ShowPanel();?></div>
      <? global $toolbar ?>
      <div id="toolbar" class="<?=($nav?$nav:'')?>">
@@ -80,6 +80,14 @@
               </div>
               <? if(!$APPLICATION->GetDirProperty("hide_nav")):?>
               <div class="col-md-10">
+                  <?if($doctors):?>
+                    <form id="search" action="/doctors/search/">
+                      <input type="text" name="q" placeholder="Поиск" value="<?=$_REQUEST['q']?>">
+                      <button type="submit">
+                        <svg width="15" height="17" viewBox="0 0 15 17" xmlns="http://www.w3.org/2000/svg"><path d="M6.367 12.733c1.273 0 2.46-.377 3.456-1.024l3.731 4.51 1.051-.869-3.723-4.5c1.143-1.152 1.851-2.736 1.851-4.483 0-3.511-2.856-6.367-6.366-6.367-3.511 0-6.367 2.856-6.367 6.367 0 3.51 2.856 6.366 6.367 6.366zm0-11.369c2.758 0 5.002 2.244 5.002 5.003 0 2.758-2.244 5.002-5.002 5.002-2.759 0-5.003-2.244-5.003-5.002 0-2.759 2.244-5.003 5.003-5.003z" fill="#C2272C"/></svg>
+                      </button>
+                    </form>
+                  <?endif;?>
                  <ul class="nav">
                     <li class="hidden">
                       <a class="trigger" href="#">

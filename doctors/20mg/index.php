@@ -2,6 +2,7 @@
    global $nav;
    $nav='white';
    require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+   $APPLICATION->SetPageProperty('body_class', "dark");
    $APPLICATION->SetTitle("Lilly Answers That Matter");
    $APPLICATION->SetPageProperty('KEYWORDS', "эректильная дисфункция, мужское здоровье, сексуальное здоровье, лечение эрекции, проблемы эрекции, лечение эректильной дисфункции, причины эректильной дисфункции, оперативное восстановление эрекции, препарат для эрекции, сиалис 20 мг, восстановление потенции, лекарство от потенции, тадалафил");
    $APPLICATION->SetPageProperty('DESCRIPTION', "Сиалис® 20 мг. Оперативное восстановление эректильной дисфункции и полноценные сексуальные отношения.");

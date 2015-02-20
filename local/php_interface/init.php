@@ -8,7 +8,13 @@
         $bs->Update($arFields["ID"], $props);
         $bs->Update(17, array("SORT" => $SORT-10));
     }
-
+    function body_class()
+	{
+		global $APPLICATION;
+		if($APPLICATION->GetPageProperty('body_class')) {
+			return $APPLICATION->GetPageProperty('body_class');
+		}
+	}
 	function mobile_title() {
 		global $APPLICATION;
 		if($APPLICATION->GetPageProperty('mobile_title')) {

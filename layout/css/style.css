@@ -825,6 +825,84 @@ a span:hover,
   font-weight: 300;
   line-height: 100px !important;
 }
+#search {
+  float: right;
+  margin-bottom: -10px;
+  position: relative;
+}
+#search input {
+  border: 1px solid #eb222e;
+  padding: 0 30px 0 10px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  width: 200px;
+}
+.dark #search input {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+#search button {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  right: 1px;
+  top: 1px;
+}
+#search button svg {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.dark #search button svg path {
+  fill: #fff;
+}
+@media (max-width: 770px) {
+  #search {
+    display: none;
+  }
+}
+.search {
+  min-height: 400px;
+}
+.search form {
+  display: none;
+}
+.search h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.search .search-page {
+  font-size: 15px;
+}
+.search .search-page a {
+  color: #eb222e;
+  text-decoration: underline;
+}
+.search .search-page .page__divider {
+  margin: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+.search .search-page__text {
+  width: 100%;
+  margin-top: 10px;
+}
+.search .search-page__title {
+  font-size: 25px;
+}
+.search .search-page__text,
+.search .search-page__sort {
+  font-size: 14px;
+}
+.search .search-page small {
+  width: 100%;
+  opacity: 0.6;
+  display: inline-block;
+}
 .block {
   float: left;
   width: 100%;
