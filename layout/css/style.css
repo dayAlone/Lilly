@@ -837,6 +837,12 @@ a span:hover,
   overflow: hidden;
   color: #fff;
 }
+.block .video-icon {
+  position: absolute;
+  z-index: 4;
+  top: 20px;
+  left: 20px;
+}
 .block .image {
   display: none;
   position: relative;

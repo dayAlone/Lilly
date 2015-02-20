@@ -39,7 +39,7 @@
 		"SORT_ORDER2" => "",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array("XML_ID","NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
-		"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE"),
+		"PROPERTY_CODE" => array("AUTHOR","HTML_TITLE","LINK","VIDEO_ICON"),
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
 		"AJAX_MODE" => "N",
