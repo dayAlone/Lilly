@@ -3,20 +3,6 @@ $this->setFrameMode(true);
 ?>
 <div id="promo">
 <?
-   function item_promo($item, $size, &$i) {
-      if(isset($item))
-         echo '<a href="'.(strlen($item['PROPERTIES']['LINK']['VALUE'])>0?$item['PROPERTIES']['LINK']['VALUE']:"/materials/".$item['CODE']."/").'" class="block '.$size.' '.($i==0?"first":"").'" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')">
-                     <div class="shadow"></div>
-                     <div class="image" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')"><div class="shadow"></div></div>
-                     <div class="content">
-                        '.($item['PROPERTIES']['HTML_TITLE']['VALUE']?'<div class="text">'.$item['PROPERTIES']['HTML_TITLE']['~VALUE'].'</div>':
-                        ($item['PROPERTIES']['AUTHOR']['VALUE']?'<div class="name">'.$item['PROPERTIES']['AUTHOR']['VALUE'].'</div>':'').'
-                        <div class="title">'.str_replace('®','<sup>®</sup>', $item['NAME']).'</div>
-                        '.($item['~PREVIEW_TEXT']?'<div class="text">'.$item['~PREVIEW_TEXT'].'</div>':'')).'
-                     </div>
-                  </a>';
-      $i++;
-   }
    $i=0;
    $open = 0;
    $count = 0;
@@ -25,13 +11,13 @@ $this->setFrameMode(true);
      ?>
       <div class="row">
          <div class="col-md-4">
-            <?item_promo($item[0],'small', $count);?>                  
+            <?item_promo($item[0],'small', $count, 'materials');?>                  
          </div>
          <div class="col-md-4">
-            <?item_promo($item[1],'small', $count);?>
+            <?item_promo($item[1],'small', $count, 'materials');?>
          </div>
          <div class="col-md-4">
-            <?item_promo($item[2],'small', $count);?>
+            <?item_promo($item[2],'small', $count, 'materials');?>
          </div>
       </div>
       <?

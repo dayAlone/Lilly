@@ -6,19 +6,6 @@ if(strlen($arParams['TARGET'])>0)
 ?>
 <div id="promo">
 <?
-   function item_promo($item, $size, &$i, $blank) {
-      echo '<a href="'.(strlen($item['PROPERTIES']['LINK']['VALUE'])>0?$item['PROPERTIES']['LINK']['VALUE']:"/materials/".$item['CODE']."/").'" '.($blank?"target='_blank'":"").' class="block '.$size.' '.($i==0?"first":"").'" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')">
-                  <div class="shadow"></div>
-                  <div class="image" style="background-image:url('.(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC']).')"><div class="shadow"></div></div>
-                  <div class="content">
-                     '.($item['PROPERTIES']['HTML_TITLE']['VALUE']?'<div class="text">'.$item['PROPERTIES']['HTML_TITLE']['~VALUE'].'</div>':
-                     ($item['PROPERTIES']['AUTHOR']['VALUE']?'<div class="name">'.$item['PROPERTIES']['AUTHOR']['VALUE'].'</div>':'').'
-                     <div class="title">'.str_replace('®','<sup>®</sup>', $item['NAME']).'</div>
-                     '.($item['~PREVIEW_TEXT']?'<div class="text">'.$item['~PREVIEW_TEXT'].'</div>':'')).'
-                  </div>
-               </a>';
-      $i++;
-   }
    $i=0;
    $open = 0;
    $count = 0;
@@ -27,14 +14,14 @@ if(strlen($arParams['TARGET'])>0)
      ?>
       <div class="row">
          <div class="col-md-7">
-            <?if($item[0]) item_promo($item[0],'big', $count, $blank);?>
+            <?if($item[0]) item_promo($item[0],'big', $count, $blank, "materials");?>
 
             <div class="row">
                <div class="col-md-6">
-                  <?if($item[3]) item_promo($item[3],'small', $count, $blank);?>                  
+                  <?if($item[3]) item_promo($item[3],'small', $count, $blank, "materials");?>                  
                </div>
                <div class="col-md-6">
-                  <?if($item[4]) item_promo($item[4],'small', $count, $blank);?>
+                  <?if($item[4]) item_promo($item[4],'small', $count, $blank, "materials");?>
                </div>
             </div>
          </div>
@@ -55,9 +42,9 @@ if(strlen($arParams['TARGET'])>0)
                   </div>
                </a>
             <? else: ?>*/?>
-               <?if($item[1]) item_promo($item[1],'medium', $count, $blank);?>
+               <?if($item[1]) item_promo($item[1],'medium', $count, $blank, "materials");?>
             <?/*<? endif;?>*/?>
-            <?if($item[2]) item_promo($item[2],'medium', $count, $blank);?>
+            <?if($item[2]) item_promo($item[2],'medium', $count, $blank, "materials");?>
          </div>
       </div>
          

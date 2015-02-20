@@ -1135,7 +1135,7 @@ a span:hover,
 .flag {
   position: fixed;
   z-index: 400;
-  top: 166px;
+  top: 128px;
   left: 50%;
   margin-left: -615px;
   overflow: hidden;
@@ -1144,7 +1144,7 @@ a span:hover,
   border-top-left-radius: 50px;
 }
 .flag.test {
-  top: 487px;
+  top: 450px;
   border-bottom-left-radius: 50px;
 }
 .flag.test.enter {
