@@ -735,12 +735,20 @@ a, a span, .shadow
 .flag
 	position: fixed
 	z-index: 400
-	top: 80px
-	left: 0
+	top: 166px
+	left: 50%
+	margin-left: -615px;
+	overflow hidden
+	&.talk
+		border-top-left-radius 50px
 	&.test
-		top: 139px
-	&:hover
-		opacity: 0.5
+		top: 487px
+		border-bottom-left-radius 50px
+		&.enter
+			border-bottom-left-radius 0px
+			margin-left: 0
+			left 0
+			top 100px
 	@media (max-width: 770px)
 		display: none
 #main-block
@@ -897,8 +905,8 @@ input:focus, a:focus
 .index
 	#enter
 		top: 299px
-	a.flag.test
-		top: 290px
+	//a.flag.test
+	//	top: 290px
 	iframe
 		full-width()
 		max-width: 100%

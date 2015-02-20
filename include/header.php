@@ -117,7 +117,12 @@
      </div>
      <?if(!$doctors&&!defined('ERROR_404')):?>
        <? /*<a href="/upload/takethis.ochenprosto.ru.pdf" class="flag no-ajax get" target="_blank"><img src="/layout/images/flag-get.png"></a>*/?>
-       <a href="/test/man/" class="flag test"><img src="/layout/images/flag-test.png"></a>
+       <? if(!$APPLICATION->GetDirProperty("show_flag")): ?>
+       <a href="/enter/" class="flag talk"><img src="/layout/images/talk.png"></a>
+       <a href="/test/man/" class="flag test"><img src="/layout/images/test.png"></a>
+     <? else: ?>
+     <a href="/test/man/" class="flag test enter"><img src="/layout/images/flag-test.png"></a>
+   <? endif;?>
       <?/* if(!$APPLICATION->GetDirProperty("hide_enter") && $APPLICATION->GetCurDir()!='/'):
       
       ?>

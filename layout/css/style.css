@@ -1132,14 +1132,23 @@ a span:hover,
 .flag {
   position: fixed;
   z-index: 400;
-  top: 80px;
-  left: 0;
+  top: 166px;
+  left: 50%;
+  margin-left: -615px;
+  overflow: hidden;
+}
+.flag.talk {
+  border-top-left-radius: 50px;
 }
 .flag.test {
-  top: 139px;
+  top: 487px;
+  border-bottom-left-radius: 50px;
 }
-.flag:hover {
-  opacity: 0.5;
+.flag.test.enter {
+  border-bottom-left-radius: 0px;
+  margin-left: 0;
+  left: 0;
+  top: 100px;
 }
 @media (max-width: 770px) {
   .flag {
@@ -1350,9 +1359,6 @@ a:focus {
 }
 .index #enter {
   top: 299px;
-}
-.index a.flag.test {
-  top: 290px;
 }
 .index iframe {
   float: left;
