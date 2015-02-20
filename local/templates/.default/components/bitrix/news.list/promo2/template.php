@@ -11,24 +11,24 @@ $this->setFrameMode(true);
      ?>
       <div class="row">
          <div class="col-md-6">
-            <?item_promo($item[0],'small', $count, "materials");?>                  
+            <?item_promo($item[0],'small', $count);?>                  
          </div>
          <div class="col-md-6">
-            <?item_promo($item[1],'small', $count, "materials");?>
+            <?item_promo($item[1],'small', $count);?>
          </div>
       </div>
          
       <div class="row">  
          <div class="col-md-12">
-               <?item_promo($item[2],'big', $count, "materials");?>
+               <?item_promo($item[2],'big', $count);?>
          </div>
       </div>
       <div class="row">
          <div class="col-md-6">
-            <?item_promo($item[3],'small', $count, "materials");?>                  
+            <?item_promo($item[3],'small', $count);?>                  
          </div>
          <div class="col-md-6">
-            <?item_promo($item[4],'small', $count, "materials");?>
+            <?item_promo($item[4],'small', $count);?>
          </div>
       </div>
       <?

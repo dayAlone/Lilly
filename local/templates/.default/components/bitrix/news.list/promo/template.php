@@ -14,14 +14,14 @@ if(strlen($arParams['TARGET'])>0)
      ?>
       <div class="row">
          <div class="col-md-7">
-            <?if($item[0]) item_promo($item[0],'big', $count, $blank, "materials");?>
+            <?if($item[0]) item_promo($item[0],'big', $count, $blank);?>
 
             <div class="row">
                <div class="col-md-6">
-                  <?if($item[3]) item_promo($item[3],'small', $count, $blank, "materials");?>                  
+                  <?if($item[3]) item_promo($item[3],'small', $count, $blank);?>                  
                </div>
                <div class="col-md-6">
-                  <?if($item[4]) item_promo($item[4],'small', $count, $blank, "materials");?>
+                  <?if($item[4]) item_promo($item[4],'small', $count, $blank);?>
                </div>
             </div>
          </div>
@@ -42,9 +42,9 @@ if(strlen($arParams['TARGET'])>0)
                   </div>
                </a>
             <? else: ?>*/?>
-               <?if($item[1]) item_promo($item[1],'medium', $count, $blank, "materials");?>
+               <?if($item[1]) item_promo($item[1],'medium', $count, $blank);?>
             <?/*<? endif;?>*/?>
-            <?if($item[2]) item_promo($item[2],'medium', $count, $blank, "materials");?>
+            <?if($item[2]) item_promo($item[2],'medium', $count, $blank);?>
          </div>
       </div>
          
