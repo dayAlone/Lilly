@@ -3759,7 +3759,7 @@ a:focus {
   opacity: 0;
   display: inline-block;
   width: 745px !important;
-  height: 420px !important;
+  height: 483px !important;
   float: none !important;
   -webkit-transition-property: all;
   transition-property: all;
@@ -3827,7 +3827,7 @@ a:focus {
   float: left;
   width: 100%;
   position: relative;
-  height: 420px;
+  height: 483px;
   background-color: #000;
   background-size: 90% auto;
   background-position: center center;
@@ -4526,7 +4526,7 @@ a:focus {
   max-width: 273px;
   background: url("/layout/images/bg3.jpg") top right;
   background-size: cover;
-  min-height: 480px;
+  min-height: 483px;
   color: #fff;
   padding: 20px 13px;
   margin-bottom: 20px;
