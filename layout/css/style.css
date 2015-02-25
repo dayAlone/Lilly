@@ -3944,7 +3944,7 @@ a:focus {
 }
 #article > .top-title .container {
   position: relative;
-  height: 420px;
+  height: 480px;
 }
 @media (max-width: 770px) {
   #article > .top-title .container {
