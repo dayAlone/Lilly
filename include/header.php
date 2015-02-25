@@ -80,7 +80,7 @@
               </div>
               <? if(!$APPLICATION->GetDirProperty("hide_nav")):?>
               <div class="col-md-10">
-                  <?if($doctors):?>
+                  <?if(in_array($APPLICATION->GetCurDir(),array('/doctors/video/', '/doctors/research/', '/doctors/search/'))):?>
                     <form id="search" action="/doctors/search/">
                       <input type="text" name="q" placeholder="Поиск" value="<?=$_REQUEST['q']?>">
                       <button type="submit">

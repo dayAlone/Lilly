@@ -6,6 +6,7 @@ $APPLICATION->SetTitle('Поиск по сайту');
 	<div class="row">
 	<div class="col-md-12">
 		<h1>Поиск</h1>
+		<p style="margin-top:-20px;opacity:.7;">По записям научных трансляций и клиническим исследованиям</p>
 	<?
 	$APPLICATION->IncludeComponent("bitrix:search.page","",Array(
 	    "TAGS_SORT" => "NAME",
