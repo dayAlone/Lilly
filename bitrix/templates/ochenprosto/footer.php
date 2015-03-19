@@ -36,7 +36,7 @@
                         "MENU_CACHE_GET_VARS" => "" 
                       )
                     );?><br>
-                  <span class="copyright">© Copyright ООО «Лилли Фарма» <?=date('Y')?>. Все права защищены.</span>
+                  <span class="copyright">© Copyright ООО «Лилли Фарма» 2015. Все права защищены.</span>
                </div>
             </div>
             <? if(!$doctors):?>
