@@ -831,12 +831,13 @@ a span:hover,
   position: relative;
 }
 #search input {
-  border: 1px solid #eb222e;
+  border: 2px solid #eb222e;
   padding: 0 30px 0 10px;
   height: 30px;
   line-height: 30px;
   font-size: 14px;
-  width: 200px;
+  width: 300px;
+  font-weight: bold;
 }
 .dark #search input {
   background: transparent;
