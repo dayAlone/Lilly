@@ -2,12 +2,13 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
 			"path": "."
 		},
 		{
-			"follow_symlinks": true,
 			"path": "bitrix/templates/ochenprosto"
+		},
+		{
+			"path": "/Users/slider/Documents/Projects/Lilly/kz"
 		}
 	]
 }

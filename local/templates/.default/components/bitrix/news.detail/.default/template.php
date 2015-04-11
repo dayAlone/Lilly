@@ -116,7 +116,7 @@ $this->setFrameMode(true);
            </div>
           <? if(!$doctors&&$arResult['IBLOCK_ID']!=5) :
           ?>
-           <div class="col-md-8 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
+           <div class="col-md-9 <?=($arResult['PROPERTIES']['FULLWIDTH']['VALUE_XML_ID']=='Y'?'hidden':'')?> side" >
             
               <h4>Другие публикации</h4>
               <?php
