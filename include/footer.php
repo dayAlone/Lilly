@@ -178,6 +178,14 @@
   <script type="text/javascript" async="async" src="http://track.hubrus.com/pixel?id=32150&type=js"></script>
 </body>
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Bh6DI5ReSHIvsQsemv1SLKV6jKW8*qviv*I2ezvg/tqn4jZ439vgbfkzR2dG26Go/i4c*k6YC/B9MYPQWEEndGWVz/h81y8wBJjErUivrgccc5*4bzV4R7pAEENut9J/C8TyNd1rlJDD78OlhjcsIrNKOogMjYcoqSHHRNmNgbo-';</script>
+<script type="text/javascript">
+(function(d) {
+var pxl = d.createElement("script");
+pxl.setAttribute("src", "//pixel.hubrus.com/containers/2335_Eli_Lilly/dist/smartPixel.min.js"); pxl.setAttribute("type", "text/javascript"); pxl.async = true;
+var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pxl, s);
+} (document));
+</script>
+
 <? 
 
 $APPLICATION->SetAdditionalCSS("/layout/css/bootstrap.min.css", true);
