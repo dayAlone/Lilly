@@ -524,29 +524,61 @@ a, a span, .shadow
 					display: inline-block
 					font-weight: 300
 					line-height: 100px !important
+.links
+	position absolute
+	bottom 40px
+	left 0
+	display none
+	@media (min-width: 770px)
+		display block
+	@media (min-width: 1024px)
+		right 0
+		left auto
+		bottom 0px
+	a.border
+		position relative
+		margin-left 20px
+		display inline-block
+		&:after
+			box-shadow inset 0 0 0 1px rgba(255,255,255,.7)
+			display inline-block
+			border-radius 5px
+			content ""
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
 #search
 	float right
 	margin-bottom -10px
 	position relative
-	input
+	width 300px
+	max-width 100%
+	input[type="text"]
 		border 2px solid #eb222e
 		padding 0 30px 0 10px
 		height 30px
 		line-height 30px
 		font-size 14px
-		width 300px
+		margin-bottom 5px
+		width 100%
+		float left
 		font-weight: bold
 		.dark &
 			background transparent
 			border-color white
 			color white
+	label
+		font-size 14px
+		font-weight: normal
 	button
 		background transparent
 		border 0
 		position absolute
 		width 28px
 		height 28px
-		right 1px
+		right 12px
 		top 1px
 		svg
 			display inline-block
@@ -559,6 +591,39 @@ a, a span, .shadow
 			
 	@media (max-width: 770px)
 		display none
+
+.modal-sm
+	width 450px
+	
+#question
+	.success
+		display none
+		h3
+			margin-bottom 0
+	h3
+		margin-bottom 30px
+	input[type="text"], textarea
+		width 100%
+		resize none
+		border 1px solid #b5b5b5
+		margin-bottom 15px
+		padding 5px 10px
+		&.error
+			border-color #eb222e
+	input
+		&[type="text"]
+			line-height 30px
+			height 30px
+		&[type="submit"]
+			border 0
+			color white
+			font-weight: bold
+			margin-top 10px
+			display inline-block
+			background-image: linear-gradient(bottom left, rgba(155, 29, 33, 0.8) -18.85%, rgba(233, 33, 45, 0.8) 81.15%)
+			line-height: 30px
+			padding: 2px 29px 3px
+		
 
 .search
 	min-height 400px

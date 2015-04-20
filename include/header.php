@@ -81,12 +81,39 @@
               <? if(!$APPLICATION->GetDirProperty("hide_nav")):?>
               <div class="col-md-10">
                   <?if(in_array($APPLICATION->GetCurDir(),array('/doctors/video/', '/doctors/research/', '/doctors/search/'))):?>
-                    <form id="search" action="/doctors/search/">
-                      <input type="text" name="q" placeholder="Поиск" value="<?=$_REQUEST['q']?>">
-                      <button type="submit">
-                        <svg width="15" height="17" viewBox="0 0 15 17" xmlns="http://www.w3.org/2000/svg"><path d="M6.367 12.733c1.273 0 2.46-.377 3.456-1.024l3.731 4.51 1.051-.869-3.723-4.5c1.143-1.152 1.851-2.736 1.851-4.483 0-3.511-2.856-6.367-6.366-6.367-3.511 0-6.367 2.856-6.367 6.367 0 3.51 2.856 6.366 6.367 6.366zm0-11.369c2.758 0 5.002 2.244 5.002 5.003 0 2.758-2.244 5.002-5.002 5.002-2.759 0-5.003-2.244-5.003-5.002 0-2.759 2.244-5.003 5.003-5.003z" fill="#C2272C"/></svg>
-                      </button>
-                    </form>
+                    <div class="row visible-md visible-lg">
+                    <?if(!in_array($APPLICATION->GetCurDir(),array('/doctors/search/'))):?>
+                      <div class="col-xs-8">
+                    <?else:?>
+                      <div class="col-xs-12">
+                    <?endif;?>
+                        <form id="search" action="/doctors/search/">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <input type="text" name="q" placeholder="Поиск" value="<?=$_REQUEST['q']?>">
+                              <button type="submit">
+                                <svg width="15" height="17" viewBox="0 0 15 17" xmlns="http://www.w3.org/2000/svg"><path d="M6.367 12.733c1.273 0 2.46-.377 3.456-1.024l3.731 4.51 1.051-.869-3.723-4.5c1.143-1.152 1.851-2.736 1.851-4.483 0-3.511-2.856-6.367-6.366-6.367-3.511 0-6.367 2.856-6.367 6.367 0 3.51 2.856 6.366 6.367 6.366zm0-11.369c2.758 0 5.002 2.244 5.002 5.003 0 2.758-2.244 5.002-5.002 5.002-2.759 0-5.003-2.244-5.003-5.002 0-2.759 2.244-5.003 5.003-5.003z" fill="#C2272C"/></svg>
+                              </button>  
+                            </div>
+                            <div class="col-xs-6">
+                              <input type="radio" value="1" data-action="/doctors/search/" data-name="q" name="type" id="r-1" checked> <label for="r-1"> Искать на сайте</label>
+                            </div>
+                            <div class="col-xs-6">
+                              <input type="radio" value="2" data-action="http://www.ncbi.nlm.nih.gov/pubmed/" data-name="term" name="type" id="r-2"> <label for="r-2"> Найти в PubMed</label>
+                            </div>
+                          </div>
+                        </form>    
+                      </div>
+                      <?if(!in_array($APPLICATION->GetCurDir(),array('/doctors/search/'))):?>
+                      <div class="col-xs-4 right">
+                        <div class="promo">
+                          <div class="promo__text">Не нашли что искали?</div>
+                          <a data-toggle="modal" data-target="#question" href="#question" class="promo__button">Задать вопрос</a>
+                        </div>
+                      </div>
+                      <?endif;?>
+                    </div>
+                    
                   <?endif;?>
                  <ul class="nav">
                     <li class="hidden">

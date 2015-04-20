@@ -32,8 +32,11 @@
                   <a href="/doctors/20mg/" onclick="_gaq.push(['_trackEvent', 'CialisInfo', '20mg', '20mg Info']);"><img src="/layout/images/p-2.png" alt=""></a>
                </div>
             </div>
+         </div>         
+         <div class="links">
+            <a href="https://itunes.apple.com/ru/app/lilly-medinfo/id531654779?mt=8" target="_blank"><img width="135" src="/layout/images/apple.png" alt=""></a>
+            <a href=" https://play.google.com/store/apps/details?id=tr.com.lilly.medinfoandroid" class="border" target="_blank"><img height="40" src="/layout/images/googleplay.png" alt=""></a>
          </div>
-         
       </div>
    </div>
 <?

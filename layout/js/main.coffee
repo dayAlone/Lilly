@@ -115,6 +115,38 @@ init = ()->
                 else if($(this).hasClass('no-ajax'))
                     window.open(url, '_blank')
 
+    $('#question form').submit (e)->
+        $('#question input[name="email"], #question textarea').each ->
+            if $(this).val().length == 0
+                $(this).addClass 'error'
+        if $('#question .error').length == 0
+            data = new FormData(this)
+            $.ajax 
+                type        : 'POST'
+                url         : '/include/send.php'
+                data        : data
+                cache       : false
+                contentType : false
+                processData : false
+                mimeType    : 'multipart/form-data'
+                success     : (data) ->
+                    data = $.parseJSON(data)
+                    if data.status == "ok"
+                        $('#question form').hide()
+                        $('#question .success').show()
+                    
+            e.preventDefault()
+
+        e.preventDefault()
+
+    $('#search input[name="type"]').change ()->
+        el = $('#search input[name="type"]:checked')
+        $('#search').attr
+            'action' : el.data('action')
+
+        $('#search input[type="text"]').attr
+            'name' : el.data('name')
+
     $('#doctor').off('shown.bs.modal').on 'shown.bs.modal', ()->
         if $('.frame').hasClass 'doctor'
             $('#doctor a.back').attr 'href', '/'

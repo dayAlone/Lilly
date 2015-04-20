@@ -5,8 +5,19 @@ $APPLICATION->SetTitle('Поиск по сайту');
 <div class="container search">
 	<div class="row">
 	<div class="col-md-12">
-		<h1>Поиск</h1>
-		<p style="margin-top:-20px;opacity:.7;">По записям научных трансляций и клиническим исследованиям</p>
+		<div class="row">
+			<div class="col-md-8">
+				<h1>Поиск</h1>
+				<p style="margin-top:-20px;opacity:.7;">По записям научных трансляций и клиническим исследованиям</p>
+			</div>
+			<div class="col-md-4 right">
+				<div class="promo center">
+                  <div class="promo__text promo__text--big">Не нашли что искали?</div>
+                  <a data-toggle="modal" data-target="#question" href="#question" class="promo__button promo__button--big">Задать вопрос</a>
+                </div>
+			</div>
+		</div>
+		
 	<?
 	$APPLICATION->IncludeComponent("bitrix:search.page","",Array(
 	    "TAGS_SORT" => "NAME",
