@@ -896,9 +896,6 @@ a span:hover,
   position: relative;
   top: -2px;
 }
-.dark #search button svg path {
-  fill: #fff;
-}
 @media (max-width: 770px) {
   #search {
     display: none;
@@ -938,6 +935,7 @@ a span:hover,
   font-weight: bold;
   margin-top: 10px;
   display: inline-block;
+  background-color: #eb222e;
   background-image: -webkit-linear-gradient(bottom left, rgba(155,29,33,0.8) -18.85%, rgba(233,33,45,0.8) 81.15%);
   background-image: linear-gradient(bottom left, rgba(155,29,33,0.8) -18.85%, rgba(233,33,45,0.8) 81.15%);
   line-height: 30px;
@@ -2648,6 +2646,7 @@ a:focus {
   }
 }
 .user #toolbar .nav li:last-child a {
+  background-color: #eb222e;
   background-image: -webkit-linear-gradient(bottom left, rgba(155,29,33,0.8) -18.85%, rgba(233,33,45,0.8) 81.15%);
   background-image: linear-gradient(bottom left, rgba(155,29,33,0.8) -18.85%, rgba(233,33,45,0.8) 81.15%);
   line-height: 30px;
@@ -2808,6 +2807,7 @@ a:focus {
 }
 .promo__button {
   display: inline-block;
+  background-color: #eb222e;
   background-image: -webkit-linear-gradient(bottom left, rgba(155,29,33,0.8) -18.85%, rgba(233,33,45,0.8) 81.15%);
   background-image: linear-gradient(bottom left, rgba(155,29,33,0.8) -18.85%, rgba(233,33,45,0.8) 81.15%);
   line-height: 30px;

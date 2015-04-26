@@ -82,6 +82,9 @@ strstr = ( haystack, needle, bool )->
         else
             return haystack.slice( pos );
 
+validateEmail =  (email)->
+    re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+    return re.test(email)
 
 init = ()->
 
@@ -115,10 +118,21 @@ init = ()->
                 else if($(this).hasClass('no-ajax'))
                     window.open(url, '_blank')
 
+    $('#question').off('shown.bs.modal').on 'shown.bs.modal', ()->
+        $('#question form').show()
+        $('#question .success').hide()
+
+    $('#question input[name="email"], #question textarea').on 'keydown', ->
+        if $(this).hasClass 'error'
+            $(this).removeClass 'error'
+
     $('#question form').submit (e)->
         $('#question input[name="email"], #question textarea').each ->
             if $(this).val().length == 0
                 $(this).addClass 'error'
+        if !validateEmail $('#question input[name="email"]').val()
+            $('#question input[name="email"]').addClass 'error'
+
         if $('#question .error').length == 0
             data = new FormData(this)
             $.ajax 
@@ -143,6 +157,7 @@ init = ()->
         el = $('#search input[name="type"]:checked')
         $('#search').attr
             'action' : el.data('action')
+            'target' : el.data('target')
 
         $('#search input[type="text"]').attr
             'name' : el.data('name')

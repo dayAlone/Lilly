@@ -96,10 +96,10 @@
                               </button>  
                             </div>
                             <div class="col-xs-6">
-                              <input type="radio" value="1" data-action="/doctors/search/" data-name="q" name="type" id="r-1" checked> <label for="r-1"> Искать на сайте</label>
+                              <input type="radio" value="1" data-target="_self" data-action="/doctors/search/" data-name="q" name="type" id="r-1" checked> <label for="r-1"> Искать на сайте</label>
                             </div>
                             <div class="col-xs-6">
-                              <input type="radio" value="2" data-action="http://www.ncbi.nlm.nih.gov/pubmed/" data-name="term" name="type" id="r-2"> <label for="r-2"> Найти в PubMed</label>
+                              <input type="radio" value="2" data-target="_blank" data-action="http://www.ncbi.nlm.nih.gov/pubmed/" data-name="term" name="type" id="r-2"> <label for="r-2"> Найти в PubMed</label>
                             </div>
                           </div>
                         </form>    

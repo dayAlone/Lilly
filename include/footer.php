@@ -105,11 +105,12 @@
    <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="question" aria-hidden="true">
      <div class="modal-dialog modal-sm">
        <div class="modal-content">
+        <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
         <div class="success">
           <h3>Спасибо за Ваш вопрос! Мы ответим Вам в ближайшее время!</h3>
         </div>
         <form action="">
-          <a href="#" class="close" data-dismiss="modal" aria-hidden="true"></a>
+          
           <h3>Вы можете задать вопрос сотрудникам Lilly если Вы не смогли найти нужную информацию с помощью поиска по сайт</h3>
           <textarea name="" id="" cols="30" name="question" rows="7" placeholder="Введите Ваш вопрос здесь"></textarea>
           <input type="text" name="email" placeholder="Ваш e-mail для ответа">
