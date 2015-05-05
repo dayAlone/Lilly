@@ -18,7 +18,10 @@ const KEY_FILE_PATH     = '/include/83b8b1c5fd6e902573366858ee24acf1ebb770a8-pri
                           // secure location and isn't readable by others
 const ANALYTICS_SCOPE   = 'https://www.googleapis.com/auth/analytics.readonly';
  
-$client = new Google_Client();
+$config = new Google_Config();
+$config->setClassConfig('Google_Cache_File', array('directory' => '../tmp/cache'));
+
+$client = new Google_Client($config);
 $client->setApplicationName( 'Analytics' );
 
 
