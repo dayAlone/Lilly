@@ -80,7 +80,13 @@
               </div>
               <? if(!$APPLICATION->GetDirProperty("hide_nav")):?>
               <div class="col-md-10">
-                  <?if(in_array($APPLICATION->GetCurDir(),array('/doctors/video/', '/doctors/research/', '/doctors/search/'))):?>
+                  <?
+                  $hide = false;
+                  foreach (array('/doctors/video/', '/doctors/research/', '/doctors/search/') as $el) {
+                    if(strstr($APPLICATION->GetCurDir(), $el))
+                      $show = true;
+                  }
+                  if($show):?>
                     <div class="row visible-md visible-lg">
                     <?if(!in_array($APPLICATION->GetCurDir(),array('/doctors/search/'))):?>
                       <div class="col-xs-8">
