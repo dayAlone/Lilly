@@ -112,7 +112,7 @@
         <form action="">
           
           <h3>Вы можете задать вопрос сотрудникам Lilly если Вы не смогли найти нужную информацию с помощью поиска по сайт</h3>
-          <textarea name="" id="" cols="30" name="question" rows="7" placeholder="Введите Ваш вопрос здесь"></textarea>
+          <textarea cols="30" name="question" rows="7" placeholder="Введите Ваш вопрос здесь"></textarea>
           <input type="text" name="email" placeholder="Ваш e-mail для ответа">
           <div class="center">
             <input type="submit" value="Отправить">
