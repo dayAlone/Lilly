@@ -111,7 +111,7 @@
         </div>
         <form action="">
           
-          <h3>Вы можете задать вопрос сотрудникам Lilly если Вы не смогли найти нужную информацию с помощью поиска по сайт</h3>
+          <h3>Вы можете задать вопрос сотрудникам Lilly, если Вы не смогли найти нужную информацию с помощью поиска по сайту</h3>
           <textarea cols="30" name="question" rows="7" placeholder="Введите Ваш вопрос здесь"></textarea>
           <input type="text" name="email" placeholder="Ваш e-mail для ответа">
           <div class="center">
