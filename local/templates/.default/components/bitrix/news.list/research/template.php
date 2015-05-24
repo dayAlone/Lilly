@@ -14,9 +14,9 @@ $this->setFrameMode(true);
       }
       ?>
          <div class="item no-ajax" target="_blank">
-            <div class="image" style="background-image:url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC'])?>)">
+            <a href="<?=CFile::GetPath($item['PROPERTIES']['FILE']['VALUE'])?>" target="_blank" class="image" style="background-image:url(<?=(file_exists($_SERVER['DOCUMENT_ROOT'].$item['PREVIEW_PICTURE']['SRC'])?$item['PREVIEW_PICTURE']['SRC']:"http://ochenprosto.ru".$item['PREVIEW_PICTURE']['SRC'])?>)">
                <div class="icon"></div>
-            </div>
+            </a>
             <div class="content">
                <div class="title"><?=$item['NAME']?></div>
                <div class="description"><?=$item['PROPERTIES']['DESCRIPTION']['VALUE']?></div>
