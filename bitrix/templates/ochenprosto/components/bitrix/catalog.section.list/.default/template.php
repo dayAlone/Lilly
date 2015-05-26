@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 		$ob = $res->Fetch();
 		?>
 			<div class="col-md-4">
-               <a href="<?=($item["UF_WEBINAR"]?"http://webinar.".$_SERVER['SERVER_NAME']:"")?>/doctors/video/<?=$ob['CODE']?>/" class="item">
+               <a href="<?=($item["UF_WEBINAR"]?"http://webinar.".str_replace('www.','', $_SERVER['SERVER_NAME']):"")?>/doctors/video/<?=$ob['CODE']?>/" class="item">
                	  <div class="header">
 	                  <span class="title <?=strlen($item['NAME'])?> <?=(strlen($item['NAME'])>50?"medium":"")?> <?=(strlen($item['NAME'])>75?"small":"")?>">
 	                     <?=str_replace('®','<sup>®</sup>', $item['NAME'])?>
